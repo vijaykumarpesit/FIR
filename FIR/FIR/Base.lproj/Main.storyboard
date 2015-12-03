@@ -93,7 +93,7 @@
         <!--Emergency-->
         <scene sceneID="ear-sh-uZr">
             <objects>
-                <viewController id="cEv-p6-mRT" userLabel="Emergency" sceneMemberID="viewController">
+                <viewController id="cEv-p6-mRT" userLabel="Emergency" customClass="EmergencyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VIk-EI-IUJ"/>
                         <viewControllerLayoutGuide type="bottom" id="opS-zV-gIs"/>
@@ -105,6 +105,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Emergency" id="ps7-hy-NHv" userLabel="Emergency"/>
+                    <connections>
+                        <outlet property="view" destination="j9g-nR-6uQ" id="DCw-8s-R0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zP6-2O-Q1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

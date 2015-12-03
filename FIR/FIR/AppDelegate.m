@@ -20,6 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Fabric with:@[[Digits class]]];
+    Digits *digits = [Digits sharedInstance];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
+        config.phoneNumber = @"+91";
+        [digits authenticateWithViewController:nil configuration:config completion:NULL];
+    });
+    
+    
     return YES;
 }
 
