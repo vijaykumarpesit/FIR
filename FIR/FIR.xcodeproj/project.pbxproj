@@ -7,28 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
+		B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B114091E1C10B3850033F0F5 /* EmergencyViewController.m */; };
+		B11409251C10B3F10033F0F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409211C10B3F10033F0F5 /* Fabric.framework */; };
+		B11409261C10B3F10033F0F5 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409221C10B3F10033F0F5 /* DigitsKit.framework */; };
+		B11409271C10B3F10033F0F5 /* DigitsKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B11409231C10B3F10033F0F5 /* DigitsKitResources.bundle */; };
+		B11409281C10B3F10033F0F5 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409241C10B3F10033F0F5 /* TwitterCore.framework */; };
+		B114092C1C10B6500033F0F5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092B1C10B6500033F0F5 /* AddressBook.framework */; };
+		B114092E1C10B6570033F0F5 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092D1C10B6570033F0F5 /* AddressBookUI.framework */; };
+		B11409301C10B6670033F0F5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092F1C10B6670033F0F5 /* CoreData.framework */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
-		B1D168C41C102F8F0079E760 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FirstViewController.m */; };
-		B1D168C71C102F8F0079E760 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C61C102F8F0079E760 /* SecondViewController.m */; };
+		B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FileViewController.m */; };
+		B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C61C102F8F0079E760 /* StatusViewController.m */; };
 		B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168C81C102F8F0079E760 /* Main.storyboard */; };
 		B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CB1C102F900079E760 /* Assets.xcassets */; };
 		B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B114091D1C10B3850033F0F5 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
+		B114091E1C10B3850033F0F5 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
+		B11409211C10B3F10033F0F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		B11409221C10B3F10033F0F5 /* DigitsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DigitsKit.framework; sourceTree = SOURCE_ROOT; };
+		B11409231C10B3F10033F0F5 /* DigitsKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DigitsKitResources.bundle; path = DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle; sourceTree = SOURCE_ROOT; };
+		B11409241C10B3F10033F0F5 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
+		B114092B1C10B6500033F0F5 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		B114092D1C10B6570033F0F5 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		B114092F1C10B6670033F0F5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B1D168B91C102F8F0079E760 /* FIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1D168C01C102F8F0079E760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B1D168C21C102F8F0079E760 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		B1D168C31C102F8F0079E760 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B1D168C51C102F8F0079E760 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B1D168C61C102F8F0079E760 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		B1D168C21C102F8F0079E760 /* FileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		B1D168C31C102F8F0079E760 /* FileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
+		B1D168C51C102F8F0079E760 /* StatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
+		B1D168C61C102F8F0079E760 /* StatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
 		B1D168C91C102F8F0079E760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1D168CB1C102F900079E760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1D168CE1C102F900079E760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1D168D01C102F900079E760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C61F0AB145FE38C667092794 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CE27327042BDA62222BEAE3E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +57,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11409301C10B6670033F0F5 /* CoreData.framework in Frameworks */,
+				B114092E1C10B6570033F0F5 /* AddressBookUI.framework in Frameworks */,
+				B114092C1C10B6500033F0F5 /* AddressBook.framework in Frameworks */,
+				B11409251C10B3F10033F0F5 /* Fabric.framework in Frameworks */,
+				B11409281C10B3F10033F0F5 /* TwitterCore.framework in Frameworks */,
+				B11409261C10B3F10033F0F5 /* DigitsKit.framework in Frameworks */,
+				116D23D042297E33B2D63D02 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20AA80C624B1E5210AEA8DAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B114092F1C10B6670033F0F5 /* CoreData.framework */,
+				B114092D1C10B6570033F0F5 /* AddressBookUI.framework */,
+				B114092B1C10B6500033F0F5 /* AddressBook.framework */,
+				CE27327042BDA62222BEAE3E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		998D46A76D8AC4AB8F42F7D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */,
+				C61F0AB145FE38C667092794 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B1D168B01C102F8F0079E760 = {
 			isa = PBXGroup;
 			children = (
 				B1D168BB1C102F8F0079E760 /* FIR */,
 				B1D168BA1C102F8F0079E760 /* Products */,
+				998D46A76D8AC4AB8F42F7D3 /* Pods */,
+				20AA80C624B1E5210AEA8DAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,13 +111,19 @@
 		B1D168BB1C102F8F0079E760 /* FIR */ = {
 			isa = PBXGroup;
 			children = (
+				B11409211C10B3F10033F0F5 /* Fabric.framework */,
+				B11409221C10B3F10033F0F5 /* DigitsKit.framework */,
+				B11409231C10B3F10033F0F5 /* DigitsKitResources.bundle */,
+				B11409241C10B3F10033F0F5 /* TwitterCore.framework */,
 				B1D168BF1C102F8F0079E760 /* AppDelegate.h */,
 				B1D168C01C102F8F0079E760 /* AppDelegate.m */,
-				B1D168C21C102F8F0079E760 /* FirstViewController.h */,
-				B1D168C31C102F8F0079E760 /* FirstViewController.m */,
-				B1D168C51C102F8F0079E760 /* SecondViewController.h */,
-				B1D168C61C102F8F0079E760 /* SecondViewController.m */,
+				B1D168C21C102F8F0079E760 /* FileViewController.h */,
+				B1D168C31C102F8F0079E760 /* FileViewController.m */,
+				B1D168C51C102F8F0079E760 /* StatusViewController.h */,
+				B1D168C61C102F8F0079E760 /* StatusViewController.m */,
 				B1D168C81C102F8F0079E760 /* Main.storyboard */,
+				B114091D1C10B3850033F0F5 /* EmergencyViewController.h */,
+				B114091E1C10B3850033F0F5 /* EmergencyViewController.m */,
 				B1D168CB1C102F900079E760 /* Assets.xcassets */,
 				B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */,
 				B1D168D01C102F900079E760 /* Info.plist */,
@@ -91,9 +147,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "FIR" */;
 			buildPhases = (
+				AEFB8C95C4554529FBC6F637 /* Check Pods Manifest.lock */,
 				B1D168B51C102F8F0079E760 /* Sources */,
 				B1D168B61C102F8F0079E760 /* Frameworks */,
 				B1D168B71C102F8F0079E760 /* Resources */,
+				BBE13A39F728DF15814615A6 /* Embed Pods Frameworks */,
+				4A4C87D2047066737F3E7BA0 /* Copy Pods Resources */,
+				B114092A1C10B6280033F0F5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -141,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11409271C10B3F10033F0F5 /* DigitsKitResources.bundle in Resources */,
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
@@ -149,15 +210,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A4C87D2047066737F3E7BA0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEFB8C95C4554529FBC6F637 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B114092A1C10B6280033F0F5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run a158ed92adc33849add174bc6f7fb20fc8ba2fa6 60ebe5f7c0afae81320b2d59dccc1285dfe88b14eb75d9e775447f0487921899";
+		};
+		BBE13A39F728DF15814615A6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1D168B51C102F8F0079E760 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D168C71C102F8F0079E760 /* SecondViewController.m in Sources */,
+				B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */,
 				B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */,
-				B1D168C41C102F8F0079E760 /* FirstViewController.m in Sources */,
+				B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
+				B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +390,13 @@
 		};
 		B1D168D41C102F900079E760 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FIR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vijay.-fir.FIR";
@@ -278,8 +406,13 @@
 		};
 		B1D168D51C102F900079E760 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61F0AB145FE38C667092794 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FIR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vijay.-fir.FIR";
@@ -306,6 +439,7 @@
 				B1D168D51C102F900079E760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
