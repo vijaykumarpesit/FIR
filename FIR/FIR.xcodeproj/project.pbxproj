@@ -111,10 +111,6 @@
 		B1D168BB1C102F8F0079E760 /* FIR */ = {
 			isa = PBXGroup;
 			children = (
-				B11409211C10B3F10033F0F5 /* Fabric.framework */,
-				B11409221C10B3F10033F0F5 /* DigitsKit.framework */,
-				B11409231C10B3F10033F0F5 /* DigitsKitResources.bundle */,
-				B11409241C10B3F10033F0F5 /* TwitterCore.framework */,
 				B1D168BF1C102F8F0079E760 /* AppDelegate.h */,
 				B1D168C01C102F8F0079E760 /* AppDelegate.m */,
 				B1D168C21C102F8F0079E760 /* FileViewController.h */,
@@ -135,6 +131,10 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B11409211C10B3F10033F0F5 /* Fabric.framework */,
+				B11409221C10B3F10033F0F5 /* DigitsKit.framework */,
+				B11409231C10B3F10033F0F5 /* DigitsKitResources.bundle */,
+				B11409241C10B3F10033F0F5 /* TwitterCore.framework */,
 				B1D168BD1C102F8F0079E760 /* main.m */,
 			);
 			name = "Supporting Files";
