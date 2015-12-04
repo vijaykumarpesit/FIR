@@ -11,6 +11,8 @@
 #import <Parse/Parse.h>
 #import "DataSource.h"
 #import "FIRAccidentMetaData.h"
+#import "UIImageView+AFNetworking.h"
+
 
 @interface StatusViewController ()
 
@@ -24,13 +26,19 @@
     [super viewDidLoad];
     self.registeredFIR = [[NSMutableArray alloc] init];
     [self.tableView registerNib:[UINib nibWithNibName:@"FIRComplaintCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-    [self loadComplaintData];
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    //[self loadComplaintData];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.registeredFIR.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    return 300.0f;
 }
 
 
@@ -45,7 +53,8 @@
                                                           timeStyle:NSDateFormatterFullStyle];
     cell.time.text = dateString;
     PFFile *file = metadata.spotImages[0];
-
+    NSURL *fileURL = [NSURL URLWithString:file.url];
+    [cell.imageView setImageWithURL:fileURL placeholderImage:nil];
     return cell;
 }
 
