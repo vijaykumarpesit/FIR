@@ -483,10 +483,10 @@
             </objects>
             <point key="canvasLocation" x="777" y="1191"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="TabbarViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -508,7 +508,7 @@
         <scene sceneID="8ZU-Ec-abg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GeZ-9r-t13" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Filing" image="first" id="acW-dT-cKf" userLabel="Filing"/>
+                    <tabBarItem key="tabBarItem" title="Filing" id="acW-dT-cKf" userLabel="Filing"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8ov-WX-DzW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -547,9 +547,7 @@
     </scenes>
     <resources>
         <image name="document.JPG" width="120" height="77"/>
-        <image name="first" width="30" height="30"/>
         <image name="motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg" width="120" height="77"/>
-        <image name="second" width="30" height="30"/>
         <image name="toonvectors-15209-140.jpg" width="120" height="77"/>
     </resources>
 </document>
