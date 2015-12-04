@@ -40,6 +40,10 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     [self.spotCollectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     [self.victimCollectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     [self.documentCollectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    
+    self.victimImages = [[NSMutableArray alloc] init];
+    self.documentImages = [[NSMutableArray alloc] init];
+    self.spotImages = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,19 +114,56 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
 {
     // Access the uncropped image from info dictionary
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    NSString *text = [TextExtractor textFromImage:image];
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.6);
+    NSMutableString *filePath =  [NSMutableString stringWithString:[self baseFilePath]];
+    [filePath appendString:@"/"];
+    [filePath appendString:[self GetUUID]];
+    [imageData writeToFile:filePath atomically:YES];
+
     
-    
+    switch (self.pickerMode) {
+        case ImagePickerModeSpot:
+            [self.spotImages addObject:filePath];
+            [self.spotCollectionView reloadData];
+            break;
+            
+        case ImagePickerModeVictim:
+            [self.victimImages addObject:filePath];
+            [self.victimCollectionView reloadData];
+
+            break;
+            
+        case ImagePickerModeDocument:
+            [self.documentImages addObject:filePath];
+            [self.documentCollectionView reloadData];
+
+            break;
+            
+        default:
+            break;
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 
 //if user is cancelling the camera
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    [[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
-    [self.tabBarController setSelectedIndex:0];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (NSString *)baseFilePath {
+    NSString *documentsDirectoryPayh = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    return documentsDirectoryPayh;
+}
 
+- (NSString *)GetUUID
+{
+    CFUUIDRef theUUID = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
+    return (__bridge NSString *)string;
+}
 
 @end

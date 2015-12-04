@@ -41,14 +41,14 @@
                                     <action selector="uploadDocumentImage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="HLl-j1-jPe"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aQY-xL-rVu" userLabel="SpotCollectionView">
-                                <rect key="frame" x="40" y="130" width="520" height="80"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aQY-xL-rVu" userLabel="SpotCollectionView">
+                                <rect key="frame" x="30" y="130" width="540" height="80"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="YoV-x3-L6U"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sGx-0h-e0e">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sGx-0h-e0e">
                                     <size key="itemSize" width="80" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -77,14 +77,14 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="Til-R7-Lsm"/>
                                 </connections>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-ks-ydY" userLabel="VictimCollectionView">
-                                <rect key="frame" x="40" y="240" width="520" height="80"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-ks-ydY" userLabel="VictimCollectionView">
+                                <rect key="frame" x="30" y="240" width="540" height="80"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="sJG-DB-6HE"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ohy-lW-Y2u">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ohy-lW-Y2u">
                                     <size key="itemSize" width="80" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -113,15 +113,15 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="fwM-Rc-HS4"/>
                                 </connections>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-Uz-bZY" userLabel="DocuemntCollectionView">
-                                <rect key="frame" x="40" y="350" width="520" height="80"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-Uz-bZY" userLabel="DocuemntCollectionView">
+                                <rect key="frame" x="30" y="350" width="540" height="80"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="KB5-gg-zkr"/>
                                     <constraint firstAttribute="height" constant="102" id="wVQ-4D-zs7"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wbo-KL-Q9J">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wbo-KL-Q9J">
                                     <size key="itemSize" width="80" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -159,24 +159,24 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="MeO-Uz-bZY" secondAttribute="trailing" constant="20" id="0AV-vI-it8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MeO-Uz-bZY" secondAttribute="trailing" constant="10" id="0AV-vI-it8"/>
                             <constraint firstItem="Yvz-wL-9jV" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="0UF-V8-DVB"/>
                             <constraint firstItem="fFz-Is-zR3" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="5mv-t0-PG5"/>
                             <constraint firstItem="aQY-xL-rVu" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="8Et-gT-Kcc"/>
                             <constraint firstItem="WDp-ks-ydY" firstAttribute="top" secondItem="Yvz-wL-9jV" secondAttribute="bottom" id="QTg-rD-Rr2"/>
-                            <constraint firstItem="WDp-ks-ydY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="20" id="RVU-y5-fyu"/>
+                            <constraint firstItem="WDp-ks-ydY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="RVU-y5-fyu"/>
                             <constraint firstItem="MeO-Uz-bZY" firstAttribute="top" secondItem="NFu-7X-0XI" secondAttribute="bottom" id="Tky-wE-GLd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WDp-ks-ydY" secondAttribute="trailing" constant="20" id="WZe-kb-v0K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WDp-ks-ydY" secondAttribute="trailing" constant="10" id="WZe-kb-v0K"/>
                             <constraint firstItem="NFu-7X-0XI" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bqJ-gg-jEY"/>
-                            <constraint firstItem="aQY-xL-rVu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="20" id="cw7-Lt-pYq"/>
+                            <constraint firstItem="aQY-xL-rVu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="cw7-Lt-pYq"/>
                             <constraint firstItem="NFu-7X-0XI" firstAttribute="top" secondItem="WDp-ks-ydY" secondAttribute="bottom" id="d74-eD-Va8"/>
                             <constraint firstItem="aQY-xL-rVu" firstAttribute="top" secondItem="fFz-Is-zR3" secondAttribute="bottom" id="exw-bZ-XLX"/>
                             <constraint firstItem="Yvz-wL-9jV" firstAttribute="top" secondItem="fFz-Is-zR3" secondAttribute="bottom" constant="80" id="fGS-S9-Dyi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aQY-xL-rVu" secondAttribute="trailing" constant="20" id="fd4-5N-UPF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQY-xL-rVu" secondAttribute="trailing" constant="10" id="fd4-5N-UPF"/>
                             <constraint firstItem="fFz-Is-zR3" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="gwo-3o-rc7"/>
                             <constraint firstItem="Yvz-wL-9jV" firstAttribute="top" secondItem="aQY-xL-rVu" secondAttribute="bottom" id="hhL-nv-B30"/>
                             <constraint firstItem="ABP-I8-KXS" firstAttribute="top" secondItem="MeO-Uz-bZY" secondAttribute="bottom" constant="20" id="lCM-4f-nnY"/>
-                            <constraint firstItem="MeO-Uz-bZY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="20" id="o2M-9e-aCw"/>
+                            <constraint firstItem="MeO-Uz-bZY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="o2M-9e-aCw"/>
                             <constraint firstItem="ABP-I8-KXS" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="stH-IE-rts"/>
                             <constraint firstItem="NFu-7X-0XI" firstAttribute="top" secondItem="Yvz-wL-9jV" secondAttribute="bottom" constant="80" id="uG9-ef-tMF"/>
                         </constraints>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
+		B1072C221C11684700F7BBB7 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
 		B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B114091E1C10B3850033F0F5 /* EmergencyViewController.m */; };
 		B11409251C10B3F10033F0F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409211C10B3F10033F0F5 /* Fabric.framework */; };
 		B11409261C10B3F10033F0F5 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409221C10B3F10033F0F5 /* DigitsKit.framework */; };
@@ -16,7 +17,6 @@
 		B114092C1C10B6500033F0F5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092B1C10B6500033F0F5 /* AddressBook.framework */; };
 		B114092E1C10B6570033F0F5 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092D1C10B6570033F0F5 /* AddressBookUI.framework */; };
 		B11409301C10B6670033F0F5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092F1C10B6670033F0F5 /* CoreData.framework */; };
-		B11409401C114F920033F0F5 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
 		B11409441C114FFE0033F0F5 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409411C114FFE0033F0F5 /* libstdc++.6.0.9.tbd */; };
 		B11409451C114FFE0033F0F5 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409421C114FFE0033F0F5 /* libstdc++.6.tbd */; };
 		B11409461C114FFE0033F0F5 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409431C114FFE0033F0F5 /* libstdc++.tbd */; };
@@ -27,6 +27,7 @@
 		B11409561C115A7E0033F0F5 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B11409551C115A7E0033F0F5 /* ImageViewCell.xib */; };
 		B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B11409581C1162510033F0F5 /* UIImage+Resize.m */; };
 		B114095B1C1164400033F0F5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B114095A1C1164400033F0F5 /* tessdata */; };
+		B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B114095D1C1165040033F0F5 /* ImageMetaData.m */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
 		B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FileViewController.m */; };
@@ -62,6 +63,8 @@
 		B11409571C1162510033F0F5 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		B11409581C1162510033F0F5 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		B114095A1C1164400033F0F5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		B114095C1C1165040033F0F5 /* ImageMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMetaData.h; sourceTree = "<group>"; };
+		B114095D1C1165040033F0F5 /* ImageMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMetaData.m; sourceTree = "<group>"; };
 		B1D168B91C102F8F0079E760 /* FIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,11 +86,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1072C221C11684700F7BBB7 /* TesseractOCR.framework in Frameworks */,
 				B11409481C1150040033F0F5 /* CoreImage.framework in Frameworks */,
 				B11409441C114FFE0033F0F5 /* libstdc++.6.0.9.tbd in Frameworks */,
 				B11409451C114FFE0033F0F5 /* libstdc++.6.tbd in Frameworks */,
 				B11409461C114FFE0033F0F5 /* libstdc++.tbd in Frameworks */,
-				B11409401C114F920033F0F5 /* TesseractOCR.framework in Frameworks */,
 				B11409301C10B6670033F0F5 /* CoreData.framework in Frameworks */,
 				B114092E1C10B6570033F0F5 /* AddressBookUI.framework in Frameworks */,
 				B114092C1C10B6500033F0F5 /* AddressBook.framework in Frameworks */,
@@ -149,6 +152,8 @@
 			children = (
 				B1D168BF1C102F8F0079E760 /* AppDelegate.h */,
 				B1D168C01C102F8F0079E760 /* AppDelegate.m */,
+				B114095C1C1165040033F0F5 /* ImageMetaData.h */,
+				B114095D1C1165040033F0F5 /* ImageMetaData.m */,
 				B1D168C21C102F8F0079E760 /* FileViewController.h */,
 				B1D168C31C102F8F0079E760 /* FileViewController.m */,
 				B1D168C51C102F8F0079E760 /* StatusViewController.h */,
@@ -332,6 +337,7 @@
 				B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */,
 				B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
+				B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */,
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +457,8 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Tesseract",
 					Resources,
+					"$(PROJECT_DIR)/Tesseract",
+					Resources,
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -468,6 +476,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Tesseract",
+					Resources,
 					"$(PROJECT_DIR)/Tesseract",
 					Resources,
 				);
