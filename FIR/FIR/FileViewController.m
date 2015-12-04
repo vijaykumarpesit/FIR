@@ -60,11 +60,18 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
 
 - (void)viewWillAppear:(BOOL)animated {
     
-    [super viewWillAppear:YES];
+    [super viewWillAppear:animated];
+    
+    self.spotCollectionView.hidden = self.spotImages.count > 0 ? NO : YES;
+    self.victimCollectionView.hidden = self.victimImages.count > 0 ? NO : YES;
+    self.documentCollectionView.hidden = self.documentImages.count > 0 ? NO : YES;
+    
     [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -150,11 +157,13 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     switch (self.pickerMode) {
         case ImagePickerModeSpot:
             [self.spotImages addObject:filePath];
+            self.spotCollectionView.hidden = NO;
             [self.spotCollectionView reloadData];
             break;
             
         case ImagePickerModeVictim: {
             [self.victimImages addObject:filePath];
+            self.victimCollectionView.hidden = NO;
             [self.victimCollectionView reloadData];
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
                 NSString *text = [TextExtractor textFromImage:image];
@@ -165,6 +174,7 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
             
         case ImagePickerModeDocument:
             [self.documentImages addObject:filePath];
+            self.documentCollectionView.hidden = NO;
             [self.documentCollectionView reloadData];
             
             break;
@@ -206,7 +216,6 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"didUpdateToLocation: %@", newLocation);
     CLLocation *currentLocation = newLocation;
     
     self.lattitude = currentLocation.coordinate.latitude;

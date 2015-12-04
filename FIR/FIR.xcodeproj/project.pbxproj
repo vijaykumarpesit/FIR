@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
+		54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CC51C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg */; };
+		54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */; };
+		54E18CD01C11B61D00939F08 /* document.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CCF1C11B61D00939F08 /* document.JPG */; };
 		B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C241C11716200F7BBB7 /* SubmitViewController.m */; };
 		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C301C117FD500F7BBB7 /* FIRUser.m */; };
@@ -46,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		54E18CC51C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg"; sourceTree = "<group>"; };
+		54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "toonvectors-15209-140.jpg"; sourceTree = "<group>"; };
+		54E18CCF1C11B61D00939F08 /* document.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = document.JPG; sourceTree = "<group>"; };
 		B1072C231C11716200F7BBB7 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
 		B1072C241C11716200F7BBB7 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
 		B1072C261C11788C00F7BBB7 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
@@ -250,6 +256,9 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				54E18CCF1C11B61D00939F08 /* document.JPG */,
+				54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */,
+				54E18CC51C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg */,
 				B1D168CB1C102F900079E760 /* Assets.xcassets */,
 				B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */,
 				B1D168D01C102F900079E760 /* Info.plist */,
@@ -330,6 +339,9 @@
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
 				B1F447D01C11A4D800DCEA3A /* FIRComplaintCell.xib in Resources */,
+				54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */,
+				54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */,
+				54E18CD01C11B61D00939F08 /* document.JPG in Resources */,
 				B114095B1C1164400033F0F5 /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
