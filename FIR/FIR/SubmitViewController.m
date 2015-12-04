@@ -42,55 +42,70 @@
 }
 */
 - (IBAction)sumbmitAccidentReport:(id)sender {
-
-    //Craete PF Object
     
     FIRAccidentMetaData *metadata = [[[DataSource sharedDataSource] accidentMetaDataArry] firstObject];
-    PFObject* accident = [PFObject objectWithClassName:@"Accident"];
-    accident[@"date"] = metadata.date;
-    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:metadata.lattitude longitude:metadata.longitude];
-    accident[@"geoPoint"] = geoPoint;
-    accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
     
-    NSMutableArray *spotArray = [NSMutableArray array];
-    for (NSString *filePath in metadata.spotImages) {
-        @autoreleasepool {
-            UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-            NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
-            PFFile *file = [PFFile fileWithData:imageData];
-            [file saveInBackground];
-            [spotArray addObject:file];
-        }
-    }
-
-    NSMutableArray *victimArray = [NSMutableArray array];
-    for (NSString *filePath in metadata.victimImages) {
-        @autoreleasepool {
-            UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-            NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
-            PFFile *file = [PFFile fileWithData:imageData];
-            [file saveInBackground];
-            [victimArray addObject:file];
-        }
-    }
+    PFQuery *query = [PFQuery queryWithClassName:@"Accident"];
+    [query whereKey:@"vehicleNumbers" containedIn:metadata.vehicleNumbers.allObjects];
     
-    NSMutableArray *documentArray = [NSMutableArray array];
-    for (NSString *filePath in metadata.documentsImages) {
-        @autoreleasepool {
-            UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-            NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
-            PFFile *file = [PFFile fileWithData:imageData];
-            [file saveInBackground];
-            [documentArray addObject:file];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (objects.count) {
+            
+            //Already found update the item//TODO
+            
+        } else {
+            //Craete PF Object
+            
+            PFObject* accident = [PFObject objectWithClassName:@"Accident"];
+            accident[@"date"] = metadata.date;
+            PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:metadata.lattitude longitude:metadata.longitude];
+            accident[@"geoPoint"] = geoPoint;
+            accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
+            
+            
+            NSMutableArray *spotArray = [NSMutableArray array];
+            for (NSString *filePath in metadata.spotImages) {
+                @autoreleasepool {
+                    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+                    NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
+                    PFFile *file = [PFFile fileWithData:imageData];
+                    [file saveInBackground];
+                    [spotArray addObject:file];
+                }
+            }
+            
+            NSMutableArray *victimArray = [NSMutableArray array];
+            for (NSString *filePath in metadata.victimImages) {
+                @autoreleasepool {
+                    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+                    NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
+                    PFFile *file = [PFFile fileWithData:imageData];
+                    [file saveInBackground];
+                    [victimArray addObject:file];
+                }
+            }
+            
+            NSMutableArray *documentArray = [NSMutableArray array];
+            for (NSString *filePath in metadata.documentsImages) {
+                @autoreleasepool {
+                    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+                    NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
+                    PFFile *file = [PFFile fileWithData:imageData];
+                    [file saveInBackground];
+                    [documentArray addObject:file];
+                }
+            }
+            
+            accident[@"spotImages"] = spotArray;
+            accident[@"victimImages"] = victimArray;
+            accident[@"documentImages"] = documentArray;
+            //accident[@"description"] = @""
+            
+            [accident saveInBackground];
         }
-    }
-    
-    accident[@"spotImages"] = spotArray;
-    accident[@"victimImages"] = victimArray;
-    accident[@"documentImages"] = documentArray;
-    //accident[@"description"] = @""
-
-    [accident saveInBackground];
+        
+    }];
 }
 
 @end

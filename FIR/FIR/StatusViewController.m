@@ -69,11 +69,9 @@
         for (PFObject *accident in objects) {
             
             FIRAccidentMetaData *metaData = [[FIRAccidentMetaData alloc] init];
-            NSNumber *lattitudeValue = accident[@"lattitude"];
-            metaData.lattitude = lattitudeValue.floatValue;
+            //metaData.lattitude = lattitudeValue.floatValue;
             
-            NSNumber *longitudeValue = accident[@"longitude"];
-            metaData.longitude = longitudeValue.floatValue;
+            //metaData.longitude = longitudeValue.floatValue;
             metaData.date = accident[@"date"];
             metaData.spotImages = accident[@"spotImages"];
             
