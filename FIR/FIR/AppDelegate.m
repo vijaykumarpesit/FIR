@@ -32,8 +32,8 @@
         [digits authenticateWithViewController:nil configuration:config completion:^(DGTSession *session, NSError *error) {
             FIRUser *user = [[DataSource sharedDataSource] currentUser];
             NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
-            user.phoneNumber =  [phoneNo substringFromIndex:3];
             user.userID = session.userID;
+            user.phoneNumber = phoneNo;
             [user saveUser];
         }];
     });
