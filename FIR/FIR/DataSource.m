@@ -32,7 +32,9 @@
             parseUser = [PFUser user];
         }
         self.currentUser = [[FIRUser alloc] initWithPFUser:parseUser];
+        self.currentUser.phoneNumber = @"9844480550";
         self.accidentMetaDataArry = [[NSMutableArray alloc] init];
+        
     }
     
     return self;

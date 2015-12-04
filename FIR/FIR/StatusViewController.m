@@ -69,9 +69,10 @@
         for (PFObject *accident in objects) {
             
             FIRAccidentMetaData *metaData = [[FIRAccidentMetaData alloc] init];
-            //metaData.lattitude = lattitudeValue.floatValue;
             
-            //metaData.longitude = longitudeValue.floatValue;
+            PFGeoPoint *geoPoint = accident[@"geoPoint"];
+            metaData.longitude = geoPoint.longitude;
+            metaData.lattitude = geoPoint.latitude;
             metaData.date = accident[@"date"];
             metaData.spotImages = accident[@"spotImages"];
             
