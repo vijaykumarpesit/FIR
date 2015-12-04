@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FIRUser.h"
 
 @interface DataSource : NSObject
+
+@property (nonatomic, strong)FIRUser*currentUser;
+
++ (DataSource *)sharedDataSource;
 
 @end

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <DigitsKit/DigitsKit.h>
+#import "FIRUser.h"
+#import "DataSource.h"
 
 
 @interface AppDelegate ()
@@ -26,7 +28,14 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
         config.phoneNumber = @"+91";
-       // [digits authenticateWithViewController:nil configuration:config completion:NULL];
+        
+        [digits authenticateWithViewController:nil configuration:config completion:^(DGTSession *session, NSError *error) {
+            FIRUser *user = [[DataSource sharedDataSource] currentUser];
+            NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
+            user.phoneNumber =  [phoneNo substringFromIndex:3];
+            user.userID = session.userID;
+            [user saveUser];
+        }];
     });
     
     

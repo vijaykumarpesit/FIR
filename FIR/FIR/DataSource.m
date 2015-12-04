@@ -7,7 +7,34 @@
 //
 
 #import "DataSource.h"
+#import <Parse/Parse.h>
+#import "FIRUser.h"
 
 @implementation DataSource
+
++ (DataSource *)sharedDataSource {
+    
+    static DataSource* sharedDataSource = nil;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        sharedDataSource = [[DataSource alloc] init];
+    });
+    
+    return sharedDataSource;
+}
+
+-(instancetype)init {
+    
+    if(self = [super init]) {
+        PFUser *parseUser = [PFUser currentUser];
+        if (!parseUser) {
+            parseUser = [PFUser user];
+        }
+        self.currentUser = [[FIRUser alloc] initWithPFUser:parseUser];
+    }
+    
+    return self;
+}
 
 @end
