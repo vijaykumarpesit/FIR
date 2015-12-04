@@ -48,8 +48,8 @@
     FIRAccidentMetaData *metadata = [[[DataSource sharedDataSource] accidentMetaDataArry] firstObject];
     PFObject* accident = [PFObject objectWithClassName:@"Accident"];
     accident[@"date"] = metadata.date;
-    accident[@"lattitude"] =@(metadata.lattitude);
-    accident[@"longitude"] =@(metadata.longitude);
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:metadata.lattitude longitude:metadata.longitude];
+    accident[@"geoPoint"] = geoPoint;
     accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
     
     NSMutableArray *spotArray = [NSMutableArray array];
