@@ -573,6 +573,9 @@
                                         <color key="value" red="0.99607843137254903" green="0.7803921568627451" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callFireEngine:" destination="cEv-p6-mRT" eventType="touchUpInside" id="ab9-W0-NDp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-Vn-5lB">
                                 <rect key="frame" x="225" y="332" width="151" height="35.5"/>
@@ -596,6 +599,9 @@
                                         <color key="value" red="0.94523358585858586" green="0.94523358585858586" blue="0.94523358585858586" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callAmbulance:" destination="cEv-p6-mRT" eventType="touchUpInside" id="mxR-f2-Ns8"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire.png" translatesAutoresizingMaskIntoConstraints="NO" id="8WP-6S-kgU">
                                 <rect key="frame" x="200" y="200" width="50" height="50"/>
