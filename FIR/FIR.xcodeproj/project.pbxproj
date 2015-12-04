@@ -523,12 +523,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Tesseract",
+					"$(PROJECT_DIR)/Tesseract/**",
 					Resources,
-					"$(PROJECT_DIR)/Tesseract",
-					Resources,
-					"$(PROJECT_DIR)/Tesseract",
-					Resources,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Bolts\"",
+					"\"${PODS_ROOT}/Headers/Public/Parse\"",
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -546,12 +548,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Tesseract",
+					"$(PROJECT_DIR)/Tesseract/**",
 					Resources,
-					"$(PROJECT_DIR)/Tesseract",
-					Resources,
-					"$(PROJECT_DIR)/Tesseract",
-					Resources,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Bolts\"",
+					"\"${PODS_ROOT}/Headers/Public/Parse\"",
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
