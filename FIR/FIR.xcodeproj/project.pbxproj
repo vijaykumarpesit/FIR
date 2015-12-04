@@ -23,6 +23,10 @@
 		B11409481C1150040033F0F5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409471C1150040033F0F5 /* CoreImage.framework */; };
 		B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B114094A1C1150DB0033F0F5 /* TextExtractor.m */; };
 		B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */; };
+		B11409541C1159990033F0F5 /* ImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B11409531C1159990033F0F5 /* ImageViewCell.m */; };
+		B11409561C115A7E0033F0F5 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B11409551C115A7E0033F0F5 /* ImageViewCell.xib */; };
+		B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B11409581C1162510033F0F5 /* UIImage+Resize.m */; };
+		B114095B1C1164400033F0F5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B114095A1C1164400033F0F5 /* tessdata */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
 		B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FileViewController.m */; };
@@ -52,6 +56,12 @@
 		B114094A1C1150DB0033F0F5 /* TextExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextExtractor.m; sourceTree = "<group>"; };
 		B114094C1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+BlackAndWhiteFilters.h"; path = "../UIImage+BlackAndWhiteFilters.h"; sourceTree = "<group>"; };
 		B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+BlackAndWhiteFilters.m"; path = "../UIImage+BlackAndWhiteFilters.m"; sourceTree = "<group>"; };
+		B11409521C1159990033F0F5 /* ImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewCell.h; sourceTree = "<group>"; };
+		B11409531C1159990033F0F5 /* ImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewCell.m; sourceTree = "<group>"; };
+		B11409551C115A7E0033F0F5 /* ImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
+		B11409571C1162510033F0F5 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		B11409581C1162510033F0F5 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		B114095A1C1164400033F0F5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		B1D168B91C102F8F0079E760 /* FIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,13 +153,18 @@
 				B1D168C31C102F8F0079E760 /* FileViewController.m */,
 				B1D168C51C102F8F0079E760 /* StatusViewController.h */,
 				B1D168C61C102F8F0079E760 /* StatusViewController.m */,
-				B1D168C81C102F8F0079E760 /* Main.storyboard */,
 				B114091D1C10B3850033F0F5 /* EmergencyViewController.h */,
 				B114091E1C10B3850033F0F5 /* EmergencyViewController.m */,
 				B11409491C1150DB0033F0F5 /* TextExtractor.h */,
 				B114094A1C1150DB0033F0F5 /* TextExtractor.m */,
 				B114094C1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.h */,
 				B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */,
+				B11409521C1159990033F0F5 /* ImageViewCell.h */,
+				B11409531C1159990033F0F5 /* ImageViewCell.m */,
+				B11409551C115A7E0033F0F5 /* ImageViewCell.xib */,
+				B11409571C1162510033F0F5 /* UIImage+Resize.h */,
+				B11409581C1162510033F0F5 /* UIImage+Resize.m */,
+				B1D168C81C102F8F0079E760 /* Main.storyboard */,
 				B1D168CB1C102F900079E760 /* Assets.xcassets */,
 				B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */,
 				B1D168D01C102F900079E760 /* Info.plist */,
@@ -161,6 +176,7 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B114095A1C1164400033F0F5 /* tessdata */,
 				B11409211C10B3F10033F0F5 /* Fabric.framework */,
 				B11409221C10B3F10033F0F5 /* DigitsKit.framework */,
 				B11409231C10B3F10033F0F5 /* DigitsKitResources.bundle */,
@@ -232,9 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B11409271C10B3F10033F0F5 /* DigitsKitResources.bundle in Resources */,
+				B11409561C115A7E0033F0F5 /* ImageViewCell.xib in Resources */,
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
+				B114095B1C1164400033F0F5 /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,10 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11409541C1159990033F0F5 /* ImageViewCell.m in Sources */,
 				B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */,
 				B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */,
 				B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
+				B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */,
 				B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
@@ -425,6 +445,7 @@
 			baseConfigurationReference = 2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -443,6 +464,7 @@
 			baseConfigurationReference = C61F0AB145FE38C667092794 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

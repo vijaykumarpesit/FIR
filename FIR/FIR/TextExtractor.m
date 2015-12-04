@@ -15,7 +15,7 @@
 
 + (NSString *)textFromImage:(UIImage *)image {
     
-    G8Tesseract *ract = [[G8Tesseract alloc] initWithLanguage:@"eng+fra"];
+    G8Tesseract *ract = [[G8Tesseract alloc] initWithLanguage:@"eng"];
     ract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
     ract.maximumRecognitionTime = 60.0;
     ract.image = [image g8_grayScale];
