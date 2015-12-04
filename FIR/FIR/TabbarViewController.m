@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *tabBarImages = @[@"Filing", @"", @"Emergency"];
+    NSArray *tabBarImages = @[@"Filing", @"Status", @"Emergency"];
     
     for (int i = 0; i < 3; i++) {
         NSString *imageName = tabBarImages[i];

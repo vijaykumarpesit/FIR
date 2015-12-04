@@ -10,7 +10,8 @@
 		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
 		547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547741811C11E19400C5E2BA /* TabbarViewController.m */; };
 		547741A01C11E76500C5E2BA /* Emergency@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5477419F1C11E76500C5E2BA /* Emergency@2x.png */; };
-		547741A21C11E7BC00C5E2BA /* Filing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 547741A11C11E7BC00C5E2BA /* Filing@2x.png */; };
+		547741B11C11EE5D00C5E2BA /* Filing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 547741AF1C11EE5D00C5E2BA /* Filing@2x.png */; };
+		547741B21C11EE5D00C5E2BA /* Status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 547741B01C11EE5D00C5E2BA /* Status@2x.png */; };
 		54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CC51C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg */; };
 		54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */; };
 		54E18CD01C11B61D00939F08 /* document.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CCF1C11B61D00939F08 /* document.JPG */; };
@@ -56,7 +57,8 @@
 		547741801C11E19400C5E2BA /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
 		547741811C11E19400C5E2BA /* TabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarViewController.m; sourceTree = "<group>"; };
 		5477419F1C11E76500C5E2BA /* Emergency@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Emergency@2x.png"; sourceTree = "<group>"; };
-		547741A11C11E7BC00C5E2BA /* Filing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Filing@2x.png"; sourceTree = "<group>"; };
+		547741AF1C11EE5D00C5E2BA /* Filing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Filing@2x.png"; sourceTree = "<group>"; };
+		547741B01C11EE5D00C5E2BA /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Status@2x.png"; sourceTree = "<group>"; };
 		54E18CC51C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg"; sourceTree = "<group>"; };
 		54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "toonvectors-15209-140.jpg"; sourceTree = "<group>"; };
 		54E18CCF1C11B61D00939F08 /* document.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = document.JPG; sourceTree = "<group>"; };
@@ -267,8 +269,9 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				547741AF1C11EE5D00C5E2BA /* Filing@2x.png */,
+				547741B01C11EE5D00C5E2BA /* Status@2x.png */,
 				B1B940241C11E186002306D3 /* accidentPlaceHolder.png */,
-				547741A11C11E7BC00C5E2BA /* Filing@2x.png */,
 				5477419F1C11E76500C5E2BA /* Emergency@2x.png */,
 				54E18CCF1C11B61D00939F08 /* document.JPG */,
 				54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */,
@@ -351,7 +354,9 @@
 				B11409561C115A7E0033F0F5 /* ImageViewCell.xib in Resources */,
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
+				547741B21C11EE5D00C5E2BA /* Status@2x.png in Resources */,
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
+				547741B11C11EE5D00C5E2BA /* Filing@2x.png in Resources */,
 				B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */,
 				B1F447D01C11A4D800DCEA3A /* FIRComplaintCell.xib in Resources */,
 				54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */,
@@ -359,7 +364,6 @@
 				547741A01C11E76500C5E2BA /* Emergency@2x.png in Resources */,
 				54E18CD01C11B61D00939F08 /* document.JPG in Resources */,
 				B114095B1C1164400033F0F5 /* tessdata in Resources */,
-				547741A21C11E7BC00C5E2BA /* Filing@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
