@@ -10,6 +10,7 @@
 		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
 		B1072C221C11684700F7BBB7 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
 		B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C241C11716200F7BBB7 /* SubmitViewController.m */; };
+		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B114091E1C10B3850033F0F5 /* EmergencyViewController.m */; };
 		B11409251C10B3F10033F0F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409211C10B3F10033F0F5 /* Fabric.framework */; };
 		B11409261C10B3F10033F0F5 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409221C10B3F10033F0F5 /* DigitsKit.framework */; };
@@ -42,6 +43,8 @@
 		2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B1072C231C11716200F7BBB7 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
 		B1072C241C11716200F7BBB7 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
+		B1072C261C11788C00F7BBB7 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		B1072C271C11788C00F7BBB7 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		B114091D1C10B3850033F0F5 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
 		B114091E1C10B3850033F0F5 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
 		B11409211C10B3F10033F0F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
@@ -132,6 +135,65 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B1072C291C11789600F7BBB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B11409521C1159990033F0F5 /* ImageViewCell.h */,
+				B11409531C1159990033F0F5 /* ImageViewCell.m */,
+				B11409551C115A7E0033F0F5 /* ImageViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B1072C2A1C1178A900F7BBB7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1072C231C11716200F7BBB7 /* SubmitViewController.h */,
+				B1072C241C11716200F7BBB7 /* SubmitViewController.m */,
+				B1D168C21C102F8F0079E760 /* FileViewController.h */,
+				B1D168C31C102F8F0079E760 /* FileViewController.m */,
+				B1D168C51C102F8F0079E760 /* StatusViewController.h */,
+				B1D168C61C102F8F0079E760 /* StatusViewController.m */,
+				B114091D1C10B3850033F0F5 /* EmergencyViewController.h */,
+				B114091E1C10B3850033F0F5 /* EmergencyViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B1072C2C1C1178CC00F7BBB7 /* App Life Cycle */ = {
+			isa = PBXGroup;
+			children = (
+				B1D168BF1C102F8F0079E760 /* AppDelegate.h */,
+				B1D168C01C102F8F0079E760 /* AppDelegate.m */,
+				B1D168C81C102F8F0079E760 /* Main.storyboard */,
+			);
+			name = "App Life Cycle";
+			sourceTree = "<group>";
+		};
+		B1072C2D1C1178EF00F7BBB7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B114095C1C1165040033F0F5 /* ImageMetaData.h */,
+				B114095D1C1165040033F0F5 /* ImageMetaData.m */,
+				B1072C261C11788C00F7BBB7 /* DataSource.h */,
+				B1072C271C11788C00F7BBB7 /* DataSource.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		B1072C2E1C11790E00F7BBB7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B11409491C1150DB0033F0F5 /* TextExtractor.h */,
+				B114094A1C1150DB0033F0F5 /* TextExtractor.m */,
+				B114094C1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.h */,
+				B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */,
+				B11409571C1162510033F0F5 /* UIImage+Resize.h */,
+				B11409581C1162510033F0F5 /* UIImage+Resize.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		B1D168B01C102F8F0079E760 = {
 			isa = PBXGroup;
 			children = (
@@ -153,31 +215,11 @@
 		B1D168BB1C102F8F0079E760 /* FIR */ = {
 			isa = PBXGroup;
 			children = (
-				B1D168BF1C102F8F0079E760 /* AppDelegate.h */,
-				B1D168C01C102F8F0079E760 /* AppDelegate.m */,
-				B114095C1C1165040033F0F5 /* ImageMetaData.h */,
-				B114095D1C1165040033F0F5 /* ImageMetaData.m */,
-				B1D168C21C102F8F0079E760 /* FileViewController.h */,
-				B1D168C31C102F8F0079E760 /* FileViewController.m */,
-				B1D168C51C102F8F0079E760 /* StatusViewController.h */,
-				B1D168C61C102F8F0079E760 /* StatusViewController.m */,
-				B114091D1C10B3850033F0F5 /* EmergencyViewController.h */,
-				B114091E1C10B3850033F0F5 /* EmergencyViewController.m */,
-				B11409491C1150DB0033F0F5 /* TextExtractor.h */,
-				B114094A1C1150DB0033F0F5 /* TextExtractor.m */,
-				B114094C1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.h */,
-				B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */,
-				B11409521C1159990033F0F5 /* ImageViewCell.h */,
-				B11409531C1159990033F0F5 /* ImageViewCell.m */,
-				B11409551C115A7E0033F0F5 /* ImageViewCell.xib */,
-				B11409571C1162510033F0F5 /* UIImage+Resize.h */,
-				B11409581C1162510033F0F5 /* UIImage+Resize.m */,
-				B1072C231C11716200F7BBB7 /* SubmitViewController.h */,
-				B1072C241C11716200F7BBB7 /* SubmitViewController.m */,
-				B1D168C81C102F8F0079E760 /* Main.storyboard */,
-				B1D168CB1C102F900079E760 /* Assets.xcassets */,
-				B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */,
-				B1D168D01C102F900079E760 /* Info.plist */,
+				B1072C2C1C1178CC00F7BBB7 /* App Life Cycle */,
+				B1072C2A1C1178A900F7BBB7 /* ViewControllers */,
+				B1072C291C11789600F7BBB7 /* Views */,
+				B1072C2D1C1178EF00F7BBB7 /* DataModel */,
+				B1072C2E1C11790E00F7BBB7 /* Utility */,
 				B1D168BC1C102F8F0079E760 /* Supporting Files */,
 			);
 			path = FIR;
@@ -186,6 +228,9 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1D168CB1C102F900079E760 /* Assets.xcassets */,
+				B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */,
+				B1D168D01C102F900079E760 /* Info.plist */,
 				B114095A1C1164400033F0F5 /* tessdata */,
 				B11409211C10B3F10033F0F5 /* Fabric.framework */,
 				B11409221C10B3F10033F0F5 /* DigitsKit.framework */,
@@ -336,6 +381,7 @@
 			files = (
 				B11409541C1159990033F0F5 /* ImageViewCell.m in Sources */,
 				B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */,
+				B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */,
 				B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */,
 				B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,

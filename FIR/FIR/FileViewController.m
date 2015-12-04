@@ -45,6 +45,8 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     self.victimImages = [[NSMutableArray alloc] init];
     self.documentImages = [[NSMutableArray alloc] init];
     self.spotImages = [[NSMutableArray alloc] init];
+    
+    [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {

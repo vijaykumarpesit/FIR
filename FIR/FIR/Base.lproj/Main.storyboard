@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFz-Is-zR3">
-                                <rect key="frame" x="234" y="94" width="131" height="29.5"/>
+                                <rect key="frame" x="234" y="100" width="131" height="29.5"/>
                                 <animations/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvz-wL-9jV">
-                                <rect key="frame" x="228" y="203" width="143" height="30"/>
+                                <rect key="frame" x="228" y="209" width="143" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Upload Victim Image"/>
                                 <connections>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFu-7X-0XI">
-                                <rect key="frame" x="213" y="313" width="174" height="30"/>
+                                <rect key="frame" x="213" y="319" width="174" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Upload Document Image "/>
                                 <connections>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aQY-xL-rVu" userLabel="SpotCollectionView">
-                                <rect key="frame" x="30" y="123" width="540" height="80.5"/>
+                                <rect key="frame" x="30" y="129" width="540" height="80.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -86,7 +86,7 @@
                                 </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-ks-ydY" userLabel="VictimCollectionView">
-                                <rect key="frame" x="30" y="233" width="540" height="80.5"/>
+                                <rect key="frame" x="30" y="239" width="540" height="80"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -100,7 +100,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3Uu-BW-A8h">
-                                        <rect key="frame" x="0.0" y="0.5" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -122,7 +122,7 @@
                                 </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-Uz-bZY" userLabel="DocuemntCollectionView">
-                                <rect key="frame" x="30" y="343" width="540" height="80"/>
+                                <rect key="frame" x="30" y="349" width="540" height="80"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -159,7 +159,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABP-I8-KXS" userLabel="Submit Report">
-                                <rect key="frame" x="275" y="443" width="49" height="30"/>
+                                <rect key="frame" x="275" y="449" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
@@ -184,7 +184,7 @@
                             <constraint firstItem="aQY-xL-rVu" firstAttribute="top" secondItem="fFz-Is-zR3" secondAttribute="bottom" id="exw-bZ-XLX"/>
                             <constraint firstItem="Yvz-wL-9jV" firstAttribute="top" secondItem="fFz-Is-zR3" secondAttribute="bottom" constant="80" id="fGS-S9-Dyi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aQY-xL-rVu" secondAttribute="trailing" constant="10" id="fd4-5N-UPF"/>
-                            <constraint firstItem="fFz-Is-zR3" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="30" id="gwo-3o-rc7"/>
+                            <constraint firstItem="fFz-Is-zR3" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="gwo-3o-rc7"/>
                             <constraint firstItem="Yvz-wL-9jV" firstAttribute="top" secondItem="aQY-xL-rVu" secondAttribute="bottom" id="hhL-nv-B30"/>
                             <constraint firstItem="ABP-I8-KXS" firstAttribute="top" secondItem="MeO-Uz-bZY" secondAttribute="bottom" constant="20" id="lCM-4f-nnY"/>
                             <constraint firstItem="MeO-Uz-bZY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="o2M-9e-aCw"/>
@@ -198,6 +198,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="DHU-2K-WIM"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="documentCollectionView" destination="MeO-Uz-bZY" id="3VS-40-mgH"/>
                         <outlet property="spotCollectionView" destination="aQY-xL-rVu" id="PZV-yb-6Mg"/>
