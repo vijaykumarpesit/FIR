@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFz-Is-zR3">
-                                <rect key="frame" x="243" y="80" width="174" height="30"/>
+                                <rect key="frame" x="243" y="80" width="174" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.93521468995389223" blue="0.94916697508760839" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gSK-Ef-2CG"/>
+                                    <constraint firstAttribute="height" constant="40" id="gSK-Ef-2CG"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
                                 <state key="normal">
@@ -48,11 +48,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yvz-wL-9jV">
-                                <rect key="frame" x="240" y="233" width="186" height="30"/>
+                                <rect key="frame" x="240" y="233" width="186" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.94156320976149555" green="0.93732740222190825" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="PLd-kC-EKo"/>
+                                    <constraint firstAttribute="height" constant="40" id="PLd-kC-EKo"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -76,11 +76,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFu-7X-0XI">
-                                <rect key="frame" x="218" y="381" width="230" height="30"/>
+                                <rect key="frame" x="218" y="381" width="230" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.91984205321900014" green="1" blue="0.98854946686578005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="L1b-yu-PRs"/>
+                                    <constraint firstAttribute="height" constant="40" id="L1b-yu-PRs"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -379,11 +379,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-22-JUE">
-                                <rect key="frame" x="267" y="391" width="64" height="30"/>
+                                <rect key="frame" x="249" y="391" width="100" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.82764272175198705" green="0.91745169505199642" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7Qc-Us-Gta"/>
+                                    <constraint firstAttribute="width" constant="100" id="Qoq-Vk-DGL"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -443,6 +444,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="73D-gi-ybM" id="bnQ-Fq-Ij2"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Ff-5dk">
                                 <rect key="frame" x="20" y="276" width="560" height="30"/>
@@ -451,6 +455,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="vehicleNo2:" destination="73D-gi-ybM" eventType="touchUpInside" id="5gq-FR-tli"/>
+                                    <outlet property="delegate" destination="73D-gi-ybM" id="j7N-Ew-hG5"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -476,6 +481,7 @@
                     </view>
                     <connections>
                         <outlet property="vehicleNo1" destination="K7B-D5-fvU" id="oVX-5f-Nly"/>
+                        <outlet property="vehicleNo2" destination="y1d-Ff-5dk" id="3RW-dd-5Va"/>
                         <outlet property="view" destination="ge7-Wg-sjt" id="itO-UB-K2F"/>
                     </connections>
                 </viewController>
@@ -546,7 +552,7 @@
                                 <color key="backgroundColor" red="0.85037703201128712" green="0.95040914454768954" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Ambulance (102)">
+                                        <fragment content="Ambulance (108)">
                                             <attributes>
                                                 <color key="NSColor" red="0.031182397677035699" green="0.53805551871205526" blue="0.72050583964646464" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="20" name="HelveticaNeue"/>
@@ -575,7 +581,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ambulance.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wgh-VM-tHG">
-                                <rect key="frame" x="167" y="325.5" width="50" height="50"/>
+                                <rect key="frame" x="167" y="324.5" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="GYx-sL-A5C"/>

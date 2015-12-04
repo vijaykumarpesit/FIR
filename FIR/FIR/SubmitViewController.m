@@ -13,8 +13,10 @@
 
 
 
-@interface SubmitViewController ()
+@interface SubmitViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *vehicleNo1;
+
+@property (weak, nonatomic) IBOutlet UITextField *vehicleNo2;
 
 @end
 
@@ -23,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController.navigationBar setHidden:NO];
+    self.vehicleNo1.text = @"KA-03-HY-3266";
     
     // Do any additional setup after loading the view.
 }
@@ -100,12 +103,30 @@
             accident[@"spotImages"] = spotArray;
             accident[@"victimImages"] = victimArray;
             accident[@"documentImages"] = documentArray;
-            //accident[@"description"] = @""
+            accident[@"vehicleNumbers"] = @[self.vehicleNo1.text,self.vehicleNo2.text];
             
             [accident saveInBackground];
         }
         
     }];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Submission Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+ 
+    });
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+
+    
 }
 
 @end
