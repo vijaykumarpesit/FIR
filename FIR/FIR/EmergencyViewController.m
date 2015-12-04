@@ -10,4 +10,12 @@
 
 @implementation EmergencyViewController
 
+- (IBAction)callFireEngine:(id)sender {
+    
+}
+
+- (IBAction)callAmbulance:(id)sender {
+    
+}
+
 @end
