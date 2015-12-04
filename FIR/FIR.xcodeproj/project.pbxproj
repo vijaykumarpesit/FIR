@@ -16,6 +16,13 @@
 		B114092C1C10B6500033F0F5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092B1C10B6500033F0F5 /* AddressBook.framework */; };
 		B114092E1C10B6570033F0F5 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092D1C10B6570033F0F5 /* AddressBookUI.framework */; };
 		B11409301C10B6670033F0F5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114092F1C10B6670033F0F5 /* CoreData.framework */; };
+		B11409401C114F920033F0F5 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
+		B11409441C114FFE0033F0F5 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409411C114FFE0033F0F5 /* libstdc++.6.0.9.tbd */; };
+		B11409451C114FFE0033F0F5 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409421C114FFE0033F0F5 /* libstdc++.6.tbd */; };
+		B11409461C114FFE0033F0F5 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409431C114FFE0033F0F5 /* libstdc++.tbd */; };
+		B11409481C1150040033F0F5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409471C1150040033F0F5 /* CoreImage.framework */; };
+		B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B114094A1C1150DB0033F0F5 /* TextExtractor.m */; };
+		B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
 		B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FileViewController.m */; };
@@ -36,6 +43,15 @@
 		B114092B1C10B6500033F0F5 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		B114092D1C10B6570033F0F5 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		B114092F1C10B6670033F0F5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B114093F1C114F920033F0F5 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "Tesseract Resources/TesseractOCR.framework"; sourceTree = "<group>"; };
+		B11409411C114FFE0033F0F5 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		B11409421C114FFE0033F0F5 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		B11409431C114FFE0033F0F5 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		B11409471C1150040033F0F5 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B11409491C1150DB0033F0F5 /* TextExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextExtractor.h; sourceTree = "<group>"; };
+		B114094A1C1150DB0033F0F5 /* TextExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextExtractor.m; sourceTree = "<group>"; };
+		B114094C1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+BlackAndWhiteFilters.h"; path = "../UIImage+BlackAndWhiteFilters.h"; sourceTree = "<group>"; };
+		B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+BlackAndWhiteFilters.m"; path = "../UIImage+BlackAndWhiteFilters.m"; sourceTree = "<group>"; };
 		B1D168B91C102F8F0079E760 /* FIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11409481C1150040033F0F5 /* CoreImage.framework in Frameworks */,
+				B11409441C114FFE0033F0F5 /* libstdc++.6.0.9.tbd in Frameworks */,
+				B11409451C114FFE0033F0F5 /* libstdc++.6.tbd in Frameworks */,
+				B11409461C114FFE0033F0F5 /* libstdc++.tbd in Frameworks */,
+				B11409401C114F920033F0F5 /* TesseractOCR.framework in Frameworks */,
 				B11409301C10B6670033F0F5 /* CoreData.framework in Frameworks */,
 				B114092E1C10B6570033F0F5 /* AddressBookUI.framework in Frameworks */,
 				B114092C1C10B6500033F0F5 /* AddressBook.framework in Frameworks */,
@@ -73,6 +94,11 @@
 		20AA80C624B1E5210AEA8DAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B11409471C1150040033F0F5 /* CoreImage.framework */,
+				B11409411C114FFE0033F0F5 /* libstdc++.6.0.9.tbd */,
+				B11409421C114FFE0033F0F5 /* libstdc++.6.tbd */,
+				B11409431C114FFE0033F0F5 /* libstdc++.tbd */,
+				B114093F1C114F920033F0F5 /* TesseractOCR.framework */,
 				B114092F1C10B6670033F0F5 /* CoreData.framework */,
 				B114092D1C10B6570033F0F5 /* AddressBookUI.framework */,
 				B114092B1C10B6500033F0F5 /* AddressBook.framework */,
@@ -120,6 +146,10 @@
 				B1D168C81C102F8F0079E760 /* Main.storyboard */,
 				B114091D1C10B3850033F0F5 /* EmergencyViewController.h */,
 				B114091E1C10B3850033F0F5 /* EmergencyViewController.m */,
+				B11409491C1150DB0033F0F5 /* TextExtractor.h */,
+				B114094A1C1150DB0033F0F5 /* TextExtractor.m */,
+				B114094C1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.h */,
+				B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */,
 				B1D168CB1C102F900079E760 /* Assets.xcassets */,
 				B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */,
 				B1D168D01C102F900079E760 /* Info.plist */,
@@ -281,6 +311,8 @@
 				B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
 				B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */,
+				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
+				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +428,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Tesseract",
+					Resources,
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -412,6 +446,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Tesseract",
+					Resources,
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

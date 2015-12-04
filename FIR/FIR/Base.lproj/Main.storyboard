@@ -16,29 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="221" y="279" width="157.5" height="41.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFz-Is-zR3">
+                                <rect key="frame" x="234.5" y="100" width="131" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="203" y="329" width="194.5" height="17"/>
+                                <state key="normal" title="Upload Spot Image"/>
+                                <connections>
+                                    <action selector="presentCamera:" destination="9pv-A4-QxB" eventType="touchUpInside" id="D7L-Bz-ce7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvz-wL-9jV">
+                                <rect key="frame" x="228" y="210" width="143" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Upload Victim Image"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFu-7X-0XI">
+                                <rect key="frame" x="213" y="320" width="174" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Upload Document Image "/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="Yvz-wL-9jV" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="0UF-V8-DVB"/>
+                            <constraint firstItem="fFz-Is-zR3" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="5mv-t0-PG5"/>
+                            <constraint firstItem="NFu-7X-0XI" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bqJ-gg-jEY"/>
+                            <constraint firstItem="Yvz-wL-9jV" firstAttribute="top" secondItem="fFz-Is-zR3" secondAttribute="bottom" constant="80" id="fGS-S9-Dyi"/>
+                            <constraint firstItem="fFz-Is-zR3" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="gwo-3o-rc7"/>
+                            <constraint firstItem="NFu-7X-0XI" firstAttribute="top" secondItem="Yvz-wL-9jV" secondAttribute="bottom" constant="80" id="uG9-ef-tMF"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Filing" image="first" id="acW-dT-cKf" userLabel="Filing"/>

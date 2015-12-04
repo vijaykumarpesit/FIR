@@ -23,5 +23,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)presentCamera:(id)sender {
+    
+}
 
 @end

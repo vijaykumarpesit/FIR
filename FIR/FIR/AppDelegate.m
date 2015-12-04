@@ -26,7 +26,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
         config.phoneNumber = @"+91";
-        [digits authenticateWithViewController:nil configuration:config completion:NULL];
+       // [digits authenticateWithViewController:nil configuration:config completion:NULL];
     });
     
     
