@@ -35,6 +35,7 @@
 		B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B11409581C1162510033F0F5 /* UIImage+Resize.m */; };
 		B114095B1C1164400033F0F5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B114095A1C1164400033F0F5 /* tessdata */; };
 		B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B114095D1C1165040033F0F5 /* ImageMetaData.m */; };
+		B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B940241C11E186002306D3 /* accidentPlaceHolder.png */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
 		B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FileViewController.m */; };
@@ -87,6 +88,7 @@
 		B114095A1C1164400033F0F5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		B114095C1C1165040033F0F5 /* ImageMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMetaData.h; sourceTree = "<group>"; };
 		B114095D1C1165040033F0F5 /* ImageMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMetaData.m; sourceTree = "<group>"; };
+		B1B940241C11E186002306D3 /* accidentPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidentPlaceHolder.png; sourceTree = "<group>"; };
 		B1D168B91C102F8F0079E760 /* mFIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mFIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1B940241C11E186002306D3 /* accidentPlaceHolder.png */,
 				54E18CCF1C11B61D00939F08 /* document.JPG */,
 				54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */,
 				54E18CC51C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg */,
@@ -338,6 +341,7 @@
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
+				B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */,
 				B1F447D01C11A4D800DCEA3A /* FIRComplaintCell.xib in Resources */,
 				54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */,
 				54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */,

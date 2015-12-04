@@ -16,7 +16,7 @@
 
 @interface StatusViewController ()
 
-@property (nonatomic, strong) NSArray *registeredFIR;
+@property (nonatomic, strong) NSMutableArray *registeredFIR;
 
 @end
 
@@ -27,7 +27,7 @@
     self.registeredFIR = [[NSMutableArray alloc] init];
     [self.tableView registerNib:[UINib nibWithNibName:@"FIRComplaintCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     self.tableView.tableFooterView = [[UIView alloc] init];
-    //[self loadComplaintData];
+    [self loadComplaintData];
 }
 
 
@@ -38,7 +38,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    return 300.0f;
+    return 130.0f;
 }
 
 
@@ -50,11 +50,11 @@
     
     NSString *dateString = [NSDateFormatter localizedStringFromDate:metadata.date
                                                           dateStyle:NSDateFormatterShortStyle
-                                                          timeStyle:NSDateFormatterFullStyle];
+                                                          timeStyle:NSDateFormatterNoStyle];
     cell.time.text = dateString;
     PFFile *file = metadata.spotImages[0];
     NSURL *fileURL = [NSURL URLWithString:file.url];
-    [cell.imageView setImageWithURL:fileURL placeholderImage:nil];
+    [cell.bgImageView setImageWithURL:fileURL placeholderImage:[UIImage imageNamed:@"accidentPlaceHolder"]];
     return cell;
 }
 
@@ -75,7 +75,7 @@
             metaData.lattitude = geoPoint.latitude;
             metaData.date = accident[@"date"];
             metaData.spotImages = accident[@"spotImages"];
-            
+            [self.registeredFIR addObject:metaData];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
