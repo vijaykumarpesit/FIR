@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFz-Is-zR3">
-                                <rect key="frame" x="243" y="110" width="174" height="30"/>
+                                <rect key="frame" x="243" y="50" width="174" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.93521468995389223" blue="0.94916697508760839" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yvz-wL-9jV">
-                                <rect key="frame" x="240" y="273" width="186" height="30"/>
+                                <rect key="frame" x="240" y="203" width="186" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.94156320976149555" green="0.93732740222190825" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -77,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFu-7X-0XI">
-                                <rect key="frame" x="218" y="431" width="230" height="30"/>
+                                <rect key="frame" x="218" y="351" width="230" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.91984205321900014" green="1" blue="0.98854946686578005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmf-Gz-LdL">
-                                <rect key="frame" x="168" y="158" width="265" height="80"/>
+                                <rect key="frame" x="168" y="98" width="265" height="70"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="265" id="Oye-KZ-yXh"/>
@@ -122,11 +122,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aQY-xL-rVu" userLabel="SpotCollectionView">
-                                <rect key="frame" x="30" y="158" width="540" height="80"/>
+                                <rect key="frame" x="30" y="98" width="540" height="70"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="1TF-kz-SeY"/>
+                                    <constraint firstAttribute="height" constant="70" id="1TF-kz-SeY"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="sGx-0h-e0e">
                                     <size key="itemSize" width="80" height="80"/>
@@ -136,7 +136,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2Ym-eK-QeS">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="-5" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -153,7 +153,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNd-UT-QCp">
-                                <rect key="frame" x="160" y="316" width="281" height="80"/>
+                                <rect key="frame" x="160" y="246" width="281" height="70"/>
                                 <animations/>
                                 <attributedString key="attributedText">
                                     <fragment content="Images of the victims who are involved in the Accident">
@@ -167,11 +167,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-ks-ydY" userLabel="VictimCollectionView">
-                                <rect key="frame" x="30" y="316" width="540" height="80"/>
+                                <rect key="frame" x="30" y="246" width="540" height="70"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="VEX-3u-cSS"/>
+                                    <constraint firstAttribute="height" constant="70" id="VEX-3u-cSS"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="ohy-lW-Y2u">
                                     <size key="itemSize" width="80" height="80"/>
@@ -181,7 +181,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3Uu-BW-A8h">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="-5" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -198,7 +198,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxU-Qp-PSc">
-                                <rect key="frame" x="191" y="474" width="218" height="80"/>
+                                <rect key="frame" x="191" y="394" width="218" height="70"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="218" id="tV6-Jy-nt0"/>
@@ -215,11 +215,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-Uz-bZY" userLabel="DocuemntCollectionView">
-                                <rect key="frame" x="30" y="474" width="540" height="80"/>
+                                <rect key="frame" x="30" y="394" width="540" height="70"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="rUh-Gg-4BZ"/>
+                                    <constraint firstAttribute="height" constant="70" id="rUh-Gg-4BZ"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="wbo-KL-Q9J">
                                     <size key="itemSize" width="80" height="80"/>
@@ -229,7 +229,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OTH-ia-8tl">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="-5" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -246,7 +246,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABP-I8-KXS" userLabel="Submit Report">
-                                <rect key="frame" x="268" y="574" width="64" height="35.5"/>
+                                <rect key="frame" x="268" y="484" width="64" height="35.5"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.86404490766527631" blue="0.94836409575803116" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
@@ -271,7 +271,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bZL-6V-Che">
-                                <rect key="frame" x="185" y="100" width="50" height="50"/>
+                                <rect key="frame" x="185" y="40" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KWV-8u-OvC"/>
@@ -279,7 +279,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toonvectors-15209-140.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nKU-fZ-wv5">
-                                <rect key="frame" x="182" y="258" width="50" height="50"/>
+                                <rect key="frame" x="182" y="188" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="W7a-1m-YCh"/>
@@ -287,7 +287,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="document.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-pV-LpV">
-                                <rect key="frame" x="160" y="416" width="50" height="50"/>
+                                <rect key="frame" x="160" y="336" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MtS-8U-WTU"/>
@@ -312,7 +312,7 @@
                             <constraint firstItem="NFu-7X-0XI" firstAttribute="top" secondItem="WDp-ks-ydY" secondAttribute="bottom" constant="35" id="Fx1-pb-irl"/>
                             <constraint firstItem="ZNd-UT-QCp" firstAttribute="top" secondItem="WDp-ks-ydY" secondAttribute="top" id="QdE-mO-cxc"/>
                             <constraint firstItem="mmf-Gz-LdL" firstAttribute="bottom" secondItem="aQY-xL-rVu" secondAttribute="bottom" id="Ujn-vo-ol1"/>
-                            <constraint firstItem="bZL-6V-Che" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="WNs-91-UVS"/>
+                            <constraint firstItem="bZL-6V-Che" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="20" id="WNs-91-UVS"/>
                             <constraint firstItem="NFu-7X-0XI" firstAttribute="leading" secondItem="Uwx-pV-LpV" secondAttribute="trailing" constant="8" id="YTd-Ml-Md7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aQY-xL-rVu" secondAttribute="trailing" constant="10" id="Ysb-RK-d8B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WDp-ks-ydY" secondAttribute="trailing" constant="10" id="aKm-nC-Rbe"/>
