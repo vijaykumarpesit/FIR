@@ -87,7 +87,7 @@
 		B114095A1C1164400033F0F5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		B114095C1C1165040033F0F5 /* ImageMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMetaData.h; sourceTree = "<group>"; };
 		B114095D1C1165040033F0F5 /* ImageMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMetaData.m; sourceTree = "<group>"; };
-		B1D168B91C102F8F0079E760 /* FIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D168B91C102F8F0079E760 /* mFIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mFIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1D168C01C102F8F0079E760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 		B1D168BA1C102F8F0079E760 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1D168B91C102F8F0079E760 /* FIR.app */,
+				B1D168B91C102F8F0079E760 /* mFIR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,9 +275,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1D168B81C102F8F0079E760 /* FIR */ = {
+		B1D168B81C102F8F0079E760 /* mFIR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "FIR" */;
+			buildConfigurationList = B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "mFIR" */;
 			buildPhases = (
 				AEFB8C95C4554529FBC6F637 /* Check Pods Manifest.lock */,
 				B1D168B51C102F8F0079E760 /* Sources */,
@@ -291,9 +291,9 @@
 			);
 			dependencies = (
 			);
-			name = FIR;
+			name = mFIR;
 			productName = FIR;
-			productReference = B1D168B91C102F8F0079E760 /* FIR.app */;
+			productReference = B1D168B91C102F8F0079E760 /* mFIR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -323,7 +323,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1D168B81C102F8F0079E760 /* FIR */,
+				B1D168B81C102F8F0079E760 /* mFIR */,
 			);
 		};
 /* End PBXProject section */
@@ -598,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "FIR" */ = {
+		B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "mFIR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1D168D41C102F900079E760 /* Debug */,
