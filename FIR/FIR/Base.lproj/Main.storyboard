@@ -236,11 +236,17 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="vehicleNo2:" destination="73D-gi-ybM" eventType="touchUpInside" id="5gq-FR-tli"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-22-JUE">
                                 <rect key="frame" x="275" y="421" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="sumbmitAccidentReport:" destination="73D-gi-ybM" eventType="touchUpInside" id="2Pe-4A-EZf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-jE-dRv">
                                 <rect key="frame" x="40" y="164" width="96" height="16"/>
@@ -292,6 +298,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="vehicleNo1" destination="K7B-D5-fvU" id="oVX-5f-Nly"/>
                         <outlet property="view" destination="ge7-Wg-sjt" id="itO-UB-K2F"/>
                     </connections>
                 </viewController>

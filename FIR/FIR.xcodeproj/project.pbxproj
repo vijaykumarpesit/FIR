@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
-		B1072C221C11684700F7BBB7 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
 		B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C241C11716200F7BBB7 /* SubmitViewController.m */; };
 		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C301C117FD500F7BBB7 /* FIRUser.m */; };
+		B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C331C1183D800F7BBB7 /* FIRAccidentMetaData.m */; };
+		B1072C361C11865A00F7BBB7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1072C351C11865A00F7BBB7 /* CoreLocation.framework */; };
 		B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B114091E1C10B3850033F0F5 /* EmergencyViewController.m */; };
 		B11409251C10B3F10033F0F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409211C10B3F10033F0F5 /* Fabric.framework */; };
 		B11409261C10B3F10033F0F5 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409221C10B3F10033F0F5 /* DigitsKit.framework */; };
@@ -38,6 +39,7 @@
 		B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168C81C102F8F0079E760 /* Main.storyboard */; };
 		B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CB1C102F900079E760 /* Assets.xcassets */; };
 		B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */; };
+		B1F447CB1C1191DD00DCEA3A /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,9 @@
 		B1072C271C11788C00F7BBB7 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		B1072C2F1C117FD500F7BBB7 /* FIRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRUser.h; sourceTree = "<group>"; };
 		B1072C301C117FD500F7BBB7 /* FIRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRUser.m; sourceTree = "<group>"; };
+		B1072C321C1183D800F7BBB7 /* FIRAccidentMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRAccidentMetaData.h; sourceTree = "<group>"; };
+		B1072C331C1183D800F7BBB7 /* FIRAccidentMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRAccidentMetaData.m; sourceTree = "<group>"; };
+		B1072C351C11865A00F7BBB7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B114091D1C10B3850033F0F5 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
 		B114091E1C10B3850033F0F5 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
 		B11409211C10B3F10033F0F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
@@ -95,7 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1072C221C11684700F7BBB7 /* TesseractOCR.framework in Frameworks */,
+				B1F447CB1C1191DD00DCEA3A /* TesseractOCR.framework in Frameworks */,
+				B1072C361C11865A00F7BBB7 /* CoreLocation.framework in Frameworks */,
 				B11409481C1150040033F0F5 /* CoreImage.framework in Frameworks */,
 				B11409441C114FFE0033F0F5 /* libstdc++.6.0.9.tbd in Frameworks */,
 				B11409451C114FFE0033F0F5 /* libstdc++.6.tbd in Frameworks */,
@@ -116,6 +122,7 @@
 		20AA80C624B1E5210AEA8DAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1072C351C11865A00F7BBB7 /* CoreLocation.framework */,
 				B11409471C1150040033F0F5 /* CoreImage.framework */,
 				B11409411C114FFE0033F0F5 /* libstdc++.6.0.9.tbd */,
 				B11409421C114FFE0033F0F5 /* libstdc++.6.tbd */,
@@ -182,6 +189,8 @@
 				B1072C271C11788C00F7BBB7 /* DataSource.m */,
 				B1072C2F1C117FD500F7BBB7 /* FIRUser.h */,
 				B1072C301C117FD500F7BBB7 /* FIRUser.m */,
+				B1072C321C1183D800F7BBB7 /* FIRAccidentMetaData.h */,
+				B1072C331C1183D800F7BBB7 /* FIRAccidentMetaData.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -393,6 +402,7 @@
 				B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */,
 				B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
+				B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */,
 				B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */,
 				B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */,
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
@@ -517,6 +527,8 @@
 					Resources,
 					"$(PROJECT_DIR)/Tesseract",
 					Resources,
+					"$(PROJECT_DIR)/Tesseract",
+					Resources,
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -534,6 +546,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Tesseract",
+					Resources,
 					"$(PROJECT_DIR)/Tesseract",
 					Resources,
 					"$(PROJECT_DIR)/Tesseract",

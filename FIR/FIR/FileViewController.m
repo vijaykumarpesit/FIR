@@ -11,6 +11,10 @@
 #import "UIImage+Resize.h"
 #import "TextExtractor.h"
 #import "SubmitViewController.h"
+#import "FIRAccidentMetaData.h"
+#import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
+#import "DataSource.h"
 
 typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     
@@ -19,7 +23,7 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     ImagePickerModeDocument
 };
 
-@interface FileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface FileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *spotCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *victimCollectionView;
@@ -30,6 +34,11 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
 @property (nonatomic, strong) NSMutableArray *documentImages;
 
 @property (nonatomic, assign)ImagePickerMode pickerMode;
+@property (nonatomic, assign) CGFloat lattitude;
+@property (nonatomic, assign) CGFloat longitude;
+@property (nonatomic, strong) NSMutableSet *detectedTexts;
+
+@property (nonatomic, strong)CLLocationManager *locationManager;
 
 @end
 
@@ -45,8 +54,23 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     self.victimImages = [[NSMutableArray alloc] init];
     self.documentImages = [[NSMutableArray alloc] init];
     self.spotImages = [[NSMutableArray alloc] init];
+    self.detectedTexts = [[NSMutableSet alloc] init];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:YES];
     [self.navigationController.navigationBar setHidden:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,7 +146,6 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     [filePath appendString:@"/"];
     [filePath appendString:[self GetUUID]];
     [imageData writeToFile:filePath atomically:YES];
-
     
     switch (self.pickerMode) {
         case ImagePickerModeSpot:
@@ -130,23 +153,27 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
             [self.spotCollectionView reloadData];
             break;
             
-        case ImagePickerModeVictim:
+        case ImagePickerModeVictim: {
             [self.victimImages addObject:filePath];
             [self.victimCollectionView reloadData];
-
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                NSString *text = [TextExtractor textFromImage:image];
+                [self.detectedTexts addObject:text];
+            });
+        }
             break;
             
         case ImagePickerModeDocument:
             [self.documentImages addObject:filePath];
             [self.documentCollectionView reloadData];
-
+            
             break;
             
         default:
             break;
     }
     [picker dismissViewControllerAnimated:YES completion:nil];
-
+    
 }
 
 
@@ -169,8 +196,46 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     return (__bridge NSString *)string;
 }
 
-- (IBAction)submitReport:(id)sender {
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+    
+    self.lattitude = currentLocation.coordinate.latitude;
+    self.longitude = currentLocation.coordinate.longitude;
+    
+
+}
+
+- (void)createAccidentObject {
+    
+    FIRAccidentMetaData *metadata = [[FIRAccidentMetaData alloc] init];
+    metadata.date = [NSDate date];
+    metadata.longitude = self.longitude;
+    metadata.lattitude = self.lattitude;
+    metadata.spotImages = self.spotImages;
+    metadata.victimImages = self.victimImages;
+    metadata.documentsImages = self.documentImages;
+    metadata.vehicleNumbers = self.detectedTexts;
+    //As of now assume only one in future we need to support multiple
+    
+    [[DataSource sharedDataSource].accidentMetaDataArry addObject:metadata];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.destinationViewController isKindOfClass:[SubmitViewController class]]) {
+        [self createAccidentObject];
+        
+    }
 }
 
 @end

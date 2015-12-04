@@ -24,19 +24,28 @@
     // Override point for customization after application launch.
     [Fabric with:@[[Digits class]]];
     Digits *digits = [Digits sharedInstance];
+   
+    // Initialize Parse.
+    [Parse setApplicationId:@"20ET8vDW6uFUheVsYeFNE27UeNYvFWJL3kbw6vum"
+                  clientKey:@"SkFhHaDlOsGuuuelyEIMKoh77oUz9J9HZXPuWw83"];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
-        config.phoneNumber = @"+91";
-        
-        [digits authenticateWithViewController:nil configuration:config completion:^(DGTSession *session, NSError *error) {
-            FIRUser *user = [[DataSource sharedDataSource] currentUser];
-            NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
-            user.userID = session.userID;
-            user.phoneNumber = phoneNo;
-            [user saveUser];
-        }];
-    });
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
+//        config.phoneNumber = @"+91";
+//        
+//        [digits authenticateWithViewController:nil configuration:config completion:^(DGTSession *session, NSError *error) {
+//            FIRUser *user = [[DataSource sharedDataSource] currentUser];
+//            NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
+//            user.userID = session.userID;
+//            user.phoneNumber = phoneNo;
+//            [user saveUser];
+//        }];
+//    });
     
     
     return YES;

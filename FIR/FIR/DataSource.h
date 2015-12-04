@@ -15,4 +15,6 @@
 
 + (DataSource *)sharedDataSource;
 
+@property(nonatomic, strong) NSMutableArray *accidentMetaDataArry;
+
 @end
