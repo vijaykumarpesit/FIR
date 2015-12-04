@@ -357,81 +357,159 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please verify the info " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjC-Ia-RFK" userLabel="Please verify the info">
-                                <rect key="frame" x="218" y="94" width="164" height="20.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Ff-5dk">
-                                <rect key="frame" x="156" y="223" width="150" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjC-Ia-RFK" userLabel="Please verify the info">
+                                <rect key="frame" x="185" y="70" width="231.5" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="7p9-YR-jte"/>
+                                    <constraint firstAttribute="height" constant="30" id="yrM-0z-DKZ"/>
                                 </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Please verify the info">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36728614267676762" green="0.27368135556539092" blue="0.021763121841932864" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                            <integer key="NSUnderline" value="1"/>
+                                            <color key="NSUnderlineColor" red="0.79607843137254897" green="0.59607843137254901" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-22-JUE">
+                                <rect key="frame" x="267" y="391" width="64" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.82764272175198705" green="0.91745169505199642" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Qc-Us-Gta"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Submit">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.98664378156565657" green="0.98664378156565657" blue="0.98664378156565657" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sumbmitAccidentReport:" destination="73D-gi-ybM" eventType="touchUpInside" id="2Pe-4A-EZf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-jE-dRv">
+                                <rect key="frame" x="20" y="144" width="174" height="20"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="xVc-50-5z5"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Vehicle No.1's Number">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.43854718139582644" blue="0.88582348823547363" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGm-gn-oPv">
+                                <rect key="frame" x="20" y="252" width="174" height="16"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="ZNJ-Kr-IGA"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Vehicle No,2's Number">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.4392156862745098" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7B-D5-fvU">
+                                <rect key="frame" x="20" y="172" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Ff-5dk">
+                                <rect key="frame" x="20" y="276" width="560" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="vehicleNo2:" destination="73D-gi-ybM" eventType="touchUpInside" id="5gq-FR-tli"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-22-JUE">
-                                <rect key="frame" x="275" y="421" width="49" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="sumbmitAccidentReport:" destination="73D-gi-ybM" eventType="touchUpInside" id="2Pe-4A-EZf"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vehicle Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-jE-dRv">
-                                <rect key="frame" x="40" y="164" width="96" height="16"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vehicle Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGm-gn-oPv">
-                                <rect key="frame" x="40" y="230" width="96" height="16"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7B-D5-fvU">
-                                <rect key="frame" x="156" y="157" width="150" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="uXt-hv-uTa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o7Y-IE-4Pf" firstAttribute="top" secondItem="Aht-22-JUE" secondAttribute="bottom" constant="100" id="0Ps-10-no7"/>
-                            <constraint firstItem="VjC-Ia-RFK" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" id="3Bw-Mn-oLB"/>
-                            <constraint firstItem="y1d-Ff-5dk" firstAttribute="centerY" secondItem="EGm-gn-oPv" secondAttribute="centerY" id="AUE-f7-R9k"/>
-                            <constraint firstItem="Huu-jE-dRv" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" constant="20" id="KtX-CN-mJ5"/>
-                            <constraint firstItem="K7B-D5-fvU" firstAttribute="centerY" secondItem="Huu-jE-dRv" secondAttribute="centerY" id="MWu-ea-BPV"/>
-                            <constraint firstItem="EGm-gn-oPv" firstAttribute="top" secondItem="Huu-jE-dRv" secondAttribute="bottom" constant="50" id="T0c-fi-MgY"/>
-                            <constraint firstItem="Huu-jE-dRv" firstAttribute="top" secondItem="VjC-Ia-RFK" secondAttribute="bottom" constant="50" id="TAC-qb-9V0"/>
-                            <constraint firstItem="K7B-D5-fvU" firstAttribute="leading" secondItem="Huu-jE-dRv" secondAttribute="trailing" constant="20" id="ZmI-aa-I3R"/>
-                            <constraint firstItem="VjC-Ia-RFK" firstAttribute="top" secondItem="fbL-Xh-IhS" secondAttribute="bottom" constant="30" id="cj1-kB-ivd"/>
-                            <constraint firstItem="K7B-D5-fvU" firstAttribute="bottom" secondItem="Huu-jE-dRv" secondAttribute="bottom" id="ePA-Sf-YlS"/>
-                            <constraint firstItem="y1d-Ff-5dk" firstAttribute="bottom" secondItem="EGm-gn-oPv" secondAttribute="bottom" id="hex-Ha-V3J"/>
-                            <constraint firstItem="y1d-Ff-5dk" firstAttribute="leading" secondItem="K7B-D5-fvU" secondAttribute="leading" id="jcD-eD-RLn"/>
-                            <constraint firstItem="EGm-gn-oPv" firstAttribute="leading" secondItem="Huu-jE-dRv" secondAttribute="leading" id="mvV-HD-rWA"/>
-                            <constraint firstItem="Aht-22-JUE" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" id="vf9-HF-oit"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K7B-D5-fvU" secondAttribute="trailing" id="12o-Iq-1X3"/>
+                            <constraint firstItem="EGm-gn-oPv" firstAttribute="top" secondItem="K7B-D5-fvU" secondAttribute="bottom" constant="50" id="4Qu-Mv-3Zj"/>
+                            <constraint firstItem="Huu-jE-dRv" firstAttribute="top" secondItem="VjC-Ia-RFK" secondAttribute="bottom" constant="44" id="5WC-bC-IIe"/>
+                            <constraint firstItem="K7B-D5-fvU" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" id="AHJ-BG-vdR"/>
+                            <constraint firstItem="K7B-D5-fvU" firstAttribute="top" secondItem="Huu-jE-dRv" secondAttribute="bottom" constant="8" symbolic="YES" id="ETW-gb-79i"/>
+                            <constraint firstItem="VjC-Ia-RFK" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" id="HwU-hK-ROr"/>
+                            <constraint firstItem="Huu-jE-dRv" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" id="IFY-cr-IXN"/>
+                            <constraint firstItem="y1d-Ff-5dk" firstAttribute="top" secondItem="EGm-gn-oPv" secondAttribute="bottom" constant="8" id="J5Q-td-cHM"/>
+                            <constraint firstItem="K7B-D5-fvU" firstAttribute="leading" secondItem="EGm-gn-oPv" secondAttribute="leading" id="TNo-mV-Plv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y1d-Ff-5dk" secondAttribute="trailing" id="bJY-f2-DAw"/>
+                            <constraint firstItem="y1d-Ff-5dk" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" id="baL-dr-RDU"/>
+                            <constraint firstItem="Aht-22-JUE" firstAttribute="top" secondItem="y1d-Ff-5dk" secondAttribute="bottom" constant="85" id="lBo-iU-Rw3"/>
+                            <constraint firstItem="VjC-Ia-RFK" firstAttribute="top" secondItem="fbL-Xh-IhS" secondAttribute="bottom" constant="50" id="qTW-AG-mh8"/>
+                            <constraint firstItem="K7B-D5-fvU" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" id="qv7-42-KzP"/>
+                            <constraint firstItem="Aht-22-JUE" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" constant="-1" id="wU7-6x-4aK"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ePA-Sf-YlS"/>
-                                <exclude reference="hex-Ha-V3J"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="vehicleNo1" destination="K7B-D5-fvU" id="oVX-5f-Nly"/>
@@ -472,8 +550,82 @@
                     <view key="view" contentMode="scaleToFill" id="j9g-nR-6uQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQr-Ow-kIO">
+                                <rect key="frame" x="258" y="207" width="83" height="35.5"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.8269413704200258" blue="0.87570381299687527" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Fire (101)">
+                                            <attributes>
+                                                <color key="NSColor" red="0.60077335858585856" green="0.093598363732394357" blue="0.037799562604442789" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.99607843137254903" green="0.7803921568627451" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-Vn-5lB">
+                                <rect key="frame" x="225" y="332" width="151" height="35.5"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.85037703201128712" green="0.95040914454768954" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Ambulance (102)">
+                                            <attributes>
+                                                <color key="NSColor" red="0.031182397677035699" green="0.53805551871205526" blue="0.72050583964646464" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.94523358585858586" green="0.94523358585858586" blue="0.94523358585858586" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire.png" translatesAutoresizingMaskIntoConstraints="NO" id="8WP-6S-kgU">
+                                <rect key="frame" x="200" y="200" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3aJ-TE-DmO"/>
+                                    <constraint firstAttribute="width" constant="50" id="4pD-vw-1sW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ambulance.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wgh-VM-tHG">
+                                <rect key="frame" x="167" y="325.5" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="GYx-sL-A5C"/>
+                                    <constraint firstAttribute="height" constant="50" id="e6Q-Tq-ewF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wgh-VM-tHG" firstAttribute="centerY" secondItem="NkR-Vn-5lB" secondAttribute="centerY" id="1Tw-qZ-QJg"/>
+                            <constraint firstItem="NkR-Vn-5lB" firstAttribute="centerY" secondItem="j9g-nR-6uQ" secondAttribute="centerY" constant="50" id="DpZ-Bf-KX0"/>
+                            <constraint firstItem="tQr-Ow-kIO" firstAttribute="centerY" secondItem="j9g-nR-6uQ" secondAttribute="centerY" constant="-75" id="Qi2-1E-gA9"/>
+                            <constraint firstItem="NkR-Vn-5lB" firstAttribute="leading" secondItem="Wgh-VM-tHG" secondAttribute="trailing" constant="8" id="R0H-fJ-44n"/>
+                            <constraint firstItem="tQr-Ow-kIO" firstAttribute="centerX" secondItem="j9g-nR-6uQ" secondAttribute="centerX" id="YdW-9o-UhG"/>
+                            <constraint firstItem="tQr-Ow-kIO" firstAttribute="leading" secondItem="8WP-6S-kgU" secondAttribute="trailing" constant="8" id="e97-f9-LiH"/>
+                            <constraint firstItem="NkR-Vn-5lB" firstAttribute="centerX" secondItem="j9g-nR-6uQ" secondAttribute="centerX" id="huF-QN-vzh"/>
+                            <constraint firstItem="8WP-6S-kgU" firstAttribute="centerY" secondItem="tQr-Ow-kIO" secondAttribute="centerY" id="ogh-bH-4hh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Emergency" id="ps7-hy-NHv" userLabel="Emergency"/>
                     <connections>
@@ -547,6 +699,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Ambulance.png" width="50" height="50"/>
+        <image name="Fire.png" width="50" height="50"/>
         <image name="document.JPG" width="120" height="77"/>
         <image name="motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg" width="120" height="77"/>
         <image name="second" width="30" height="30"/>
