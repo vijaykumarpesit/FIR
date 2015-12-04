@@ -34,18 +34,18 @@
     
     
     
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
-//        config.phoneNumber = @"+91";
-//        
-//        [digits authenticateWithViewController:nil configuration:config completion:^(DGTSession *session, NSError *error) {
-//            FIRUser *user = [[DataSource sharedDataSource] currentUser];
-//            NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
-//            user.userID = session.userID;
-//            user.phoneNumber = phoneNo;
-//            [user saveUser];
-//        }];
-//    });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
+        config.phoneNumber = @"+91";
+    
+        [digits authenticateWithViewController:nil configuration:config completion:^(DGTSession *session, NSError *error) {
+            FIRUser *user = [[DataSource sharedDataSource] currentUser];
+            NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
+            user.userID = session.userID;
+            user.phoneNumber = phoneNo;
+            [user saveUser];
+        }];
+    });
     
     
     return YES;
