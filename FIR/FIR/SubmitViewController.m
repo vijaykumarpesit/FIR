@@ -50,7 +50,7 @@
     accident[@"date"] = metadata.date;
     accident[@"lattitude"] =@(metadata.lattitude);
     accident[@"longitude"] =@(metadata.longitude);
-    //accident[@"phoneNO"] = [[[DataSource sharedDataSource] currentUser] phoneNumber];
+    accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
     
     NSMutableArray *spotArray = [NSMutableArray array];
     for (NSString *filePath in metadata.spotImages) {
@@ -88,6 +88,7 @@
     accident[@"spotImages"] = spotArray;
     accident[@"victimImages"] = victimArray;
     accident[@"documentImages"] = documentArray;
+    //accident[@"description"] = @""
 
     [accident saveInBackground];
 }

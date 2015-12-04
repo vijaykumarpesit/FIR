@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StatusViewController : UIViewController
+@interface StatusViewController : UITableViewController
 
 
 @end

@@ -7,8 +7,14 @@
 //
 
 #import "StatusViewController.h"
+#import "FIRComplaintCell.h"
+#import <Parse/Parse.h>
+#import "DataSource.h"
+#import "FIRAccidentMetaData.h"
 
 @interface StatusViewController ()
+
+@property (nonatomic, strong) NSArray *registeredFIR;
 
 @end
 
@@ -16,7 +22,59 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.registeredFIR = [[NSMutableArray alloc] init];
+    [self.tableView registerNib:[UINib nibWithNibName:@"FIRComplaintCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    [self loadComplaintData];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.registeredFIR.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    FIRComplaintCell *cell = (FIRComplaintCell *) [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    FIRAccidentMetaData *metadata = self.registeredFIR[indexPath.row];
+    
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:metadata.date
+                                                          dateStyle:NSDateFormatterShortStyle
+                                                          timeStyle:NSDateFormatterFullStyle];
+    cell.time.text = dateString;
+    PFFile *file = metadata.spotImages[0];
+
+    return cell;
+}
+
+- (void)loadComplaintData {
+    
+    NSString *phoneNO = [[DataSource sharedDataSource] currentUser].phoneNumber;
+    PFQuery *query = [PFQuery queryWithClassName:@"Accident"];
+    [query whereKey:@"reportedByPhoneNOs" containedIn:@[phoneNO]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        for (PFObject *accident in objects) {
+            
+            FIRAccidentMetaData *metaData = [[FIRAccidentMetaData alloc] init];
+            NSNumber *lattitudeValue = accident[@"lattitude"];
+            metaData.lattitude = lattitudeValue.floatValue;
+            
+            NSNumber *longitudeValue = accident[@"longitude"];
+            metaData.longitude = longitudeValue.floatValue;
+            metaData.date = accident[@"date"];
+            metaData.spotImages = accident[@"spotImages"];
+            
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
