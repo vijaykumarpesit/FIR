@@ -10,6 +10,7 @@
 #import "ImageViewCell.h"
 #import "UIImage+Resize.h"
 #import "TextExtractor.h"
+#import "SubmitViewController.h"
 
 typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     
@@ -164,6 +165,10 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
     CFRelease(theUUID);
     return (__bridge NSString *)string;
+}
+
+- (IBAction)submitReport:(id)sender {
+
 }
 
 @end

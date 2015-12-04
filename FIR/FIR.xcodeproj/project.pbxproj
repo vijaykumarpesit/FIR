@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
 		B1072C221C11684700F7BBB7 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
+		B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C241C11716200F7BBB7 /* SubmitViewController.m */; };
 		B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B114091E1C10B3850033F0F5 /* EmergencyViewController.m */; };
 		B11409251C10B3F10033F0F5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409211C10B3F10033F0F5 /* Fabric.framework */; };
 		B11409261C10B3F10033F0F5 /* DigitsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409221C10B3F10033F0F5 /* DigitsKit.framework */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B1072C231C11716200F7BBB7 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
+		B1072C241C11716200F7BBB7 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
 		B114091D1C10B3850033F0F5 /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
 		B114091E1C10B3850033F0F5 /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
 		B11409211C10B3F10033F0F5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
@@ -169,6 +172,8 @@
 				B11409551C115A7E0033F0F5 /* ImageViewCell.xib */,
 				B11409571C1162510033F0F5 /* UIImage+Resize.h */,
 				B11409581C1162510033F0F5 /* UIImage+Resize.m */,
+				B1072C231C11716200F7BBB7 /* SubmitViewController.h */,
+				B1072C241C11716200F7BBB7 /* SubmitViewController.m */,
 				B1D168C81C102F8F0079E760 /* Main.storyboard */,
 				B1D168CB1C102F900079E760 /* Assets.xcassets */,
 				B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */,
@@ -337,6 +342,7 @@
 				B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */,
 				B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
+				B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */,
 				B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */,
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
 			);
