@@ -41,10 +41,13 @@
 		B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B11409581C1162510033F0F5 /* UIImage+Resize.m */; };
 		B114095B1C1164400033F0F5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B114095A1C1164400033F0F5 /* tessdata */; };
 		B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B114095D1C1165040033F0F5 /* ImageMetaData.m */; };
+		B18E3E0E1C15E6970094A7EC /* SAMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B18E3E0D1C15E6970094A7EC /* SAMTextView.m */; };
+		B18E3E121C15F2D30094A7EC /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E111C15F2D30094A7EC /* placeholder.png */; };
+		B18E3E161C15F6F20094A7EC /* placeholder_large.png in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E151C15F6F20094A7EC /* placeholder_large.png */; };
 		B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B940241C11E186002306D3 /* accidentPlaceHolder.png */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
-		B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FileViewController.m */; };
+		B1D168C41C102F8F0079E760 /* FIRFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FIRFileViewController.m */; };
 		B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C61C102F8F0079E760 /* StatusViewController.m */; };
 		B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168C81C102F8F0079E760 /* Main.storyboard */; };
 		B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CB1C102F900079E760 /* Assets.xcassets */; };
@@ -101,13 +104,17 @@
 		B114095A1C1164400033F0F5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		B114095C1C1165040033F0F5 /* ImageMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMetaData.h; sourceTree = "<group>"; };
 		B114095D1C1165040033F0F5 /* ImageMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMetaData.m; sourceTree = "<group>"; };
+		B18E3E0C1C15E6970094A7EC /* SAMTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMTextView.h; sourceTree = "<group>"; };
+		B18E3E0D1C15E6970094A7EC /* SAMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMTextView.m; sourceTree = "<group>"; };
+		B18E3E111C15F2D30094A7EC /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		B18E3E151C15F6F20094A7EC /* placeholder_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_large.png; sourceTree = "<group>"; };
 		B1B940241C11E186002306D3 /* accidentPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidentPlaceHolder.png; sourceTree = "<group>"; };
 		B1D168B91C102F8F0079E760 /* mFIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mFIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1D168C01C102F8F0079E760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B1D168C21C102F8F0079E760 /* FileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
-		B1D168C31C102F8F0079E760 /* FileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
+		B1D168C21C102F8F0079E760 /* FIRFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRFileViewController.h; sourceTree = "<group>"; };
+		B1D168C31C102F8F0079E760 /* FIRFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRFileViewController.m; sourceTree = "<group>"; };
 		B1D168C51C102F8F0079E760 /* StatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
 		B1D168C61C102F8F0079E760 /* StatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
 		B1D168C91C102F8F0079E760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,6 +181,8 @@
 		B1072C291C11789600F7BBB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B18E3E0C1C15E6970094A7EC /* SAMTextView.h */,
+				B18E3E0D1C15E6970094A7EC /* SAMTextView.m */,
 				B11409521C1159990033F0F5 /* ImageViewCell.h */,
 				B11409531C1159990033F0F5 /* ImageViewCell.m */,
 				B11409551C115A7E0033F0F5 /* ImageViewCell.xib */,
@@ -189,8 +198,8 @@
 			children = (
 				B1072C231C11716200F7BBB7 /* SubmitViewController.h */,
 				B1072C241C11716200F7BBB7 /* SubmitViewController.m */,
-				B1D168C21C102F8F0079E760 /* FileViewController.h */,
-				B1D168C31C102F8F0079E760 /* FileViewController.m */,
+				B1D168C21C102F8F0079E760 /* FIRFileViewController.h */,
+				B1D168C31C102F8F0079E760 /* FIRFileViewController.m */,
 				B1D168C51C102F8F0079E760 /* StatusViewController.h */,
 				B1D168C61C102F8F0079E760 /* StatusViewController.m */,
 				B114091D1C10B3850033F0F5 /* EmergencyViewController.h */,
@@ -273,6 +282,8 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B18E3E151C15F6F20094A7EC /* placeholder_large.png */,
+				B18E3E111C15F2D30094A7EC /* placeholder.png */,
 				5476F9841C11FAA4001A18CF /* Fire.png */,
 				5476F9821C11F999001A18CF /* Ambulance.png */,
 				547741AF1C11EE5D00C5E2BA /* Filing@2x.png */,
@@ -358,6 +369,7 @@
 			files = (
 				B11409271C10B3F10033F0F5 /* DigitsKitResources.bundle in Resources */,
 				5476F9851C11FAA4001A18CF /* Fire.png in Resources */,
+				B18E3E121C15F2D30094A7EC /* placeholder.png in Resources */,
 				B11409561C115A7E0033F0F5 /* ImageViewCell.xib in Resources */,
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
@@ -372,6 +384,7 @@
 				547741A01C11E76500C5E2BA /* Emergency@2x.png in Resources */,
 				54E18CD01C11B61D00939F08 /* document.JPG in Resources */,
 				B114095B1C1164400033F0F5 /* tessdata in Resources */,
+				B18E3E161C15F6F20094A7EC /* placeholder_large.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +460,8 @@
 				B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */,
 				B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */,
 				B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */,
-				B1D168C41C102F8F0079E760 /* FileViewController.m in Sources */,
+				B18E3E0E1C15E6970094A7EC /* SAMTextView.m in Sources */,
+				B1D168C41C102F8F0079E760 /* FIRFileViewController.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
 				B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */,
 				B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */,

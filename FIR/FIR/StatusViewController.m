@@ -52,7 +52,7 @@
                                                           dateStyle:NSDateFormatterShortStyle
                                                           timeStyle:NSDateFormatterNoStyle];
     cell.time.text = dateString;
-    PFFile *file = metadata.spotImages[0];
+    PFFile *file = metadata.victimImages[0];
     NSURL *fileURL = [NSURL URLWithString:file.url];
     [cell.bgImageView setImageWithURL:fileURL placeholderImage:[UIImage imageNamed:@"accidentPlaceHolder"]];
     return cell;
@@ -62,7 +62,7 @@
     
     NSString *phoneNO = [[DataSource sharedDataSource] currentUser].phoneNumber;
     PFQuery *query = [PFQuery queryWithClassName:@"Accident"];
-    [query whereKey:@"reportedByPhoneNOs" containedIn:@[phoneNO]];
+    //[query whereKey:@"reportedByPhoneNOs" containedIn:@[phoneNO]];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         

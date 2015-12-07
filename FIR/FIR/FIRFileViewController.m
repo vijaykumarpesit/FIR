@@ -6,7 +6,7 @@
 //  Copyright © 2015 Vijay. All rights reserved.
 //
 
-#import "FileViewController.h"
+#import "FIRFileViewController.h"
 #import "ImageViewCell.h"
 #import "UIImage+Resize.h"
 #import "TextExtractor.h"
@@ -16,57 +16,42 @@
 #import <Parse/Parse.h>
 #import "DataSource.h"
 
-typedef NS_ENUM(NSUInteger,ImagePickerMode) {
-    
-    ImagePickerModeSpot,
-    ImagePickerModeVictim,
-    ImagePickerModeDocument
-};
 
-@interface FileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
+@interface FIRFileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
 
-@property (weak, nonatomic) IBOutlet UICollectionView *spotCollectionView;
-@property (weak, nonatomic) IBOutlet UICollectionView *victimCollectionView;
-@property (weak, nonatomic) IBOutlet UICollectionView *documentCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-@property (nonatomic, strong) NSMutableArray *spotImages;
-@property (nonatomic, strong) NSMutableArray *victimImages;
-@property (nonatomic, strong) NSMutableArray *documentImages;
-
-@property (nonatomic, assign)ImagePickerMode pickerMode;
+@property (nonatomic, strong) NSMutableArray *images;
 @property (nonatomic, assign) CGFloat lattitude;
 @property (nonatomic, assign) CGFloat longitude;
 @property (nonatomic, strong) NSMutableSet *detectedTexts;
+@property (weak, nonatomic) IBOutlet UIImageView *cameraPlaceHolder;
 
 @property (nonatomic, strong)CLLocationManager *locationManager;
 
 @end
 
-@implementation FileViewController
+@implementation FIRFileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.spotCollectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
-    [self.victimCollectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
-    [self.documentCollectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil]  forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     
-    self.victimImages = [[NSMutableArray alloc] init];
-    self.documentImages = [[NSMutableArray alloc] init];
-    self.spotImages = [[NSMutableArray alloc] init];
+    self.images = [[NSMutableArray alloc] init];
     self.detectedTexts = [[NSMutableSet alloc] init];
-    
+    UITapGestureRecognizer *tapReco = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cameraImageViewTapped:)];
+    [self.cameraPlaceHolder addGestureRecognizer:tapReco];
+    self.title = @"File FIR";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
-    self.spotCollectionView.hidden = self.spotImages.count > 0 ? NO : YES;
-    self.victimCollectionView.hidden = self.victimImages.count > 0 ? NO : YES;
-    self.documentCollectionView.hidden = self.documentImages.count > 0 ? NO : YES;
-    
-    [self.navigationController.navigationBar setHidden:YES];
+    self.collectionView.hidden = self.images.count > 0 ? NO : YES;
+    self.cameraPlaceHolder.hidden = self.images.count > 0 ? YES : NO;
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -87,53 +72,41 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
 
 
 
-- (IBAction)uploadVictimImage:(id)sender {
-    self.pickerMode = ImagePickerModeVictim;
-    [self presentImagePicker];
-}
 
-- (IBAction)uploadSpotImage:(id)sender {
-    self.pickerMode = ImagePickerModeSpot;
-    [self presentImagePicker];
 
-}
-
-- (IBAction)uploadDocumentImage:(id)sender {
-    self.pickerMode = ImagePickerModeDocument;
+- (IBAction)uploadImage:(id)sender {
     [self presentImagePicker];
 
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
-    if (collectionView == self.spotCollectionView) {
-        return self.spotImages.count;
-    } else if(collectionView == self.victimCollectionView) {
-        return self.victimImages.count;
-    } else if(collectionView ==  self.documentCollectionView) {
-        return self.documentImages.count;
-    }
-    else return 1;
-    
+    return self.images.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
    ImageViewCell *cell =  (ImageViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
-    if (collectionView == self.spotCollectionView) {
-        cell.imageView.image = [UIImage imageWithContentsOfFile:self.spotImages[indexPath.row]];
-    
-    } else if(collectionView == self.victimCollectionView) {
-        cell.imageView.image = [UIImage imageWithContentsOfFile:self.victimImages[indexPath.row]];
-
-        
-    } else if(collectionView ==  self.documentCollectionView) {
-        cell.imageView.image = [UIImage imageWithContentsOfFile:self.documentImages[indexPath.row]];
- 
-    }
-    
+   cell.imageView.image = [UIImage imageWithContentsOfFile:self.images[indexPath.row]];
     return  cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width/3;
+    return CGSizeMake(width, width);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width/3;
+    return CGSizeMake(width, width);
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    ImageViewCell *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
+    reusableView.imageView.image = [UIImage imageNamed:@"placeholder_large.png"];
+    return  reusableView;
 }
 
 - (void)presentImagePicker {
@@ -153,35 +126,9 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     [filePath appendString:@"/"];
     [filePath appendString:[self GetUUID]];
     [imageData writeToFile:filePath atomically:YES];
-    
-    switch (self.pickerMode) {
-        case ImagePickerModeSpot:
-            [self.spotImages addObject:filePath];
-            self.spotCollectionView.hidden = NO;
-            [self.spotCollectionView reloadData];
-            break;
-            
-        case ImagePickerModeVictim: {
-            [self.victimImages addObject:filePath];
-            self.victimCollectionView.hidden = NO;
-            [self.victimCollectionView reloadData];
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                NSString *text = [TextExtractor textFromImage:image];
-                [self.detectedTexts addObject:text];
-            });
-        }
-            break;
-            
-        case ImagePickerModeDocument:
-            [self.documentImages addObject:filePath];
-            self.documentCollectionView.hidden = NO;
-            [self.documentCollectionView reloadData];
-            
-            break;
-            
-        default:
-            break;
-    }
+    [self.images addObject:filePath];
+    self.collectionView.hidden = NO;
+    [self.collectionView reloadData];
     [picker dismissViewControllerAnimated:YES completion:nil];
     
 }
@@ -230,9 +177,7 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
     metadata.date = [NSDate date];
     metadata.longitude = self.longitude;
     metadata.lattitude = self.lattitude;
-    metadata.spotImages = self.spotImages;
-    metadata.victimImages = self.victimImages;
-    metadata.documentsImages = self.documentImages;
+    metadata.images = self.images;
     metadata.vehicleNumbers = self.detectedTexts;
     //As of now assume only one in future we need to support multiple
     
@@ -245,6 +190,10 @@ typedef NS_ENUM(NSUInteger,ImagePickerMode) {
         [self createAccidentObject];
         
     }
+}
+
+- (void)cameraImageViewTapped:(UITapGestureRecognizer *)reco {
+  [self presentImagePicker];
 }
 
 @end

@@ -15,12 +15,13 @@
     
     self = [super init];
     if (self) {
-        self.victimImages = [[NSMutableArray alloc] init];
-        self.spotImages = [[NSMutableArray alloc] init];
-        self.documentsImages = [[NSMutableArray alloc] init];
-        self.reportedByPhoneNOs = [[NSMutableSet alloc] init];
-        self.attendedByPhoneNos = [[NSMutableSet alloc] init];
-        self.vehicleNumbers = [[NSMutableSet alloc] init];
+        _victimImages = [[NSMutableArray alloc] init];
+        _spotImages = [[NSMutableArray alloc] init];
+       _documentsImages = [[NSMutableArray alloc] init];
+        _reportedByPhoneNOs = [[NSMutableSet alloc] init];
+        _attendedByPhoneNos = [[NSMutableSet alloc] init];
+        _vehicleNumbers = [[NSMutableSet alloc] init];
+        _images = [[NSMutableArray alloc] init];
     }
     return self;
 }

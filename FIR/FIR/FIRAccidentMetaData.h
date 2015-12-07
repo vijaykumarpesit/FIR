@@ -30,6 +30,9 @@
 
 @property (nonatomic, strong) NSMutableSet *attendedByPhoneNos;
 
+@property (nonatomic, strong)NSMutableArray *images;
+
+
 @property (nonatomic, assign) NSUInteger status;
 
 @end
