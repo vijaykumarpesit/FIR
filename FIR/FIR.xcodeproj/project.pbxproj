@@ -44,6 +44,7 @@
 		B18E3E161C15F6F20094A7EC /* placeholder_large.png in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E151C15F6F20094A7EC /* placeholder_large.png */; };
 		B18E3E1A1C160B7C0094A7EC /* ImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B18E3E181C160B7C0094A7EC /* ImageViewCell.m */; };
 		B18E3E1B1C160B7C0094A7EC /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E191C160B7C0094A7EC /* ImageViewCell.xib */; };
+		B18E3E1E1C16103D0094A7EC /* FIRFacedetector.m in Sources */ = {isa = PBXBuildFile; fileRef = B18E3E1D1C16103D0094A7EC /* FIRFacedetector.m */; };
 		B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B940241C11E186002306D3 /* accidentPlaceHolder.png */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
@@ -108,6 +109,8 @@
 		B18E3E171C160B7C0094A7EC /* ImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewCell.h; sourceTree = "<group>"; };
 		B18E3E181C160B7C0094A7EC /* ImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewCell.m; sourceTree = "<group>"; };
 		B18E3E191C160B7C0094A7EC /* ImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
+		B18E3E1C1C16103D0094A7EC /* FIRFacedetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRFacedetector.h; sourceTree = "<group>"; };
+		B18E3E1D1C16103D0094A7EC /* FIRFacedetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRFacedetector.m; sourceTree = "<group>"; };
 		B1B940241C11E186002306D3 /* accidentPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidentPlaceHolder.png; sourceTree = "<group>"; };
 		B1D168B91C102F8F0079E760 /* mFIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mFIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */,
 				B11409571C1162510033F0F5 /* UIImage+Resize.h */,
 				B11409581C1162510033F0F5 /* UIImage+Resize.m */,
+				B18E3E1C1C16103D0094A7EC /* FIRFacedetector.h */,
+				B18E3E1D1C16103D0094A7EC /* FIRFacedetector.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18E3E1E1C16103D0094A7EC /* FIRFacedetector.m in Sources */,
 				B18E3E1A1C160B7C0094A7EC /* ImageViewCell.m in Sources */,
 				B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */,
 				B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */,
