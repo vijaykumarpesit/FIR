@@ -36,14 +36,14 @@
 		B11409481C1150040033F0F5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11409471C1150040033F0F5 /* CoreImage.framework */; };
 		B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B114094A1C1150DB0033F0F5 /* TextExtractor.m */; };
 		B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */; };
-		B11409541C1159990033F0F5 /* ImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B11409531C1159990033F0F5 /* ImageViewCell.m */; };
-		B11409561C115A7E0033F0F5 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B11409551C115A7E0033F0F5 /* ImageViewCell.xib */; };
 		B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B11409581C1162510033F0F5 /* UIImage+Resize.m */; };
 		B114095B1C1164400033F0F5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B114095A1C1164400033F0F5 /* tessdata */; };
 		B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B114095D1C1165040033F0F5 /* ImageMetaData.m */; };
 		B18E3E0E1C15E6970094A7EC /* SAMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B18E3E0D1C15E6970094A7EC /* SAMTextView.m */; };
 		B18E3E121C15F2D30094A7EC /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E111C15F2D30094A7EC /* placeholder.png */; };
 		B18E3E161C15F6F20094A7EC /* placeholder_large.png in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E151C15F6F20094A7EC /* placeholder_large.png */; };
+		B18E3E1A1C160B7C0094A7EC /* ImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B18E3E181C160B7C0094A7EC /* ImageViewCell.m */; };
+		B18E3E1B1C160B7C0094A7EC /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E191C160B7C0094A7EC /* ImageViewCell.xib */; };
 		B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B940241C11E186002306D3 /* accidentPlaceHolder.png */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
@@ -96,9 +96,6 @@
 		B114094A1C1150DB0033F0F5 /* TextExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextExtractor.m; sourceTree = "<group>"; };
 		B114094C1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+BlackAndWhiteFilters.h"; path = "../UIImage+BlackAndWhiteFilters.h"; sourceTree = "<group>"; };
 		B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+BlackAndWhiteFilters.m"; path = "../UIImage+BlackAndWhiteFilters.m"; sourceTree = "<group>"; };
-		B11409521C1159990033F0F5 /* ImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewCell.h; sourceTree = "<group>"; };
-		B11409531C1159990033F0F5 /* ImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewCell.m; sourceTree = "<group>"; };
-		B11409551C115A7E0033F0F5 /* ImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 		B11409571C1162510033F0F5 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		B11409581C1162510033F0F5 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		B114095A1C1164400033F0F5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
@@ -108,6 +105,9 @@
 		B18E3E0D1C15E6970094A7EC /* SAMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMTextView.m; sourceTree = "<group>"; };
 		B18E3E111C15F2D30094A7EC /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		B18E3E151C15F6F20094A7EC /* placeholder_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_large.png; sourceTree = "<group>"; };
+		B18E3E171C160B7C0094A7EC /* ImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewCell.h; sourceTree = "<group>"; };
+		B18E3E181C160B7C0094A7EC /* ImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewCell.m; sourceTree = "<group>"; };
+		B18E3E191C160B7C0094A7EC /* ImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 		B1B940241C11E186002306D3 /* accidentPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidentPlaceHolder.png; sourceTree = "<group>"; };
 		B1D168B91C102F8F0079E760 /* mFIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mFIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -183,12 +183,12 @@
 			children = (
 				B18E3E0C1C15E6970094A7EC /* SAMTextView.h */,
 				B18E3E0D1C15E6970094A7EC /* SAMTextView.m */,
-				B11409521C1159990033F0F5 /* ImageViewCell.h */,
-				B11409531C1159990033F0F5 /* ImageViewCell.m */,
-				B11409551C115A7E0033F0F5 /* ImageViewCell.xib */,
 				B1F447CC1C11A4D800DCEA3A /* FIRComplaintCell.h */,
 				B1F447CD1C11A4D800DCEA3A /* FIRComplaintCell.m */,
 				B1F447CE1C11A4D800DCEA3A /* FIRComplaintCell.xib */,
+				B18E3E171C160B7C0094A7EC /* ImageViewCell.h */,
+				B18E3E181C160B7C0094A7EC /* ImageViewCell.m */,
+				B18E3E191C160B7C0094A7EC /* ImageViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -370,7 +370,6 @@
 				B11409271C10B3F10033F0F5 /* DigitsKitResources.bundle in Resources */,
 				5476F9851C11FAA4001A18CF /* Fire.png in Resources */,
 				B18E3E121C15F2D30094A7EC /* placeholder.png in Resources */,
-				B11409561C115A7E0033F0F5 /* ImageViewCell.xib in Resources */,
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
 				547741B21C11EE5D00C5E2BA /* Status@2x.png in Resources */,
@@ -378,6 +377,7 @@
 				547741B11C11EE5D00C5E2BA /* Filing@2x.png in Resources */,
 				B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */,
 				B1F447D01C11A4D800DCEA3A /* FIRComplaintCell.xib in Resources */,
+				B18E3E1B1C160B7C0094A7EC /* ImageViewCell.xib in Resources */,
 				54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */,
 				54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */,
 				5476F9831C11F999001A18CF /* Ambulance.png in Resources */,
@@ -456,7 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B11409541C1159990033F0F5 /* ImageViewCell.m in Sources */,
+				B18E3E1A1C160B7C0094A7EC /* ImageViewCell.m in Sources */,
 				B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */,
 				B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */,
 				B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */,
