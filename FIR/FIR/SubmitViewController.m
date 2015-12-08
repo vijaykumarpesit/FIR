@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "DataSource.h"
 #import "FIRAccidentMetaData.h"
+#import "ImageMetaData.h"
 
 
 
@@ -68,43 +69,35 @@
             
             
             NSMutableArray *spotArray = [NSMutableArray array];
-            for (NSString *filePath in metadata.spotImages) {
-                @autoreleasepool {
-                    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-                    NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
-                    PFFile *file = [PFFile fileWithData:imageData];
-                    [file saveInBackground];
-                    [spotArray addObject:file];
-                }
-            }
-            
             NSMutableArray *victimArray = [NSMutableArray array];
-            for (NSString *filePath in metadata.victimImages) {
-                @autoreleasepool {
-                    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-                    NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
-                    PFFile *file = [PFFile fileWithData:imageData];
-                    [file saveInBackground];
-                    [victimArray addObject:file];
-                }
-            }
+            NSMutableArray *vehicleNoArray = [NSMutableArray array];
             
-            NSMutableArray *documentArray = [NSMutableArray array];
-            for (NSString *filePath in metadata.documentsImages) {
+            
+            for (ImageMetaData*imageMetaData in metadata.images) {
                 @autoreleasepool {
-                    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-                    NSData *imageData = UIImageJPEGRepresentation(image, 0.4);
+                    UIImage *image = [UIImage imageWithContentsOfFile:imageMetaData.filePath];
+                    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
                     PFFile *file = [PFFile fileWithData:imageData];
                     [file saveInBackground];
-                    [documentArray addObject:file];
+                    switch (imageMetaData.imageType) {
+                        case AccidentImageTypeNumberPlate:
+                            [vehicleNoArray addObject:file];
+                            break;
+                        case AccidentImageTypeVictim:
+                            [victimArray addObject:file];
+                            break;
+                        case  AccidentImageTypeOther:
+                            [spotArray addObject:file];
+                        default:
+                            break;
+                    }
                 }
             }
             
             accident[@"spotImages"] = spotArray;
             accident[@"victimImages"] = victimArray;
-            accident[@"documentImages"] = documentArray;
+            accident[@"vehicleNoImages"] = vehicleNoArray;
             accident[@"vehicleNumbers"] = @[self.vehicleNo1.text,self.vehicleNo2.text];
-            
             [accident saveInBackground];
         }
         
@@ -114,7 +107,7 @@
     [alertView show];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.navigationController popToRootViewControllerAnimated:YES];
- 
+        
     });
 }
 

@@ -17,7 +17,7 @@
     if (self) {
         _victimImages = [[NSMutableArray alloc] init];
         _spotImages = [[NSMutableArray alloc] init];
-       _documentsImages = [[NSMutableArray alloc] init];
+       _vehicleNoImages = [[NSMutableArray alloc] init];
         _reportedByPhoneNOs = [[NSMutableSet alloc] init];
         _attendedByPhoneNos = [[NSMutableSet alloc] init];
         _vehicleNumbers = [[NSMutableSet alloc] init];

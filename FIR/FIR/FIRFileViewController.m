@@ -35,6 +35,7 @@
 @property (nonatomic, strong)CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet SAMTextView *textView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *addImagesTopConstraint;
+@property (nonatomic, strong) UIToolbar *toolBar;
 
 @end
 
@@ -50,18 +51,19 @@
     UITapGestureRecognizer *tapReco = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cameraImageViewTapped:)];
     [self.cameraPlaceHolder addGestureRecognizer:tapReco];
     self.title = @"File FIR";
-    
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-    tapGestureRecognizer.numberOfTapsRequired = 1;
-    tapGestureRecognizer.numberOfTouchesRequired = 1;
-    [self.view addGestureRecognizer:tapGestureRecognizer];
-    
+ 
     UIColor *borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0];
     
     self.textView.layer.borderColor = borderColor.CGColor;
     self.textView.layer.borderWidth = 1.0;
     self.textView.layer.cornerRadius = 5.0;
     self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Please provide us some information about accident." attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:(199.0/255.0) green:(0.0/255.0) blue:(0.0/255.0) alpha:1.0f]}];
+    
+    
+    self.toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    self.toolBar.barStyle = UIBarStyleBlackOpaque;
+    UIBarButtonItem *btnDone = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(btnClickedDone:)];
+    [self.toolBar setItems:[NSArray arrayWithObject:btnDone]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -249,24 +251,38 @@
   [self presentImagePicker];
 }
 
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    [textView setInputAccessoryView:self.toolBar];
+    return YES;
+}
+
 - (void)textViewDidBeginEditing:(UITextView *)textView {
+    self.addImagesTopConstraint.constant -= 175;
     [UIView animateWithDuration:0.3 animations:^{
-        self.addImagesTopConstraint.constant -= 175;
+        [self.view layoutIfNeeded];
     }];
+    
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
     if ([textView isFirstResponder]) {
+        self.addImagesTopConstraint.constant += 175;
         [UIView animateWithDuration:0.3 animations:^{
-            self.addImagesTopConstraint.constant += 175;
+            [self.view layoutIfNeeded];
         }];
         [textView resignFirstResponder];
     }
 }
 
-- (void)tapped:(UIGestureRecognizer *)gestureReconginzer {
+- (void)btnClickedDone:(id)sender {
+    
     if ([self.textView isFirstResponder]) {
-        [self textViewDidEndEditing:self.textView];
+        self.addImagesTopConstraint.constant += 175;
+        [UIView animateWithDuration:0.3 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+        [self.textView resignFirstResponder];
     }
 }
 

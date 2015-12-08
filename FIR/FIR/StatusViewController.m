@@ -52,9 +52,24 @@
                                                           dateStyle:NSDateFormatterShortStyle
                                                           timeStyle:NSDateFormatterNoStyle];
     cell.time.text = dateString;
-    PFFile *file = metadata.victimImages[0];
-    NSURL *fileURL = [NSURL URLWithString:file.url];
-    [cell.bgImageView setImageWithURL:fileURL placeholderImage:[UIImage imageNamed:@"accidentPlaceHolder"]];
+    
+    PFFile *file  = nil;
+    
+    if (metadata.spotImages.count) {
+        file = metadata.spotImages[0];
+    } else if(metadata.vehicleNoImages.count) {
+        file = metadata.vehicleNoImages[0];
+    } else if(metadata.victimImages.count) {
+        file = metadata.victimImages[0];
+    }
+    
+    if (file) {
+        NSURL *fileURL = [NSURL URLWithString:file.url];
+        [cell.bgImageView setImageWithURL:fileURL placeholderImage:[UIImage imageNamed:@"accidentPlaceHolder"]];
+    } else {
+        [cell.bgImageView setImage:[UIImage imageNamed:@"accidentPlaceHolder"]];
+        
+    }
     return cell;
 }
 

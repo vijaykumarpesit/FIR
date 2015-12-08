@@ -24,7 +24,7 @@
 
 @property (nonatomic, strong)NSMutableArray *victimImages;
 
-@property (nonatomic, strong)NSMutableArray *documentsImages;
+@property (nonatomic, strong)NSMutableArray *vehicleNoImages;
 
 @property (nonatomic, strong) NSMutableSet *reportedByPhoneNOs;
 

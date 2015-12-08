@@ -23,6 +23,7 @@
         _imageView.clipsToBounds = YES;
         [self.contentView addSubview:_imageView];
         [_imageView setContentMode:UIViewContentModeScaleAspectFill];
+        [_imageView setUserInteractionEnabled:YES];
     }
     return self;
 }
