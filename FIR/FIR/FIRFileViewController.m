@@ -57,7 +57,7 @@
     self.textView.layer.borderColor = borderColor.CGColor;
     self.textView.layer.borderWidth = 1.0;
     self.textView.layer.cornerRadius = 5.0;
-    self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Please provide us some information about accident." attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:(199.0/255.0) green:(0.0/255.0) blue:(0.0/255.0) alpha:1.0f]}];
+    self.textView.placeholder = @"Please provide us some information about accident.";
     
     
     self.toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
@@ -259,7 +259,7 @@
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-    self.addImagesTopConstraint.constant -= 175;
+    self.addImagesTopConstraint.constant -= 220;
     [UIView animateWithDuration:0.3 animations:^{
         [self.view layoutIfNeeded];
     }];
@@ -268,7 +268,7 @@
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
     if ([textView isFirstResponder]) {
-        self.addImagesTopConstraint.constant += 175;
+        self.addImagesTopConstraint.constant += 220;
         [UIView animateWithDuration:0.3 animations:^{
             [self.view layoutIfNeeded];
         }];
@@ -279,7 +279,7 @@
 - (void)btnClickedDone:(id)sender {
     
     if ([self.textView isFirstResponder]) {
-        self.addImagesTopConstraint.constant += 175;
+        self.addImagesTopConstraint.constant += 220;
         [UIView animateWithDuration:0.3 animations:^{
             [self.view layoutIfNeeded];
         }];
