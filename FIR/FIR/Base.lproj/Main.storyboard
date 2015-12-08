@@ -180,30 +180,22 @@
                         <sections>
                             <tableViewSection headerTitle="Emergency" id="wsl-uR-pzt">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="Nzp-bo-dtV">
-                                        <rect key="frame" x="0.0" y="49.5" width="600" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="Nzp-bo-dtV">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nzp-bo-dtV" id="qjZ-6T-Ye9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire.png" translatesAutoresizingMaskIntoConstraints="NO" id="8WP-6S-kgU">
-                                                    <rect key="frame" x="8" y="-1" width="50" height="50.5"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="3aJ-TE-DmO"/>
-                                                        <constraint firstAttribute="width" constant="50" id="4pD-vw-1sW"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQr-Ow-kIO">
-                                                    <rect key="frame" x="59" y="8" width="80" height="33.5"/>
+                                                    <rect key="frame" x="59" y="8" width="170" height="53.5"/>
                                                     <animations/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Call Fire (101)">
+                                                            <fragment content="Contact Fire Engine (101)">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.60077335858585856" green="0.093598363732394357" blue="0.037799562604442789" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -217,6 +209,14 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire.png" translatesAutoresizingMaskIntoConstraints="NO" id="8WP-6S-kgU">
+                                                    <rect key="frame" x="8" y="9" width="50" height="50.5"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="3aJ-TE-DmO"/>
+                                                        <constraint firstAttribute="width" constant="50" id="4pD-vw-1sW"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                             <constraints>
@@ -229,15 +229,15 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="VJk-RN-IVh">
-                                        <rect key="frame" x="0.0" y="99.5" width="600" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="VJk-RN-IVh">
+                                        <rect key="frame" x="0.0" y="119.5" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VJk-RN-IVh" id="Tds-TL-anM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ambulance.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wgh-VM-tHG">
-                                                    <rect key="frame" x="8" y="-0.5" width="50" height="50.5"/>
+                                                    <rect key="frame" x="8" y="9" width="50" height="50.5"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="GYx-sL-A5C"/>
@@ -245,13 +245,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-Vn-5lB">
-                                                    <rect key="frame" x="58" y="8" width="143" height="33.5"/>
+                                                    <rect key="frame" x="58" y="8" width="171" height="53.5"/>
                                                     <animations/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Call Ambulance (108)">
+                                                            <fragment content="Contact Ambulance (108)">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.031182397677035699" green="0.53805551871205526" blue="0.72050583964646464" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="15" name="HelveticaNeue"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -278,15 +278,15 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="5D9-Zo-wZy">
-                                        <rect key="frame" x="0.0" y="149.5" width="600" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="5D9-Zo-wZy">
+                                        <rect key="frame" x="0.0" y="189.5" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5D9-Zo-wZy" id="4hn-3K-LhR">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Police.png" translatesAutoresizingMaskIntoConstraints="NO" id="Esx-7k-OGP">
-                                                    <rect key="frame" x="8" y="-1" width="50" height="50.5"/>
+                                                    <rect key="frame" x="8" y="9" width="50" height="50.5"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="COO-dc-IiS"/>
@@ -294,11 +294,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpA-K5-Q2z">
-                                                    <rect key="frame" x="58" y="8" width="108" height="33.5"/>
+                                                    <rect key="frame" x="58" y="8" width="136" height="53.5"/>
                                                     <animations/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Call Police (108)">
+                                                            <fragment content="Contact Police (100)">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="15" name="HelveticaNeue"/>
@@ -404,7 +404,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Images">
                                             <attributes>
-                                                <color key="NSColor" red="0.80038667929292928" green="0.12469741286691315" blue="0.050358868214312486" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="NSColor" red="0.77840909090909094" green="0.38944283499833754" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             </attributes>
                                         </fragment>
@@ -418,7 +418,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Description">
                                             <attributes>
-                                                <color key="NSColor" red="0.079719277065179783" green="0.70036300505050497" blue="0.037265604732618023" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="NSColor" red="0.7834793244949495" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             </attributes>
                                         </fragment>
@@ -454,7 +454,7 @@
                                 </connections>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-mf-wEQ" customClass="SAMTextView">
-                                <rect key="frame" x="10" y="370.5" width="300" height="113.5"/>
+                                <rect key="frame" x="10" y="370" width="300" height="113.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -468,7 +468,7 @@
                                 </connections>
                             </textView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="placeholder_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-ea-164">
-                                <rect key="frame" x="-90" y="167" width="500" height="150"/>
+                                <rect key="frame" x="-4" y="167" width="328" height="150"/>
                                 <animations/>
                                 <color key="tintColor" red="0.70165761071022104" green="0.39601698351732267" blue="0.22024195776688224" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -491,8 +491,8 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Please add spot,victim's and vehicle's number image ">
                                         <attributes>
-                                            <color key="NSColor" red="0.071405204415380369" green="0.20105060979327397" blue="0.84244791666666663" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <color key="NSColor" red="0.0" green="0.40548058712121215" blue="0.20261616630509202" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -502,7 +502,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="8QU-ea-164" secondAttribute="trailing" constant="12" id="6EF-rL-Kys"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8QU-ea-164" secondAttribute="trailing" constant="-20" id="6EF-rL-Kys"/>
                             <constraint firstAttribute="trailing" secondItem="N4N-AK-fJt" secondAttribute="trailing" constant="5" id="6cX-vf-ie4"/>
                             <constraint firstItem="pqA-mf-wEQ" firstAttribute="height" secondItem="w4v-ap-35F" secondAttribute="height" multiplier="0.2" id="9Lv-N3-B6v"/>
                             <constraint firstItem="9oI-PV-njv" firstAttribute="top" secondItem="pqA-mf-wEQ" secondAttribute="bottom" constant="20" id="9rg-do-Gvj"/>
@@ -522,13 +522,11 @@
                             <constraint firstItem="8QU-ea-164" firstAttribute="top" secondItem="S8Z-VT-RFd" secondAttribute="bottom" constant="5" id="rjg-nR-Xwd"/>
                             <constraint firstItem="8QU-ea-164" firstAttribute="centerX" secondItem="w4v-ap-35F" secondAttribute="centerX" id="voF-X7-jjb"/>
                             <constraint firstItem="6wE-gb-RcH" firstAttribute="top" secondItem="8QU-ea-164" secondAttribute="bottom" constant="10" id="xW4-dh-68W"/>
-                            <constraint firstItem="8QU-ea-164" firstAttribute="leading" secondItem="w4v-ap-35F" secondAttribute="leadingMargin" constant="16" id="yRd-aC-HQ7"/>
+                            <constraint firstItem="8QU-ea-164" firstAttribute="leading" secondItem="w4v-ap-35F" secondAttribute="leadingMargin" constant="-20" id="yRd-aC-HQ7"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6EF-rL-Kys"/>
                                 <exclude reference="Qdq-ii-hHS"/>
-                                <exclude reference="yRd-aC-HQ7"/>
                                 <exclude reference="9rg-do-Gvj"/>
                                 <exclude reference="oXb-nD-gsV"/>
                             </mask>
@@ -574,7 +572,7 @@
     <resources>
         <image name="Ambulance.png" width="50" height="50"/>
         <image name="Fire.png" width="50" height="50"/>
-        <image name="Police.png" width="40" height="40"/>
+        <image name="Police.png" width="40" height="30"/>
         <image name="placeholder_large.png" width="500" height="285"/>
         <image name="second" width="30" height="30"/>
     </resources>
