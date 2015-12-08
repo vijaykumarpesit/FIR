@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -16,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="o7Y-IE-4Pf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ge7-Wg-sjt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7B-D5-fvU">
-                                <rect key="frame" x="40" y="110" width="240" height="30"/>
+                                <rect key="frame" x="36" y="110" width="128" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="ZiU-T1-fjW"/>
@@ -37,7 +36,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-jE-dRv">
-                                <rect key="frame" x="239" y="84" width="121" height="18"/>
+                                <rect key="frame" x="99" y="84" width="121" height="18"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="xVc-50-5z5"/>
@@ -58,7 +57,7 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Ff-5dk">
-                                <rect key="frame" x="300" y="110" width="240" height="30"/>
+                                <rect key="frame" x="184" y="110" width="128" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="S1g-Ae-yqQ"/>
@@ -76,7 +75,7 @@
                                 </connections>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J0Z-zA-SUY">
-                                <rect key="frame" x="0.0" y="160" width="600" height="208"/>
+                                <rect key="frame" x="0.0" y="160" width="320" height="176"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="O25-NY-lat">
@@ -104,16 +103,22 @@
                                 </connections>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Khg-dV-lHe" customClass="SAMTextView">
-                                <rect key="frame" x="10" y="401" width="580" height="100"/>
+                                <rect key="frame" x="10" y="369" width="300" height="100"/>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DQa-p0-dtY"/>
                                     <constraint firstAttribute="height" constant="100" id="Hak-Xb-QJv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hak-Xb-QJv"/>
+                                    </mask>
+                                </variation>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-UX-159">
-                                <rect key="frame" x="260" y="373" width="79.5" height="18"/>
+                                <rect key="frame" x="120" y="341" width="79.5" height="18"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Ucb-Jl-Nco"/>
@@ -169,9 +174,10 @@
                                 <exclude reference="12o-Iq-1X3"/>
                                 <exclude reference="AHJ-BG-vdR"/>
                                 <exclude reference="qv7-42-KzP"/>
+                                <exclude reference="IFY-cr-IXN"/>
                                 <exclude reference="bJY-f2-DAw"/>
                                 <exclude reference="baL-dr-RDU"/>
-                                <exclude reference="IFY-cr-IXN"/>
+                                <exclude reference="RJw-ac-pLf"/>
                                 <exclude reference="rm1-mR-G6c"/>
                             </mask>
                         </variation>
