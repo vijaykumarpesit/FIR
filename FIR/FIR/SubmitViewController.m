@@ -75,7 +75,8 @@
     } else {
         self.textView.placeholder = @"Add Description to make investigation easy";
     }
-    if (metadata.vehicleNumbers.count) {
+    
+    if (metadata.vehicleNumbers.count && self.isInEditMode) {
         if (metadata.vehicleNumbers.count >1) {
             self.vehicleNo1.text = metadata.vehicleNumbers.allObjects[0];
             self.vehicleNo2.text = metadata.vehicleNumbers.allObjects[1];
