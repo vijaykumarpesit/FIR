@@ -64,6 +64,7 @@
     self.toolBar.barStyle = UIBarStyleBlackOpaque;
     UIBarButtonItem *btnDone = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(btnClickedDone:)];
     [self.toolBar setItems:[NSArray arrayWithObject:btnDone]];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
