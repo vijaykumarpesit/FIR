@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -131,9 +132,9 @@
                                 <exclude reference="12o-Iq-1X3"/>
                                 <exclude reference="AHJ-BG-vdR"/>
                                 <exclude reference="qv7-42-KzP"/>
-                                <exclude reference="IFY-cr-IXN"/>
                                 <exclude reference="bJY-f2-DAw"/>
                                 <exclude reference="baL-dr-RDU"/>
+                                <exclude reference="IFY-cr-IXN"/>
                                 <exclude reference="rm1-mR-G6c"/>
                             </mask>
                         </variation>
@@ -592,10 +593,10 @@
                                     <constraint firstAttribute="height" constant="45" id="UXL-Vm-dHL"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Please add spot,victim's and vehicle's number images ">
+                                    <fragment content="Please add spot, victim's and vehicle's number images ">
                                         <attributes>
                                             <color key="NSColor" red="0.38823529411764707" green="0.5607843137254902" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue-Light"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue-Light"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -690,6 +691,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3JQ-50-snZ"/>
+        <segue reference="oNT-bW-nMK"/>
     </inferredMetricsTieBreakers>
 </document>
