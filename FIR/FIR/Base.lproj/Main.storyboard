@@ -65,7 +65,7 @@
                                 </connections>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J0Z-zA-SUY">
-                                <rect key="frame" x="0.0" y="158" width="320" height="361"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="253"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="O25-NY-lat">
@@ -92,6 +92,15 @@
                                     <outlet property="delegate" destination="73D-gi-ybM" id="VNb-92-jgX"/>
                                 </connections>
                             </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Khg-dV-lHe">
+                                <rect key="frame" x="10" y="419" width="300" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Hak-Xb-QJv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,14 +112,18 @@
                             <constraint firstItem="K7B-D5-fvU" firstAttribute="top" secondItem="Huu-jE-dRv" secondAttribute="bottom" constant="8" symbolic="YES" id="ETW-gb-79i"/>
                             <constraint firstItem="Huu-jE-dRv" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" id="IFY-cr-IXN"/>
                             <constraint firstItem="Huu-jE-dRv" firstAttribute="top" secondItem="fbL-Xh-IhS" secondAttribute="bottom" constant="20" id="LJh-Nd-c00"/>
+                            <constraint firstItem="Khg-dV-lHe" firstAttribute="top" secondItem="J0Z-zA-SUY" secondAttribute="bottom" constant="8" id="RJw-ac-pLf"/>
+                            <constraint firstItem="o7Y-IE-4Pf" firstAttribute="top" secondItem="Khg-dV-lHe" secondAttribute="bottom" id="TJP-V2-8xK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y1d-Ff-5dk" secondAttribute="trailing" id="bJY-f2-DAw"/>
                             <constraint firstItem="y1d-Ff-5dk" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" id="baL-dr-RDU"/>
                             <constraint firstItem="J0Z-zA-SUY" firstAttribute="top" secondItem="y1d-Ff-5dk" secondAttribute="bottom" constant="20" id="dGj-AF-C3k"/>
                             <constraint firstItem="Huu-jE-dRv" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" id="g4R-y1-ZK1"/>
                             <constraint firstItem="K7B-D5-fvU" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" constant="20" id="gD8-yN-WKb"/>
-                            <constraint firstItem="o7Y-IE-4Pf" firstAttribute="top" secondItem="J0Z-zA-SUY" secondAttribute="bottom" id="gHB-lE-Aja"/>
                             <constraint firstItem="K7B-D5-fvU" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" id="qv7-42-KzP"/>
+                            <constraint firstItem="Khg-dV-lHe" firstAttribute="top" secondItem="J0Z-zA-SUY" secondAttribute="bottom" constant="8" id="rm1-mR-G6c"/>
                             <constraint firstAttribute="trailing" secondItem="J0Z-zA-SUY" secondAttribute="trailing" id="sKc-gF-Fy7"/>
+                            <constraint firstAttribute="trailing" secondItem="Khg-dV-lHe" secondAttribute="trailing" constant="10" id="snM-pL-Ukf"/>
+                            <constraint firstItem="Khg-dV-lHe" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leading" constant="10" id="uHR-Jn-kni"/>
                             <constraint firstAttribute="leading" secondItem="J0Z-zA-SUY" secondAttribute="leading" id="wH5-Rd-6D5"/>
                         </constraints>
                         <variation key="default">
@@ -121,6 +134,7 @@
                                 <exclude reference="IFY-cr-IXN"/>
                                 <exclude reference="bJY-f2-DAw"/>
                                 <exclude reference="baL-dr-RDU"/>
+                                <exclude reference="rm1-mR-G6c"/>
                             </mask>
                         </variation>
                     </view>
