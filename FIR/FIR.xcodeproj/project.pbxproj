@@ -10,6 +10,8 @@
 		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
 		545EAA911C16B620008FA18A /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545EAA901C16B620008FA18A /* EmergencyViewController.m */; };
 		545EAA951C16BA75008FA18A /* Police.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAA941C16BA75008FA18A /* Police.png */; };
+		545EAACA1C16E7AE008FA18A /* Call.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAAC91C16E7AE008FA18A /* Call.png */; };
+		545EAACC1C16E806008FA18A /* ShareLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAACB1C16E806008FA18A /* ShareLocation.png */; };
 		5476F9831C11F999001A18CF /* Ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9821C11F999001A18CF /* Ambulance.png */; };
 		5476F9851C11FAA4001A18CF /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9841C11FAA4001A18CF /* Fire.png */; };
 		547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547741811C11E19400C5E2BA /* TabbarViewController.m */; };
@@ -66,6 +68,8 @@
 		545EAA8F1C16B620008FA18A /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
 		545EAA901C16B620008FA18A /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
 		545EAA941C16BA75008FA18A /* Police.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Police.png; sourceTree = "<group>"; };
+		545EAAC91C16E7AE008FA18A /* Call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call.png; sourceTree = "<group>"; };
+		545EAACB1C16E806008FA18A /* ShareLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareLocation.png; sourceTree = "<group>"; };
 		5476F9821C11F999001A18CF /* Ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ambulance.png; sourceTree = "<group>"; };
 		5476F9841C11FAA4001A18CF /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
 		547741801C11E19400C5E2BA /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				545EAACB1C16E806008FA18A /* ShareLocation.png */,
+				545EAAC91C16E7AE008FA18A /* Call.png */,
 				B18E3E151C15F6F20094A7EC /* placeholder_large.png */,
 				545EAA941C16BA75008FA18A /* Police.png */,
 				B1624C3C1C168713001E897C /* placeholder_small.png */,
@@ -384,12 +390,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B11409271C10B3F10033F0F5 /* DigitsKitResources.bundle in Resources */,
+				545EAACA1C16E7AE008FA18A /* Call.png in Resources */,
 				5476F9851C11FAA4001A18CF /* Fire.png in Resources */,
 				B18E3E121C15F2D30094A7EC /* placeholder.png in Resources */,
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
 				B1624C3D1C168713001E897C /* placeholder_small.png in Resources */,
 				547741B21C11EE5D00C5E2BA /* Status@2x.png in Resources */,
+				545EAACC1C16E806008FA18A /* ShareLocation.png in Resources */,
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
 				547741B11C11EE5D00C5E2BA /* Filing@2x.png in Resources */,
 				B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */,

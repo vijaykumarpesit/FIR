@@ -58,7 +58,7 @@
     self.textView.layer.borderColor = borderColor.CGColor;
     self.textView.layer.borderWidth = 1.0;
     self.textView.layer.cornerRadius = 5.0;
-    self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Please provide us some information about accident." attributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:(199.0/255.0) green:(0.0/255.0) blue:(0.0/255.0) alpha:1.0f]}];
+    self.textView.placeholder = @"Please provide us some information about accident.";
 }
 
 - (void)viewWillAppear:(BOOL)animated {

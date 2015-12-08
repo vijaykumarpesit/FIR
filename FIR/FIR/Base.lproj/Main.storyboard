@@ -188,11 +188,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQr-Ow-kIO">
-                                                    <rect key="frame" x="59" y="8" width="170" height="53.5"/>
+                                                    <rect key="frame" x="59" y="8" width="133" height="53.5"/>
                                                     <animations/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Contact Fire Engine (101)">
+                                                            <fragment content="Contact Fire Engine">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="15" name="HelveticaNeue"/>
@@ -245,11 +245,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-Vn-5lB">
-                                                    <rect key="frame" x="58" y="8" width="171" height="53.5"/>
+                                                    <rect key="frame" x="58" y="8" width="134" height="53.5"/>
                                                     <animations/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Contact Ambulance (108)">
+                                                            <fragment content="Contact Ambulance">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="15" name="HelveticaNeue"/>
@@ -294,11 +294,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpA-K5-Q2z">
-                                                    <rect key="frame" x="58" y="8" width="136" height="53.5"/>
+                                                    <rect key="frame" x="58" y="8" width="99" height="53.5"/>
                                                     <animations/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Contact Police (100)">
+                                                            <fragment content="Contact Police">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="15" name="HelveticaNeue"/>
@@ -323,6 +323,94 @@
                                                 <constraint firstItem="Esx-7k-OGP" firstAttribute="leading" secondItem="4hn-3K-LhR" secondAttribute="leadingMargin" id="Fik-fQ-LRU"/>
                                                 <constraint firstItem="dpA-K5-Q2z" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="KdN-yC-gx1"/>
                                                 <constraint firstItem="dpA-K5-Q2z" firstAttribute="leading" secondItem="Esx-7k-OGP" secondAttribute="trailing" id="NWd-L6-2an"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="ONZ-Xe-tMb">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="Ph2-Qg-cXf">
+                                        <rect key="frame" x="0.0" y="295.5" width="600" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ph2-Qg-cXf" id="SNS-3O-k4t">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4S-V0-fFg">
+                                                    <rect key="frame" x="36" y="8" width="102" height="54"/>
+                                                    <animations/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Share Location">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" red="0.94523358589999995" green="0.94523358589999995" blue="0.94523358589999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Che-wv-BJc">
+                                                    <rect key="frame" x="560" y="8" width="30" height="54"/>
+                                                    <animations/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Call">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" red="0.94523358589999995" green="0.94523358589999995" blue="0.94523358589999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="2a1-Vz-iyy">
+                                                    <rect key="frame" x="8" y="20" width="28" height="30"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="28" id="XCS-pX-TAx"/>
+                                                        <constraint firstAttribute="height" constant="30" id="gDL-7W-jRx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call.png" translatesAutoresizingMaskIntoConstraints="NO" id="PB3-p4-iH5">
+                                                    <rect key="frame" x="522" y="20" width="30" height="30"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Wm9-T7-poQ"/>
+                                                        <constraint firstAttribute="height" constant="30" id="he8-ec-ibV"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="h4S-V0-fFg" firstAttribute="leading" secondItem="2a1-Vz-iyy" secondAttribute="trailing" id="Ayt-B3-D9o"/>
+                                                <constraint firstItem="Che-wv-BJc" firstAttribute="top" secondItem="SNS-3O-k4t" secondAttribute="topMargin" id="IwZ-ky-64b"/>
+                                                <constraint firstItem="2a1-Vz-iyy" firstAttribute="centerY" secondItem="SNS-3O-k4t" secondAttribute="centerY" id="MrF-aL-AfB"/>
+                                                <constraint firstItem="2a1-Vz-iyy" firstAttribute="leading" secondItem="SNS-3O-k4t" secondAttribute="leadingMargin" id="RKX-u9-mxH"/>
+                                                <constraint firstItem="PB3-p4-iH5" firstAttribute="trailing" secondItem="SNS-3O-k4t" secondAttribute="trailingMargin" constant="-40" id="a9q-iF-oir"/>
+                                                <constraint firstItem="Che-wv-BJc" firstAttribute="centerY" secondItem="SNS-3O-k4t" secondAttribute="centerY" id="abr-UQ-sRy"/>
+                                                <constraint firstItem="h4S-V0-fFg" firstAttribute="top" secondItem="SNS-3O-k4t" secondAttribute="topMargin" id="eEG-j9-uie"/>
+                                                <constraint firstItem="PB3-p4-iH5" firstAttribute="top" secondItem="2a1-Vz-iyy" secondAttribute="top" id="ehq-H5-N8n"/>
+                                                <constraint firstItem="h4S-V0-fFg" firstAttribute="centerY" secondItem="SNS-3O-k4t" secondAttribute="centerY" id="g1k-30-KMa"/>
+                                                <constraint firstItem="Che-wv-BJc" firstAttribute="leading" secondItem="PB3-p4-iH5" secondAttribute="trailing" constant="8" symbolic="YES" id="qnz-GV-EB1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -404,7 +492,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Images">
                                             <attributes>
-                                                <color key="NSColor" red="0.079149752282357794" green="0.65060763888888884" blue="0.055044098783251401" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="NSColor" red="0.0" green="0.35294117647058826" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             </attributes>
                                         </fragment>
@@ -418,7 +506,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Description">
                                             <attributes>
-                                                <color key="NSColor" red="0.10196078431372549" green="0.59999999999999998" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="NSColor" red="0.0" green="0.23137254901960785" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             </attributes>
                                         </fragment>
@@ -491,7 +579,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Please add spot,victim's and vehicle's number image ">
                                         <attributes>
-                                            <color key="NSColor" red="0.78010574494949492" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.23137254901960785" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                         </attributes>
                                     </fragment>
@@ -500,7 +588,7 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="8QU-ea-164" secondAttribute="trailing" constant="-20" id="6EF-rL-Kys"/>
                             <constraint firstAttribute="trailing" secondItem="N4N-AK-fJt" secondAttribute="trailing" constant="5" id="6cX-vf-ie4"/>
@@ -571,8 +659,10 @@
     </scenes>
     <resources>
         <image name="Ambulance.png" width="50" height="50"/>
+        <image name="Call.png" width="50" height="50"/>
         <image name="Fire.png" width="50" height="50"/>
         <image name="Police.png" width="40" height="30"/>
+        <image name="ShareLocation.png" width="50" height="50"/>
         <image name="placeholder_large.png" width="500" height="285"/>
         <image name="second" width="30" height="30"/>
     </resources>
