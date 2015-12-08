@@ -16,6 +16,7 @@
 #import "TextExtractor.h"
 #import "FIRFaceDetector.h"
 #import "UIImageView+AFNetworking.h"
+#import "SAMTextView.h"
 
 
 @interface SubmitViewController () <UITextFieldDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -26,7 +27,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet SAMTextView *textView;
 
 @property (nonatomic, strong) NSMutableArray *images;
 
@@ -63,8 +64,27 @@
         }
         
     }
+    UIColor *borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0];
+    self.textView.layer.borderColor = borderColor.CGColor;
+    self.textView.layer.borderWidth = 1.0;
+    self.textView.layer.cornerRadius = 5.0;
+    [self.textView setBackgroundColor:[UIColor clearColor]];
     
-    // Do any additional setup after loading the view.
+    if (metadata.accidentDescription) {
+        self.textView.text = metadata.accidentDescription;
+    } else {
+        self.textView.placeholder = @"Add Description to make investigation easy";
+    }
+    if (metadata.vehicleNumbers.count) {
+        if (metadata.vehicleNumbers.count >1) {
+            self.vehicleNo1.text = metadata.vehicleNumbers.allObjects[0];
+            self.vehicleNo2.text = metadata.vehicleNumbers.allObjects[1];
+        } else {
+            self.vehicleNo1.text = metadata.vehicleNumbers.allObjects[0];
+
+        }
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,11 +123,19 @@
             
             
             for (ImageMetaData*imageMetaData in metadata.images) {
+                
                 @autoreleasepool {
-                    UIImage *image = [UIImage imageWithContentsOfFile:imageMetaData.filePath];
-                    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-                    PFFile *file = [PFFile fileWithData:imageData];
-                    [file saveInBackground];
+                    PFFile *file = nil;
+                    
+                    if (imageMetaData.isLocallyPresent) {
+                        UIImage *image = [UIImage imageWithContentsOfFile:imageMetaData.filePath];
+                        NSData *imageData = UIImageJPEGRepresentation(image, 0.7);
+                        file = [PFFile fileWithData:imageData];
+                        [file saveInBackground];
+                    } else {
+                        file = imageMetaData.file;
+                    }
+                    
                     switch (imageMetaData.imageType) {
                         case AccidentImageTypeNumberPlate:
                             [vehicleNoArray addObject:file];
@@ -122,6 +150,7 @@
                     }
                 }
             }
+            
             
             accident[@"spotImages"] = spotArray;
             accident[@"victimImages"] = victimArray;
@@ -146,10 +175,17 @@
             
             for (ImageMetaData*imageMetaData in metadata.images) {
                 @autoreleasepool {
-                    UIImage *image = [UIImage imageWithContentsOfFile:imageMetaData.filePath];
-                    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-                    PFFile *file = [PFFile fileWithData:imageData];
-                    [file saveInBackground];
+                    PFFile *file = nil;
+                    
+                    if (imageMetaData.isLocallyPresent) {
+                        UIImage *image = [UIImage imageWithContentsOfFile:imageMetaData.filePath];
+                        NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+                        file = [PFFile fileWithData:imageData];
+                        [file saveInBackground];
+                    } else {
+                        file = imageMetaData.file;
+                    }
+                  
                     switch (imageMetaData.imageType) {
                         case AccidentImageTypeNumberPlate:
                             [vehicleNoArray addObject:file];

@@ -101,9 +101,12 @@
             metaData.spotImages = accident[@"spotImages"];
             metaData.victimImages = accident[@"victimImages"];
             metaData.vehicleNoImages = accident[@"vehicleNoImages"];
+            metaData.vehicleNumbers =  accident[@"vehicleNumbers"];
             
             for (PFFile *file in metaData.spotImages) {
                 ImageMetaData *imageMetaData = [[ImageMetaData alloc] init];
+                imageMetaData.imageType = AccidentImageTypeOther;
+                imageMetaData.file = file;
                 imageMetaData.filePath = file.url;
                 [metaData.images addObject:imageMetaData];
             }
@@ -111,13 +114,18 @@
             for (PFFile *file in metaData.victimImages) {
                 ImageMetaData *imageMetaData = [[ImageMetaData alloc] init];
                 imageMetaData.filePath = file.url;
+                imageMetaData.file = file;
+                imageMetaData.imageType = AccidentImageTypeVictim;
                 [metaData.images addObject:imageMetaData];
+            
 
             }
             
             for (PFFile *file in metaData.vehicleNoImages) {
                 ImageMetaData *imageMetaData = [[ImageMetaData alloc] init];
                 imageMetaData.filePath = file.url;
+                imageMetaData.file = file;
+                imageMetaData.imageType = AccidentImageTypeNumberPlate;
                 [metaData.images addObject:imageMetaData];
 
             }

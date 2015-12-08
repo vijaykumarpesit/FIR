@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 typedef NS_ENUM(NSUInteger,AccidentImageType) {
     AccidentImageTypeOther,
@@ -24,5 +25,7 @@ typedef NS_ENUM(NSUInteger,AccidentImageType) {
 @property (nonatomic,strong) NSString *text;
 
 @property (nonatomic, assign) BOOL isLocallyPresent;
+
+@property (nonatomic, strong)PFFile *file;
 
 @end
