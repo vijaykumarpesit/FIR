@@ -107,7 +107,12 @@
     FIRAccidentMetaData *metadata = self.accidentMetdata;
     
     PFQuery *query = [PFQuery queryWithClassName:@"Accident"];
-    [query whereKey:@"vehicleNumbers" containedIn:metadata.vehicleNumbers.allObjects];
+    if (self.selectedObjectID && self.isInEditMode) {
+        [query whereKey:@"objectId" equalTo:self.selectedObjectID];
+
+    } else {
+        [query whereKey:@"vehicleNumbers" containedIn:metadata.vehicleNumbers.allObjects];
+    }
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         

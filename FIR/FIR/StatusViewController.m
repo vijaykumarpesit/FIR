@@ -20,6 +20,7 @@
 
 @property (nonatomic, strong) NSMutableArray *registeredFIR;
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+@property (nonatomic, strong) NSMutableArray *objectIDs;
 
 @end
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.registeredFIR = [[NSMutableArray alloc] init];
+    self.objectIDs = [[NSMutableArray alloc] init];
     [self.tableView registerNib:[UINib nibWithNibName:@"FIRComplaintCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self loadComplaintData];
@@ -92,6 +94,8 @@
         
         for (PFObject *accident in objects) {
             
+            [self.objectIDs addObject:accident.objectId];
+            
             FIRAccidentMetaData *metaData = [[FIRAccidentMetaData alloc] init];
             
             PFGeoPoint *geoPoint = accident[@"geoPoint"];
@@ -151,6 +155,7 @@
         SubmitViewController *submitVC = (SubmitViewController *)segue.destinationViewController;
         submitVC.isInEditMode = YES;
         submitVC.accidentMetdata = self.registeredFIR[self.selectedIndexPath.row];
+        submitVC.selectedObjectID = self.objectIDs[self.selectedIndexPath.row];
         
     }
 }
