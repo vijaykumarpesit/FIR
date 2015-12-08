@@ -7,7 +7,7 @@
 //
 
 #import "FIRFileViewController.h"
-#import "ImageViewCell.h"
+#import "FIRImageCollectionViewCell.h"
 #import "UIImage+Resize.h"
 #import "TextExtractor.h"
 #import "SubmitViewController.h"
@@ -15,6 +15,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <Parse/Parse.h>
 #import "DataSource.h"
+#import "FIRFileCollectionViewFooter.h"
 
 
 @interface FIRFileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
@@ -36,8 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.collectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"ImageViewCell" bundle:nil]  forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    [self.collectionView registerClass:[FIRImageCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     
     self.images = [[NSMutableArray alloc] init];
     self.detectedTexts = [[NSMutableSet alloc] init];
@@ -80,33 +80,36 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.images.count;
+    if (self.images.count > 0) {
+        return self.images.count +1;
+    }
+    return 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-   ImageViewCell *cell =  (ImageViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-   cell.imageView.image = [UIImage imageWithContentsOfFile:self.images[indexPath.row]];
+   FIRImageCollectionViewCell *cell =  (FIRImageCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
+                                                                                                               forIndexPath:indexPath];
+    UIImage *image = nil;
+    if (indexPath.row < self.images.count) {
+        image = [UIImage imageWithContentsOfFile:self.images[indexPath.row]];
+    } else {
+        image = [UIImage imageNamed:@"placeholder_small.png"];
+    }
+    cell.imageView.image = image;
     return  cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    CGFloat width = [UIScreen mainScreen].bounds.size.width/3;
+    CGFloat width = ([UIScreen mainScreen].bounds.size.width - 8)/3;
     return CGSizeMake(width, width);
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    
-    CGFloat width = [UIScreen mainScreen].bounds.size.width/3;
-    return CGSizeMake(width, width);
-}
-
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    
-    ImageViewCell *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
-    reusableView.imageView.image = [UIImage imageNamed:@"placeholder_large.png"];
-    return  reusableView;
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == self.images.count) {
+        [self presentImagePicker];
+    }
 }
 
 - (void)presentImagePicker {
@@ -129,6 +132,9 @@
     [self.images addObject:filePath];
     self.collectionView.hidden = NO;
     [self.collectionView reloadData];
+    
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.images.count inSection:0] atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
+    
     [picker dismissViewControllerAnimated:YES completion:nil];
     
 }

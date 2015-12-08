@@ -340,10 +340,10 @@
                                 <state key="normal" title="Add Description"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N4N-AK-fJt">
-                                <rect key="frame" x="11" y="168" width="288" height="205"/>
+                                <rect key="frame" x="-5" y="168" width="320" height="205"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UU8-K1-xY8">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="UU8-K1-xY8">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -408,11 +408,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="8QU-ea-164" secondAttribute="trailing" constant="12" id="6EF-rL-Kys"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="N4N-AK-fJt" secondAttribute="trailing" constant="5" id="6cX-vf-ie4"/>
+                            <constraint firstAttribute="trailing" secondItem="N4N-AK-fJt" secondAttribute="trailing" constant="5" id="6cX-vf-ie4"/>
                             <constraint firstItem="pqA-mf-wEQ" firstAttribute="height" secondItem="w4v-ap-35F" secondAttribute="height" multiplier="0.12" id="9Lv-N3-B6v"/>
                             <constraint firstItem="9oI-PV-njv" firstAttribute="top" secondItem="pqA-mf-wEQ" secondAttribute="bottom" constant="20" id="9rg-do-Gvj"/>
                             <constraint firstItem="S8Z-VT-RFd" firstAttribute="leading" secondItem="w4v-ap-35F" secondAttribute="leadingMargin" constant="5" id="C1B-Zi-UQI"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="N4N-AK-fJt" secondAttribute="leading" constant="5" id="Kj6-Mc-LqB"/>
+                            <constraint firstAttribute="leading" secondItem="N4N-AK-fJt" secondAttribute="leading" constant="5" id="Kj6-Mc-LqB"/>
                             <constraint firstItem="6wE-gb-RcH" firstAttribute="centerX" secondItem="w4v-ap-35F" secondAttribute="centerX" id="Olx-CC-8eK"/>
                             <constraint firstItem="8QU-ea-164" firstAttribute="top" secondItem="p00-oe-fgq" secondAttribute="bottom" constant="20" id="Qdq-ii-hHS"/>
                             <constraint firstItem="N4N-AK-fJt" firstAttribute="top" secondItem="S8Z-VT-RFd" secondAttribute="bottom" constant="5" id="Vd5-k8-q0L"/>

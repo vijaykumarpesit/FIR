@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9046" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="FIRFileCollectionViewFooter">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UN0-17-Kx4">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <animations/>
+                </imageView>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UN0-17-Kx4" secondAttribute="trailing" id="4VX-iB-g9y"/>
+                <constraint firstAttribute="bottom" secondItem="UN0-17-Kx4" secondAttribute="bottom" id="4ly-7A-CiY"/>
+                <constraint firstItem="UN0-17-Kx4" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="FAn-SC-5LE"/>
+                <constraint firstItem="UN0-17-Kx4" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Vhk-3A-xYN"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="UN0-17-Kx4" id="KwV-SS-nsF"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>
