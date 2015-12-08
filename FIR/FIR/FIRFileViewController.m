@@ -57,7 +57,7 @@
     self.textView.layer.borderColor = borderColor.CGColor;
     self.textView.layer.borderWidth = 1.0;
     self.textView.layer.cornerRadius = 5.0;
-    self.textView.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0f];
+    self.textView.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0f];
     self.textView.placeholder = @"Please provide us some information about accident.";
     
     
