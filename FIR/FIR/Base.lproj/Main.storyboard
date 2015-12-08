@@ -139,10 +139,15 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Verify Info" id="Yfr-oC-XZ6">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="HfE-DO-vMg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="HfE-DO-vMg">
+                            <connections>
+                                <action selector="sumbmitAccidentReport:" destination="73D-gi-ybM" id="BFb-e4-Wqy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="J0Z-zA-SUY" id="dPH-MH-FID"/>
+                        <outlet property="textView" destination="Khg-dV-lHe" id="chD-u5-lb6"/>
                         <outlet property="vehicleNo1" destination="K7B-D5-fvU" id="oVX-5f-Nly"/>
                         <outlet property="vehicleNo2" destination="y1d-Ff-5dk" id="3RW-dd-5Va"/>
                         <outlet property="view" destination="ge7-Wg-sjt" id="itO-UB-K2F"/>

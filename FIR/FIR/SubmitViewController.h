@@ -10,4 +10,7 @@
 
 @interface SubmitViewController : UIViewController
 
+@property(nonatomic, assign)BOOL isInEditMode;
+@property (nonatomic, strong) NSMutableArray *images;
+
 @end

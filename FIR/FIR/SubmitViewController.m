@@ -12,29 +12,39 @@
 #import "FIRAccidentMetaData.h"
 #import "ImageMetaData.h"
 #import "FIRImageCollectionViewCell.h"
+#import "UIImage+Resize.h"
+#import "TextExtractor.h"
+#import "FIRFaceDetector.h"
 
 
-
-@interface SubmitViewController () <UITextFieldDelegate>
+@interface SubmitViewController () <UITextFieldDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *vehicleNo1;
 
 @property (weak, nonatomic) IBOutlet UITextField *vehicleNo2;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-@property (nonatomic, strong) NSMutableArray *images;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @end
 
 @implementation SubmitViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _images = [[NSMutableArray alloc] init];
+
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController.navigationBar setHidden:NO];
-    self.vehicleNo1.text = @"KA-03-HY-3266";
     
     [self.collectionView registerClass:[FIRImageCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
 
-    self.images = [[NSMutableArray alloc] init];
     FIRAccidentMetaData *metadata = [[[DataSource sharedDataSource] accidentMetaDataArry] firstObject];
     
     for (ImageMetaData*imageMetaData in metadata.images) {
@@ -79,8 +89,41 @@
         
         if (objects.count) {
             
-            //Already found update the item//TODO
+            PFObject* accident = (PFObject *)[objects lastObject];
+            accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
             
+            
+            NSMutableArray *spotArray = [NSMutableArray array];
+            NSMutableArray *victimArray = [NSMutableArray array];
+            NSMutableArray *vehicleNoArray = [NSMutableArray array];
+            
+            
+            for (ImageMetaData*imageMetaData in metadata.images) {
+                @autoreleasepool {
+                    UIImage *image = [UIImage imageWithContentsOfFile:imageMetaData.filePath];
+                    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+                    PFFile *file = [PFFile fileWithData:imageData];
+                    [file saveInBackground];
+                    switch (imageMetaData.imageType) {
+                        case AccidentImageTypeNumberPlate:
+                            [vehicleNoArray addObject:file];
+                            break;
+                        case AccidentImageTypeVictim:
+                            [victimArray addObject:file];
+                            break;
+                        case  AccidentImageTypeOther:
+                            [spotArray addObject:file];
+                        default:
+                            break;
+                    }
+                }
+            }
+            
+            accident[@"spotImages"] = spotArray;
+            accident[@"victimImages"] = victimArray;
+            accident[@"vehicleNoImages"] = vehicleNoArray;
+            accident[@"vehicleNumbers"] = @[self.vehicleNo1.text,self.vehicleNo2.text];
+            [accident saveInBackground];
         } else {
             //Craete PF Object
             
@@ -126,6 +169,7 @@
         
     }];
     
+    //Replace this with good UI
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Submission Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -145,8 +189,26 @@
     
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == self.images.count) {
+        [self presentImagePicker];
+    }
+}
+
+- (void)presentImagePicker {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.allowsEditing = NO;
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if (self.isInEditMode) {
+        return  self.images.count +1;
+    }
     return self.images.count;
 }
 
@@ -155,9 +217,12 @@
     FIRImageCollectionViewCell *cell =  (FIRImageCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
                                                                                                                 forIndexPath:indexPath];
     UIImage *image = nil;
-    ImageMetaData *metaData = self.images[indexPath.row];
-    image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@-thumb",metaData.filePath]];
-    
+    if (indexPath.row < self.images.count) {
+        ImageMetaData *metaData = self.images[indexPath.row];
+        image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@-thumb",metaData.filePath]];
+    } else {
+        image = [UIImage imageNamed:@"placeholder_small.png"];
+    }
     cell.imageView.image = image;
     return  cell;
 }
@@ -166,6 +231,76 @@
     
     CGFloat width = ([UIScreen mainScreen].bounds.size.width - 8)/3;
     return CGSizeMake(width, width);
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo: (NSDictionary *)info
+{
+    // Access the uncropped image from info dictionary
+    NSMutableString *filePath =  [NSMutableString stringWithString:[self baseFilePath]];
+    [filePath appendString:@"/"];
+    [filePath appendString:[self GetUUID]];
+    
+    ImageMetaData *metaData = [[ImageMetaData alloc] init];
+    metaData.filePath = filePath;
+    
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    UIImage *thumbnailImage = [image thumbnailImage:200 interpolationQuality:0];
+    NSData *thumbnailData = UIImageJPEGRepresentation(thumbnailImage, 0.6);
+    [thumbnailData writeToFile:[NSString stringWithFormat:@"%@-thumb",filePath] atomically:YES];
+    
+    //Do it parallely
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSData *imageData = UIImageJPEGRepresentation(image, 0.6);
+        [imageData writeToFile:filePath atomically:YES];
+    });
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSString *text = [TextExtractor textFromImage:thumbnailImage];
+        if (text && text.length > 5 && metaData.imageType != AccidentImageTypeVictim) {
+            metaData.text = text;
+            metaData.imageType = AccidentImageTypeNumberPlate;
+            
+        }
+    });
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        BOOL isFacePresent =  [FIRFaceDetector isFaceDetectedInImage:image];
+        if (isFacePresent) {
+            metaData.imageType = AccidentImageTypeVictim;
+        }
+    });
+    
+    [self.images addObject:metaData];
+    self.collectionView.hidden = NO;
+    [self.collectionView reloadData];
+    
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.images.count inSection:0] atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    FIRAccidentMetaData *metadata = [[[DataSource sharedDataSource] accidentMetaDataArry] firstObject];
+    metadata.images = self.images;
+    
+}
+
+- (NSString *)baseFilePath {
+    NSString *documentsDirectoryPayh = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    return documentsDirectoryPayh;
+}
+
+
+//if user is cancelling the camera
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (NSString *)GetUUID
+{
+    CFUUIDRef theUUID = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
+    return (__bridge NSString *)string;
 }
 
 @end
