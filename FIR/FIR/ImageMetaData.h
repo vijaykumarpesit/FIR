@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger,AccidentImageType) {
-    
+    AccidentImageTypeOther,
     AccidentImageTypeVictim,
-    AccidentImageTypeNumberPlate,
-    AccidentImageTypeOther
+    AccidentImageTypeNumberPlate
+    
 };
 
 @interface ImageMetaData : NSObject
