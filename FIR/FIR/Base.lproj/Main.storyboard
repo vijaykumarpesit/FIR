@@ -169,107 +169,177 @@
             <point key="canvasLocation" x="1562" y="360"/>
         </scene>
         <!--Emergency-->
-        <scene sceneID="ear-sh-uZr">
+        <scene sceneID="L71-43-c40">
             <objects>
-                <viewController id="cEv-p6-mRT" userLabel="Emergency" customClass="EmergencyViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VIk-EI-IUJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="opS-zV-gIs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="j9g-nR-6uQ">
+                <tableViewController id="A0O-gj-Wlf" customClass="EmergencyViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="r2G-Z9-Vjh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQr-Ow-kIO">
-                                <rect key="frame" x="258" y="207" width="83" height="35.5"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.8269413704200258" blue="0.87570381299687527" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Fire (101)">
-                                            <attributes>
-                                                <color key="NSColor" red="0.60077335858585856" green="0.093598363732394357" blue="0.037799562604442789" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.99607843137254903" green="0.7803921568627451" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="callFireEngine:" destination="cEv-p6-mRT" eventType="touchUpInside" id="ab9-W0-NDp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-Vn-5lB">
-                                <rect key="frame" x="225" y="332" width="151" height="35.5"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.85037703201128712" green="0.95040914454768954" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Ambulance (108)">
-                                            <attributes>
-                                                <color key="NSColor" red="0.031182397677035699" green="0.53805551871205526" blue="0.72050583964646464" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.94523358585858586" green="0.94523358585858586" blue="0.94523358585858586" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="callAmbulance:" destination="cEv-p6-mRT" eventType="touchUpInside" id="mxR-f2-Ns8"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire.png" translatesAutoresizingMaskIntoConstraints="NO" id="8WP-6S-kgU">
-                                <rect key="frame" x="200" y="200" width="50" height="50"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3aJ-TE-DmO"/>
-                                    <constraint firstAttribute="width" constant="50" id="4pD-vw-1sW"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ambulance.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wgh-VM-tHG">
-                                <rect key="frame" x="167" y="324.5" width="50" height="50"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="GYx-sL-A5C"/>
-                                    <constraint firstAttribute="height" constant="50" id="e6Q-Tq-ewF"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Wgh-VM-tHG" firstAttribute="centerY" secondItem="NkR-Vn-5lB" secondAttribute="centerY" id="1Tw-qZ-QJg"/>
-                            <constraint firstItem="NkR-Vn-5lB" firstAttribute="centerY" secondItem="j9g-nR-6uQ" secondAttribute="centerY" constant="50" id="DpZ-Bf-KX0"/>
-                            <constraint firstItem="tQr-Ow-kIO" firstAttribute="centerY" secondItem="j9g-nR-6uQ" secondAttribute="centerY" constant="-75" id="Qi2-1E-gA9"/>
-                            <constraint firstItem="NkR-Vn-5lB" firstAttribute="leading" secondItem="Wgh-VM-tHG" secondAttribute="trailing" constant="8" id="R0H-fJ-44n"/>
-                            <constraint firstItem="tQr-Ow-kIO" firstAttribute="centerX" secondItem="j9g-nR-6uQ" secondAttribute="centerX" id="YdW-9o-UhG"/>
-                            <constraint firstItem="tQr-Ow-kIO" firstAttribute="leading" secondItem="8WP-6S-kgU" secondAttribute="trailing" constant="8" id="e97-f9-LiH"/>
-                            <constraint firstItem="NkR-Vn-5lB" firstAttribute="centerX" secondItem="j9g-nR-6uQ" secondAttribute="centerX" id="huF-QN-vzh"/>
-                            <constraint firstItem="8WP-6S-kgU" firstAttribute="centerY" secondItem="tQr-Ow-kIO" secondAttribute="centerY" id="ogh-bH-4hh"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Emergency" id="ps7-hy-NHv" userLabel="Emergency"/>
-                    <connections>
-                        <outlet property="view" destination="j9g-nR-6uQ" id="DCw-8s-R0e"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zP6-2O-Q1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Emergency" id="wsl-uR-pzt">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="Nzp-bo-dtV">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nzp-bo-dtV" id="qjZ-6T-Ye9">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire.png" translatesAutoresizingMaskIntoConstraints="NO" id="8WP-6S-kgU">
+                                                    <rect key="frame" x="8" y="-1" width="50" height="50.5"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="3aJ-TE-DmO"/>
+                                                        <constraint firstAttribute="width" constant="50" id="4pD-vw-1sW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQr-Ow-kIO">
+                                                    <rect key="frame" x="59" y="8" width="80" height="33.5"/>
+                                                    <animations/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Call Fire (101)">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.60077335858585856" green="0.093598363732394357" blue="0.037799562604442789" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" red="0.99607843137254903" green="0.7803921568627451" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="tQr-Ow-kIO" firstAttribute="top" secondItem="qjZ-6T-Ye9" secondAttribute="topMargin" id="1D1-dL-xLb"/>
+                                                <constraint firstItem="8WP-6S-kgU" firstAttribute="leading" secondItem="qjZ-6T-Ye9" secondAttribute="leadingMargin" id="Ita-IK-WIT"/>
+                                                <constraint firstItem="8WP-6S-kgU" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="TxE-r6-PDh"/>
+                                                <constraint firstItem="tQr-Ow-kIO" firstAttribute="leading" secondItem="8WP-6S-kgU" secondAttribute="trailing" constant="1" id="YEr-pb-ID7"/>
+                                                <constraint firstItem="tQr-Ow-kIO" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="wsD-db-0jh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="VJk-RN-IVh">
+                                        <rect key="frame" x="0.0" y="99.5" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VJk-RN-IVh" id="Tds-TL-anM">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ambulance.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wgh-VM-tHG">
+                                                    <rect key="frame" x="8" y="-0.5" width="50" height="50.5"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="GYx-sL-A5C"/>
+                                                        <constraint firstAttribute="height" constant="50" id="e6Q-Tq-ewF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-Vn-5lB">
+                                                    <rect key="frame" x="58" y="8" width="143" height="33.5"/>
+                                                    <animations/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Call Ambulance (108)">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.031182397677035699" green="0.53805551871205526" blue="0.72050583964646464" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" red="0.94523358585858586" green="0.94523358585858586" blue="0.94523358585858586" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="Wgh-VM-tHG" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="3OL-N8-Z1V"/>
+                                                <constraint firstItem="NkR-Vn-5lB" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="4PX-hx-An3"/>
+                                                <constraint firstItem="Wgh-VM-tHG" firstAttribute="leading" secondItem="Tds-TL-anM" secondAttribute="leadingMargin" id="Gtl-ZH-bPT"/>
+                                                <constraint firstItem="NkR-Vn-5lB" firstAttribute="leading" secondItem="Wgh-VM-tHG" secondAttribute="trailing" id="RWI-WD-6lp"/>
+                                                <constraint firstItem="NkR-Vn-5lB" firstAttribute="top" secondItem="Tds-TL-anM" secondAttribute="topMargin" id="Uju-Hv-58Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="5D9-Zo-wZy">
+                                        <rect key="frame" x="0.0" y="149.5" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5D9-Zo-wZy" id="4hn-3K-LhR">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Police.png" translatesAutoresizingMaskIntoConstraints="NO" id="Esx-7k-OGP">
+                                                    <rect key="frame" x="8" y="-1" width="50" height="50.5"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="COO-dc-IiS"/>
+                                                        <constraint firstAttribute="height" constant="50" id="xnf-FA-ASj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpA-K5-Q2z">
+                                                    <rect key="frame" x="58" y="8" width="108" height="33.5"/>
+                                                    <animations/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Call Police (108)">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                            <color key="value" red="0.94523358589999995" green="0.94523358589999995" blue="0.94523358589999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="dpA-K5-Q2z" firstAttribute="top" secondItem="4hn-3K-LhR" secondAttribute="topMargin" id="5h5-dh-nv5"/>
+                                                <constraint firstItem="Esx-7k-OGP" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="CYi-3v-N0c"/>
+                                                <constraint firstItem="Esx-7k-OGP" firstAttribute="leading" secondItem="4hn-3K-LhR" secondAttribute="leadingMargin" id="Fik-fQ-LRU"/>
+                                                <constraint firstItem="dpA-K5-Q2z" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="KdN-yC-gx1"/>
+                                                <constraint firstItem="dpA-K5-Q2z" firstAttribute="leading" secondItem="Esx-7k-OGP" secondAttribute="trailing" id="NWd-L6-2an"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="A0O-gj-Wlf" id="CJg-g8-oh7"/>
+                            <outlet property="delegate" destination="A0O-gj-Wlf" id="TyF-y2-bl7"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Emergency" id="iMv-C8-g6f"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4JA-w0-aXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="1191"/>
+            <point key="canvasLocation" x="750" y="1115"/>
         </scene>
         <!--Tabbar View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -285,7 +355,7 @@
                     <connections>
                         <segue destination="bD1-rA-Kow" kind="relationship" relationship="viewControllers" id="HsM-jQ-NP2"/>
                         <segue destination="zCh-8c-JUu" kind="relationship" relationship="viewControllers" id="lhE-Uh-gTZ"/>
-                        <segue destination="cEv-p6-mRT" kind="relationship" relationship="viewControllers" id="yMP-mh-ATW"/>
+                        <segue destination="A0O-gj-Wlf" kind="relationship" relationship="viewControllers" id="05y-Hf-PMd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -504,6 +574,7 @@
     <resources>
         <image name="Ambulance.png" width="50" height="50"/>
         <image name="Fire.png" width="50" height="50"/>
+        <image name="Police.png" width="40" height="40"/>
         <image name="placeholder_large.png" width="500" height="285"/>
         <image name="second" width="30" height="30"/>
     </resources>
