@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7B-D5-fvU">
-                                <rect key="frame" x="36" y="108" width="130" height="30"/>
+                                <rect key="frame" x="36" y="113" width="130" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="ZiU-T1-fjW"/>
@@ -31,7 +32,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-jE-dRv">
-                                <rect key="frame" x="105" y="84" width="109.5" height="16.5"/>
+                                <rect key="frame" x="87" y="84" width="145" height="21.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="xVc-50-5z5"/>
@@ -39,8 +40,8 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Vehicle's Number">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.43854718139582644" blue="0.88582348823547363" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <color key="NSColor" red="0.039215686274509803" green="0.37647058823529411" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -52,7 +53,7 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Ff-5dk">
-                                <rect key="frame" x="186" y="108" width="120" height="30"/>
+                                <rect key="frame" x="186" y="113" width="120" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="S1g-Ae-yqQ"/>
@@ -65,7 +66,7 @@
                                 </connections>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J0Z-zA-SUY">
-                                <rect key="frame" x="0.0" y="158" width="320" height="253"/>
+                                <rect key="frame" x="0.0" y="163" width="320" height="247.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="O25-NY-lat">
@@ -155,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ez-44-Lgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="-332"/>
+            <point key="canvasLocation" x="2432" y="-332"/>
         </scene>
         <!--Status-->
         <scene sceneID="wg7-f3-ORb">
@@ -491,17 +492,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p00-oe-fgq">
-                                <rect key="frame" x="100" y="80" width="120" height="37.5"/>
+                                <rect key="frame" x="85" y="80" width="150" height="38"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="8qZ-qE-nk0"/>
+                                    <constraint firstAttribute="width" constant="150" id="8qZ-qE-nk0"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Images">
                                             <attributes>
-                                                <color key="NSColor" white="0.39000000000000001" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                <color key="NSColor" red="0.066666666666666666" green="0.40000000000000002" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -509,21 +510,21 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wE-gb-RcH">
-                                <rect key="frame" x="80" y="327" width="159" height="37.5"/>
+                                <rect key="frame" x="77" y="328" width="165" height="38"/>
                                 <animations/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Description">
                                             <attributes>
-                                                <color key="NSColor" red="0.0" green="0.23137254901960785" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                <color key="NSColor" red="0.039215686274509803" green="0.37647058823529411" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N4N-AK-fJt">
-                                <rect key="frame" x="-5" y="167" width="320" height="155"/>
+                                <rect key="frame" x="-5" y="168" width="320" height="155"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="UU8-K1-xY8">
@@ -551,7 +552,7 @@
                                 </connections>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-mf-wEQ" customClass="SAMTextView">
-                                <rect key="frame" x="10" y="370" width="300" height="113.5"/>
+                                <rect key="frame" x="10" y="372" width="300" height="113.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -570,7 +571,7 @@
                                 </connections>
                             </textView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="placeholder_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-ea-164">
-                                <rect key="frame" x="-4" y="167" width="328" height="150"/>
+                                <rect key="frame" x="-4" y="168" width="328" height="150"/>
                                 <animations/>
                                 <color key="tintColor" red="0.70165761071022104" green="0.39601698351732267" blue="0.22024195776688224" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -585,16 +586,16 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-VT-RFd">
-                                <rect key="frame" x="21" y="117" width="278" height="45"/>
+                                <rect key="frame" x="21" y="118" width="278" height="45"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="UXL-Vm-dHL"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Please add spot,victim's and vehicle's number image ">
+                                    <fragment content="Please add spot,victim's and vehicle's number images ">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.23137254901960785" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <color key="NSColor" red="0.38823529411764707" green="0.5607843137254902" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Light"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
