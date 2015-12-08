@@ -18,72 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjC-Ia-RFK" userLabel="Please verify the info">
-                                <rect key="frame" x="45" y="70" width="231.5" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="yrM-0z-DKZ"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Please verify the info">
-                                        <attributes>
-                                            <color key="NSColor" red="0.36728614267676762" green="0.27368135556539092" blue="0.021763121841932864" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="25" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                            <integer key="NSUnderline" value="1"/>
-                                            <color key="NSUnderlineColor" red="0.79607843137254897" green="0.59607843137254901" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-22-JUE">
-                                <rect key="frame" x="109" y="391" width="100" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.82764272175198705" green="0.91745169505199642" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7Qc-Us-Gta"/>
-                                    <constraint firstAttribute="width" constant="100" id="Qoq-Vk-DGL"/>
-                                </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Submit">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.98664378156565657" green="0.98664378156565657" blue="0.98664378156565657" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="sumbmitAccidentReport:" destination="73D-gi-ybM" eventType="touchUpInside" id="2Pe-4A-EZf"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-jE-dRv">
-                                <rect key="frame" x="16" y="144" width="174" height="20"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="xVc-50-5z5"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Vehicle No.1's Number">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.43854718139582644" blue="0.88582348823547363" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGm-gn-oPv">
-                                <rect key="frame" x="16" y="252" width="174" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGm-gn-oPv">
+                                <rect key="frame" x="16" y="148" width="143.5" height="16"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="ZNJ-Kr-IGA"/>
@@ -92,14 +28,14 @@
                                     <fragment content="Vehicle No,2's Number">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.4392156862745098" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7B-D5-fvU">
-                                <rect key="frame" x="16" y="172" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7B-D5-fvU">
+                                <rect key="frame" x="16" y="108" width="288" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -107,8 +43,29 @@
                                     <outlet property="delegate" destination="73D-gi-ybM" id="bnQ-Fq-Ij2"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Ff-5dk">
-                                <rect key="frame" x="16" y="276" width="288" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-jE-dRv">
+                                <rect key="frame" x="16" y="84" width="143.5" height="16.5"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="xVc-50-5z5"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Vehicle No.1's Number">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.43854718139582644" blue="0.88582348823547363" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xVc-50-5z5"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Ff-5dk">
+                                <rect key="frame" x="16" y="172" width="288" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -117,28 +74,60 @@
                                     <outlet property="delegate" destination="73D-gi-ybM" id="j7N-Ew-hG5"/>
                                 </connections>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J0Z-zA-SUY">
+                                <rect key="frame" x="0.0" y="222" width="320" height="296.5"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="O25-NY-lat">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="j7c-qN-NaC">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="73D-gi-ybM" id="Op8-xM-ols"/>
+                                    <outlet property="delegate" destination="73D-gi-ybM" id="VNb-92-jgX"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="K7B-D5-fvU" secondAttribute="trailing" id="12o-Iq-1X3"/>
-                            <constraint firstItem="EGm-gn-oPv" firstAttribute="top" secondItem="K7B-D5-fvU" secondAttribute="bottom" constant="50" id="4Qu-Mv-3Zj"/>
-                            <constraint firstItem="Huu-jE-dRv" firstAttribute="top" secondItem="VjC-Ia-RFK" secondAttribute="bottom" constant="44" id="5WC-bC-IIe"/>
+                            <constraint firstItem="EGm-gn-oPv" firstAttribute="top" secondItem="K7B-D5-fvU" secondAttribute="bottom" constant="10" id="4Qu-Mv-3Zj"/>
                             <constraint firstItem="K7B-D5-fvU" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" id="AHJ-BG-vdR"/>
                             <constraint firstItem="K7B-D5-fvU" firstAttribute="top" secondItem="Huu-jE-dRv" secondAttribute="bottom" constant="8" symbolic="YES" id="ETW-gb-79i"/>
-                            <constraint firstItem="VjC-Ia-RFK" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" id="HwU-hK-ROr"/>
                             <constraint firstItem="Huu-jE-dRv" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" id="IFY-cr-IXN"/>
                             <constraint firstItem="y1d-Ff-5dk" firstAttribute="top" secondItem="EGm-gn-oPv" secondAttribute="bottom" constant="8" id="J5Q-td-cHM"/>
+                            <constraint firstItem="Huu-jE-dRv" firstAttribute="top" secondItem="fbL-Xh-IhS" secondAttribute="bottom" constant="20" id="LJh-Nd-c00"/>
                             <constraint firstItem="K7B-D5-fvU" firstAttribute="leading" secondItem="EGm-gn-oPv" secondAttribute="leading" id="TNo-mV-Plv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y1d-Ff-5dk" secondAttribute="trailing" id="bJY-f2-DAw"/>
                             <constraint firstItem="y1d-Ff-5dk" firstAttribute="leading" secondItem="ge7-Wg-sjt" secondAttribute="leadingMargin" id="baL-dr-RDU"/>
-                            <constraint firstItem="Aht-22-JUE" firstAttribute="top" secondItem="y1d-Ff-5dk" secondAttribute="bottom" constant="85" id="lBo-iU-Rw3"/>
-                            <constraint firstItem="VjC-Ia-RFK" firstAttribute="top" secondItem="fbL-Xh-IhS" secondAttribute="bottom" constant="50" id="qTW-AG-mh8"/>
+                            <constraint firstItem="J0Z-zA-SUY" firstAttribute="top" secondItem="y1d-Ff-5dk" secondAttribute="bottom" constant="20" id="dGj-AF-C3k"/>
+                            <constraint firstItem="o7Y-IE-4Pf" firstAttribute="top" secondItem="J0Z-zA-SUY" secondAttribute="bottom" id="gHB-lE-Aja"/>
                             <constraint firstItem="K7B-D5-fvU" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" id="qv7-42-KzP"/>
-                            <constraint firstItem="Aht-22-JUE" firstAttribute="centerX" secondItem="ge7-Wg-sjt" secondAttribute="centerX" constant="-1" id="wU7-6x-4aK"/>
+                            <constraint firstAttribute="trailing" secondItem="J0Z-zA-SUY" secondAttribute="trailing" id="sKc-gF-Fy7"/>
+                            <constraint firstAttribute="leading" secondItem="J0Z-zA-SUY" secondAttribute="leading" id="wH5-Rd-6D5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Verify Info" id="Yfr-oC-XZ6">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="HfE-DO-vMg"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="J0Z-zA-SUY" id="dPH-MH-FID"/>
                         <outlet property="vehicleNo1" destination="K7B-D5-fvU" id="oVX-5f-Nly"/>
                         <outlet property="vehicleNo2" destination="y1d-Ff-5dk" id="3RW-dd-5Va"/>
                         <outlet property="view" destination="ge7-Wg-sjt" id="itO-UB-K2F"/>
@@ -146,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ez-44-Lgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386" y="-339"/>
+            <point key="canvasLocation" x="2142" y="-332"/>
         </scene>
         <!--Status-->
         <scene sceneID="wg7-f3-ORb">

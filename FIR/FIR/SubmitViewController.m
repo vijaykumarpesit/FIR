@@ -11,6 +11,7 @@
 #import "DataSource.h"
 #import "FIRAccidentMetaData.h"
 #import "ImageMetaData.h"
+#import "FIRImageCollectionViewCell.h"
 
 
 
@@ -19,6 +20,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *vehicleNo2;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic, strong) NSMutableArray *images;
 @end
 
 @implementation SubmitViewController
@@ -27,6 +31,25 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setHidden:NO];
     self.vehicleNo1.text = @"KA-03-HY-3266";
+    
+    [self.collectionView registerClass:[FIRImageCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+
+    self.images = [[NSMutableArray alloc] init];
+    FIRAccidentMetaData *metadata = [[[DataSource sharedDataSource] accidentMetaDataArry] firstObject];
+    
+    for (ImageMetaData*imageMetaData in metadata.images) {
+        switch (imageMetaData.imageType) {
+            case AccidentImageTypeNumberPlate:
+                [self.images addObject:imageMetaData];
+                break;
+            case AccidentImageTypeVictim:
+                [self.images addObject:imageMetaData];
+                break;
+            default:
+                break;
+        }
+   
+    }
     
     // Do any additional setup after loading the view.
 }
@@ -120,6 +143,29 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
 
     
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.images.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    FIRImageCollectionViewCell *cell =  (FIRImageCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
+                                                                                                                forIndexPath:indexPath];
+    UIImage *image = nil;
+    ImageMetaData *metaData = self.images[indexPath.row];
+    image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@-thumb",metaData.filePath]];
+    
+    cell.imageView.image = image;
+    return  cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat width = ([UIScreen mainScreen].bounds.size.width - 8)/3;
+    return CGSizeMake(width, width);
 }
 
 @end
