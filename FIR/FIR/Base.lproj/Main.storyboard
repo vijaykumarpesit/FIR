@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -270,13 +271,33 @@
                                                         <constraint firstAttribute="width" constant="50" id="4pD-vw-1sW"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call.png" translatesAutoresizingMaskIntoConstraints="NO" id="j3D-Ms-r3V">
+                                                    <rect key="frame" x="565" y="16.5" width="27" height="37"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="ANH-VJ-MKi"/>
+                                                        <constraint firstAttribute="width" constant="27" id="S8f-5F-gts"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ES-bH-aLp">
+                                                    <rect key="frame" x="518" y="15.5" width="27" height="37"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="2GF-aM-CwO"/>
+                                                        <constraint firstAttribute="width" constant="27" id="sCA-rI-8Id"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="tQr-Ow-kIO" firstAttribute="top" secondItem="qjZ-6T-Ye9" secondAttribute="topMargin" id="1D1-dL-xLb"/>
+                                                <constraint firstItem="j3D-Ms-r3V" firstAttribute="trailing" secondItem="qjZ-6T-Ye9" secondAttribute="trailingMargin" id="HHO-GA-HFa"/>
                                                 <constraint firstItem="8WP-6S-kgU" firstAttribute="leading" secondItem="qjZ-6T-Ye9" secondAttribute="leadingMargin" id="Ita-IK-WIT"/>
+                                                <constraint firstItem="j3D-Ms-r3V" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="Qaw-Pg-LoB"/>
+                                                <constraint firstItem="j3D-Ms-r3V" firstAttribute="leading" secondItem="3ES-bH-aLp" secondAttribute="trailing" constant="20" id="RFN-5M-gwU"/>
                                                 <constraint firstItem="8WP-6S-kgU" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="TxE-r6-PDh"/>
                                                 <constraint firstItem="tQr-Ow-kIO" firstAttribute="leading" secondItem="8WP-6S-kgU" secondAttribute="trailing" constant="1" id="YEr-pb-ID7"/>
+                                                <constraint firstItem="3ES-bH-aLp" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="ZiB-Qg-zSd"/>
                                                 <constraint firstItem="tQr-Ow-kIO" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="wsD-db-0jh"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -319,14 +340,34 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call.png" translatesAutoresizingMaskIntoConstraints="NO" id="KKd-zl-vHA">
+                                                    <rect key="frame" x="565" y="16.5" width="27" height="37"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="27" id="EjC-le-jYO"/>
+                                                        <constraint firstAttribute="height" constant="37" id="ZWt-ce-FH2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="vdl-1H-b2W">
+                                                    <rect key="frame" x="518" y="15.5" width="27" height="37"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="1t9-zc-xTt"/>
+                                                        <constraint firstAttribute="width" constant="27" id="sB6-N0-Wst"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="Wgh-VM-tHG" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="3OL-N8-Z1V"/>
                                                 <constraint firstItem="NkR-Vn-5lB" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="4PX-hx-An3"/>
+                                                <constraint firstItem="KKd-zl-vHA" firstAttribute="trailing" secondItem="Tds-TL-anM" secondAttribute="trailingMargin" id="7hw-3E-tLD"/>
                                                 <constraint firstItem="Wgh-VM-tHG" firstAttribute="leading" secondItem="Tds-TL-anM" secondAttribute="leadingMargin" id="Gtl-ZH-bPT"/>
                                                 <constraint firstItem="NkR-Vn-5lB" firstAttribute="leading" secondItem="Wgh-VM-tHG" secondAttribute="trailing" id="RWI-WD-6lp"/>
                                                 <constraint firstItem="NkR-Vn-5lB" firstAttribute="top" secondItem="Tds-TL-anM" secondAttribute="topMargin" id="Uju-Hv-58Q"/>
+                                                <constraint firstItem="vdl-1H-b2W" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="WXI-r2-Vs1"/>
+                                                <constraint firstItem="KKd-zl-vHA" firstAttribute="leading" secondItem="vdl-1H-b2W" secondAttribute="trailing" constant="20" id="peh-Gj-4rF"/>
+                                                <constraint firstItem="KKd-zl-vHA" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="zo4-uA-Zpa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -368,102 +409,34 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call.png" translatesAutoresizingMaskIntoConstraints="NO" id="S1J-Kj-UsB">
+                                                    <rect key="frame" x="565" y="15.5" width="27" height="37"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="3I5-r4-eBm"/>
+                                                        <constraint firstAttribute="width" constant="27" id="5xS-Cz-x1O"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="imD-r0-LHW">
+                                                    <rect key="frame" x="518" y="16.5" width="27" height="37"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="27" id="aAi-gg-CRw"/>
+                                                        <constraint firstAttribute="height" constant="37" id="cql-ka-diW"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="dpA-K5-Q2z" firstAttribute="top" secondItem="4hn-3K-LhR" secondAttribute="topMargin" id="5h5-dh-nv5"/>
+                                                <constraint firstItem="S1J-Kj-UsB" firstAttribute="leading" secondItem="imD-r0-LHW" secondAttribute="trailing" constant="20" id="85O-Je-3jl"/>
                                                 <constraint firstItem="Esx-7k-OGP" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="CYi-3v-N0c"/>
                                                 <constraint firstItem="Esx-7k-OGP" firstAttribute="leading" secondItem="4hn-3K-LhR" secondAttribute="leadingMargin" id="Fik-fQ-LRU"/>
+                                                <constraint firstItem="S1J-Kj-UsB" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="JYH-0T-83C"/>
+                                                <constraint firstItem="imD-r0-LHW" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="K9Y-M7-bsJ"/>
                                                 <constraint firstItem="dpA-K5-Q2z" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="KdN-yC-gx1"/>
                                                 <constraint firstItem="dpA-K5-Q2z" firstAttribute="leading" secondItem="Esx-7k-OGP" secondAttribute="trailing" id="NWd-L6-2an"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="ONZ-Xe-tMb">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="Ph2-Qg-cXf">
-                                        <rect key="frame" x="0.0" y="295.5" width="600" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ph2-Qg-cXf" id="SNS-3O-k4t">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4S-V0-fFg">
-                                                    <rect key="frame" x="36" y="8" width="102" height="54"/>
-                                                    <animations/>
-                                                    <state key="normal">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="Share Location">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                            <color key="value" red="0.94523358589999995" green="0.94523358589999995" blue="0.94523358589999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Che-wv-BJc">
-                                                    <rect key="frame" x="560" y="8" width="30" height="54"/>
-                                                    <animations/>
-                                                    <state key="normal">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="Call">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                            <color key="value" red="0.94523358589999995" green="0.94523358589999995" blue="0.94523358589999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="2a1-Vz-iyy">
-                                                    <rect key="frame" x="8" y="20" width="28" height="30"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="28" id="XCS-pX-TAx"/>
-                                                        <constraint firstAttribute="height" constant="30" id="gDL-7W-jRx"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call.png" translatesAutoresizingMaskIntoConstraints="NO" id="PB3-p4-iH5">
-                                                    <rect key="frame" x="522" y="20" width="30" height="30"/>
-                                                    <animations/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="Wm9-T7-poQ"/>
-                                                        <constraint firstAttribute="height" constant="30" id="he8-ec-ibV"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstItem="h4S-V0-fFg" firstAttribute="leading" secondItem="2a1-Vz-iyy" secondAttribute="trailing" id="Ayt-B3-D9o"/>
-                                                <constraint firstItem="Che-wv-BJc" firstAttribute="top" secondItem="SNS-3O-k4t" secondAttribute="topMargin" id="IwZ-ky-64b"/>
-                                                <constraint firstItem="2a1-Vz-iyy" firstAttribute="centerY" secondItem="SNS-3O-k4t" secondAttribute="centerY" id="MrF-aL-AfB"/>
-                                                <constraint firstItem="2a1-Vz-iyy" firstAttribute="leading" secondItem="SNS-3O-k4t" secondAttribute="leadingMargin" id="RKX-u9-mxH"/>
-                                                <constraint firstItem="PB3-p4-iH5" firstAttribute="trailing" secondItem="SNS-3O-k4t" secondAttribute="trailingMargin" constant="-40" id="a9q-iF-oir"/>
-                                                <constraint firstItem="Che-wv-BJc" firstAttribute="centerY" secondItem="SNS-3O-k4t" secondAttribute="centerY" id="abr-UQ-sRy"/>
-                                                <constraint firstItem="h4S-V0-fFg" firstAttribute="top" secondItem="SNS-3O-k4t" secondAttribute="topMargin" id="eEG-j9-uie"/>
-                                                <constraint firstItem="PB3-p4-iH5" firstAttribute="top" secondItem="2a1-Vz-iyy" secondAttribute="top" id="ehq-H5-N8n"/>
-                                                <constraint firstItem="h4S-V0-fFg" firstAttribute="centerY" secondItem="SNS-3O-k4t" secondAttribute="centerY" id="g1k-30-KMa"/>
-                                                <constraint firstItem="Che-wv-BJc" firstAttribute="leading" secondItem="PB3-p4-iH5" secondAttribute="trailing" constant="8" symbolic="YES" id="qnz-GV-EB1"/>
+                                                <constraint firstItem="S1J-Kj-UsB" firstAttribute="trailing" secondItem="4hn-3K-LhR" secondAttribute="trailingMargin" id="wqS-FA-dU9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
