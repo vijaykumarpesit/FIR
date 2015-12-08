@@ -17,6 +17,9 @@
 #import "DataSource.h"
 #import "FIRFileCollectionViewFooter.h"
 #import "SAMTextView.h"
+#import "ImageMetaData.h"
+#import "UIImage+Resize.h"
+#import "FIRFaceDetector.h"
 
 
 @interface FIRFileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate, UITextViewDelegate>
@@ -107,7 +110,8 @@
                                                                                                                forIndexPath:indexPath];
     UIImage *image = nil;
     if (indexPath.row < self.images.count) {
-        image = [UIImage imageWithContentsOfFile:self.images[indexPath.row]];
+        ImageMetaData *metaData = self.images[indexPath.row];
+        image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@-thumb",metaData.filePath]];
     } else {
         image = [UIImage imageNamed:@"placeholder_small.png"];
     }
@@ -138,13 +142,41 @@
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo: (NSDictionary *)info
 {
     // Access the uncropped image from info dictionary
-    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.6);
     NSMutableString *filePath =  [NSMutableString stringWithString:[self baseFilePath]];
     [filePath appendString:@"/"];
     [filePath appendString:[self GetUUID]];
-    [imageData writeToFile:filePath atomically:YES];
-    [self.images addObject:filePath];
+    
+    ImageMetaData *metaData = [[ImageMetaData alloc] init];
+    metaData.filePath = filePath;
+    
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    UIImage *thumbnailImage = [image thumbnailImage:200 interpolationQuality:0];
+    NSData *thumbnailData = UIImageJPEGRepresentation(thumbnailImage, 0.6);
+    [thumbnailData writeToFile:[NSString stringWithFormat:@"%@-thumb",filePath] atomically:YES];
+    
+    //Do it parallely
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSData *imageData = UIImageJPEGRepresentation(image, 0.6);
+        [imageData writeToFile:filePath atomically:YES];
+    });
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSString *text = [TextExtractor textFromImage:thumbnailImage];
+        if (text && text.length > 5 && metaData.imageType != AccidentImageTypeVictim) {
+            metaData.text = text;
+            metaData.imageType = AccidentImageTypeNumberPlate;
+
+        }
+    });
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        BOOL isFacePresent =  [FIRFaceDetector isFaceDetectedInImage:image];
+        if (isFacePresent) {
+            metaData.imageType = AccidentImageTypeVictim;
+        }
+    });
+    
+    [self.images addObject:metaData];
     self.collectionView.hidden = NO;
     [self.collectionView reloadData];
     

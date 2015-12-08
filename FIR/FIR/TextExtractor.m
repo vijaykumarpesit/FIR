@@ -16,7 +16,10 @@
 + (NSString *)textFromImage:(UIImage *)image {
     
     G8Tesseract *ract = [[G8Tesseract alloc] initWithLanguage:@"eng"];
-    ract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
+    ract.pageSegmentationMode = G8PageSegmentationModeAuto;
+    ract.engineMode = G8OCREngineModeTesseractCubeCombined;
+    ract.charWhitelist = @"QWERTYUIOPASDFGHJKLZXCVBNM1234567890";
+
     ract.maximumRecognitionTime = 60.0;
     ract.image = [image g8_grayScale];
     BOOL success =  [ract recognize];

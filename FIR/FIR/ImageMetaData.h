@@ -8,12 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger,AccidentImageType) {
+    
+    AccidentImageTypeVictim,
+    AccidentImageTypeNumberPlate,
+    AccidentImageTypeOther
+};
+
 @interface ImageMetaData : NSObject
 
 @property (nonatomic, strong)NSString *filePath;
 
-@property (nonatomic, strong)NSDate *date;
+@property (nonatomic, assign)AccidentImageType imageType;
 
-@property (nonatomic, strong)NSString *cameraName;
+@property (nonatomic,strong) NSString *text;
 
 @end

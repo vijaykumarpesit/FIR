@@ -12,21 +12,54 @@
 
 +(BOOL)isFaceDetectedInImage:(UIImage *)image {
  
-    CIContext *context = [CIContext contextWithOptions:nil];
+    CIImage* img = [CIImage imageWithCGImage:image.CGImage];
     
-    NSDictionary *opts = @{ CIDetectorAccuracy : CIDetectorAccuracyHigh };
-    
+    CIContext *context = [CIContext contextWithOptions:nil];                    // 1
+    NSDictionary *opts = @{ CIDetectorAccuracy : CIDetectorAccuracyLow };      // 2
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace
                                               context:context
-                                              options:opts];
+                                              options:opts];                    // 3
     
-    NSArray *features = [detector featuresInImage:image.CIImage];
-    
-    if ( features.count >2) {
-        return YES;
-    } else {
-        return NO;
+    int exifOrientation;
+    switch (image.imageOrientation) {
+        case UIImageOrientationUp:
+            exifOrientation = 1;
+            break;
+        case UIImageOrientationDown:
+            exifOrientation = 3;
+            break;
+        case UIImageOrientationLeft:
+            exifOrientation = 8;
+            break;
+        case UIImageOrientationRight:
+            exifOrientation = 6;
+            break;
+        case UIImageOrientationUpMirrored:
+            exifOrientation = 2;
+            break;
+        case UIImageOrientationDownMirrored:
+            exifOrientation = 4;
+            break;
+        case UIImageOrientationLeftMirrored:
+            exifOrientation = 5;
+            break;
+        case UIImageOrientationRightMirrored:
+            exifOrientation = 7;
+            break;
+        default:
+            break;
     }
+    
+    
+    opts = @{ CIDetectorImageOrientation :[NSNumber numberWithInt:exifOrientation
+                                           ] };
+    
+    NSArray *features = [detector featuresInImage:img options:opts];
+    
+    if ([features count] > 0) {
+        return YES;
+    }
+    return NO;
 }
 
 @end
