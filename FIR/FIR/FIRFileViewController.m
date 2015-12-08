@@ -250,11 +250,13 @@
         SubmitViewController *submitVC = (SubmitViewController *)segue.destinationViewController;
         submitVC.accidentMetdata = [self createAccidentObject];
         
-        self.addImagesTopConstraint.constant += 175;
-        [UIView animateWithDuration:0.3 animations:^{
-            [self.view layoutIfNeeded];
-        }];
-        [self.textView resignFirstResponder];
+        if ([self.textView isFirstResponder]) {
+            self.addImagesTopConstraint.constant += 220;
+            [UIView animateWithDuration:0.3 animations:^{
+                [self.view layoutIfNeeded];
+            }];
+            [self.textView resignFirstResponder];
+        }
     }
 }
 
