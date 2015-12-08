@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -323,24 +324,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p00-oe-fgq">
-                                <rect key="frame" x="112" y="84" width="96" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p00-oe-fgq">
+                                <rect key="frame" x="100" y="80" width="120" height="37.5"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="8qZ-qE-nk0"/>
+                                    <constraint firstAttribute="width" constant="120" id="8qZ-qE-nk0"/>
                                 </constraints>
-                                <state key="normal" title="Add Images">
-                                    <color key="titleColor" red="0.30803751150000003" green="0.35386457170000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add Images">
+                                            <attributes>
+                                                <color key="NSColor" red="0.80038667929292928" green="0.12469741286691315" blue="0.050358868214312486" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wE-gb-RcH">
-                                <rect key="frame" x="95" y="328" width="130" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wE-gb-RcH">
+                                <rect key="frame" x="80" y="327" width="159" height="37.5"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Add Description"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add Description">
+                                            <attributes>
+                                                <color key="NSColor" red="0.079719277065179783" green="0.70036300505050497" blue="0.037265604732618023" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N4N-AK-fJt">
-                                <rect key="frame" x="-5" y="168" width="320" height="155"/>
+                                <rect key="frame" x="-5" y="167" width="320" height="155"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="UU8-K1-xY8">
@@ -367,24 +383,24 @@
                                     <outlet property="delegate" destination="Jdd-IW-PUo" id="QlT-XV-dLp"/>
                                 </connections>
                             </collectionView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-mf-wEQ" customClass="SAMTextView">
-                                <rect key="frame" x="10" y="367" width="300" height="113.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-mf-wEQ" customClass="SAMTextView">
+                                <rect key="frame" x="10" y="370.5" width="300" height="113.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="kNn-2V-p4H"/>
                                 </constraints>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="Jdd-IW-PUo" id="UqI-lt-2Qj"/>
                                 </connections>
                             </textView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="placeholder_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-ea-164">
-                                <rect key="frame" x="-90" y="168" width="500" height="150"/>
+                                <rect key="frame" x="-90" y="167" width="500" height="150"/>
                                 <animations/>
+                                <color key="tintColor" red="0.70165761071022104" green="0.39601698351732267" blue="0.22024195776688224" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="211" id="7Nx-1z-Utr"/>
@@ -396,14 +412,20 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please add spot,victim's and vehicle's number image " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-VT-RFd">
-                                <rect key="frame" x="21" y="118" width="278" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-VT-RFd">
+                                <rect key="frame" x="21" y="117" width="278" height="45"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="UXL-Vm-dHL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Please add spot,victim's and vehicle's number image ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.071405204415380369" green="0.20105060979327397" blue="0.84244791666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -424,9 +446,9 @@
                             <constraint firstItem="S8Z-VT-RFd" firstAttribute="top" secondItem="p00-oe-fgq" secondAttribute="bottom" id="a9M-yF-tTt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S8Z-VT-RFd" secondAttribute="trailing" constant="5" id="fTB-aW-xLm"/>
                             <constraint firstItem="6wE-gb-RcH" firstAttribute="top" secondItem="N4N-AK-fJt" secondAttribute="bottom" constant="5" id="fhB-gy-AFX"/>
-                            <constraint firstItem="pqA-mf-wEQ" firstAttribute="top" secondItem="6wE-gb-RcH" secondAttribute="bottom" constant="5" id="jQQ-66-dLQ"/>
+                            <constraint firstItem="pqA-mf-wEQ" firstAttribute="top" secondItem="6wE-gb-RcH" secondAttribute="bottom" constant="6" id="jQQ-66-dLQ"/>
                             <constraint firstItem="9oI-PV-njv" firstAttribute="top" secondItem="6wE-gb-RcH" secondAttribute="bottom" constant="20" id="oXb-nD-gsV"/>
-                            <constraint firstItem="p00-oe-fgq" firstAttribute="top" secondItem="Vdy-cu-bgK" secondAttribute="bottom" constant="20" id="ogD-XP-J5j"/>
+                            <constraint firstItem="p00-oe-fgq" firstAttribute="top" secondItem="Vdy-cu-bgK" secondAttribute="bottom" constant="16" id="ogD-XP-J5j"/>
                             <constraint firstItem="8QU-ea-164" firstAttribute="top" secondItem="S8Z-VT-RFd" secondAttribute="bottom" constant="5" id="rjg-nR-Xwd"/>
                             <constraint firstItem="8QU-ea-164" firstAttribute="centerX" secondItem="w4v-ap-35F" secondAttribute="centerX" id="voF-X7-jjb"/>
                             <constraint firstItem="6wE-gb-RcH" firstAttribute="top" secondItem="8QU-ea-164" secondAttribute="bottom" constant="10" id="xW4-dh-68W"/>
@@ -447,6 +469,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="addImagesTopConstraint" destination="ogD-XP-J5j" id="nC5-A9-ZoY"/>
                         <outlet property="cameraPlaceHolder" destination="8QU-ea-164" id="uIC-vl-0GY"/>
                         <outlet property="collectionView" destination="N4N-AK-fJt" id="uLQ-7Q-RRA"/>
                         <outlet property="textView" destination="pqA-mf-wEQ" id="mvQ-kw-fYI"/>

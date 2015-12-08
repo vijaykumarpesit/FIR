@@ -19,7 +19,7 @@
 #import "SAMTextView.h"
 
 
-@interface FIRFileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
+@interface FIRFileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -31,6 +31,7 @@
 
 @property (nonatomic, strong)CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet SAMTextView *textView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addImagesTopConstraint;
 
 @end
 
@@ -47,6 +48,10 @@
     [self.cameraPlaceHolder addGestureRecognizer:tapReco];
     self.title = @"File FIR";
     
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    tapGestureRecognizer.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:tapGestureRecognizer];
     
     UIColor *borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0];
     
@@ -210,6 +215,27 @@
 
 - (void)cameraImageViewTapped:(UITapGestureRecognizer *)reco {
   [self presentImagePicker];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    [UIView animateWithDuration:0.3 animations:^{
+        self.addImagesTopConstraint.constant -= 175;
+    }];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    if ([textView isFirstResponder]) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.addImagesTopConstraint.constant += 175;
+        }];
+        [textView resignFirstResponder];
+    }
+}
+
+- (void)tapped:(UIGestureRecognizer *)gestureReconginzer {
+    if ([self.textView isFirstResponder]) {
+        [self textViewDidEndEditing:self.textView];
+    }
 }
 
 @end
