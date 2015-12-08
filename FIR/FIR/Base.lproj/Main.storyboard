@@ -404,7 +404,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Images">
                                             <attributes>
-                                                <color key="NSColor" red="0.77840909090909094" green="0.38944283499833754" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="NSColor" red="0.079149752282357794" green="0.65060763888888884" blue="0.055044098783251401" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             </attributes>
                                         </fragment>
@@ -418,7 +418,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Description">
                                             <attributes>
-                                                <color key="NSColor" red="0.7834793244949495" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="NSColor" red="0.10196078431372549" green="0.59999999999999998" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             </attributes>
                                         </fragment>
@@ -491,7 +491,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Please add spot,victim's and vehicle's number image ">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.40548058712121215" blue="0.20261616630509202" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.78010574494949492" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                         </attributes>
                                     </fragment>
