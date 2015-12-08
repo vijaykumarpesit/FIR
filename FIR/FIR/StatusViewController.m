@@ -90,6 +90,8 @@
             metaData.lattitude = geoPoint.latitude;
             metaData.date = accident[@"date"];
             metaData.spotImages = accident[@"spotImages"];
+            metaData.victimImages = accident[@"victimImages"];
+            metaData.vehicleNoImages = accident[@"vehicleNoImages"];
             [self.registeredFIR addObject:metaData];
         }
         
