@@ -57,6 +57,7 @@
     self.textView.layer.borderColor = borderColor.CGColor;
     self.textView.layer.borderWidth = 1.0;
     self.textView.layer.cornerRadius = 5.0;
+    self.textView.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0f];
     self.textView.placeholder = @"Please provide us some information about accident.";
     
     
@@ -250,11 +251,13 @@
         SubmitViewController *submitVC = (SubmitViewController *)segue.destinationViewController;
         submitVC.accidentMetdata = [self createAccidentObject];
         
-        self.addImagesTopConstraint.constant += 175;
-        [UIView animateWithDuration:0.3 animations:^{
-            [self.view layoutIfNeeded];
-        }];
-        [self.textView resignFirstResponder];
+        if ([self.textView isFirstResponder]) {
+            self.addImagesTopConstraint.constant += 220;
+            [UIView animateWithDuration:0.3 animations:^{
+                [self.view layoutIfNeeded];
+            }];
+            [self.textView resignFirstResponder];
+        }
     }
 }
 
