@@ -178,7 +178,7 @@
             metaData.imageType = AccidentImageTypeVictim;
         }
     });
-    
+    metaData.isLocallyPresent = YES;
     [self.images addObject:metaData];
     self.collectionView.hidden = NO;
     [self.collectionView reloadData];
@@ -227,7 +227,7 @@
 
 }
 
-- (void)createAccidentObject {
+- (FIRAccidentMetaData *)createAccidentObject {
     
     FIRAccidentMetaData *metadata = [[FIRAccidentMetaData alloc] init];
     metadata.date = [NSDate date];
@@ -235,16 +235,26 @@
     metadata.lattitude = self.lattitude;
     metadata.images = self.images;
     metadata.vehicleNumbers = self.detectedTexts;
+    metadata.accidentDescription = self.textView.text;
+    
+    
     //As of now assume only one in future we need to support multiple
     
     [[DataSource sharedDataSource].accidentMetaDataArry addObject:metadata];
+    return metadata;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.destinationViewController isKindOfClass:[SubmitViewController class]]) {
-        [self createAccidentObject];
+        SubmitViewController *submitVC = (SubmitViewController *)segue.destinationViewController;
+        submitVC.accidentMetdata = [self createAccidentObject];
         
+        self.addImagesTopConstraint.constant += 175;
+        [UIView animateWithDuration:0.3 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+        [self.textView resignFirstResponder];
     }
 }
 

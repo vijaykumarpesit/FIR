@@ -15,9 +15,11 @@
 #import "UIImage+Resize.h"
 #import "TextExtractor.h"
 #import "FIRFaceDetector.h"
+#import "UIImageView+AFNetworking.h"
 
 
-@interface SubmitViewController () <UITextFieldDelegate,UINavigationControllerDelegate>
+@interface SubmitViewController () <UITextFieldDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *vehicleNo1;
 
 @property (weak, nonatomic) IBOutlet UITextField *vehicleNo2;
@@ -25,27 +27,20 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+
+@property (nonatomic, strong) NSMutableArray *images;
+
 @end
 
 @implementation SubmitViewController
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        _images = [[NSMutableArray alloc] init];
-
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController.navigationBar setHidden:NO];
     
     [self.collectionView registerClass:[FIRImageCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-
-    FIRAccidentMetaData *metadata = [[[DataSource sharedDataSource] accidentMetaDataArry] firstObject];
+    _images = [[NSMutableArray alloc] init];
+    FIRAccidentMetaData *metadata = self.accidentMetdata;
     
     for (ImageMetaData*imageMetaData in metadata.images) {
         switch (imageMetaData.imageType) {
@@ -55,10 +50,18 @@
             case AccidentImageTypeVictim:
                 [self.images addObject:imageMetaData];
                 break;
+            case AccidentImageTypeOther:
+                if (self.isInEditMode) {
+                    [self.images addObject:imageMetaData];
+                }
+                break;
             default:
+                if (self.isInEditMode) {
+                    [self.images addObject:imageMetaData];
+                }
                 break;
         }
-   
+        
     }
     
     // Do any additional setup after loading the view.
@@ -80,7 +83,7 @@
 */
 - (IBAction)sumbmitAccidentReport:(id)sender {
     
-    FIRAccidentMetaData *metadata = [[[DataSource sharedDataSource] accidentMetaDataArry] firstObject];
+    FIRAccidentMetaData *metadata = self.accidentMetdata;
     
     PFQuery *query = [PFQuery queryWithClassName:@"Accident"];
     [query whereKey:@"vehicleNumbers" containedIn:metadata.vehicleNumbers.allObjects];
@@ -91,7 +94,8 @@
             
             PFObject* accident = (PFObject *)[objects lastObject];
             accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
-            
+            accident[@"description"] = metadata.description;
+
             
             NSMutableArray *spotArray = [NSMutableArray array];
             NSMutableArray *victimArray = [NSMutableArray array];
@@ -132,7 +136,8 @@
             PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:metadata.lattitude longitude:metadata.longitude];
             accident[@"geoPoint"] = geoPoint;
             accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
-            
+            accident[@"description"] = metadata.description;
+
             
             NSMutableArray *spotArray = [NSMutableArray array];
             NSMutableArray *victimArray = [NSMutableArray array];
@@ -219,11 +224,21 @@
     UIImage *image = nil;
     if (indexPath.row < self.images.count) {
         ImageMetaData *metaData = self.images[indexPath.row];
-        image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@-thumb",metaData.filePath]];
+        
+        if (metaData.isLocallyPresent) {
+            image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@-thumb",metaData.filePath]];
+            cell.imageView.image = image;
+
+        } else {
+            NSURL *fileURL = [NSURL URLWithString:metaData.filePath];
+            [cell.imageView setImageWithURL:fileURL placeholderImage:[UIImage imageNamed:@"accidentPlaceHolder"]];
+
+        }
     } else {
         image = [UIImage imageNamed:@"placeholder_small.png"];
+        cell.imageView.image = image;
+
     }
-    cell.imageView.image = image;
     return  cell;
 }
 
@@ -269,7 +284,7 @@
             metaData.imageType = AccidentImageTypeVictim;
         }
     });
-    
+    metaData.isLocallyPresent = YES;
     [self.images addObject:metaData];
     self.collectionView.hidden = NO;
     [self.collectionView reloadData];
@@ -278,7 +293,7 @@
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    FIRAccidentMetaData *metadata = [[[DataSource sharedDataSource] accidentMetaDataArry] firstObject];
+    FIRAccidentMetaData *metadata = self.accidentMetdata;
     metadata.images = self.images;
     
 }

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FIRAccidentMetaData.h"
 
 @interface SubmitViewController : UIViewController
 
 @property(nonatomic, assign)BOOL isInEditMode;
-@property (nonatomic, strong) NSMutableArray *images;
+@property (nonatomic, strong) FIRAccidentMetaData *accidentMetdata;
 
 @end

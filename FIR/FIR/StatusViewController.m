@@ -12,11 +12,14 @@
 #import "DataSource.h"
 #import "FIRAccidentMetaData.h"
 #import "UIImageView+AFNetworking.h"
+#import "SubmitViewController.h"
+#import "ImageMetaData.h"
 
 
 @interface StatusViewController ()
 
 @property (nonatomic, strong) NSMutableArray *registeredFIR;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -73,6 +76,12 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedIndexPath = indexPath;
+    [self performSegueWithIdentifier:@"StatusToSubmit" sender:self];
+}
+
 - (void)loadComplaintData {
     
     NSString *phoneNO = [[DataSource sharedDataSource] currentUser].phoneNumber;
@@ -92,6 +101,27 @@
             metaData.spotImages = accident[@"spotImages"];
             metaData.victimImages = accident[@"victimImages"];
             metaData.vehicleNoImages = accident[@"vehicleNoImages"];
+            
+            for (PFFile *file in metaData.spotImages) {
+                ImageMetaData *imageMetaData = [[ImageMetaData alloc] init];
+                imageMetaData.filePath = file.url;
+                [metaData.images addObject:imageMetaData];
+            }
+            
+            for (PFFile *file in metaData.victimImages) {
+                ImageMetaData *imageMetaData = [[ImageMetaData alloc] init];
+                imageMetaData.filePath = file.url;
+                [metaData.images addObject:imageMetaData];
+
+            }
+            
+            for (PFFile *file in metaData.vehicleNoImages) {
+                ImageMetaData *imageMetaData = [[ImageMetaData alloc] init];
+                imageMetaData.filePath = file.url;
+                [metaData.images addObject:imageMetaData];
+
+            }
+            
             [self.registeredFIR addObject:metaData];
         }
         
@@ -105,6 +135,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.destinationViewController isKindOfClass:[SubmitViewController class]]) {
+        SubmitViewController *submitVC = (SubmitViewController *)segue.destinationViewController;
+        submitVC.isInEditMode = YES;
+        submitVC.accidentMetdata = self.registeredFIR[self.selectedIndexPath.row];
+        
+    }
 }
 
 @end

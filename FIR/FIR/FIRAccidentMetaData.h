@@ -35,4 +35,7 @@
 
 @property (nonatomic, assign) NSUInteger status;
 
+@property (nonatomic, copy) NSString *accidentDescription;
+
+
 @end

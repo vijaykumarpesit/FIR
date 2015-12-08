@@ -23,4 +23,6 @@ typedef NS_ENUM(NSUInteger,AccidentImageType) {
 
 @property (nonatomic,strong) NSString *text;
 
+@property (nonatomic, assign) BOOL isLocallyPresent;
+
 @end
