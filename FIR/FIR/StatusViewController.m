@@ -86,7 +86,7 @@
     
     NSString *phoneNO = [[DataSource sharedDataSource] currentUser].phoneNumber;
     PFQuery *query = [PFQuery queryWithClassName:@"Accident"];
-    //[query whereKey:@"reportedByPhoneNOs" containedIn:@[phoneNO]];
+    [query whereKey:@"reportedByPhoneNOs" containedIn:@[phoneNO]];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         
