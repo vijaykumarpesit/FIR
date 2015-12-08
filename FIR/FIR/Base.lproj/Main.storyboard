@@ -334,13 +334,13 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wE-gb-RcH">
-                                <rect key="frame" x="95" y="378" width="130" height="34"/>
+                                <rect key="frame" x="95" y="328" width="130" height="34"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Add Description"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N4N-AK-fJt">
-                                <rect key="frame" x="-5" y="168" width="320" height="205"/>
+                                <rect key="frame" x="-5" y="168" width="320" height="155"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="UU8-K1-xY8">
@@ -367,8 +367,8 @@
                                     <outlet property="delegate" destination="Jdd-IW-PUo" id="QlT-XV-dLp"/>
                                 </connections>
                             </collectionView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please provide us some information about accident. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-mf-wEQ" customClass="SAMTextView">
-                                <rect key="frame" x="10" y="417" width="300" height="68"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-mf-wEQ" customClass="SAMTextView">
+                                <rect key="frame" x="10" y="367" width="300" height="113.5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -378,14 +378,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Jdd-IW-PUo" id="UqI-lt-2Qj"/>
+                                </connections>
                             </textView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="placeholder_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-ea-164">
-                                <rect key="frame" x="-90" y="168" width="500" height="200"/>
+                                <rect key="frame" x="-90" y="168" width="500" height="150"/>
                                 <animations/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="211" id="7Nx-1z-Utr"/>
-                                    <constraint firstAttribute="height" constant="200" id="qbm-5d-Ust"/>
+                                    <constraint firstAttribute="height" constant="150" id="qbm-5d-Ust"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -409,7 +412,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="8QU-ea-164" secondAttribute="trailing" constant="12" id="6EF-rL-Kys"/>
                             <constraint firstAttribute="trailing" secondItem="N4N-AK-fJt" secondAttribute="trailing" constant="5" id="6cX-vf-ie4"/>
-                            <constraint firstItem="pqA-mf-wEQ" firstAttribute="height" secondItem="w4v-ap-35F" secondAttribute="height" multiplier="0.12" id="9Lv-N3-B6v"/>
+                            <constraint firstItem="pqA-mf-wEQ" firstAttribute="height" secondItem="w4v-ap-35F" secondAttribute="height" multiplier="0.2" id="9Lv-N3-B6v"/>
                             <constraint firstItem="9oI-PV-njv" firstAttribute="top" secondItem="pqA-mf-wEQ" secondAttribute="bottom" constant="20" id="9rg-do-Gvj"/>
                             <constraint firstItem="S8Z-VT-RFd" firstAttribute="leading" secondItem="w4v-ap-35F" secondAttribute="leadingMargin" constant="5" id="C1B-Zi-UQI"/>
                             <constraint firstAttribute="leading" secondItem="N4N-AK-fJt" secondAttribute="leading" constant="5" id="Kj6-Mc-LqB"/>
@@ -446,6 +449,7 @@
                     <connections>
                         <outlet property="cameraPlaceHolder" destination="8QU-ea-164" id="uIC-vl-0GY"/>
                         <outlet property="collectionView" destination="N4N-AK-fJt" id="uLQ-7Q-RRA"/>
+                        <outlet property="textView" destination="pqA-mf-wEQ" id="mvQ-kw-fYI"/>
                         <outlet property="view" destination="w4v-ap-35F" id="ixA-V3-0Hq"/>
                     </connections>
                 </viewController>

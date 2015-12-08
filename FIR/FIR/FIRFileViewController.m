@@ -16,6 +16,7 @@
 #import <Parse/Parse.h>
 #import "DataSource.h"
 #import "FIRFileCollectionViewFooter.h"
+#import "SAMTextView.h"
 
 
 @interface FIRFileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate>
@@ -29,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *cameraPlaceHolder;
 
 @property (nonatomic, strong)CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet SAMTextView *textView;
 
 @end
 
@@ -44,6 +46,14 @@
     UITapGestureRecognizer *tapReco = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cameraImageViewTapped:)];
     [self.cameraPlaceHolder addGestureRecognizer:tapReco];
     self.title = @"File FIR";
+    
+    
+    UIColor *borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0];
+    
+    self.textView.layer.borderColor = borderColor.CGColor;
+    self.textView.layer.borderWidth = 1.0;
+    self.textView.layer.cornerRadius = 5.0;
+    self.textView.placeholder = @"Please provide us some information about accident.";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
