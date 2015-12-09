@@ -272,19 +272,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ri-9A-w0j">
-                                                    <rect key="frame" x="565" y="16" width="27" height="37"/>
+                                                    <rect key="frame" x="565" y="21" width="27" height="27"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="5ko-OF-MlL"/>
+                                                        <constraint firstAttribute="height" constant="27" id="5ko-OF-MlL"/>
                                                         <constraint firstAttribute="width" constant="27" id="elc-hk-5vl"/>
                                                     </constraints>
                                                     <state key="normal" image="Call.png"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bv-wy-Tp1">
-                                                    <rect key="frame" x="518" y="15.5" width="27" height="37"/>
+                                                    <rect key="frame" x="518" y="21.5" width="27" height="27"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="Eee-wz-WeL"/>
+                                                        <constraint firstAttribute="height" constant="27" id="Eee-wz-WeL"/>
                                                         <constraint firstAttribute="width" constant="27" id="I9v-lJ-xR4"/>
                                                     </constraints>
                                                     <state key="normal" image="ShareLocation.png"/>
@@ -343,19 +343,19 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-zv-BPH">
-                                                    <rect key="frame" x="565" y="17" width="27" height="37"/>
+                                                    <rect key="frame" x="565" y="22" width="27" height="27"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="6Xc-KH-Mov"/>
+                                                        <constraint firstAttribute="height" constant="27" id="6Xc-KH-Mov"/>
                                                         <constraint firstAttribute="width" constant="27" id="pfx-vY-Qff"/>
                                                     </constraints>
                                                     <state key="normal" image="Call.png"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V0-9f-iCN">
-                                                    <rect key="frame" x="518" y="16" width="27" height="37"/>
+                                                    <rect key="frame" x="518" y="21" width="27" height="27"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="L0y-m1-v3b"/>
+                                                        <constraint firstAttribute="height" constant="27" id="L0y-m1-v3b"/>
                                                         <constraint firstAttribute="width" constant="27" id="YrH-ci-EpF"/>
                                                     </constraints>
                                                     <state key="normal" image="ShareLocation.png"/>
@@ -414,20 +414,20 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YN-J5-JbB">
-                                                    <rect key="frame" x="565" y="16" width="27" height="37"/>
+                                                    <rect key="frame" x="565" y="21" width="27" height="27"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="gfk-PC-7Q0"/>
+                                                        <constraint firstAttribute="height" constant="27" id="gfk-PC-7Q0"/>
                                                         <constraint firstAttribute="width" constant="27" id="yhu-oA-qM8"/>
                                                     </constraints>
                                                     <state key="normal" image="Call.png"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbB-8m-2cC">
-                                                    <rect key="frame" x="518" y="16.5" width="27" height="37"/>
+                                                    <rect key="frame" x="518" y="21.5" width="27" height="27"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="27" id="Kkb-he-Yac"/>
-                                                        <constraint firstAttribute="height" constant="37" id="Xm3-Mb-aai"/>
+                                                        <constraint firstAttribute="height" constant="27" id="Xm3-Mb-aai"/>
                                                     </constraints>
                                                     <state key="normal" image="ShareLocation.png"/>
                                                 </button>

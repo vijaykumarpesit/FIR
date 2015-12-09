@@ -22,7 +22,7 @@
 #import "FIRFaceDetector.h"
 
 
-@interface FIRFileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate, UITextViewDelegate>
+@interface FIRFileViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate, UITextViewDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -36,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet SAMTextView *textView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *addImagesTopConstraint;
 @property (nonatomic, strong) UIToolbar *toolBar;
+@property (nonatomic, strong) UIAlertView *alertView;
 
 @end
 
@@ -213,9 +214,14 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"didFailWithError: %@", error);
-    UIAlertView *errorAlert = [[UIAlertView alloc]
-                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [errorAlert show];
+    if (!self.alertView) {
+        self.alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [self.alertView show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    self.alertView = nil;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
