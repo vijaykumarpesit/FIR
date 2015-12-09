@@ -25,6 +25,7 @@
 		54F9A6CB1C17DD2D00F7767B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9A6CA1C17DD2D00F7767B /* MapViewController.m */; };
 		54F9A6CD1C17DD7200F7767B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A6CC1C17DD7200F7767B /* MapKit.framework */; };
 		54F9A6D11C17F3BD00F7767B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6D01C17F3BD00F7767B /* delete.png */; };
+		54F9A6F51C18120D00F7767B /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9A6F41C18120D00F7767B /* DetailsViewController.m */; };
 		B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C241C11716200F7BBB7 /* SubmitViewController.m */; };
 		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C301C117FD500F7BBB7 /* FIRUser.m */; };
@@ -89,6 +90,8 @@
 		54F9A6CA1C17DD2D00F7767B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		54F9A6CC1C17DD7200F7767B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		54F9A6D01C17F3BD00F7767B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		54F9A6F31C18120D00F7767B /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		54F9A6F41C18120D00F7767B /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		B1072C231C11716200F7BBB7 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
 		B1072C241C11716200F7BBB7 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
 		B1072C261C11788C00F7BBB7 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 				545EAA901C16B620008FA18A /* EmergencyViewController.m */,
 				54F9A6C91C17DD2D00F7767B /* MapViewController.h */,
 				54F9A6CA1C17DD2D00F7767B /* MapViewController.m */,
+				54F9A6F31C18120D00F7767B /* DetailsViewController.h */,
+				54F9A6F41C18120D00F7767B /* DetailsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */,
 				B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */,
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
+				54F9A6F51C18120D00F7767B /* DetailsViewController.m in Sources */,
 				B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */,
 				545EAA911C16B620008FA18A /* EmergencyViewController.m in Sources */,
 			);

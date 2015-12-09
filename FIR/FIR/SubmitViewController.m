@@ -18,6 +18,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "SAMTextView.h"
 #import "MapViewController.h"
+#import "DetailsViewController.h"
 
 
 @interface SubmitViewController () <UITextFieldDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -33,10 +34,19 @@
 @property (nonatomic, strong) NSMutableArray *images;
 
 @property (nonatomic, strong) NSMutableSet *vehicleNos;
+@property (weak, nonatomic) IBOutlet UIButton *shareLocation;
+@property (weak, nonatomic) IBOutlet UIButton *call;
 
 @end
 
 @implementation SubmitViewController
+
+- (IBAction)callAction:(id)sender {
+    if (self.accidentMetdata.reportedByPhoneNOs.count > 0) {
+        NSString *phoneno = [self.accidentMetdata.reportedByPhoneNOs allObjects][0];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", phoneno]]];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -105,6 +115,11 @@
             self.vehicleNo1.text = metadata.vehicleNumbers.allObjects[0];
 
         }
+    }
+    
+    if ([[[DataSource sharedDataSource] currentUser] isPolice]) {
+        self.shareLocation.hidden = NO;
+        self.call.hidden = NO;
     }
     
 }
@@ -232,6 +247,8 @@
             accident[@"victimImages"] = victimArray;
             accident[@"vehicleNoImages"] = vehicleNoArray;
             accident[@"vehicleNumbers"] = @[self.vehicleNo1.text,self.vehicleNo2.text];
+            accident[@"status"] = @(1);
+
             [accident saveInBackground];
             
             
@@ -269,12 +286,19 @@
      //TODO:Change this
     
     //Replace this with good UI
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Submission Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        
-    });
+    if (![[[DataSource sharedDataSource] currentUser] isPolice]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Submission Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            
+        });
+    } else {
+        DetailsViewController *detailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
+        detailsVC.accidentMetdata = self.accidentMetdata;
+        detailsVC.objectID = self.selectedObjectID;
+        [self.navigationController pushViewController:detailsVC animated:YES];
+    }
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -86,6 +86,9 @@
     
     cell.vehicleNumber.text = vehicleNoString;
     
+    if (metadata.status == 2) {
+        cell.status.text = @"Filed";
+    }
     if (file) {
         NSURL *fileURL = [NSURL URLWithString:file.url];
         [cell.bgImageView setImageWithURL:fileURL placeholderImage:[UIImage imageNamed:@"accidentPlaceHolder"]];
@@ -127,6 +130,8 @@
             metaData.victimImages = accident[@"victimImages"];
             metaData.vehicleNoImages = accident[@"vehicleNoImages"];
             metaData.vehicleNumbers =  accident[@"vehicleNumbers"];
+            metaData.status = [accident[@"status"] integerValue];
+            metaData.reportedByPhoneNOs = accident[@"reportedByPhoneNOs"];
             
             for (PFFile *file in metaData.spotImages) {
                 ImageMetaData *imageMetaData = [[ImageMetaData alloc] init];
