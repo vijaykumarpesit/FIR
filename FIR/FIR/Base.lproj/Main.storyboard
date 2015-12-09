@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -270,33 +271,35 @@
                                                         <constraint firstAttribute="width" constant="50" id="4pD-vw-1sW"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call.png" translatesAutoresizingMaskIntoConstraints="NO" id="j3D-Ms-r3V">
-                                                    <rect key="frame" x="565" y="16.5" width="27" height="37"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ri-9A-w0j">
+                                                    <rect key="frame" x="565" y="16" width="27" height="37"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="ANH-VJ-MKi"/>
-                                                        <constraint firstAttribute="width" constant="27" id="S8f-5F-gts"/>
+                                                        <constraint firstAttribute="height" constant="37" id="5ko-OF-MlL"/>
+                                                        <constraint firstAttribute="width" constant="27" id="elc-hk-5vl"/>
                                                     </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ES-bH-aLp">
+                                                    <state key="normal" image="Call.png"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bv-wy-Tp1">
                                                     <rect key="frame" x="518" y="15.5" width="27" height="37"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="2GF-aM-CwO"/>
-                                                        <constraint firstAttribute="width" constant="27" id="sCA-rI-8Id"/>
+                                                        <constraint firstAttribute="height" constant="37" id="Eee-wz-WeL"/>
+                                                        <constraint firstAttribute="width" constant="27" id="I9v-lJ-xR4"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <state key="normal" image="ShareLocation.png"/>
+                                                </button>
                                             </subviews>
                                             <animations/>
                                             <constraints>
+                                                <constraint firstItem="9ri-9A-w0j" firstAttribute="leading" secondItem="1Bv-wy-Tp1" secondAttribute="trailing" constant="20" id="0gL-No-8n1"/>
                                                 <constraint firstItem="tQr-Ow-kIO" firstAttribute="top" secondItem="qjZ-6T-Ye9" secondAttribute="topMargin" id="1D1-dL-xLb"/>
-                                                <constraint firstItem="j3D-Ms-r3V" firstAttribute="trailing" secondItem="qjZ-6T-Ye9" secondAttribute="trailingMargin" id="HHO-GA-HFa"/>
+                                                <constraint firstItem="9ri-9A-w0j" firstAttribute="trailing" secondItem="qjZ-6T-Ye9" secondAttribute="trailingMargin" id="Apm-wH-k0b"/>
                                                 <constraint firstItem="8WP-6S-kgU" firstAttribute="leading" secondItem="qjZ-6T-Ye9" secondAttribute="leadingMargin" id="Ita-IK-WIT"/>
-                                                <constraint firstItem="j3D-Ms-r3V" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="Qaw-Pg-LoB"/>
-                                                <constraint firstItem="j3D-Ms-r3V" firstAttribute="leading" secondItem="3ES-bH-aLp" secondAttribute="trailing" constant="20" id="RFN-5M-gwU"/>
                                                 <constraint firstItem="8WP-6S-kgU" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="TxE-r6-PDh"/>
                                                 <constraint firstItem="tQr-Ow-kIO" firstAttribute="leading" secondItem="8WP-6S-kgU" secondAttribute="trailing" constant="1" id="YEr-pb-ID7"/>
-                                                <constraint firstItem="3ES-bH-aLp" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="ZiB-Qg-zSd"/>
+                                                <constraint firstItem="9ri-9A-w0j" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="lJk-nx-C3e"/>
+                                                <constraint firstItem="1Bv-wy-Tp1" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="wkD-oM-YDu"/>
                                                 <constraint firstItem="tQr-Ow-kIO" firstAttribute="centerY" secondItem="qjZ-6T-Ye9" secondAttribute="centerY" id="wsD-db-0jh"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -339,34 +342,36 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call.png" translatesAutoresizingMaskIntoConstraints="NO" id="KKd-zl-vHA">
-                                                    <rect key="frame" x="565" y="16.5" width="27" height="37"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-zv-BPH">
+                                                    <rect key="frame" x="565" y="17" width="27" height="37"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="27" id="EjC-le-jYO"/>
-                                                        <constraint firstAttribute="height" constant="37" id="ZWt-ce-FH2"/>
+                                                        <constraint firstAttribute="height" constant="37" id="6Xc-KH-Mov"/>
+                                                        <constraint firstAttribute="width" constant="27" id="pfx-vY-Qff"/>
                                                     </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="vdl-1H-b2W">
-                                                    <rect key="frame" x="518" y="15.5" width="27" height="37"/>
+                                                    <state key="normal" image="Call.png"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V0-9f-iCN">
+                                                    <rect key="frame" x="518" y="16" width="27" height="37"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="1t9-zc-xTt"/>
-                                                        <constraint firstAttribute="width" constant="27" id="sB6-N0-Wst"/>
+                                                        <constraint firstAttribute="height" constant="37" id="L0y-m1-v3b"/>
+                                                        <constraint firstAttribute="width" constant="27" id="YrH-ci-EpF"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <state key="normal" image="ShareLocation.png"/>
+                                                </button>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="Wgh-VM-tHG" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="3OL-N8-Z1V"/>
                                                 <constraint firstItem="NkR-Vn-5lB" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="4PX-hx-An3"/>
-                                                <constraint firstItem="KKd-zl-vHA" firstAttribute="trailing" secondItem="Tds-TL-anM" secondAttribute="trailingMargin" id="7hw-3E-tLD"/>
                                                 <constraint firstItem="Wgh-VM-tHG" firstAttribute="leading" secondItem="Tds-TL-anM" secondAttribute="leadingMargin" id="Gtl-ZH-bPT"/>
+                                                <constraint firstItem="d5S-zv-BPH" firstAttribute="trailing" secondItem="Tds-TL-anM" secondAttribute="trailingMargin" id="NmT-fY-fG3"/>
                                                 <constraint firstItem="NkR-Vn-5lB" firstAttribute="leading" secondItem="Wgh-VM-tHG" secondAttribute="trailing" id="RWI-WD-6lp"/>
+                                                <constraint firstItem="d5S-zv-BPH" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="UXN-hV-uF6"/>
                                                 <constraint firstItem="NkR-Vn-5lB" firstAttribute="top" secondItem="Tds-TL-anM" secondAttribute="topMargin" id="Uju-Hv-58Q"/>
-                                                <constraint firstItem="vdl-1H-b2W" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="WXI-r2-Vs1"/>
-                                                <constraint firstItem="KKd-zl-vHA" firstAttribute="leading" secondItem="vdl-1H-b2W" secondAttribute="trailing" constant="20" id="peh-Gj-4rF"/>
-                                                <constraint firstItem="KKd-zl-vHA" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="zo4-uA-Zpa"/>
+                                                <constraint firstItem="9V0-9f-iCN" firstAttribute="centerY" secondItem="Tds-TL-anM" secondAttribute="centerY" id="ksm-Ps-MjT"/>
+                                                <constraint firstItem="d5S-zv-BPH" firstAttribute="leading" secondItem="9V0-9f-iCN" secondAttribute="trailing" constant="20" id="yLu-cR-XUB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -408,34 +413,36 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call.png" translatesAutoresizingMaskIntoConstraints="NO" id="S1J-Kj-UsB">
-                                                    <rect key="frame" x="565" y="15.5" width="27" height="37"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YN-J5-JbB">
+                                                    <rect key="frame" x="565" y="16" width="27" height="37"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="37" id="3I5-r4-eBm"/>
-                                                        <constraint firstAttribute="width" constant="27" id="5xS-Cz-x1O"/>
+                                                        <constraint firstAttribute="height" constant="37" id="gfk-PC-7Q0"/>
+                                                        <constraint firstAttribute="width" constant="27" id="yhu-oA-qM8"/>
                                                     </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareLocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="imD-r0-LHW">
+                                                    <state key="normal" image="Call.png"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbB-8m-2cC">
                                                     <rect key="frame" x="518" y="16.5" width="27" height="37"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="27" id="aAi-gg-CRw"/>
-                                                        <constraint firstAttribute="height" constant="37" id="cql-ka-diW"/>
+                                                        <constraint firstAttribute="width" constant="27" id="Kkb-he-Yac"/>
+                                                        <constraint firstAttribute="height" constant="37" id="Xm3-Mb-aai"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <state key="normal" image="ShareLocation.png"/>
+                                                </button>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="dpA-K5-Q2z" firstAttribute="top" secondItem="4hn-3K-LhR" secondAttribute="topMargin" id="5h5-dh-nv5"/>
-                                                <constraint firstItem="S1J-Kj-UsB" firstAttribute="leading" secondItem="imD-r0-LHW" secondAttribute="trailing" constant="20" id="85O-Je-3jl"/>
+                                                <constraint firstItem="8YN-J5-JbB" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="8ce-8f-o2C"/>
                                                 <constraint firstItem="Esx-7k-OGP" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="CYi-3v-N0c"/>
+                                                <constraint firstItem="GbB-8m-2cC" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="D0y-v3-2ng"/>
                                                 <constraint firstItem="Esx-7k-OGP" firstAttribute="leading" secondItem="4hn-3K-LhR" secondAttribute="leadingMargin" id="Fik-fQ-LRU"/>
-                                                <constraint firstItem="S1J-Kj-UsB" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="JYH-0T-83C"/>
-                                                <constraint firstItem="imD-r0-LHW" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="K9Y-M7-bsJ"/>
                                                 <constraint firstItem="dpA-K5-Q2z" firstAttribute="centerY" secondItem="4hn-3K-LhR" secondAttribute="centerY" id="KdN-yC-gx1"/>
+                                                <constraint firstItem="8YN-J5-JbB" firstAttribute="trailing" secondItem="4hn-3K-LhR" secondAttribute="trailingMargin" id="Mf5-X6-BOO"/>
                                                 <constraint firstItem="dpA-K5-Q2z" firstAttribute="leading" secondItem="Esx-7k-OGP" secondAttribute="trailing" id="NWd-L6-2an"/>
-                                                <constraint firstItem="S1J-Kj-UsB" firstAttribute="trailing" secondItem="4hn-3K-LhR" secondAttribute="trailingMargin" id="wqS-FA-dU9"/>
+                                                <constraint firstItem="8YN-J5-JbB" firstAttribute="leading" secondItem="GbB-8m-2cC" secondAttribute="trailing" constant="20" id="gZI-f2-t1f"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
