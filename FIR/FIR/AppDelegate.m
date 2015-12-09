@@ -30,7 +30,7 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
+    //[digits logOut];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];

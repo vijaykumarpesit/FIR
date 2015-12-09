@@ -116,7 +116,7 @@
     if (![[[DataSource sharedDataSource] currentUser] isPolice]) {
         [query whereKey:@"reportedByPhoneNOs" containedIn:@[phoneNO]];
     }
-    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         
         for (PFObject *accident in objects) {
@@ -163,10 +163,12 @@
 
             }
             
-            [self.registeredFIR addObject:metaData];
+            [array addObject:metaData];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            [self.registeredFIR removeAllObjects];
+            [self.registeredFIR addObjectsFromArray:array];
             [self.tableView reloadData];
         });
     }];

@@ -16,6 +16,7 @@ NSString *const kDeviceToken = @"deviceToken";
 
 @interface FIRUser ()
 
+@property (nonatomic, assign) BOOL isSaveInPreogress;
 
 @end
 
@@ -57,11 +58,17 @@ NSString *const kDeviceToken = @"deviceToken";
 
 - (void)saveUser {
     
+    if (self.isSaveInPreogress) {
+        return;
+    }
+    
     [self.parseUser saveInBackground];
     
     __block PFObject *user = nil;
     
     if (self.phoneNumber) {
+        self.isSaveInPreogress = YES;
+
         PFQuery *query = [PFQuery queryWithClassName:@"FIRUser"];
         [query whereKey:@"phoneNumber" equalTo:self.phoneNumber];
         [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
@@ -78,14 +85,16 @@ NSString *const kDeviceToken = @"deviceToken";
                 
             }];
             
-            [user saveInBackground];
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                [user save];
+                self.isSaveInPreogress = NO;
+
+            });
         }];
         
         
     }
-    
-    
-    
+
 }
 
 - (void)setIsPolice:(BOOL)isPolice {
