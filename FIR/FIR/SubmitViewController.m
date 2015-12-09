@@ -17,6 +17,7 @@
 #import "FIRFaceDetector.h"
 #import "UIImageView+AFNetworking.h"
 #import "SAMTextView.h"
+#import "MapViewController.h"
 
 
 @interface SubmitViewController () <UITextFieldDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -30,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet SAMTextView *textView;
 
 @property (nonatomic, strong) NSMutableArray *images;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
 @property (nonatomic, strong) NSMutableSet *vehicleNos;
 
@@ -86,6 +88,8 @@
     self.textView.layer.borderWidth = 1.0;
     self.textView.layer.cornerRadius = 5.0;
     [self.textView setBackgroundColor:[UIColor clearColor]];
+    
+    self.locationLabel.text = [self.locationLabel.text stringByAppendingFormat:@" %@",self.locationString];
     
     if (metadata.accidentDescription) {
         self.textView.text = metadata.accidentDescription;
@@ -318,6 +322,17 @@
         if (metaData.isLocallyPresent) {
             image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@-thumb",metaData.filePath]];
             cell.imageView.image = image;
+            
+            __block typeof(self) weakSelf = self;
+            [cell addDeleteButtonWithCompletion:^{
+                NSMutableArray *pendingDeletion = [NSMutableArray array];
+                [pendingDeletion addObject:indexPath];
+                [weakSelf.images removeObjectAtIndex:indexPath.row];
+                if (weakSelf.images.count == 0) {
+                    [pendingDeletion addObject:[NSIndexPath indexPathForItem:1 inSection:0]];
+                }
+                [collectionView deleteItemsAtIndexPaths:pendingDeletion];
+            }];
 
         } else {
             NSURL *fileURL = [NSURL URLWithString:metaData.filePath];
@@ -406,6 +421,13 @@
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
     CFRelease(theUUID);
     return (__bridge NSString *)string;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[MapViewController class]]) {
+        MapViewController *mapVC = (MapViewController *)segue.destinationViewController;
+        mapVC.accidentMetdata = self.accidentMetdata;
+    }
 }
 
 @end

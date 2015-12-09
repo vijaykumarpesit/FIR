@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^deleteCompletion)(void);
+
 @interface FIRImageCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic)  UIImageView *imageView;
-
+@property (strong, nonatomic)  UIButton *deleteButton;
+- (void)addDeleteButtonWithCompletion:(deleteCompletion)deleteCompletion;
 @end

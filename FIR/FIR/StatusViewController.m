@@ -41,6 +41,13 @@
     return self.registeredFIR.count;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (self.registeredFIR.count > 0) {
+        return @"Stauts";
+    }
+    return nil;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     return 130.0f;

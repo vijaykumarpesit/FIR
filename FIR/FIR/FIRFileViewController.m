@@ -73,9 +73,12 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    [self showCollectionView];
+}
+
+- (void)showCollectionView {
     self.collectionView.hidden = self.images.count > 0 ? NO : YES;
     self.cameraPlaceHolder.hidden = self.images.count > 0 ? YES : NO;
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -104,10 +107,12 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    NSInteger numberOfItems = 0;
     if (self.images.count > 0) {
-        return self.images.count +1;
+        numberOfItems = self.images.count +1;
     }
-    return 0;
+    [self showCollectionView];
+    return numberOfItems;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,6 +123,17 @@
     if (indexPath.row < self.images.count) {
         ImageMetaData *metaData = self.images[indexPath.row];
         image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@-thumb",metaData.filePath]];
+        
+        __block typeof(self) weakSelf = self;
+        [cell addDeleteButtonWithCompletion:^{
+            NSMutableArray *pendingDeletion = [NSMutableArray array];
+            [pendingDeletion addObject:indexPath];
+            [weakSelf.images removeObjectAtIndex:indexPath.row];
+            if (weakSelf.images.count == 0) {
+                [pendingDeletion addObject:[NSIndexPath indexPathForItem:1 inSection:0]];
+            }
+            [collectionView deleteItemsAtIndexPaths:pendingDeletion];
+        }];
     } else {
         image = [UIImage imageNamed:@"placeholder_small.png"];
     }
@@ -183,7 +199,7 @@
     });
     metaData.isLocallyPresent = YES;
     [self.images addObject:metaData];
-    self.collectionView.hidden = NO;
+    [self showCollectionView];
     [self.collectionView reloadData];
     
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.images.count inSection:0] atScrollPosition:UICollectionViewScrollPositionBottom animated:YES];
