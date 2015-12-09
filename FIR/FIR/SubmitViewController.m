@@ -31,6 +31,8 @@
 
 @property (nonatomic, strong) NSMutableArray *images;
 
+@property (nonatomic, strong) NSMutableSet *vehicleNos;
+
 @end
 
 @implementation SubmitViewController
@@ -41,12 +43,17 @@
     
     [self.collectionView registerClass:[FIRImageCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     _images = [[NSMutableArray alloc] init];
+    _vehicleNos = [[NSMutableSet alloc] init];
+    
     FIRAccidentMetaData *metadata = self.accidentMetdata;
     
     for (ImageMetaData*imageMetaData in metadata.images) {
         switch (imageMetaData.imageType) {
             case AccidentImageTypeNumberPlate:
                 [self.images addObject:imageMetaData];
+                if (imageMetaData.text) {
+                    [self.vehicleNos addObject:imageMetaData.text];
+                }
                 break;
             case AccidentImageTypeVictim:
                 [self.images addObject:imageMetaData];
@@ -64,6 +71,16 @@
         }
         
     }
+    
+    if (self.vehicleNos.count == 2) {
+        NSArray *vNos = self.vehicleNos.allObjects;
+        self.vehicleNo1.text = vNos[0];
+        self.vehicleNo1.text = vNos[1];
+    } else if(self.vehicleNos.count ==  1) {
+        NSArray *vNos = self.vehicleNos.allObjects;
+        self.vehicleNo1.text = vNos[0];
+    }
+    
     UIColor *borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0];
     self.textView.layer.borderColor = borderColor.CGColor;
     self.textView.layer.borderWidth = 1.0;
