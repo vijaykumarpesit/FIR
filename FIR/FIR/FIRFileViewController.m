@@ -132,7 +132,7 @@
             if (weakSelf.images.count == 0) {
                 [pendingDeletion addObject:[NSIndexPath indexPathForItem:1 inSection:0]];
             }
-            [collectionView deleteItemsAtIndexPaths:pendingDeletion];
+            [self.collectionView reloadData];
         }];
     } else {
         image = [UIImage imageNamed:@"placeholder_small.png"];

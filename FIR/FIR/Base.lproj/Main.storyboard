@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -16,11 +17,11 @@
                         <viewControllerLayoutGuide type="bottom" id="o7Y-IE-4Pf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ge7-Wg-sjt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7B-D5-fvU">
-                                <rect key="frame" x="36" y="110" width="128" height="30"/>
+                                <rect key="frame" x="40" y="110" width="240" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="ZiU-T1-fjW"/>
@@ -37,7 +38,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-jE-dRv">
-                                <rect key="frame" x="99" y="84" width="121" height="18"/>
+                                <rect key="frame" x="239" y="84" width="121" height="18"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="xVc-50-5z5"/>
@@ -58,7 +59,7 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Ff-5dk">
-                                <rect key="frame" x="184" y="110" width="128" height="30"/>
+                                <rect key="frame" x="300" y="110" width="240" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="S1g-Ae-yqQ"/>
@@ -76,7 +77,7 @@
                                 </connections>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J0Z-zA-SUY">
-                                <rect key="frame" x="0.0" y="160" width="320" height="176"/>
+                                <rect key="frame" x="0.0" y="160" width="600" height="208"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="O25-NY-lat">
@@ -104,7 +105,7 @@
                                 </connections>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Khg-dV-lHe" customClass="SAMTextView">
-                                <rect key="frame" x="10" y="369" width="300" height="100"/>
+                                <rect key="frame" x="10" y="401" width="580" height="100"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="DQa-p0-dtY"/>
@@ -119,7 +120,7 @@
                                 </variation>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-UX-159">
-                                <rect key="frame" x="120" y="341" width="79.5" height="18"/>
+                                <rect key="frame" x="260" y="373" width="79.5" height="18"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Ucb-Jl-Nco"/>
@@ -208,6 +209,8 @@
                                 <exclude reference="rKi-Xk-aJp"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="0em-pB-An7"/>
+                                <exclude reference="9vS-rk-f6N"/>
                                 <exclude reference="12o-Iq-1X3"/>
                                 <exclude reference="AHJ-BG-vdR"/>
                                 <exclude reference="qv7-42-KzP"/>
@@ -215,8 +218,6 @@
                                 <exclude reference="mkY-7c-Trg"/>
                                 <exclude reference="bJY-f2-DAw"/>
                                 <exclude reference="baL-dr-RDU"/>
-                                <exclude reference="0em-pB-An7"/>
-                                <exclude reference="9vS-rk-f6N"/>
                                 <exclude reference="RJw-ac-pLf"/>
                                 <exclude reference="rm1-mR-G6c"/>
                             </mask>
@@ -226,9 +227,9 @@
                                 <include reference="rKi-Xk-aJp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="mkY-7c-Trg"/>
                                 <include reference="0em-pB-An7"/>
                                 <include reference="9vS-rk-f6N"/>
+                                <include reference="mkY-7c-Trg"/>
                             </mask>
                         </variation>
                     </view>
@@ -260,6 +261,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RNY-sc-2vw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CY1-Wc-7KH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WgI-gy-9uJ">
@@ -280,10 +282,10 @@
                                 <exclude reference="WgI-gy-9uJ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="eqN-ce-XUx"/>
                                 <exclude reference="3JN-up-sH9"/>
                                 <exclude reference="3ic-DU-6Sx"/>
                                 <exclude reference="93n-jJ-w8r"/>
-                                <exclude reference="eqN-ce-XUx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -291,10 +293,10 @@
                                 <include reference="WgI-gy-9uJ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="eqN-ce-XUx"/>
                                 <include reference="3JN-up-sH9"/>
                                 <include reference="3ic-DU-6Sx"/>
                                 <include reference="93n-jJ-w8r"/>
-                                <include reference="eqN-ce-XUx"/>
                             </mask>
                         </variation>
                     </view>
