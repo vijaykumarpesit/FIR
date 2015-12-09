@@ -32,9 +32,12 @@
     self.objectIDs = [[NSMutableArray alloc] init];
     [self.tableView registerNib:[UINib nibWithNibName:@"FIRComplaintCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     self.tableView.tableFooterView = [[UIView alloc] init];
-    [self loadComplaintData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self loadComplaintData];
+
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
