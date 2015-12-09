@@ -21,6 +21,7 @@
 		54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CC51C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg */; };
 		54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */; };
 		54E18CD01C11B61D00939F08 /* document.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CCF1C11B61D00939F08 /* document.JPG */; };
+		54F9A6C81C17DA9000F7767B /* Accident.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6C71C17DA9000F7767B /* Accident.png */; };
 		B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C241C11716200F7BBB7 /* SubmitViewController.m */; };
 		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C301C117FD500F7BBB7 /* FIRUser.m */; };
@@ -80,6 +81,7 @@
 		54E18CC51C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg"; sourceTree = "<group>"; };
 		54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "toonvectors-15209-140.jpg"; sourceTree = "<group>"; };
 		54E18CCF1C11B61D00939F08 /* document.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = document.JPG; sourceTree = "<group>"; };
+		54F9A6C71C17DA9000F7767B /* Accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Accident.png; sourceTree = "<group>"; };
 		B1072C231C11716200F7BBB7 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
 		B1072C241C11716200F7BBB7 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
 		B1072C261C11788C00F7BBB7 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				54F9A6C71C17DA9000F7767B /* Accident.png */,
 				545EAACB1C16E806008FA18A /* ShareLocation.png */,
 				545EAAC91C16E7AE008FA18A /* Call.png */,
 				B18E3E151C15F6F20094A7EC /* placeholder_large.png */,
@@ -398,6 +401,7 @@
 				B1624C3D1C168713001E897C /* placeholder_small.png in Resources */,
 				547741B21C11EE5D00C5E2BA /* Status@2x.png in Resources */,
 				545EAACC1C16E806008FA18A /* ShareLocation.png in Resources */,
+				54F9A6C81C17DA9000F7767B /* Accident.png in Resources */,
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
 				547741B11C11EE5D00C5E2BA /* Filing@2x.png in Resources */,
 				B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */,
