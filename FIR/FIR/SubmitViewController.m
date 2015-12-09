@@ -53,7 +53,10 @@
             case AccidentImageTypeNumberPlate:
                 [self.images addObject:imageMetaData];
                 if (imageMetaData.text) {
-                    [self.vehicleNos addObject:imageMetaData.text];
+                    NSMutableString *textString = [NSMutableString stringWithString:imageMetaData.text];
+                    NSString *removedChar = [textString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+                    NSString *removedEmptySpace = [removedChar stringByReplacingOccurrencesOfString:@" " withString:@""];
+                    [self.vehicleNos addObject:removedEmptySpace];
                 }
                 break;
             case AccidentImageTypeVictim:
@@ -76,7 +79,7 @@
     if (self.vehicleNos.count == 2) {
         NSArray *vNos = self.vehicleNos.allObjects;
         self.vehicleNo1.text = vNos[0];
-        self.vehicleNo1.text = vNos[1];
+        self.vehicleNo2.text = vNos[1];
     } else if(self.vehicleNos.count ==  1) {
         NSArray *vNos = self.vehicleNos.allObjects;
         self.vehicleNo1.text = vNos[0];
