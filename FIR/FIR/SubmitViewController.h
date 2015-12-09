@@ -14,5 +14,4 @@
 @property(nonatomic, assign)BOOL isInEditMode;
 @property (nonatomic, strong) FIRAccidentMetaData *accidentMetdata;
 @property (nonatomic, strong) NSString *selectedObjectID;
-@property (nonatomic, strong) NSString *locationString;
 @end

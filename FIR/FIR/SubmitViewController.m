@@ -31,7 +31,6 @@
 @property (weak, nonatomic) IBOutlet SAMTextView *textView;
 
 @property (nonatomic, strong) NSMutableArray *images;
-@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
 @property (nonatomic, strong) NSMutableSet *vehicleNos;
 
