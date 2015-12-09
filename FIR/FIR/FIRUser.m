@@ -25,7 +25,7 @@ NSString *const kDeviceToken = @"deviceToken";
 - (instancetype)initWithPFUser:(PFUser*)parseUser {
     if (self = [super init]) {
         self.parseUser = parseUser;
-        self.isPolice = YES;
+        //self.isPolice = YES;
     }
     return self;
 }

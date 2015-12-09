@@ -68,6 +68,17 @@
         file = metadata.victimImages[0];
     }
     
+    NSMutableString *vehicleNoString = [[NSMutableString alloc] init];
+    
+    for (NSString *vehilceNo in metadata.vehicleNumbers) {
+        
+        [vehicleNoString appendString:vehilceNo];
+        [vehicleNoString appendString:@" "];
+
+    }
+    
+    cell.vehicleNumber.text = vehicleNoString;
+    
     if (file) {
         NSURL *fileURL = [NSURL URLWithString:file.url];
         [cell.bgImageView setImageWithURL:fileURL placeholderImage:[UIImage imageNamed:@"accidentPlaceHolder"]];
