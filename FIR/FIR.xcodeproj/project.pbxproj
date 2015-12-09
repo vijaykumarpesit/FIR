@@ -491,8 +491,6 @@
 				B1D168C41C102F8F0079E760 /* FIRFileViewController.m in Sources */,
 				B1624C2A1C167BBF001E897C /* FIRFaceDetector.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
-				B11409591C1162510033F0F5 /* UIImage+Resize.m in Sources */,
-				B114091F1C10B3850033F0F5 /* EmergencyViewController.m in Sources */,
 				B1F447CF1C11A4D800DCEA3A /* FIRComplaintCell.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
 				B1624C2E1C167FD1001E897C /* FIRFileCollectionViewFooter.m in Sources */,
@@ -629,6 +627,7 @@
 					"\"${PODS_ROOT}/Headers/Public/Parse\"",
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vijay.-fir.FIR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,6 +653,7 @@
 					"\"${PODS_ROOT}/Headers/Public/Parse\"",
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vijay.-fir.FIR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
