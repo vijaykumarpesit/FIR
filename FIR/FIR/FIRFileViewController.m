@@ -37,6 +37,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *addImagesTopConstraint;
 @property (nonatomic, strong) UIToolbar *toolBar;
 @property (nonatomic, strong) UIAlertView *alertView;
+@property (nonatomic, strong) PFGeoPoint *oldGeoPoint;
 
 @end
 
@@ -230,8 +231,13 @@
     
     self.lattitude = currentLocation.coordinate.latitude;
     self.longitude = currentLocation.coordinate.longitude;
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:self.lattitude longitude:self.longitude];
     
-
+    if([geoPoint distanceInKilometersTo:self.oldGeoPoint] > 0.1) {
+        [[[DataSource sharedDataSource] currentUser] setLocation:geoPoint];
+        [[[DataSource sharedDataSource] currentUser] saveUser];
+        self.oldGeoPoint = geoPoint;
+    }
 }
 
 - (FIRAccidentMetaData *)createAccidentObject {

@@ -120,7 +120,7 @@
             
             PFObject* accident = (PFObject *)[objects lastObject];
             accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
-            accident[@"description"] = metadata.description;
+            accident[@"description"] = metadata.accidentDescription;
 
             
             NSMutableArray *spotArray = [NSMutableArray array];
@@ -171,7 +171,7 @@
             PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:metadata.lattitude longitude:metadata.longitude];
             accident[@"geoPoint"] = geoPoint;
             accident[@"reportedByPhoneNOs"] = [NSMutableArray arrayWithObject:[[[DataSource sharedDataSource] currentUser] phoneNumber]];
-            accident[@"description"] = metadata.description;
+            accident[@"description"] = metadata.accidentDescription;
 
             
             NSMutableArray *spotArray = [NSMutableArray array];
@@ -212,9 +212,40 @@
             accident[@"vehicleNoImages"] = vehicleNoArray;
             accident[@"vehicleNumbers"] = @[self.vehicleNo1.text,self.vehicleNo2.text];
             [accident saveInBackground];
-        }
+            
+            
+            //Push dont for police
+            if (![[[DataSource sharedDataSource] currentUser] isPolice]) {
+                PFQuery *query = [PFQuery queryWithClassName:@"FIRUser"];
+                [query whereKey:@"location" nearGeoPoint:geoPoint withinKilometers:5];
+                [query whereKey:@"isPolice" equalTo:@(YES)];
+                [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                    
+                    for (PFObject *user in objects) {
+                        NSString *deviceToken = user[@"deviceToken"];
+                        PFQuery *pushQuery = [PFInstallation query];
+                        [pushQuery whereKey:@"deviceType" equalTo:@"ios"];
+                        [pushQuery whereKey:@"deviceToken" equalTo:deviceToken];
+                        
+                        
+                        // Send push notification to query
+                        [PFPush sendPushMessageToQueryInBackground:pushQuery
+                                                       withMessage:@"Accident"];
+                    }
+                    
+                    
+                }];
         
+            }
+            
+        }
     }];
+    
+    
+    
+
+    
+     //TODO:Change this
     
     //Replace this with good UI
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Submission Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
