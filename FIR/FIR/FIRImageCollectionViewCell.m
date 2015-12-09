@@ -37,6 +37,7 @@
 }
 
 - (void)addDeleteButtonWithCompletion:(deleteCompletion)deleteCompletion {
+    [self removeDeleteButton];
     if (!_deleteButton) {
         _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _deleteButton.backgroundColor = [UIColor clearColor];

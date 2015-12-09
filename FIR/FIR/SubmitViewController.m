@@ -87,7 +87,7 @@
     self.textView.layer.borderWidth = 1.0;
     self.textView.layer.cornerRadius = 5.0;
     [self.textView setBackgroundColor:[UIColor clearColor]];
-        
+    
     if (metadata.accidentDescription) {
         self.textView.text = metadata.accidentDescription;
     } else {
