@@ -25,7 +25,7 @@ NSString *const kDeviceToken = @"deviceToken";
 - (instancetype)initWithPFUser:(PFUser*)parseUser {
     if (self = [super init]) {
         self.parseUser = parseUser;
-        //self.isPolice = YES;
+        self.isPolice = YES;
     }
     return self;
 }
@@ -61,25 +61,29 @@ NSString *const kDeviceToken = @"deviceToken";
     
     __block PFObject *user = nil;
     
-    PFQuery *query = [PFQuery queryWithClassName:@"FIRUser"];
-    [query whereKey:@"phoneNumber" equalTo:self.phoneNumber];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        
-        if (objects.count) {
-            user = [objects lastObject];
-        } else {
-            user = [PFObject objectWithClassName:@"FIRUser"];
-        }
-        
-        
-        [self.parseUser.allKeys enumerateObjectsUsingBlock:^(NSString * _Nonnull key, NSUInteger idx, BOOL * _Nonnull stop) {
-            [user setObject:self.parseUser[key] forKey:key];
-        
+    if (self.phoneNumber) {
+        PFQuery *query = [PFQuery queryWithClassName:@"FIRUser"];
+        [query whereKey:@"phoneNumber" equalTo:self.phoneNumber];
+        [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+            
+            if (objects.count) {
+                user = [objects lastObject];
+            } else {
+                user = [PFObject objectWithClassName:@"FIRUser"];
+            }
+            
+            
+            [self.parseUser.allKeys enumerateObjectsUsingBlock:^(NSString * _Nonnull key, NSUInteger idx, BOOL * _Nonnull stop) {
+                [user setObject:self.parseUser[key] forKey:key];
+                
+            }];
+            
+            [user saveInBackground];
         }];
         
-        [user saveInBackground];
-  }];
+        
+    }
+    
     
     
 }
