@@ -394,8 +394,7 @@
     
     //Do it parallely
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSData *imageData = UIImageJPEGRepresentation(image, 0.6);
-        [imageData writeToFile:filePath atomically:YES];
+        [thumbnailData writeToFile:filePath atomically:YES];
     });
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
