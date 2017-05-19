@@ -1,2 +1,8 @@
+target 'mFIR' do
+
 pod 'Parse'
-pod 'AFNetworking', '~> 2.5'
+pod 'AFNetworking'
+pod 'Firebase/Database'
+pod 'QRCodeReaderViewController', '~> 4.0.2'
+
+end

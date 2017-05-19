@@ -14,12 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-mFIR.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>QRCodeReaderViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3C40AD938D23DF5F8345D23B4D3E1644</key>
+		<key>218DA1E4EE00CD93369958F4BC97779D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<key>8643B0B801AB163EB57D00D95E8233C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CC4BDBD04BFA4C58876CC4D0EC5B247</key>
+		<key>8BE2A308CAE433311A925C5F8824F645</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B53DF583949C0313F8655A28EF6EB07D</key>
+		<key>AFAFB55453D161D2BB5CFB30C68A54D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1BBB76ADBF2EF4EF2CE5DF6BBC77296</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5B45F094255D607E91476C5AF1D556E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
