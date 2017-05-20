@@ -46,15 +46,12 @@
     hud.label.text = @"Creating New Loan";
     [self.view addSubview:hud];
     hud.center = self.view.center;
-    FIRLoan *loan = [FIRLoan alloc];
+    FIRLoan *loan = [[FIRLoan alloc] init];
     loan.money = [NSNumber numberWithFloat:self.amountSlider.value];
     loan.duartion = [NSString stringWithFormat:@"%f", self.daysSlider.value];
     loan.phoneNumber = [DataSource sharedDataSource].currentUser.phoneNumber;
     loan.userID = [DataSource sharedDataSource].currentUser.userID;
-    NSString *loadID = [[NSUserDefaults standardUserDefaults] valueForKey:@"loadID"];
-    loan.loanID = loadID;
-    loadID = [NSString stringWithFormat:@"%d", loadID.intValue + 1];
-    [[NSUserDefaults standardUserDefaults] setValue:loadID forKey:@"loadID"];
+    loan.loanID = [self GetUUID];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [loan saveLoan];
     __weak typeof(self) weakSelf = self;
@@ -98,4 +95,11 @@
 }
 */
 
+- (NSString *)GetUUID
+{
+    CFUUIDRef theUUID = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
+    return (__bridge NSString *)string;
+}
 @end
