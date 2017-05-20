@@ -82,7 +82,7 @@
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
-                                    <font key="NSFont" size="13" name="HelveticaNeue-Thin"/>
+                                    <font key="NSFont" size="13" name="HelveticaNeue-Light"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
@@ -93,7 +93,7 @@
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
-                                    <font key="NSFont" size="13" name="HelveticaNeue-Thin"/>
+                                    <font key="NSFont" size="13" name="HelveticaNeue-Light"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
