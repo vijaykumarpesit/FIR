@@ -349,7 +349,7 @@
                                                     <action selector="submitTapped:" destination="Hwu-ky-8bw" eventType="touchUpInside" id="Kmk-8C-RZL"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dsj-n7-5GA">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dsj-n7-5GA">
                                                 <rect key="frame" x="137" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="DKq-1Q-Aam"/>
