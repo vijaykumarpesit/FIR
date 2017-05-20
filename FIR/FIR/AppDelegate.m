@@ -78,6 +78,7 @@
                                         [user saveUser];
                                         [DataSource sharedDataSource].currentUser = user;
                                         [[NSUserDefaults standardUserDefaults] setValue:phoneNo forKey:@"phoneNumber"];
+                                        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"loanID"];
                                         [[NSUserDefaults standardUserDefaults] synchronize];
                                         
                                         
