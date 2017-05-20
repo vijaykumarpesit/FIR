@@ -52,7 +52,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     InvestCell *cell = (InvestCell *)[tableView dequeueReusableCellWithIdentifier:@"Invest" forIndexPath:indexPath];
     FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] othersLoansArray] objectAtIndex:indexPath.row];
-    cell.scoreLabel.text = [cell.scoreLabel.text stringByAppendingFormat:@" %@", riskLoan.riskScore.stringValue];
+    cell.scoreLabel.text = riskLoan.riskScore.stringValue;
     NSDictionary *loan = riskLoan.loanSnapshot.value;
     cell.nameLabel.text = loan[@"name"] != nil ? loan[@"name"] : loan[@"phoneNumber"];
     cell.moneyLabel.text =  [NSString stringWithFormat:@"₹ %@", [loan[@"money"] stringValue]];
