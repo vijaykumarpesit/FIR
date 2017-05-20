@@ -8,6 +8,7 @@
 
 #import "FIRUser.h"
 #import "FIRDataBase.h"
+#import "NSObject+DictionaryRep.h"
 
 NSString * const kKeyName = @"name";
 NSString * const kKeyPhoneNumber = @"phoneNumber";
@@ -78,11 +79,12 @@ NSString *const kDeviceToken = @"deviceToken";
     
     FIRDatabaseReference *ref = [FIRDataBase sharedDataBase].ref;
     
-    [[[ref child:@"accounts"] child:self.userID] setValue:@{@"name": self.name,
-                                                             @"phoneNumber":self.phoneNumber,
-                                                             @"address":self.address,
-                                                             @"investMentScore":self.investmentScore,
-                                                             @"riskScore":self.riskScore}];
+    NSDictionary *propertyDict = [self dictionaryRepresentation];
+    
+    if (propertyDict.count && propertyDict[@"userID"]) {
+        [[[ref child:@"accounts"] child:self.userID] setValue:propertyDict];
+    }
+   
 
 }
 
