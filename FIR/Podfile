@@ -5,4 +5,5 @@ pod 'AFNetworking'
 pod 'Firebase/Database'
 pod 'QRCodeReaderViewController', '~> 4.0.2'
 pod 'XMLDictionary'
+pod 'MBProgressHUD'
 end

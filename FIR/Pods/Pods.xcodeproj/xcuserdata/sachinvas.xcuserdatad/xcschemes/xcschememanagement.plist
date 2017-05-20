@@ -8,78 +8,56 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Pods-mFIR.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-p2pLending.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>QRCodeReaderViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>XMLDictionary.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>218DA1E4EE00CD93369958F4BC97779D</key>
+		<key>15B6F7D58D3405C101BFEDB821A5E566</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3378CAA93D41A4F86929F4E5833C7804</key>
+		<key>1D4A3C1EF95E7809C34AA79418A14859</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D0A61105C5236500B3408E41D389727</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8643B0B801AB163EB57D00D95E8233C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8BE2A308CAE433311A925C5F8824F645</key>
+		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -89,17 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AFAFB55453D161D2BB5CFB30C68A54D5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B2231DD312A3237C400AFFBDAFE382A3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>BB263DFA423FBA5D07F51AD73371574C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D39CBADFDC22CA60D6953FEA67EB5A8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -110,11 +83,6 @@
 			<true/>
 		</dict>
 		<key>EC4BFF1CEB6BF45FA7608BBE24D57B4C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F5B45F094255D607E91476C5AF1D556E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

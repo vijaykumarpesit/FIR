@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="1753" y="0.0"/>
         </scene>
-        <!--Borrow View Controller-->
+        <!--Borrow Money-->
         <scene sceneID="0W7-O1-6Xe">
             <objects>
-                <viewController id="Mw1-IL-3B3" customClass="BorrowViewController" sceneMemberID="viewController">
+                <viewController title="Borrow Money" id="Mw1-IL-3B3" customClass="BorrowViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Peu-o8-TX5"/>
                         <viewControllerLayoutGuide type="bottom" id="B50-UG-qUG"/>

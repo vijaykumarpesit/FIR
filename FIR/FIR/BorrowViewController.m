@@ -7,6 +7,9 @@
 //
 
 #import "BorrowViewController.h"
+#import "FIRLoan.h"
+#import "DataSource.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface BorrowViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *amountTextField;
@@ -26,7 +29,28 @@
 }
 
 - (IBAction)submitTapped:(id)sender {
-    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:true];
+    hud.label.text = @"Creating New Loan";
+    [self.view addSubview:hud];
+    hud.center = self.view.center;
+    FIRLoan *loan = [FIRLoan alloc];
+    loan.money = [NSNumber numberWithFloat:self.amountSlider.value];
+    loan.duartion = [NSString stringWithFormat:@"%f", self.daysSlider.value];
+    loan.phoneNumber = [DataSource sharedDataSource].currentUser.phoneNumber;
+    loan.userID = [DataSource sharedDataSource].currentUser.userID;
+    NSString *loadID = [[NSUserDefaults standardUserDefaults] valueForKey:@"loadID"];
+    loan.loanID = loadID;
+    loadID = [NSString stringWithFormat:@"%d", loadID.intValue + 1];
+    [[NSUserDefaults standardUserDefaults] setValue:loadID forKey:@"loadID"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [loan saveLoan];
+    __weak typeof(self) weakSelf = self;
+    hud.completionBlock = ^(){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.navigationController popViewControllerAnimated:true];
+        });
+    };
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
