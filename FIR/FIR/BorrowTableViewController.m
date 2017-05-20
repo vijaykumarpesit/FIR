@@ -8,6 +8,8 @@
 
 #import "BorrowTableViewController.h"
 #import "InvestCell.h"
+#import "FIRRiskScoreLoan.h"
+#import "DataSource.h"
 
 @interface BorrowTableViewController ()
 
@@ -34,11 +36,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [[DataSource sharedDataSource] myLoansArray].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     InvestCell *cell = (InvestCell *)[tableView dequeueReusableCellWithIdentifier:@"Borrow" forIndexPath:indexPath];
+    FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] myLoansArray] objectAtIndex:indexPath.row];
+    NSDictionary *loan = riskLoan.loanSnapshot.value;
+    cell.nameLabel.text = loan[@"name"] != nil ? loan[@"name"] : loan[@"phoneNumber"];
+    cell.moneyLabel.text =  [NSString stringWithFormat:@"₹ %@", [loan[@"money"] stringValue]];
+    return cell;
     return cell;
 }
 
