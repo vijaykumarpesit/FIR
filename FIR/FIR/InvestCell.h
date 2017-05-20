@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (weak, nonatomic) IBOutlet UIButton *investButton;
+@property (weak, nonatomic) IBOutlet UILabel *interestLabel;
+@property (weak, nonatomic) IBOutlet UILabel *duration;
 
 @end

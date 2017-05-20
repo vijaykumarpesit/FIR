@@ -18,6 +18,7 @@
 @property (nonatomic, copy) NSString *phoneNumber;
 @property (nonatomic, copy) NSDictionary *locationDict;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *interest;
 
 - (void)saveLoan;
 + (NSString *)getDistanceFromSnapshot:(NSDictionary *)loan;

@@ -61,7 +61,9 @@
     cell.moneyLabel.text =  [NSString stringWithFormat:@"₹ %@", [loan[@"money"] stringValue]];
     cell.scoreLabel.text = nil;
     cell.locationLabel.text = nil;
-    [cell.investButton setTitle:@"Response" forState:UIControlStateNormal];
+    cell.interestLabel.text = loan[@"interest"];
+    cell.duration.text = loan[@"duration"];
+    [cell.investButton setTitle:@"Responses" forState:UIControlStateNormal];
     return cell;
 }
 

@@ -69,8 +69,9 @@
     NSDictionary *loan = riskLoan.loanSnapshot.value;
     cell.nameLabel.text = loan[@"name"] != nil ? loan[@"name"] : loan[@"phoneNumber"];
     cell.moneyLabel.text =  [NSString stringWithFormat:@"₹ %@", [loan[@"money"] stringValue]];
-    cell.locationLabel.text = [FIRLoan getDistanceFromSnapshot:loan];
     cell.investButton.tag = indexPath.row;
+    cell.interestLabel.text = loan[@"interest"];
+    cell.duration.text = loan[@"duration"];
     [cell.investButton addTarget:self action:@selector(invest:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }

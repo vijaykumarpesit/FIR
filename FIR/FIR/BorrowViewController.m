@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *daysTextField;
 @property (weak, nonatomic) IBOutlet UISlider *daysSlider;
 @property (weak, nonatomic) IBOutlet UITableView *documentsView;
+
+@property (weak, nonatomic) IBOutlet UILabel *interestRateLablel;
+@property (weak, nonatomic) IBOutlet UISlider *interestRateSlider;
 @end
 
 @implementation BorrowViewController
@@ -29,7 +32,14 @@
     
     [self.amountSlider addTarget:self action:@selector(amountChanged:) forControlEvents:UIControlEventValueChanged];
     [self.daysSlider addTarget:self action:@selector(daysChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.interestRateSlider addTarget:self action:@selector(interestChanged:) forControlEvents:UIControlEventValueChanged];
+
     // Do any additional setup after loading the view.
+}
+
+- (void)interestChanged:(UISlider *)sender {
+    NSInteger value = sender.value;
+    self.interestRateLablel.text = [NSString stringWithFormat:@"%ld %%%", value];
 }
 
 - (void)amountChanged:(UISlider *)sender {
@@ -54,7 +64,7 @@
     NSString *days = [self.daysTextField.text componentsSeparatedByString:@" "][0];
     loan.duartion = days;
     loan.phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"];
-    
+    loan.interest = self.interestRateLablel.text;
     NSMutableDictionary *locationDict = [NSMutableDictionary dictionary];
     
     if ([FIRLocationManger locationManager].locationManger.location) {
