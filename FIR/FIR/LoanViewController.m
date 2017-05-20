@@ -36,7 +36,7 @@
         FIRDatabaseReference *db = [FIRDataBase sharedDataBase].ref;
         
         [[[db child:@"acounts"] child:loanDict[@"phoneNumber"] ] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            if (snapshot.value) {
+            if (snapshot.value && ![snapshot isKindOfClass:[NSNull class]]) {
                 NSDictionary *adharCardInfo = snapshot.value[@"completeAdharInfo"];
                 NSMutableString *address  = [NSMutableString string];
                 if (adharCardInfo[@"_co"]) {

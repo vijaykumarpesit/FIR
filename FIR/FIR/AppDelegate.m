@@ -67,9 +67,6 @@
                              configuration:config
                                 completion:^(DGTSession *session, NSError *error) {
                                     
-                                    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"adharNumber"];
-                                    [[NSUserDefaults standardUserDefaults] synchronize];
-
                                     if ([[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"] && [[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
                                         //Everything is cool just go
                                     } else {
@@ -116,7 +113,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
-    NSArray *invest = [DataSource sharedDataSource].investments.value;
+    //NSArray *invest = [DataSource sharedDataSource].investments.value;
     
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
