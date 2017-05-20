@@ -129,7 +129,7 @@
     
     //First check
     if ([[[[GoContactSync sharedInstance] syncedContacts] allKeys] containsObject:phoneNumber]) {
-        riskScore += 10;
+        riskScore += 1000;
     }
    
     //SecondCheck
@@ -143,7 +143,7 @@
         CLLocation *currentLocation = [FIRLocationManger locationManager].locationManger.location;
         
         CLLocationDistance distance = [currentLocation distanceFromLocation:loanLocation];
-        riskScore += (riskScore*distance/1000);
+        riskScore += (riskScore*distance/100);
         
     }
     
