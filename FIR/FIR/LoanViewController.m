@@ -7,6 +7,7 @@
 //
 
 #import "LoanViewController.h"
+#import "FIRDataBase.h"
 
 @interface LoanViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
@@ -28,8 +29,45 @@
     self.nameLabel.text = loanDict[@"name"];
     self.moneyLabel.text = [loanDict[@"money"] stringValue];
     self.riskScore.text = self.riskScoreLoan.riskScore.stringValue;
-
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Invest" style:UIBarButtonItemStylePlain target:self action:@selector(submitTapped:)];
+    
+    if (loanDict[@"phoneNumber"]) {
+        FIRDatabaseReference *db = [FIRDataBase sharedDataBase].ref;
+        
+        [[[db child:@"acounts"] child:loanDict[@"phoneNumber"] ] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            if (snapshot.value) {
+                NSDictionary *adharCardInfo = snapshot.value[@"completeAdharInfo"];
+                NSMutableString *address  = [NSMutableString string];
+                if (adharCardInfo[@"_co"]) {
+                    [address appendString:adharCardInfo[@"_co"]];
+                }
+                
+                if (adharCardInfo[@"_house"]) {
+                    [address appendString:adharCardInfo[@"_house"]];
+                }
+                
+                if (adharCardInfo[@"_street"]) {
+                    [address appendString:adharCardInfo[@"_street"]];
+                }
+                
+                if (adharCardInfo[@"_po"]) {
+                    [address appendString:adharCardInfo[@"_po"]];
+                }
+                
+                if (adharCardInfo[@"_dist"]) {
+                    [address appendString:adharCardInfo[@"_dist"]];
+                }
+                
+                if (adharCardInfo[@"_state"]) {
+                    [address appendString:adharCardInfo[@"_state"]];
+                }
+                
+                self.addressLabel.text = address;
+            }
+        }];
+        
+    }
     
     // Do any additional setup after loading the view.
 }
