@@ -93,15 +93,11 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="distance" destination="YD6-Gw-JIe" id="EGf-57-cyy"/>
-                <outlet property="locationLabel" destination="YD6-Gw-JIe" id="wZa-RA-Vln"/>
-                <outlet property="money" destination="HCP-a0-WDG" id="LQy-uj-aXT"/>
-                <outlet property="moneyLabel" destination="62t-Au-po7" id="ZlQ-dI-f1c"/>
-                <outlet property="name" destination="Xga-tD-vTE" id="Xah-PY-GK4"/>
-                <outlet property="nameLabel" destination="Xga-tD-vTE" id="lnr-a6-o1F"/>
-                <outlet property="profilePic" destination="C7y-Ig-pVX" id="9Bl-zd-VVJ"/>
-                <outlet property="score" destination="pgb-eM-lez" id="A67-Tr-nMC"/>
-                <outlet property="scoreLabel" destination="pgb-eM-lez" id="ofl-ga-tq1"/>
+                <outlet property="locationLabel" destination="YD6-Gw-JIe" id="2y9-Vf-Pef"/>
+                <outlet property="moneyLabel" destination="HCP-a0-WDG" id="udH-nN-4NH"/>
+                <outlet property="nameLabel" destination="Xga-tD-vTE" id="vNz-gP-XfQ"/>
+                <outlet property="profilePic" destination="C7y-Ig-pVX" id="k7L-uQ-oNi"/>
+                <outlet property="scoreLabel" destination="pgb-eM-lez" id="cCT-Dl-RZz"/>
             </connections>
             <point key="canvasLocation" x="424" y="272"/>
         </tableViewCell>

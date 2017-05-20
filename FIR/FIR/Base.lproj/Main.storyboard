@@ -157,7 +157,7 @@
         <!--Invest-->
         <scene sceneID="WIC-ie-IDQ">
             <objects>
-                <tableViewController id="28N-bw-gmI" customClass="LendViewController" customModule="p2pLending" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="28N-bw-gmI" customClass="LendTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8nt-qo-kq3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
