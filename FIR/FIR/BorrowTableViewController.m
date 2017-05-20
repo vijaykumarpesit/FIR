@@ -19,10 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     UINib *nib = [UINib nibWithNibName:@"InvestCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"Invest"];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"Invest Now"];
     
-    
+    self.title = @"Details";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -54,6 +55,7 @@
     cell.moneyLabel.text =  [NSString stringWithFormat:@"₹ %@", [loan[@"money"] stringValue]];
     cell.scoreLabel.text = nil;
     cell.locationLabel.text = nil;
+    [cell.investButton setTitle:@"Response" forState:UIControlStateNormal];
     return cell;
 }
 
