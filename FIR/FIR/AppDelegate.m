@@ -15,9 +15,9 @@
 #import "GoContactSync.h"
 #import <QRCodeReaderViewController/QRCodeReaderViewController.h>
 #import "DataSource.h"
+#import <XMLDictionary/XMLDictionary.h>
 
 @interface AppDelegate () <QRCodeReaderDelegate>
-@property (nonatomic, strong) QRCodeReaderViewController *codeReaderVC;
 @end
 
 @implementation AppDelegate
@@ -57,14 +57,12 @@
     
     DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
     config.phoneNumber = @"+91";
-    [digits logOut];
+    //[digits logOut];
     [digits authenticateWithViewController:nil
                              configuration:config
                                 completion:^(DGTSession *session, NSError *error) {
                                     
                                     //First time sign up
-                                    if (![[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"]) {
-                                        
                                         FIRUser *user = [[FIRUser alloc] init];
                                         NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
                                         user.userID = session.userID;
@@ -73,7 +71,7 @@
                                         [DataSource sharedDataSource].currentUser = user;
                                         [[NSUserDefaults standardUserDefaults] setValue:session.phoneNumber forKey:@"phoneNumber"];
                                         [[NSUserDefaults standardUserDefaults] synchronize];
-                                    }
+                                    
                                     
                                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                                         if (![[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
@@ -87,7 +85,6 @@
                                                                                                                      showTorchButton:YES];
                                             vc.modalPresentationStyle = UIModalPresentationFormSheet;
                                             vc.delegate = self;
-                                            self.codeReaderVC = vc;
                                             
                                             [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
                                         }
@@ -128,8 +125,29 @@
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
 {
     [self.window.rootViewController dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"%@", result);
-        //Set the adhar value and user
+        
+        NSDictionary *xmlDoc = [[XMLDictionaryParser sharedInstance] dictionaryWithString:result];
+        
+        NSLog(@"%@", xmlDoc);
+        
+        FIRUser *user = [[DataSource sharedDataSource] currentUser];
+        
+        if ([xmlDoc[@"_uid"] length]) {
+            user.adharID = xmlDoc[@"_uid"];
+        }
+        
+        if ([xmlDoc count]) {
+            user.completeAdharInfo = xmlDoc;
+        }
+        
+        [user saveUser];
+        
+        if (user.adharID) {
+            [[NSUserDefaults standardUserDefaults] setValue:user.adharID forKey:@"adharNumber"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        
+        
     }];
 }
 

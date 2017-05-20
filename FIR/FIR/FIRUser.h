@@ -15,11 +15,10 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *phoneNumber;
 @property (nonatomic, copy) NSString *userID;
-@property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *investmentScore;
 @property (nonatomic, copy) NSString *riskScore;
 @property (nonatomic, copy) NSString *adharID;
-
+@property (nonatomic, strong) NSDictionary *completeAdharInfo;
 - (void)saveUser;
 
 

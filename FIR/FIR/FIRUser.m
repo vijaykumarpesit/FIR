@@ -19,8 +19,6 @@ NSString *const kDeviceToken = @"deviceToken";
 
 @interface FIRUser ()
 
-@property (nonatomic, assign) BOOL isSaveInPreogress;
-
 @end
 
 

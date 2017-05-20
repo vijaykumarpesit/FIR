@@ -37,12 +37,14 @@ PODS:
   - Parse (1.14.4):
     - Bolts/Tasks (~> 1.8)
   - QRCodeReaderViewController (4.0.2)
+  - XMLDictionary (1.4.1)
 
 DEPENDENCIES:
   - AFNetworking
   - Firebase/Database
   - Parse
   - QRCodeReaderViewController (~> 4.0.2)
+  - XMLDictionary
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -55,7 +57,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
   QRCodeReaderViewController: e8f27d035b3e72b1d4b1c61ff66458287e3be0ff
+  XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
 
-PODFILE CHECKSUM: e952dbee546612f6abf2b75dce7077cd8879b231
+PODFILE CHECKSUM: b922d962c281d9f35c183ad44add054dc4db6d7f
 
 COCOAPODS: 1.2.1
