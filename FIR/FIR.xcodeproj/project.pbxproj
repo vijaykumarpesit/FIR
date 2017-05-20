@@ -19,6 +19,9 @@
 		54709AD61ED041D600B8359E /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709AD51ED041D600B8359E /* LoanViewController.m */; };
 		54709ADC1ED053B500B8359E /* BorrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709ADB1ED053B500B8359E /* BorrowViewController.m */; };
 		54709ADE1ED0580D00B8359E /* P2PLen.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709ADD1ED0580D00B8359E /* P2PLen.png */; };
+		54709AE81ED0662800B8359E /* Borrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709AE51ED0662800B8359E /* Borrow@2x.png */; };
+		54709AE91ED0662800B8359E /* Chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709AE61ED0662800B8359E /* Chat@2x.png */; };
+		54709AEA1ED0662800B8359E /* Lend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709AE71ED0662800B8359E /* Lend@2x.png */; };
 		5476F9831C11F999001A18CF /* Ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9821C11F999001A18CF /* Ambulance.png */; };
 		5476F9851C11FAA4001A18CF /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9841C11FAA4001A18CF /* Fire.png */; };
 		547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547741811C11E19400C5E2BA /* TabbarViewController.m */; };
@@ -98,6 +101,9 @@
 		54709ADA1ED053B500B8359E /* BorrowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorrowViewController.h; sourceTree = "<group>"; };
 		54709ADB1ED053B500B8359E /* BorrowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorrowViewController.m; sourceTree = "<group>"; };
 		54709ADD1ED0580D00B8359E /* P2PLen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = P2PLen.png; sourceTree = "<group>"; };
+		54709AE51ED0662800B8359E /* Borrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Borrow@2x.png"; sourceTree = "<group>"; };
+		54709AE61ED0662800B8359E /* Chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chat@2x.png"; sourceTree = "<group>"; };
+		54709AE71ED0662800B8359E /* Lend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lend@2x.png"; sourceTree = "<group>"; };
 		5476F9821C11F999001A18CF /* Ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ambulance.png; sourceTree = "<group>"; };
 		5476F9841C11FAA4001A18CF /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
 		547741801C11E19400C5E2BA /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
@@ -392,6 +398,9 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				54709AE51ED0662800B8359E /* Borrow@2x.png */,
+				54709AE61ED0662800B8359E /* Chat@2x.png */,
+				54709AE71ED0662800B8359E /* Lend@2x.png */,
 				54709ADD1ED0580D00B8359E /* P2PLen.png */,
 				54709AB51ECFE97000B8359E /* mFIR-Bridging-Header.h */,
 				54F9A6D01C17F3BD00F7767B /* delete.png */,
@@ -496,6 +505,7 @@
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
 				B1624C3D1C168713001E897C /* placeholder_small.png in Resources */,
+				54709AE81ED0662800B8359E /* Borrow@2x.png in Resources */,
 				547741B21C11EE5D00C5E2BA /* Status@2x.png in Resources */,
 				545EAACC1C16E806008FA18A /* ShareLocation.png in Resources */,
 				54F9A6C81C17DA9000F7767B /* Accident.png in Resources */,
@@ -503,10 +513,12 @@
 				547741B11C11EE5D00C5E2BA /* Filing@2x.png in Resources */,
 				B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */,
 				B1F447D01C11A4D800DCEA3A /* InvestCell.xib in Resources */,
+				54709AE91ED0662800B8359E /* Chat@2x.png in Resources */,
 				545EAA951C16BA75008FA18A /* Police.png in Resources */,
 				54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */,
 				B1556EF81ED0076700866807 /* GoogleService-Info.plist in Resources */,
 				54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */,
+				54709AEA1ED0662800B8359E /* Lend@2x.png in Resources */,
 				5476F9831C11F999001A18CF /* Ambulance.png in Resources */,
 				547741A01C11E76500C5E2BA /* Emergency@2x.png in Resources */,
 				B1624C2F1C167FD1001E897C /* FIRFileCollectionViewFooter.xib in Resources */,

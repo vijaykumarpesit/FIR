@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.documentsView.delegate = self;
+    self.documentsView.dataSource = self;
     // Do any additional setup after loading the view.
 }
 
@@ -45,6 +47,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Document"];
     }
+    cell.textLabel.text = @"None";
     return cell;
 }
 
