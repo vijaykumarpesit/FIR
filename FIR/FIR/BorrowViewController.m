@@ -25,8 +25,21 @@
     [super viewDidLoad];
     self.documentsView.delegate = self;
     self.documentsView.dataSource = self;
+    
+    [self.amountSlider addTarget:self action:@selector(amountChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.daysSlider addTarget:self action:@selector(daysChanged:) forControlEvents:UIControlEventValueChanged];
     // Do any additional setup after loading the view.
 }
+
+- (void)amountChanged:(UISlider *)sender {
+    self.amountTextField.text = [NSString stringWithFormat:@"₹ %f", sender.value];
+}
+
+- (void)daysChanged:(UISlider *)sender {
+    NSInteger value = sender.value;
+    self.daysTextField.text = [NSString stringWithFormat:@"%ld day(s)", (long)value];
+}
+
 
 - (IBAction)submitTapped:(id)sender {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:true];
