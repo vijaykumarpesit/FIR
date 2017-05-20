@@ -63,7 +63,7 @@
         LoanViewController *loanViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoanVC"];
         [weakSelf.navigationController pushViewController:loanViewController animated:true];
     }];
-    rowAction.backgroundColor = [UIColor colorWithRed:60.0/255.0 green:60.0/255.0 blue:160.0/255.0 alpha:1.0];
+    rowAction.backgroundColor = [UIColor colorWithRed:65.0/255.0 green:115.0/255.0 blue:185.0/255.0 alpha:1.0];
     return @[rowAction];
 }
 
@@ -72,8 +72,8 @@
     FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] othersLoansArray] objectAtIndex:indexPath.row];
     cell.scoreLabel.text = riskLoan.riskScore.stringValue;
     NSDictionary *loan = riskLoan.loanSnapshot.value;
-    cell.nameLabel.text = loan[@"phoneNumber"];
-    cell.moneyLabel.text = [loan[@"money"] stringValue];
+    cell.nameLabel.text = loan[@"name"] != nil ? loan[@"name"] : loan[@"phoneNumber"];
+    cell.moneyLabel.text =  [NSString stringWithFormat:@"₹ %@", [loan[@"money"] stringValue]];
     cell.locationLabel.text = [FIRLoan getDistanceFromSnapshot:loan];
     return cell;
 }

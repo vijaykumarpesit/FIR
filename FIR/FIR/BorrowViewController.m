@@ -48,12 +48,13 @@
     [self.view addSubview:hud];
     hud.center = self.view.center;
     FIRLoan *loan = [[FIRLoan alloc] init];
-    loan.money = [NSNumber numberWithFloat:self.amountSlider.value];
-    loan.duartion = [NSString stringWithFormat:@"%f", self.daysSlider.value];
+    NSString *money = [self.amountTextField.text componentsSeparatedByString:@" "][1];
+    loan.money = [NSNumber numberWithInteger:money.integerValue];
+    NSString *days = [self.daysTextField.text componentsSeparatedByString:@" "][0];
+    loan.duartion = days;
     loan.phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"];
     loan.loanID = [self GetUUID];
     loan.name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
-    
     [[NSUserDefaults standardUserDefaults] synchronize];
     [loan saveLoan];
     __weak typeof(self) weakSelf = self;
