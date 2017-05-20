@@ -93,7 +93,7 @@
             
             while (child = [children nextObject]) {
                 
-                if ([[child valueForKey:@"phoneNumber"] isEqualToString:phoneNumber]) {
+                if ([[child.value valueForKey:@"phoneNumber"] isEqualToString:phoneNumber]) {
                     FIRRiskScoreLoan *loan = [[FIRRiskScoreLoan alloc] init];
                     loan.loanSnapshot = child;
                     [localMyLoans addObject:loan];
@@ -122,7 +122,7 @@
     
     NSUInteger riskScore = 0;
     
-    NSString *phoneNumber = [snapShot valueForKey:@"phoneNumber"];
+    NSString *phoneNumber = [snapShot.value valueForKey:@"phoneNumber"];
     
     //First check
     if ([[[[GoContactSync sharedInstance] syncedContacts] allKeys] containsObject:phoneNumber]) {
@@ -131,8 +131,8 @@
    
     //SecondCheck
     
-    if ([snapShot valueForKey:@"locationDict"]) {
-        NSDictionary *locationDict = [snapShot valueForKey:@"locationDict"];
+    if ([snapShot.value valueForKey:@"locationDict"]) {
+        NSDictionary *locationDict = [snapShot.value valueForKey:@"locationDict"];
         NSNumber *lattitude = [locationDict valueForKey:@"lattitude"];
         NSNumber *longitude = [locationDict valueForKey:@"longitude"];
         
