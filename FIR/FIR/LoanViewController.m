@@ -22,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStylePlain target:self action:@selector(submitTapped:)];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -32,6 +35,9 @@
 
 - (IBAction)submitTapped:(id)sender {
     
+    //Need to make a call to submit call. investmentID creation
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*
