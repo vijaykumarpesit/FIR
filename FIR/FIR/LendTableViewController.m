@@ -53,8 +53,7 @@
     __weak typeof(self) weakSelf = self;
     UITableViewRowAction *rowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Invest" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         LoanViewController *loanViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoanVC"];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loanViewController];
-        [weakSelf presentViewController:navController animated:true completion:nil];
+        [weakSelf.navigationController pushViewController:loanViewController animated:true];
     }];
     rowAction.backgroundColor = [UIColor colorWithRed:60.0/255.0 green:60.0/255.0 blue:160.0/255.0 alpha:1.0];
     return @[rowAction];
