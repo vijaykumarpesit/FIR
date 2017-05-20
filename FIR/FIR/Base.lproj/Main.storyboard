@@ -212,7 +212,7 @@
         <!--Your Chats-->
         <scene sceneID="55n-iC-CrA">
             <objects>
-                <tableViewController id="2pM-90-Htu" customClass="ChatViewController" customModule="p2pLending" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2pM-90-Htu" customClass="ChatTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hLC-1v-1vf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,7 +349,7 @@
                                                     <action selector="submitTapped:" destination="Hwu-ky-8bw" eventType="touchUpInside" id="Kmk-8C-RZL"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dsj-n7-5GA">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dsj-n7-5GA">
                                                 <rect key="frame" x="137" y="0.0" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="DKq-1Q-Aam"/>
@@ -524,6 +524,7 @@
     </scenes>
     <resources>
         <image name="placeholder_large.png" width="500" height="285"/>
+        <image name="profile_default.png" width="210" height="210"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
