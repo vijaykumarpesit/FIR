@@ -19,7 +19,7 @@
     NSDictionary *propertyDict = [self dictionaryRepresentation];
     
     if (propertyDict.count && propertyDict[@"investmentID"]) {
-        [[[ref child:@"investments"] child:self.userID] setValue:propertyDict];
+        [[[ref child:@"investments"] child:self.investmentID] setValue:propertyDict];
     }
 }
 

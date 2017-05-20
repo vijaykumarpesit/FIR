@@ -11,7 +11,7 @@
 @interface FIRInvestment : NSObject
 
 @property (nonatomic, copy) NSString * loanID;
-@property (nonatomic, copy) NSString * investMentID;
+@property (nonatomic, copy) NSString * investmentID;
 @property (nonatomic, copy) NSString * userID;
 @property (nonatomic, copy) NSString * phoneNumber;
 @property (nonatomic, copy) NSDictionary *offers;

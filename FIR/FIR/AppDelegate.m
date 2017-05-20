@@ -119,14 +119,14 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
-
+/*
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     FIRInvestment *investment = [[FIRInvestment alloc] init];
-    investment.investMentID = @"100";
+    investment.investmentID = @"100";
     investment.loanID = @"someThing";
     [investment saveInvestment];
 }
-
+*/
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
