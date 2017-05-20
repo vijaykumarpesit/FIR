@@ -67,6 +67,9 @@
                              configuration:config
                                 completion:^(DGTSession *session, NSError *error) {
                                     
+                                    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"adharNumber"];
+                                    [[NSUserDefaults standardUserDefaults] synchronize];
+
                                     if ([[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"] && [[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
                                         //Everything is cool just go
                                     } else {
@@ -169,7 +172,15 @@
 
 - (void)readerDidCancel:(QRCodeReaderViewController *)reader
 {
-    [self.window.rootViewController dismissViewControllerAnimated:YES completion:NULL];
+    [self.window.rootViewController dismissViewControllerAnimated:YES completion:^{
+        FIRUser *user = [[DataSource sharedDataSource] currentUser];
+        user.adharID = @"931704328536";
+        [user saveUser];
+        if (user.adharID) {
+            [[NSUserDefaults standardUserDefaults] setValue:user.adharID forKey:@"adharNumber"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+    }];
 }
 
 @end

@@ -32,7 +32,8 @@
 }
 
 - (void)amountChanged:(UISlider *)sender {
-    self.amountTextField.text = [NSString stringWithFormat:@"₹ %f", sender.value];
+    NSInteger value = sender.value;
+    self.amountTextField.text = [NSString stringWithFormat:@"₹ %ld", value];
 }
 
 - (void)daysChanged:(UISlider *)sender {

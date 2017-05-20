@@ -19,5 +19,6 @@
 @property (nonatomic, copy) NSDictionary *locationDict;
 
 - (void)saveLoan;
+- (NSString *)getDistance;
 
 @end

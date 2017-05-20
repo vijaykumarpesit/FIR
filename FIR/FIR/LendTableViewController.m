@@ -9,6 +9,9 @@
 #import "LendTableViewController.h"
 #import "InvestCell.h"
 #import "LoanViewController.h"
+#import "DataSource.h"
+#import "FIRLoan.h"
+#import "FIRRiskScoreLoan.h"
 
 @interface LendTableViewController ()
 
@@ -20,6 +23,11 @@
     [super viewDidLoad];
     UINib *nib = [UINib nibWithNibName:@"InvestCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"Invest"];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +42,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [[DataSource sharedDataSource] othersLoansArray].count;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -46,7 +54,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100.0;
+    return 60.0;
 }
 
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -61,6 +69,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     InvestCell *cell = (InvestCell *)[tableView dequeueReusableCellWithIdentifier:@"Invest" forIndexPath:indexPath];
+    FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] othersLoansArray] objectAtIndex:indexPath.row];
+    cell.scoreLabel.text = riskLoan.riskScore.stringValue;
+    FIRLoan *loan = ((FIRLoan *)riskLoan.loanSnapshot);
+    cell.nameLabel.text = loan.userID;
+    cell.moneyLabel.text = loan.money.stringValue;
+    cell.locationLabel.text = loan.getDistance;
     return cell;
 }
 
