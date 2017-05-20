@@ -31,7 +31,6 @@
         if (!parseUser) {
             parseUser = [PFUser user];
         }
-        self.currentUser = [[FIRUser alloc] initWithPFUser:parseUser];
         self.accidentMetaDataArry = [[NSMutableArray alloc] init];
         
     }
