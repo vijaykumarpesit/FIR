@@ -19,6 +19,7 @@
 @property (nonatomic, copy) NSString *riskScore;
 @property (nonatomic, copy) NSString *adharID;
 @property (nonatomic, strong) NSDictionary *completeAdharInfo;
+
 - (void)saveUser;
 
 

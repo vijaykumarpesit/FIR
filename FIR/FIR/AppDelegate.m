@@ -16,6 +16,7 @@
 #import <QRCodeReaderViewController/QRCodeReaderViewController.h>
 #import "DataSource.h"
 #import <XMLDictionary/XMLDictionary.h>
+#import "FIRInvestment.h"
 
 @interface AppDelegate () <QRCodeReaderDelegate>
 @end
@@ -47,6 +48,8 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
+    [DataSource sharedDataSource];
+    
     return YES;
 }
 
@@ -62,7 +65,10 @@
                              configuration:config
                                 completion:^(DGTSession *session, NSError *error) {
                                     
-                                    //First time sign up
+                                    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"] && [[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
+                                        
+                                    } else {
+                                        //First time sign up
                                         FIRUser *user = [[FIRUser alloc] init];
                                         NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
                                         user.userID = session.userID;
@@ -71,28 +77,29 @@
                                         [DataSource sharedDataSource].currentUser = user;
                                         [[NSUserDefaults standardUserDefaults] setValue:session.phoneNumber forKey:@"phoneNumber"];
                                         [[NSUserDefaults standardUserDefaults] synchronize];
-                                    
-                                    
-                                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                                        if (![[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
-                                            
-                                            QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-                                            
-                                            QRCodeReaderViewController *vc = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel"
-                                                                                                                          codeReader:reader
-                                                                                                                 startScanningAtLoad:YES
-                                                                                                              showSwitchCameraButton:YES
-                                                                                                                     showTorchButton:YES];
-                                            vc.modalPresentationStyle = UIModalPresentationFormSheet;
-                                            vc.delegate = self;
-                                            
-                                            [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
-                                        }
                                         
-                                    });
-                                    
+                                        
+                                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                            if (![[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
+                                                
+                                                QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+                                                
+                                                QRCodeReaderViewController *vc = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel"
+                                                                                                                              codeReader:reader
+                                                                                                                     startScanningAtLoad:YES
+                                                                                                                  showSwitchCameraButton:YES
+                                                                                                                         showTorchButton:YES];
+                                                vc.modalPresentationStyle = UIModalPresentationFormSheet;
+                                                vc.delegate = self;
+                                                
+                                                [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+                                            }
+                                            
+                                        });
+                                    }
                                     
                                 }];
+    
     
 }
 
@@ -102,6 +109,9 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    
+    NSArray *invest = [DataSource sharedDataSource].investments.value;
+    
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
@@ -111,7 +121,10 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    FIRInvestment *investment = [[FIRInvestment alloc] init];
+    investment.investMentID = @"100";
+    investment.loanID = @"someThing";
+    [investment saveInvestment];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

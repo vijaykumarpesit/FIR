@@ -18,5 +18,6 @@
 
 @property (nonatomic,strong) FIRDataSnapshot *investments;
 @property (nonatomic,strong) FIRDataSnapshot *loans;
+@property (nonatomic, strong) FIRDataSnapshot *currentUserSnapShot;
 
 @end

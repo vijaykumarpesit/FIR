@@ -23,55 +23,6 @@ NSString *const kDeviceToken = @"deviceToken";
 
 
 @implementation FIRUser
-/*
-- (void)setUserID:(NSString*)userID {
-}
-
-- (NSString*)userID {
-}
-
-- (void)setName:(NSString*)Name {
-}
-
-- (NSString*)name {
-}
-
-
-- (void)setPhoneNumber:(NSString *)phoneNumber {
-}
-
-- (NSString*)phoneNumber {
-}
-
-- (void)saveUser {
-    
-    
-}
-
-
--(BOOL)isPolice {
-    
-    return  [[self.parseUser objectForKey:kIsPolice] boolValue];
-}
-
-- (void)setLocation:(PFGeoPoint *)location {
-    
-    [self.parseUser setObject:location forKey:kLocation];
-
-}
-
-- (PFGeoPoint *)location {
-    return [self.parseUser objectForKey:kLocation];
-}
-
-- (void)setDeviceToken:(NSString *)deviceToken {
-    [self.parseUser setObject:deviceToken forKey:kDeviceToken];
-}
-
-- (NSString *)deviceToken {
-    return [self.parseUser objectForKey:kDeviceToken];
-}
-*/
 
 - (void)saveUser {
     
@@ -79,11 +30,13 @@ NSString *const kDeviceToken = @"deviceToken";
     
     NSDictionary *propertyDict = [self dictionaryRepresentation];
     
-    if (propertyDict.count && propertyDict[@"userID"]) {
-        [[[ref child:@"accounts"] child:self.userID] setValue:propertyDict];
+    if (propertyDict.count && propertyDict[@"phoneNumber"]) {
+        [[[ref child:@"accounts"] child:self.phoneNumber] setValue:propertyDict];
     }
-   
+}
 
+- (void)updateUser {
+    
 }
 
 @end

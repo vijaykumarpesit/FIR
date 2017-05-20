@@ -43,6 +43,16 @@
         [[ref child:@"loans"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
             self.investments = snapshot;
         }];
+        
+        
+        NSString *phoneNumber =  [[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"];
+        
+        if (phoneNumber) {
+            [[[ref child:@"accounts"] child:phoneNumber] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                self.currentUserSnapShot = snapshot;
+            }];
+        }
+        
     }
     
     return self;
