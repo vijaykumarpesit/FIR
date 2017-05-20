@@ -29,7 +29,9 @@ class LendViewController: UITableViewController {
                 DispatchQueue.main.async {
                     let cameraViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRCodeScanner") as! CameraViewController
                     let navigationController = UINavigationController(rootViewController: cameraViewController)
-                    self.navigationController?.present(navigationController, animated: true, completion: nil)
+                    self.navigationController?.present(navigationController, animated: true, completion: {
+                        UserDefaults.standard.set(true, forKey: "InitialSetUp")
+                    })
                 }
             })
         }
