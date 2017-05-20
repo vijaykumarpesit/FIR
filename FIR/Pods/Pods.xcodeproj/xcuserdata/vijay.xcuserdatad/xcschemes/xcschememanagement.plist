@@ -24,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-mFIR.xcscheme</key>
+		<key>Pods-p2pLending.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8643B0B801AB163EB57D00D95E8233C4</key>
+		<key>119279C05B7F4C14555666B2235D3B9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8BE2A308CAE433311A925C5F8824F645</key>
+		<key>2B4E0FC439EEFD1478D3BDCED21BCE3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

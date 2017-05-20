@@ -18,6 +18,7 @@
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *investmentScore;
 @property (nonatomic, copy) NSString *riskScore;
+@property (nonatomic, copy) NSString *adharID;
 
 - (void)saveUser;
 

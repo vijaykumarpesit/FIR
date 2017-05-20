@@ -1,4 +1,4 @@
-target 'mFIR' do
+target 'p2pLending' do
 
 pod 'Parse'
 pod 'AFNetworking'

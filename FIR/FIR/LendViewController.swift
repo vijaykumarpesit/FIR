@@ -18,14 +18,14 @@ class LendViewController: UITableViewController {
         tableView.register(nib, forCellReuseIdentifier: "Invest")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+  /*  override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let initialSetUpDone = UserDefaults.standard.bool(forKey: "InitialSetUp")
         if initialSetUpDone == false {
             let authenticationConfiguration = DGTAuthenticationConfiguration(accountFields: .none)!
             authenticationConfiguration.phoneNumber = "+91"
             authenticationConfiguration.title = "Sign In"
-            Digits.sharedInstance().authenticate(with: nil, configuration: authenticationConfiguration, completion: {[unowned self] (session, error) in
+           /* Digits.sharedInstance().authenticate(with: nil, configuration: authenticationConfiguration, completion: {[unowned self] (session, error) in
                 if let digitsError = error {
                     print(digitsError)
                 } else if let phoneNumber = session?.phoneNumber {
@@ -36,11 +36,11 @@ class LendViewController: UITableViewController {
                         self.navigationController?.present(navigationController, animated: true, completion: {
                             UserDefaults.standard.set(true, forKey: "InitialSetUp")
                         })
-                    }
+                    }*/
                 }
             })
         }
-    }
+    }*/
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

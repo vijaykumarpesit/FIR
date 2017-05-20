@@ -30,6 +30,7 @@
 		54F9A6C81C17DA9000F7767B /* Accident.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6C71C17DA9000F7767B /* Accident.png */; };
 		54F9A6CD1C17DD7200F7767B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A6CC1C17DD7200F7767B /* MapKit.framework */; };
 		54F9A6D11C17F3BD00F7767B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6D01C17F3BD00F7767B /* delete.png */; };
+		AB548BE7524426CF3789D350 /* libPods-p2pLending.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D5091F5C0D3402C46BD469 /* libPods-p2pLending.a */; };
 		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C301C117FD500F7BBB7 /* FIRUser.m */; };
 		B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C331C1183D800F7BBB7 /* FIRAccidentMetaData.m */; };
@@ -101,6 +102,7 @@
 		54F9A6C71C17DA9000F7767B /* Accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Accident.png; sourceTree = "<group>"; };
 		54F9A6CC1C17DD7200F7767B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		54F9A6D01C17F3BD00F7767B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		7F8D196DBDC1FC765E305802 /* Pods-p2pLending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p2pLending.release.xcconfig"; path = "Pods/Target Support Files/Pods-p2pLending/Pods-p2pLending.release.xcconfig"; sourceTree = "<group>"; };
 		B1072C261C11788C00F7BBB7 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		B1072C271C11788C00F7BBB7 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		B1072C2F1C117FD500F7BBB7 /* FIRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRUser.h; sourceTree = "<group>"; };
@@ -165,7 +167,9 @@
 		B1D168D01C102F900079E760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1F447CE1C11A4D800DCEA3A /* InvestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestCell.xib; sourceTree = "<group>"; };
 		C4D50FF4650F570B8C626D18 /* Pods-mFIR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mFIR.release.xcconfig"; path = "Pods/Target Support Files/Pods-mFIR/Pods-mFIR.release.xcconfig"; sourceTree = "<group>"; };
+		C5D5091F5C0D3402C46BD469 /* libPods-p2pLending.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-p2pLending.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3E487640CAD6EE1A9AF242 /* libPods-mFIR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mFIR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DEB59081F913BE69003847 /* Pods-p2pLending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p2pLending.debug.xcconfig"; path = "Pods/Target Support Files/Pods-p2pLending/Pods-p2pLending.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 				B11409281C10B3F10033F0F5 /* TwitterCore.framework in Frameworks */,
 				B11409261C10B3F10033F0F5 /* DigitsKit.framework in Frameworks */,
 				278A892820DA4BF37AD386C6 /* libPods-mFIR.a in Frameworks */,
+				AB548BE7524426CF3789D350 /* libPods-p2pLending.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,8 @@
 			children = (
 				334C2C395594E1E260134DFA /* Pods-mFIR.debug.xcconfig */,
 				C4D50FF4650F570B8C626D18 /* Pods-mFIR.release.xcconfig */,
+				E5DEB59081F913BE69003847 /* Pods-p2pLending.debug.xcconfig */,
+				7F8D196DBDC1FC765E305802 /* Pods-p2pLending.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 				B114092D1C10B6570033F0F5 /* AddressBookUI.framework */,
 				B114092B1C10B6500033F0F5 /* AddressBook.framework */,
 				DC3E487640CAD6EE1A9AF242 /* libPods-mFIR.a */,
+				C5D5091F5C0D3402C46BD469 /* libPods-p2pLending.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -516,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mFIR/Pods-mFIR-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-p2pLending/Pods-p2pLending-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B114092A1C10B6280033F0F5 /* ShellScript */ = {
@@ -544,7 +552,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mFIR/Pods-mFIR-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-p2pLending/Pods-p2pLending-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -689,7 +697,7 @@
 		};
 		B1D168D41C102F900079E760 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 334C2C395594E1E260134DFA /* Pods-mFIR.debug.xcconfig */;
+			baseConfigurationReference = E5DEB59081F913BE69003847 /* Pods-p2pLending.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -724,7 +732,7 @@
 		};
 		B1D168D51C102F900079E760 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4D50FF4650F570B8C626D18 /* Pods-mFIR.release.xcconfig */;
+			baseConfigurationReference = 7F8D196DBDC1FC765E305802 /* Pods-p2pLending.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

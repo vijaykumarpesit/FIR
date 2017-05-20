@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8BE2A308CAE433311A925C5F8824F645'
-               BlueprintName = 'Pods-mFIR'
+               BlueprintIdentifier = '2B4E0FC439EEFD1478D3BDCED21BCE3F'
+               BlueprintName = 'Pods-p2pLending'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-mFIR.a'>
+               BuildableName = 'libPods-p2pLending.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

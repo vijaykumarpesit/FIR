@@ -24,18 +24,4 @@
     return sharedDataSource;
 }
 
--(instancetype)init {
-    
-    if(self = [super init]) {
-        PFUser *parseUser = [PFUser currentUser];
-        if (!parseUser) {
-            parseUser = [PFUser user];
-        }
-        self.accidentMetaDataArry = [[NSMutableArray alloc] init];
-        
-    }
-    
-    return self;
-}
-
 @end
