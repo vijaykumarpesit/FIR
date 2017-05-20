@@ -49,8 +49,7 @@
     FIRLoan *loan = [[FIRLoan alloc] init];
     loan.money = [NSNumber numberWithFloat:self.amountSlider.value];
     loan.duartion = [NSString stringWithFormat:@"%f", self.daysSlider.value];
-    loan.phoneNumber = [DataSource sharedDataSource].currentUser.phoneNumber;
-    loan.userID = [DataSource sharedDataSource].currentUser.userID;
+    loan.phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"];
     loan.loanID = [self GetUUID];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [loan saveLoan];
