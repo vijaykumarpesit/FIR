@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FIRRiskScoreLoan.h"
 
 @interface LoanViewController : UIViewController
+
+@property (retain, nonatomic) FIRRiskScoreLoan *riskScoreLoan;
 
 @end

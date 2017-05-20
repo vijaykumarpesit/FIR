@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.investButton.layer.shadowOpacity = 0.7;
+    self.investButton.layer.shadowOffset = CGSizeMake(3.0, 2.0);
     // Initialization code
 }
 

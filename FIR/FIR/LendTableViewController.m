@@ -45,37 +45,28 @@
     return [[DataSource sharedDataSource] othersLoansArray].count;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Leave Blank...
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60.0;
-}
-
-- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    __weak typeof(self) weakSelf = self;
-    UITableViewRowAction *rowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Invest" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        LoanViewController *loanViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoanVC"];
-        [weakSelf.navigationController pushViewController:loanViewController animated:true];
-    }];
-    rowAction.backgroundColor = [UIColor colorWithRed:65.0/255.0 green:115.0/255.0 blue:185.0/255.0 alpha:1.0];
-    return @[rowAction];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     InvestCell *cell = (InvestCell *)[tableView dequeueReusableCellWithIdentifier:@"Invest" forIndexPath:indexPath];
     FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] othersLoansArray] objectAtIndex:indexPath.row];
-    cell.scoreLabel.text = riskLoan.riskScore.stringValue;
+    cell.scoreLabel.text = [cell.scoreLabel.text stringByAppendingFormat:@" %@", riskLoan.riskScore.stringValue];
     NSDictionary *loan = riskLoan.loanSnapshot.value;
     cell.nameLabel.text = loan[@"name"] != nil ? loan[@"name"] : loan[@"phoneNumber"];
     cell.moneyLabel.text =  [NSString stringWithFormat:@"₹ %@", [loan[@"money"] stringValue]];
     cell.locationLabel.text = [FIRLoan getDistanceFromSnapshot:loan];
+    cell.investButton.tag = indexPath.row;
+    [cell.investButton addTarget:self action:@selector(invest:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void)invest:(UIButton *)button {
+    LoanViewController *loanViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoanVC"];
+    FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] othersLoansArray] objectAtIndex:button.tag];
+    loanViewController.riskScoreLoan = riskLoan;
+    [self.navigationController pushViewController:loanViewController animated:true];
 }
 
 @end
