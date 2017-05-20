@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "FIRUser.h"
+#import "FIRDataBase.h"
 
 @interface DataSource : NSObject
 
 @property (nonatomic, strong)FIRUser*currentUser;
 
 + (DataSource *)sharedDataSource;
+
+@property (nonatomic,strong) FIRDataSnapshot *investments;
+@property (nonatomic,strong) FIRDataSnapshot *loans;
 
 @end
