@@ -9,7 +9,7 @@
 #import "TabbarViewController.h"
 #import "ChatTableViewController.h"
 
-@interface TabbarViewController () <UITabBarControllerDelegate>
+@interface TabbarViewController ()
 
 @end
 
@@ -27,14 +27,6 @@
     }
     
     // Do any additional setup after loading the view.
-}
-
-- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
-    if ([viewController isKindOfClass:[ChatTableViewController class]]) {
-        return NO;
-    } else {
-        return YES;
-    }
 }
 
 - (void)didReceiveMemoryWarning {
