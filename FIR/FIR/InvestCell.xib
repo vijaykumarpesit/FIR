@@ -29,7 +29,7 @@
                         <attributedString key="attributedText">
                             <fragment content="Name">
                                 <attributes>
-                                    <color key="NSColor" red="0.25490196078431371" green="0.45280441641807556" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="NSColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
@@ -55,7 +55,7 @@
                         <attributedString key="attributedText">
                             <fragment content="Distance">
                                 <attributes>
-                                    <color key="NSColor" red="0.54168638405777214" green="0.73429568527918776" blue="0.47413456561313561" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="NSColor" red="0.57149754963271171" green="0.56873669190501752" blue="0.57425840736040601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
@@ -75,7 +75,7 @@
                         <attributedString key="attributedText">
                             <fragment content="Risk Score">
                                 <attributes>
-                                    <color key="NSColor" red="0.33428294916536505" green="0.33266805569113628" blue="0.33589784263959388" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="NSColor" red="0.14028540874706705" green="0.69235802664974622" blue="0.34331604421780015" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
