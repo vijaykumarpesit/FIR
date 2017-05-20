@@ -23,7 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStylePlain target:self action:@selector(submitTapped:)];
+    NSDictionary *loanDict = self.riskScoreLoan.loanSnapshot.value;
+    
+    self.nameLabel.text = loanDict[@"name"];
+    self.moneyLabel.text = [loanDict[@"money"] stringValue];
+    self.riskScore.text = self.riskScoreLoan.riskScore.stringValue;
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Invest" style:UIBarButtonItemStylePlain target:self action:@selector(submitTapped:)];
     
     // Do any additional setup after loading the view.
 }
