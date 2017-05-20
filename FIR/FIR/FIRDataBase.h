@@ -13,6 +13,6 @@
 
 @property (strong, nonatomic) FIRDatabaseReference *ref;
 
-+ (FIRDataBase *)sharedDataSource;
++ (FIRDataBase *)sharedDataBase;
 
 @end

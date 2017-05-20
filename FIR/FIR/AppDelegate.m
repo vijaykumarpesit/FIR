@@ -31,8 +31,10 @@
     Digits *digits = [Digits sharedInstance];
     
     [FIRApp configure];
-
     
+    [self createUser];
+    
+    /*
     dispatch_async(dispatch_get_main_queue(), ^{
         DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
         config.phoneNumber = @"+91";
@@ -45,7 +47,7 @@
             [user saveUser];
         }];
     });
-
+*/
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
                                                     UIUserNotificationTypeSound);
@@ -56,6 +58,18 @@
     
     return YES;
 }
+
+- (void)createUser {
+    FIRUser *user = [[FIRUser alloc] init];
+    user.name = @"vijay";
+    user.riskScore = @"10";
+    user.investmentScore = @"20";
+    user.address = @"something";
+    user.userID = @"uniqueu";
+    user.phoneNumber = @"100";
+    [user saveUser];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

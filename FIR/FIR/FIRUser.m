@@ -7,6 +7,8 @@
 //
 
 #import "FIRUser.h"
+#import "FIRDataBase.h"
+
 NSString * const kKeyName = @"name";
 NSString * const kKeyPhoneNumber = @"phoneNumber";
 NSString * const kKeyUserId = @"userID";
@@ -71,4 +73,17 @@ NSString *const kDeviceToken = @"deviceToken";
     return [self.parseUser objectForKey:kDeviceToken];
 }
 */
+
+- (void)saveUser {
+    
+    FIRDatabaseReference *ref = [FIRDataBase sharedDataBase].ref;
+    
+    [[[ref child:@"accounts"] child:self.userID] setValue:@{@"name": self.name,
+                                                             @"phoneNumber":self.phoneNumber,
+                                                             @"address":self.address,
+                                                             @"investMentScore":self.investmentScore,
+                                                             @"riskScore":self.riskScore}];
+
+}
+
 @end

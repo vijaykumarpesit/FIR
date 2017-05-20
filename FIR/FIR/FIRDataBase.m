@@ -10,16 +10,16 @@
 
 @implementation FIRDataBase
 
-+ (FIRDataBase *)sharedDataSource {
++ (FIRDataBase *)sharedDataBase {
     
-    static FIRDataBase* sharedDataSource = nil;
+    static FIRDataBase* sharedDataBase = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        sharedDataSource = [[FIRDataBase alloc] init];
+        sharedDataBase = [[FIRDataBase alloc] init];
     });
     
-    return sharedDataSource;
+    return sharedDataBase;
 }
 
 - (instancetype)init {
