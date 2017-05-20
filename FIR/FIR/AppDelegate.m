@@ -11,6 +11,7 @@
 #import <DigitsKit/DigitsKit.h>
 #import "FIRUser.h"
 #import "DataSource.h"
+#import <Firebase.h>
 
 
 @interface AppDelegate ()
@@ -28,13 +29,9 @@
     
     [Fabric with:@[[Digits class]]];
     Digits *digits = [Digits sharedInstance];
-    // Initialize Parse.
-    [Parse setApplicationId:@"20ET8vDW6uFUheVsYeFNE27UeNYvFWJL3kbw6vum"
-                  clientKey:@"SkFhHaDlOsGuuuelyEIMKoh77oUz9J9HZXPuWw83"];
     
-    // [Optional] Track statistics around application opens.
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    //[digits logOut];
+    [FIRApp configure];
+
     
     dispatch_async(dispatch_get_main_queue(), ^{
         DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
