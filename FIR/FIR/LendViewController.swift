@@ -26,12 +26,17 @@ class LendViewController: UITableViewController {
             authenticationConfiguration.phoneNumber = "+91"
             authenticationConfiguration.title = "Sign In"
             Digits.sharedInstance().authenticate(with: nil, configuration: authenticationConfiguration, completion: {[unowned self] (session, error) in
-                DispatchQueue.main.async {
-                    let cameraViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRCodeScanner") as! CameraViewController
-                    let navigationController = UINavigationController(rootViewController: cameraViewController)
-                    self.navigationController?.present(navigationController, animated: true, completion: {
-                        UserDefaults.standard.set(true, forKey: "InitialSetUp")
-                    })
+                if let digitsError = error {
+                    print(digitsError)
+                } else if let phoneNumber = session?.phoneNumber {
+                    DispatchQueue.main.async {
+                        print(phoneNumber)
+                        let cameraViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRCodeScanner") as! CameraViewController
+                        let navigationController = UINavigationController(rootViewController: cameraViewController)
+                        self.navigationController?.present(navigationController, animated: true, completion: {
+                            UserDefaults.standard.set(true, forKey: "InitialSetUp")
+                        })
+                    }
                 }
             })
         }

@@ -14,6 +14,10 @@
 		54709AB71ECFE97000B8359E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709AB61ECFE97000B8359E /* CameraViewController.swift */; };
 		54709AB91ECFF84200B8359E /* LendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709AB81ECFF84200B8359E /* LendViewController.swift */; };
 		54709ABB1ED001D000B8359E /* InvestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709ABA1ED001D000B8359E /* InvestCell.swift */; };
+		54709ABD1ED009B200B8359E /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709ABC1ED009B200B8359E /* BorrowViewController.swift */; };
+		54709ABF1ED009F900B8359E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709ABE1ED009F900B8359E /* ChatViewController.swift */; };
+		54709AC11ED01BF600B8359E /* LoanDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709AC01ED01BF600B8359E /* LoanDetailsViewController.swift */; };
+		54709AC31ED0233200B8359E /* P2PLen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54709AC21ED0233200B8359E /* P2PLen.jpg */; };
 		5476F9831C11F999001A18CF /* Ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9821C11F999001A18CF /* Ambulance.png */; };
 		5476F9851C11FAA4001A18CF /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9841C11FAA4001A18CF /* Fire.png */; };
 		547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547741811C11E19400C5E2BA /* TabbarViewController.m */; };
@@ -26,7 +30,6 @@
 		54F9A6C81C17DA9000F7767B /* Accident.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6C71C17DA9000F7767B /* Accident.png */; };
 		54F9A6CD1C17DD7200F7767B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A6CC1C17DD7200F7767B /* MapKit.framework */; };
 		54F9A6D11C17F3BD00F7767B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6D01C17F3BD00F7767B /* delete.png */; };
-		54F9A6F51C18120D00F7767B /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9A6F41C18120D00F7767B /* DetailsViewController.m */; };
 		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C301C117FD500F7BBB7 /* FIRUser.m */; };
 		B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C331C1183D800F7BBB7 /* FIRAccidentMetaData.m */; };
@@ -81,6 +84,10 @@
 		54709AB61ECFE97000B8359E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		54709AB81ECFF84200B8359E /* LendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LendViewController.swift; sourceTree = "<group>"; };
 		54709ABA1ED001D000B8359E /* InvestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestCell.swift; sourceTree = "<group>"; };
+		54709ABC1ED009B200B8359E /* BorrowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
+		54709ABE1ED009F900B8359E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		54709AC01ED01BF600B8359E /* LoanDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanDetailsViewController.swift; sourceTree = "<group>"; };
+		54709AC21ED0233200B8359E /* P2PLen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = P2PLen.jpg; sourceTree = "<group>"; };
 		5476F9821C11F999001A18CF /* Ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ambulance.png; sourceTree = "<group>"; };
 		5476F9841C11FAA4001A18CF /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
 		547741801C11E19400C5E2BA /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
@@ -94,8 +101,6 @@
 		54F9A6C71C17DA9000F7767B /* Accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Accident.png; sourceTree = "<group>"; };
 		54F9A6CC1C17DD7200F7767B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		54F9A6D01C17F3BD00F7767B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
-		54F9A6F31C18120D00F7767B /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
-		54F9A6F41C18120D00F7767B /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		B1072C261C11788C00F7BBB7 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		B1072C271C11788C00F7BBB7 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		B1072C2F1C117FD500F7BBB7 /* FIRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRUser.h; sourceTree = "<group>"; };
@@ -236,10 +241,11 @@
 			children = (
 				547741801C11E19400C5E2BA /* TabbarViewController.h */,
 				547741811C11E19400C5E2BA /* TabbarViewController.m */,
-				54F9A6F31C18120D00F7767B /* DetailsViewController.h */,
-				54F9A6F41C18120D00F7767B /* DetailsViewController.m */,
 				54709AB61ECFE97000B8359E /* CameraViewController.swift */,
 				54709AB81ECFF84200B8359E /* LendViewController.swift */,
+				54709ABC1ED009B200B8359E /* BorrowViewController.swift */,
+				54709ABE1ED009F900B8359E /* ChatViewController.swift */,
+				54709AC01ED01BF600B8359E /* LoanDetailsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				54709AB51ECFE97000B8359E /* mFIR-Bridging-Header.h */,
+				54709AC21ED0233200B8359E /* P2PLen.jpg */,
 				54F9A6D01C17F3BD00F7767B /* delete.png */,
 				54F9A6C71C17DA9000F7767B /* Accident.png */,
 				545EAACB1C16E806008FA18A /* ShareLocation.png */,
@@ -474,6 +481,7 @@
 				B1624C2F1C167FD1001E897C /* FIRFileCollectionViewFooter.xib in Resources */,
 				54E18CD01C11B61D00939F08 /* document.JPG in Resources */,
 				B114095B1C1164400033F0F5 /* tessdata in Resources */,
+				54709AC31ED0233200B8359E /* P2PLen.jpg in Resources */,
 				B18E3E161C15F6F20094A7EC /* placeholder_large.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,11 +560,13 @@
 				B1556EFD1ED0080700866807 /* FIRDataBase.m in Sources */,
 				B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */,
 				B19B086E1ED01DFD00687ADB /* GoContactSyncEntry.m in Sources */,
+				54709ABD1ED009B200B8359E /* BorrowViewController.swift in Sources */,
 				B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */,
 				54709AB71ECFE97000B8359E /* CameraViewController.swift in Sources */,
 				B18E3E0E1C15E6970094A7EC /* SAMTextView.m in Sources */,
 				B1624C411C16AEFF001E897C /* UIImage+Resize.m in Sources */,
 				B1624C2A1C167BBF001E897C /* FIRFaceDetector.m in Sources */,
+				54709AC11ED01BF600B8359E /* LoanDetailsViewController.swift in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
 				54709ABB1ED001D000B8359E /* InvestCell.swift in Sources */,
@@ -568,7 +578,7 @@
 				B19B087A1ED0275900687ADB /* NSObject+DictionaryRep.m in Sources */,
 				B19B08711ED01E2200687ADB /* GoContactSync.m in Sources */,
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
-				54F9A6F51C18120D00F7767B /* DetailsViewController.m in Sources */,
+				54709ABF1ED009F900B8359E /* ChatViewController.swift in Sources */,
 				B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
