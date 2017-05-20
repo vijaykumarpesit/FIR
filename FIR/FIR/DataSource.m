@@ -15,8 +15,8 @@
 
 @interface DataSource ()
 
-@property (nonatomic, strong) NSMutableOrderedSet *myLoans;
-@property (nonatomic, strong) NSMutableOrderedSet *othersLoans;
+@property (nonatomic, strong) NSMutableArray *myLoans;
+@property (nonatomic, strong) NSMutableArray *othersLoans;
 @property (nonatomic, strong) NSOperationQueue *dataRefreshQueue;
 @end
 
@@ -40,8 +40,8 @@
     
     if (self) {
         
-        self.myLoans = [[NSMutableOrderedSet alloc] init];
-        self.othersLoans = [[NSMutableOrderedSet alloc] init];
+        self.myLoans = [[NSMutableArray alloc] init];
+        self.othersLoans = [[NSMutableArray alloc] init];
         self.dataRefreshQueue = [[NSOperationQueue alloc] init];
         self.dataRefreshQueue.maxConcurrentOperationCount = 1;
         
@@ -82,8 +82,8 @@
         
         if (self.loans) {
             
-            NSMutableOrderedSet *localMyLoans = [NSMutableOrderedSet orderedSet];
-            NSMutableOrderedSet *localOthersLoans = [NSMutableOrderedSet orderedSet];
+            NSMutableArray *localMyLoans = [NSMutableArray array];
+            NSMutableArray *localOthersLoans = [NSMutableArray array];
             
             NSEnumerator *children = [self.loans children];
             
@@ -104,7 +104,8 @@
                 }
                 
             }
-            
+            NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"riskScore" ascending:NO];
+            [localOthersLoans sortUsingDescriptors:@[sort]];
             self.othersLoans = localOthersLoans;
             self.myLoans = localMyLoans;
             
@@ -138,7 +139,7 @@
         CLLocation *loanLocation = [[CLLocation alloc] initWithLatitude:lattitude.doubleValue longitude:longitude.doubleValue];
         CLLocation *currentLocation = [FIRLocationManger locationManager].locationManger.location;
         
-        CLLocationDistance distance = [loanLocation distanceFromLocation:loanLocation];
+        CLLocationDistance distance = [currentLocation distanceFromLocation:loanLocation];
         riskScore += (riskScore*distance/1000);
         
     }
@@ -147,10 +148,10 @@
 }
 
 - (NSArray *)myLoansArray {
-    return self.myLoans.array;
+    return self.myLoans;
 }
 
 - (NSArray *)othersLoansArray {
-    return self.othersLoans.array;
+    return self.othersLoans;
 }
 @end
