@@ -72,7 +72,7 @@
     FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] othersLoansArray] objectAtIndex:indexPath.row];
     cell.scoreLabel.text = riskLoan.riskScore.stringValue;
     NSDictionary *loan = riskLoan.loanSnapshot.value;
-    cell.nameLabel.text = loan[@"phoneNumber"];
+    cell.nameLabel.text = loan[@"name"] != nil ? loan[@"name"] : loan[@"phoneNumber"];
     cell.moneyLabel.text = [loan[@"money"] stringValue];
     cell.locationLabel.text = [FIRLoan getDistanceFromSnapshot:loan];
     return cell;
