@@ -18,6 +18,7 @@
 		54709AD01ED03E9C00B8359E /* InvestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709ACF1ED03E9C00B8359E /* InvestCell.m */; };
 		54709AD31ED03FA000B8359E /* LendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709AD21ED03FA000B8359E /* LendTableViewController.m */; };
 		54709AD61ED041D600B8359E /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709AD51ED041D600B8359E /* LoanViewController.m */; };
+		54709ADC1ED053B500B8359E /* BorrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709ADB1ED053B500B8359E /* BorrowViewController.m */; };
 		5476F9831C11F999001A18CF /* Ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9821C11F999001A18CF /* Ambulance.png */; };
 		5476F9851C11FAA4001A18CF /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9841C11FAA4001A18CF /* Fire.png */; };
 		547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547741811C11E19400C5E2BA /* TabbarViewController.m */; };
@@ -93,6 +94,8 @@
 		54709AD21ED03FA000B8359E /* LendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendTableViewController.m; sourceTree = "<group>"; };
 		54709AD41ED041D600B8359E /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
 		54709AD51ED041D600B8359E /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
+		54709ADA1ED053B500B8359E /* BorrowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorrowViewController.h; sourceTree = "<group>"; };
+		54709ADB1ED053B500B8359E /* BorrowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorrowViewController.m; sourceTree = "<group>"; };
 		5476F9821C11F999001A18CF /* Ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ambulance.png; sourceTree = "<group>"; };
 		5476F9841C11FAA4001A18CF /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
 		547741801C11E19400C5E2BA /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				54709AD21ED03FA000B8359E /* LendTableViewController.m */,
 				54709AD41ED041D600B8359E /* LoanViewController.h */,
 				54709AD51ED041D600B8359E /* LoanViewController.m */,
+				54709ADA1ED053B500B8359E /* BorrowViewController.h */,
+				54709ADB1ED053B500B8359E /* BorrowViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
 				54709ABF1ED009F900B8359E /* ChatViewController.swift in Sources */,
 				B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */,
+				54709ADC1ED053B500B8359E /* BorrowViewController.m in Sources */,
 				54709AD61ED041D600B8359E /* LoanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
