@@ -23,6 +23,11 @@
     [super viewDidLoad];
     UINib *nib = [UINib nibWithNibName:@"InvestCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"Invest"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:@"refreshDS" object:nil];
+}
+
+-(void)refresh {
+    [self.tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
