@@ -41,7 +41,7 @@
         }];
         
         [[ref child:@"loans"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-            self.investments = snapshot;
+            self.loans = snapshot;
         }];
         
         
