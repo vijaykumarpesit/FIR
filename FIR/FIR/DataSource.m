@@ -136,7 +136,7 @@
     
     if ([snapShot.value valueForKey:@"locationDict"]) {
         NSDictionary *locationDict = [snapShot.value valueForKey:@"locationDict"];
-        NSNumber *lattitude = [locationDict valueForKey:@"lattitude"];
+        NSNumber *lattitude = [locationDict valueForKey:@"latitude"];
         NSNumber *longitude = [locationDict valueForKey:@"longitude"];
         
         CLLocation *loanLocation = [[CLLocation alloc] initWithLatitude:lattitude.doubleValue longitude:longitude.doubleValue];

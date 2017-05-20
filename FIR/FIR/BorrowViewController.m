@@ -10,6 +10,7 @@
 #import "FIRLoan.h"
 #import "DataSource.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "FIRLocationManger.h"
 
 @interface BorrowViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *amountTextField;
@@ -53,6 +54,15 @@
     NSString *days = [self.daysTextField.text componentsSeparatedByString:@" "][0];
     loan.duartion = days;
     loan.phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"];
+    
+    NSMutableDictionary *locationDict = [NSMutableDictionary dictionary];
+    
+    if ([FIRLocationManger locationManager].locationManger.location) {
+        [locationDict setValue:@([FIRLocationManger locationManager].locationManger.location.coordinate.latitude) forKey:@"latitude"];
+        [locationDict setValue:@([FIRLocationManger locationManager].locationManger.location.coordinate.longitude) forKey:@"longitude"];
+        loan.locationDict = locationDict;
+    }
+    
     loan.loanID = [self GetUUID];
     loan.name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
     [[NSUserDefaults standardUserDefaults] synchronize];
