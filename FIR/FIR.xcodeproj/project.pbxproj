@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		278A892820DA4BF37AD386C6 /* libPods-mFIR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3E487640CAD6EE1A9AF242 /* libPods-mFIR.a */; };
-		545EAA911C16B620008FA18A /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545EAA901C16B620008FA18A /* EmergencyViewController.m */; };
 		545EAA951C16BA75008FA18A /* Police.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAA941C16BA75008FA18A /* Police.png */; };
 		545EAACA1C16E7AE008FA18A /* Call.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAAC91C16E7AE008FA18A /* Call.png */; };
 		545EAACC1C16E806008FA18A /* ShareLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAACB1C16E806008FA18A /* ShareLocation.png */; };
+		54709AB71ECFE97000B8359E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709AB61ECFE97000B8359E /* CameraViewController.swift */; };
+		54709AB91ECFF84200B8359E /* LendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709AB81ECFF84200B8359E /* LendViewController.swift */; };
 		5476F9831C11F999001A18CF /* Ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9821C11F999001A18CF /* Ambulance.png */; };
 		5476F9851C11FAA4001A18CF /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9841C11FAA4001A18CF /* Fire.png */; };
 		547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547741811C11E19400C5E2BA /* TabbarViewController.m */; };
@@ -22,11 +23,9 @@
 		54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */; };
 		54E18CD01C11B61D00939F08 /* document.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CCF1C11B61D00939F08 /* document.JPG */; };
 		54F9A6C81C17DA9000F7767B /* Accident.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6C71C17DA9000F7767B /* Accident.png */; };
-		54F9A6CB1C17DD2D00F7767B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9A6CA1C17DD2D00F7767B /* MapViewController.m */; };
 		54F9A6CD1C17DD7200F7767B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A6CC1C17DD7200F7767B /* MapKit.framework */; };
 		54F9A6D11C17F3BD00F7767B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6D01C17F3BD00F7767B /* delete.png */; };
 		54F9A6F51C18120D00F7767B /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9A6F41C18120D00F7767B /* DetailsViewController.m */; };
-		B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C241C11716200F7BBB7 /* SubmitViewController.m */; };
 		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C301C117FD500F7BBB7 /* FIRUser.m */; };
 		B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C331C1183D800F7BBB7 /* FIRAccidentMetaData.m */; };
@@ -58,8 +57,6 @@
 		B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B940241C11E186002306D3 /* accidentPlaceHolder.png */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
-		B1D168C41C102F8F0079E760 /* FIRFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FIRFileViewController.m */; };
-		B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C61C102F8F0079E760 /* StatusViewController.m */; };
 		B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168C81C102F8F0079E760 /* Main.storyboard */; };
 		B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CB1C102F900079E760 /* Assets.xcassets */; };
 		B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */; };
@@ -70,11 +67,12 @@
 
 /* Begin PBXFileReference section */
 		334C2C395594E1E260134DFA /* Pods-mFIR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mFIR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mFIR/Pods-mFIR.debug.xcconfig"; sourceTree = "<group>"; };
-		545EAA8F1C16B620008FA18A /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
-		545EAA901C16B620008FA18A /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
 		545EAA941C16BA75008FA18A /* Police.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Police.png; sourceTree = "<group>"; };
 		545EAAC91C16E7AE008FA18A /* Call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call.png; sourceTree = "<group>"; };
 		545EAACB1C16E806008FA18A /* ShareLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareLocation.png; sourceTree = "<group>"; };
+		54709AB51ECFE97000B8359E /* mFIR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mFIR-Bridging-Header.h"; sourceTree = "<group>"; };
+		54709AB61ECFE97000B8359E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		54709AB81ECFF84200B8359E /* LendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LendViewController.swift; sourceTree = "<group>"; };
 		5476F9821C11F999001A18CF /* Ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ambulance.png; sourceTree = "<group>"; };
 		5476F9841C11FAA4001A18CF /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
 		547741801C11E19400C5E2BA /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
@@ -86,14 +84,10 @@
 		54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "toonvectors-15209-140.jpg"; sourceTree = "<group>"; };
 		54E18CCF1C11B61D00939F08 /* document.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = document.JPG; sourceTree = "<group>"; };
 		54F9A6C71C17DA9000F7767B /* Accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Accident.png; sourceTree = "<group>"; };
-		54F9A6C91C17DD2D00F7767B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		54F9A6CA1C17DD2D00F7767B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		54F9A6CC1C17DD7200F7767B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		54F9A6D01C17F3BD00F7767B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		54F9A6F31C18120D00F7767B /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		54F9A6F41C18120D00F7767B /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
-		B1072C231C11716200F7BBB7 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
-		B1072C241C11716200F7BBB7 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
 		B1072C261C11788C00F7BBB7 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		B1072C271C11788C00F7BBB7 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		B1072C2F1C117FD500F7BBB7 /* FIRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRUser.h; sourceTree = "<group>"; };
@@ -139,10 +133,6 @@
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1D168C01C102F8F0079E760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B1D168C21C102F8F0079E760 /* FIRFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRFileViewController.h; sourceTree = "<group>"; };
-		B1D168C31C102F8F0079E760 /* FIRFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRFileViewController.m; sourceTree = "<group>"; };
-		B1D168C51C102F8F0079E760 /* StatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
-		B1D168C61C102F8F0079E760 /* StatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
 		B1D168C91C102F8F0079E760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1D168CB1C102F900079E760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1D168CE1C102F900079E760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -226,20 +216,12 @@
 		B1072C2A1C1178A900F7BBB7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1072C231C11716200F7BBB7 /* SubmitViewController.h */,
-				B1072C241C11716200F7BBB7 /* SubmitViewController.m */,
-				B1D168C21C102F8F0079E760 /* FIRFileViewController.h */,
-				B1D168C31C102F8F0079E760 /* FIRFileViewController.m */,
-				B1D168C51C102F8F0079E760 /* StatusViewController.h */,
-				B1D168C61C102F8F0079E760 /* StatusViewController.m */,
 				547741801C11E19400C5E2BA /* TabbarViewController.h */,
 				547741811C11E19400C5E2BA /* TabbarViewController.m */,
-				545EAA8F1C16B620008FA18A /* EmergencyViewController.h */,
-				545EAA901C16B620008FA18A /* EmergencyViewController.m */,
-				54F9A6C91C17DD2D00F7767B /* MapViewController.h */,
-				54F9A6CA1C17DD2D00F7767B /* MapViewController.m */,
 				54F9A6F31C18120D00F7767B /* DetailsViewController.h */,
 				54F9A6F41C18120D00F7767B /* DetailsViewController.m */,
+				54709AB61ECFE97000B8359E /* CameraViewController.swift */,
+				54709AB81ECFF84200B8359E /* LendViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -318,6 +300,7 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				54709AB51ECFE97000B8359E /* mFIR-Bridging-Header.h */,
 				54F9A6D01C17F3BD00F7767B /* delete.png */,
 				54F9A6C71C17DA9000F7767B /* Accident.png */,
 				545EAACB1C16E806008FA18A /* ShareLocation.png */,
@@ -384,6 +367,7 @@
 					B1D168B81C102F8F0079E760 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = S62Z5886G5;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -506,27 +490,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */,
 				B1624C3A1C1682EB001E897C /* FIRImageCollectionViewCell.m in Sources */,
+				54709AB91ECFF84200B8359E /* LendViewController.swift in Sources */,
 				B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */,
 				B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */,
+				54709AB71ECFE97000B8359E /* CameraViewController.swift in Sources */,
 				B18E3E0E1C15E6970094A7EC /* SAMTextView.m in Sources */,
 				B1624C411C16AEFF001E897C /* UIImage+Resize.m in Sources */,
-				B1D168C41C102F8F0079E760 /* FIRFileViewController.m in Sources */,
-				54F9A6CB1C17DD2D00F7767B /* MapViewController.m in Sources */,
 				B1624C2A1C167BBF001E897C /* FIRFaceDetector.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
 				B1F447CF1C11A4D800DCEA3A /* FIRComplaintCell.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
 				B1624C2E1C167FD1001E897C /* FIRFileCollectionViewFooter.m in Sources */,
 				B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */,
-				B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */,
 				547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */,
 				B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */,
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
 				54F9A6F51C18120D00F7767B /* DetailsViewController.m in Sources */,
 				B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */,
-				545EAA911C16B620008FA18A /* EmergencyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +620,7 @@
 			baseConfigurationReference = 334C2C395594E1E260134DFA /* Pods-mFIR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = S62Z5886G5;
@@ -656,12 +638,15 @@
 					"\"${PODS_ROOT}/Headers/Public/Parse\"",
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.GoIbibo.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FIR/mFIR-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -670,6 +655,7 @@
 			baseConfigurationReference = C4D50FF4650F570B8C626D18 /* Pods-mFIR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = S62Z5886G5;
@@ -687,12 +673,14 @@
 					"\"${PODS_ROOT}/Headers/Public/Parse\"",
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.GoIbibo.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FIR/mFIR-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
