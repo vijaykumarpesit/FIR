@@ -85,7 +85,6 @@
     [currentInstallation setDeviceTokenFromData:deviceToken];
     currentInstallation.channels = @[ @"global" ];
     [currentInstallation saveInBackground];
-    [[[DataSource sharedDataSource] currentUser] setDeviceToken:currentInstallation.deviceToken];
     [[[DataSource sharedDataSource] currentUser] saveUser];
 }
 

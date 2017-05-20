@@ -22,84 +22,31 @@ NSString *const kDeviceToken = @"deviceToken";
 
 
 @implementation FIRUser
-
-- (instancetype)initWithPFUser:(PFUser*)parseUser {
-    if (self = [super init]) {
-        self.parseUser = parseUser;
-        //self.isPolice = YES;
-    }
-    return self;
-}
-
+/*
 - (void)setUserID:(NSString*)userID {
-    [self.parseUser setObject:userID forKey:kKeyUserId];
 }
 
 - (NSString*)userID {
-    return [self.parseUser objectForKey:kKeyUserId];
 }
 
 - (void)setName:(NSString*)Name {
-    [self.parseUser setObject:Name forKey:kKeyName];
 }
 
 - (NSString*)name {
-    return [self.parseUser objectForKey:kKeyName];
 }
 
 
 - (void)setPhoneNumber:(NSString *)phoneNumber {
-    [self.parseUser setObject:phoneNumber forKey:kKeyPhoneNumber];
 }
 
 - (NSString*)phoneNumber {
-    return [self.parseUser objectForKey:kKeyPhoneNumber];
 }
 
 - (void)saveUser {
     
-    if (self.isSaveInPreogress) {
-        return;
-    }
     
-    [self.parseUser saveInBackground];
-    
-    __block PFObject *user = nil;
-    
-    if (self.phoneNumber) {
-        self.isSaveInPreogress = YES;
-
-        PFQuery *query = [PFQuery queryWithClassName:@"FIRUser"];
-        [query whereKey:@"phoneNumber" equalTo:self.phoneNumber];
-        [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-            
-            if (objects.count) {
-                user = [objects lastObject];
-            } else {
-                user = [PFObject objectWithClassName:@"FIRUser"];
-            }
-            
-            
-            [self.parseUser.allKeys enumerateObjectsUsingBlock:^(NSString * _Nonnull key, NSUInteger idx, BOOL * _Nonnull stop) {
-                [user setObject:self.parseUser[key] forKey:key];
-                
-            }];
-            
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                [user save];
-                self.isSaveInPreogress = NO;
-
-            });
-        }];
-        
-        
-    }
-
 }
 
-- (void)setIsPolice:(BOOL)isPolice {
-    [self.parseUser setObject:@(isPolice) forKey:kIsPolice];
-}
 
 -(BOOL)isPolice {
     
@@ -123,5 +70,5 @@ NSString *const kDeviceToken = @"deviceToken";
 - (NSString *)deviceToken {
     return [self.parseUser objectForKey:kDeviceToken];
 }
-
+*/
 @end

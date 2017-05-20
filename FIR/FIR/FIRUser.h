@@ -11,15 +11,13 @@
 
 @interface FIRUser : NSObject
 
-- (instancetype)initWithPFUser:(PFUser*)parseUser;
 
-@property (nonatomic, strong)PFUser *parseUser;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *phoneNumber;
 @property (nonatomic, copy) NSString *userID;
-@property (nonatomic, assign) BOOL isPolice;
-@property (nonatomic, strong) PFGeoPoint *location;
-@property (nonatomic, strong) NSString *deviceToken;
+@property (nonatomic, copy) NSString *address;
+@property (nonatomic, copy) NSString *investmentScore;
+@property (nonatomic, copy) NSString *riskScore;
 
 - (void)saveUser;
 
