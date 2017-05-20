@@ -143,7 +143,7 @@
         CLLocation *currentLocation = [FIRLocationManger locationManager].locationManger.location;
         
         CLLocationDistance distance = [currentLocation distanceFromLocation:loanLocation];
-        riskScore += (riskScore*distance/100);
+        riskScore += (riskScore*distance/1000);
         
     }
     

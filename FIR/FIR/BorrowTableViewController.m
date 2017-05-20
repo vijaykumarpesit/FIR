@@ -19,15 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     UINib *nib = [UINib nibWithNibName:@"InvestCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"Borrow"];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"Invest"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 
@@ -41,12 +43,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    InvestCell *cell = (InvestCell *)[tableView dequeueReusableCellWithIdentifier:@"Borrow" forIndexPath:indexPath];
+    InvestCell *cell = (InvestCell *)[tableView dequeueReusableCellWithIdentifier:@"Invest" forIndexPath:indexPath];
     FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] myLoansArray] objectAtIndex:indexPath.row];
     NSDictionary *loan = riskLoan.loanSnapshot.value;
     cell.nameLabel.text = loan[@"name"] != nil ? loan[@"name"] : loan[@"phoneNumber"];
     cell.moneyLabel.text =  [NSString stringWithFormat:@"₹ %@", [loan[@"money"] stringValue]];
-    return cell;
+    cell.scoreLabel.text = nil;
+    cell.locationLabel.text = nil;
     return cell;
 }
 
