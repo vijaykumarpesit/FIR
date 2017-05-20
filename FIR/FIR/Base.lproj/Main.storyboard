@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tenure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIQ-n6-QMn">
-                                <rect key="frame" x="16" y="174" width="50" height="19.5"/>
+                                <rect key="frame" x="16" y="169" width="50" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1 day(s)" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bm1-d8-lcN">
-                                <rect key="frame" x="281" y="174" width="78" height="30"/>
+                                <rect key="frame" x="281" y="169" width="78" height="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -73,10 +73,10 @@
                                 <rect key="frame" x="14" y="124" width="347" height="31"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="365" translatesAutoresizingMaskIntoConstraints="NO" id="eYz-L3-69Y">
-                                <rect key="frame" x="14" y="204" width="347" height="31"/>
+                                <rect key="frame" x="14" y="199" width="347" height="31"/>
                             </slider>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B9P-Zj-QA5">
-                                <rect key="frame" x="16" y="317.5" width="343" height="44"/>
+                                <rect key="frame" x="16" y="312.5" width="343" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="dtz-YL-Ue1"/>
@@ -90,7 +90,7 @@
                                 </label>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lo-zN-c6A">
-                                <rect key="frame" x="155" y="391.5" width="64" height="36"/>
+                                <rect key="frame" x="155" y="386.5" width="64" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Borrow"/>
                                 <connections>
@@ -98,16 +98,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBf-9c-o0Z">
-                                <rect key="frame" x="16" y="244" width="55.5" height="19.5"/>
+                                <rect key="frame" x="16" y="239" width="55.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="80" translatesAutoresizingMaskIntoConstraints="NO" id="zKh-1E-QAp">
-                                <rect key="frame" x="14" y="267.5" width="347" height="31"/>
+                                <rect key="frame" x="14" y="262.5" width="347" height="31"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgv-jx-Sp6">
-                                <rect key="frame" x="309.5" y="244.5" width="29.5" height="19.5"/>
+                                <rect key="frame" x="309.5" y="239.5" width="29.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                         <constraints>
                             <constraint firstItem="eYz-L3-69Y" firstAttribute="leading" secondItem="tzA-fw-Tof" secondAttribute="leadingMargin" id="2A2-fm-loo"/>
                             <constraint firstItem="kgT-hj-qSF" firstAttribute="leading" secondItem="tzA-fw-Tof" secondAttribute="leadingMargin" id="32s-08-xlZ"/>
-                            <constraint firstItem="eIQ-n6-QMn" firstAttribute="top" secondItem="0p6-eh-S7v" secondAttribute="bottom" constant="20" id="5PB-Bd-fQ7"/>
+                            <constraint firstItem="eIQ-n6-QMn" firstAttribute="top" secondItem="0p6-eh-S7v" secondAttribute="bottom" constant="15" id="5PB-Bd-fQ7"/>
                             <constraint firstItem="kgT-hj-qSF" firstAttribute="top" secondItem="Peu-o8-TX5" secondAttribute="bottom" constant="30" id="7wy-EJ-AjE"/>
                             <constraint firstItem="0p6-eh-S7v" firstAttribute="top" secondItem="ktG-PM-2uy" secondAttribute="bottom" id="C6a-bl-Uro"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kgv-jx-Sp6" secondAttribute="trailing" constant="20" id="Cn0-vm-oAK"/>

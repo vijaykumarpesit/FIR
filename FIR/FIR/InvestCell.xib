@@ -39,12 +39,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCP-a0-WDG">
-                        <rect key="frame" x="78" y="42" width="42" height="16"/>
+                        <rect key="frame" x="78" y="42" width="41" height="17"/>
                         <attributedString key="attributedText">
                             <fragment content="Money">
                                 <attributes>
-                                    <color key="NSColor" red="1" green="0.55719831484703042" blue="0.31925907747930959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <font key="NSFont" size="13" name="HelveticaNeue-Bold"/>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="14" name="HelveticaNeue-Light"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -70,7 +70,9 @@
                             <constraint firstAttribute="width" constant="80" id="6DL-Sb-6uD"/>
                             <constraint firstAttribute="height" constant="30" id="l8b-XF-yQ8"/>
                         </constraints>
-                        <state key="normal" title="Invest Now"/>
+                        <state key="normal" title="Invest Now">
+                            <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rei-jN-Mgm">
                         <rect key="frame" x="134" y="13" width="42" height="21"/>
