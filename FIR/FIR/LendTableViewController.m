@@ -71,10 +71,10 @@
     InvestCell *cell = (InvestCell *)[tableView dequeueReusableCellWithIdentifier:@"Invest" forIndexPath:indexPath];
     FIRRiskScoreLoan *riskLoan = (FIRRiskScoreLoan *)[[[DataSource sharedDataSource] othersLoansArray] objectAtIndex:indexPath.row];
     cell.scoreLabel.text = riskLoan.riskScore.stringValue;
-    FIRLoan *loan = ((FIRLoan *)riskLoan.loanSnapshot);
-    cell.nameLabel.text = loan.userID;
-    cell.moneyLabel.text = loan.money.stringValue;
-    cell.locationLabel.text = loan.getDistance;
+    NSDictionary *loan = riskLoan.loanSnapshot.value;
+    cell.nameLabel.text = loan[@"phoneNumber"];
+    cell.moneyLabel.text = [loan[@"money"] stringValue];
+    cell.locationLabel.text = [FIRLoan getDistanceFromSnapshot:loan];
     return cell;
 }
 

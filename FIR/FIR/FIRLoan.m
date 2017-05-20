@@ -25,19 +25,19 @@
     }
 }
 
-- (NSString *)getDistance {
-    if (self.locationDict == nil) {
++ (NSString *)getDistanceFromSnapshot:(NSDictionary *)loan {
+    if (loan[@"locationDict"] == nil) {
         return nil;
     }
-    NSNumber *lattitude = [self.locationDict valueForKey:@"lattitude"];
-    NSNumber *longitude = [self.locationDict valueForKey:@"longitude"];
+    NSNumber *lattitude = [loan[@"locationDict"] valueForKey:@"lattitude"];
+    NSNumber *longitude = [loan[@"locationDict"]  valueForKey:@"longitude"];
     
     CLLocation *loanLocation = [[CLLocation alloc] initWithLatitude:lattitude.doubleValue longitude:longitude.doubleValue];
     CLLocation *currentLocation = [FIRLocationManger locationManager].locationManger.location;
     
-    CLLocationDistance distance = [currentLocation distanceFromLocation:loanLocation];
+    CLLocationDistance distance = ([currentLocation distanceFromLocation:loanLocation]/1000);
     
-    return [NSString stringWithFormat:@"%f", distance];
+    return [NSString stringWithFormat:@"%f kms", distance];
 }
 
 @end

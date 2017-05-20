@@ -52,6 +52,8 @@
     loan.duartion = [NSString stringWithFormat:@"%f", self.daysSlider.value];
     loan.phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"];
     loan.loanID = [self GetUUID];
+    loan.name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
+    
     [[NSUserDefaults standardUserDefaults] synchronize];
     [loan saveLoan];
     __weak typeof(self) weakSelf = self;

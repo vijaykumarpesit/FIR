@@ -159,6 +159,10 @@
             user.completeAdharInfo = xmlDoc;
         }
         
+        if (xmlDoc[@"_name"] ) {
+            [[NSUserDefaults standardUserDefaults] setValue:xmlDoc[@"_name"] forKey:@"name"];
+
+        }
         [user saveUser];
         
         if (user.adharID) {
