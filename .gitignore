@@ -2,3 +2,5 @@
 .DSStore
 
 */Pods/*
+
+*.xcworkspace/xcuserdata/*
