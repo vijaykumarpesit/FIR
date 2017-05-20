@@ -54,7 +54,7 @@
 - (void)checkSignIn {
     
     Digits *digits = [Digits sharedInstance];
-
+    
     DGTAuthenticationConfiguration *config = [[DGTAuthenticationConfiguration alloc] initWithAccountFields:DGTAccountFieldsNone];
     config.phoneNumber = @"+91";
     [digits logOut];
@@ -75,25 +75,28 @@
                                         [[NSUserDefaults standardUserDefaults] synchronize];
                                     }
                                     
-                                    if (![[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
+                                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                        if (![[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
+                                            
+                                            QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+                                            
+                                            QRCodeReaderViewController *vc = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel"
+                                                                                                                          codeReader:reader
+                                                                                                                 startScanningAtLoad:YES
+                                                                                                              showSwitchCameraButton:YES
+                                                                                                                     showTorchButton:YES];
+                                            vc.modalPresentationStyle = UIModalPresentationFormSheet;
+                                            vc.delegate = self;
+                                            self.codeReaderVC = vc;
+                                            
+                                            [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+                                        }
                                         
-                                        QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-                                        
-                                        QRCodeReaderViewController *vc = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel"
-                                                                                                                      codeReader:reader
-                                                                                                             startScanningAtLoad:YES
-                                                                                                          showSwitchCameraButton:YES
-                                                                                                                 showTorchButton:YES];
-                                        vc.modalPresentationStyle = UIModalPresentationFormSheet;
-                                        vc.delegate = self;
-                                        self.codeReaderVC = vc;
-
-                                        [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
-                                    }
+                                    });
                                     
                                     
                                 }];
-
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

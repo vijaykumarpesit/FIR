@@ -8,6 +8,7 @@
 
 #import "LendTableViewController.h"
 #import "InvestCell.h"
+#import "LoanViewController.h"
 
 @interface LendTableViewController ()
 
@@ -51,11 +52,12 @@
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     __weak typeof(self) weakSelf = self;
     UITableViewRowAction *rowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Invest" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-         *loanViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoanVC"];
+        LoanViewController *loanViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoanVC"];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loanViewController];
         [weakSelf presentViewController:navController animated:true completion:nil];
     }];
     rowAction.backgroundColor = [UIColor colorWithRed:60.0/255.0 green:60.0/255.0 blue:160.0/255.0 alpha:1.0];
+    return @[rowAction];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
