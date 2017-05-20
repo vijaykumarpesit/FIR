@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -308,7 +307,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-VT-RFd">
-                                <rect key="frame" x="21" y="118" width="333" height="45"/>
+                                <rect key="frame" x="36.5" y="118" width="302.5" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="UXL-Vm-dHL"/>
                                 </constraints>
@@ -324,10 +323,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p00-oe-fgq">
-                                <rect key="frame" x="92" y="80" width="192" height="38"/>
+                                <rect key="frame" x="95" y="80" width="186" height="38"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Scan Aadhar Code">
+                                        <fragment content="Scan Aadhar Card">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
@@ -348,7 +347,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S8Z-VT-RFd" firstAttribute="centerX" secondItem="w4v-ap-35F" secondAttribute="centerX" id="9bV-HF-Ld1"/>
-                            <constraint firstItem="S8Z-VT-RFd" firstAttribute="leading" secondItem="w4v-ap-35F" secondAttribute="leadingMargin" constant="5" id="C1B-Zi-UQI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X7N-L2-Pb9" secondAttribute="trailing" id="EO8-tg-BGc"/>
                             <constraint firstItem="X7N-L2-Pb9" firstAttribute="top" secondItem="S8Z-VT-RFd" secondAttribute="bottom" id="Khp-sW-nMW"/>
                             <constraint firstItem="p00-oe-fgq" firstAttribute="centerX" secondItem="w4v-ap-35F" secondAttribute="centerX" id="PLR-2F-SKa"/>
@@ -358,7 +356,7 @@
                             <constraint firstItem="9oI-PV-njv" firstAttribute="top" secondItem="X7N-L2-Pb9" secondAttribute="bottom" id="yOp-l9-iYQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tuQ-Ha-ORC">
+                    <navigationItem key="navigationItem" title="QR Code" id="tuQ-Ha-ORC">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="mWO-CG-tJj"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

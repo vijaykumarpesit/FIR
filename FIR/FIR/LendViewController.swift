@@ -12,6 +12,12 @@ import DigitsKit
 
 class LendViewController: UITableViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let nib = UINib(nibName: "InvestCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "Invest")
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let initialSetUpDone = UserDefaults.standard.bool(forKey: "InitialSetUp")
@@ -27,5 +33,22 @@ class LendViewController: UITableViewController {
                 }
             })
         }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "Invest") as! InvestCell
+        return tableViewCell
     }
 }

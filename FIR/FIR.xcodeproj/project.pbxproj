@@ -13,6 +13,7 @@
 		545EAACC1C16E806008FA18A /* ShareLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAACB1C16E806008FA18A /* ShareLocation.png */; };
 		54709AB71ECFE97000B8359E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709AB61ECFE97000B8359E /* CameraViewController.swift */; };
 		54709AB91ECFF84200B8359E /* LendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709AB81ECFF84200B8359E /* LendViewController.swift */; };
+		54709ABB1ED001D000B8359E /* InvestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709ABA1ED001D000B8359E /* InvestCell.swift */; };
 		5476F9831C11F999001A18CF /* Ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9821C11F999001A18CF /* Ambulance.png */; };
 		5476F9851C11FAA4001A18CF /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9841C11FAA4001A18CF /* Fire.png */; };
 		547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547741811C11E19400C5E2BA /* TabbarViewController.m */; };
@@ -61,8 +62,7 @@
 		B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CB1C102F900079E760 /* Assets.xcassets */; };
 		B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */; };
 		B1F447CB1C1191DD00DCEA3A /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
-		B1F447CF1C11A4D800DCEA3A /* FIRComplaintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F447CD1C11A4D800DCEA3A /* FIRComplaintCell.m */; };
-		B1F447D01C11A4D800DCEA3A /* FIRComplaintCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F447CE1C11A4D800DCEA3A /* FIRComplaintCell.xib */; };
+		B1F447D01C11A4D800DCEA3A /* InvestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F447CE1C11A4D800DCEA3A /* InvestCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +73,7 @@
 		54709AB51ECFE97000B8359E /* mFIR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mFIR-Bridging-Header.h"; sourceTree = "<group>"; };
 		54709AB61ECFE97000B8359E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		54709AB81ECFF84200B8359E /* LendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LendViewController.swift; sourceTree = "<group>"; };
+		54709ABA1ED001D000B8359E /* InvestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestCell.swift; sourceTree = "<group>"; };
 		5476F9821C11F999001A18CF /* Ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ambulance.png; sourceTree = "<group>"; };
 		5476F9841C11FAA4001A18CF /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
 		547741801C11E19400C5E2BA /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
@@ -137,9 +138,7 @@
 		B1D168CB1C102F900079E760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1D168CE1C102F900079E760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1D168D01C102F900079E760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1F447CC1C11A4D800DCEA3A /* FIRComplaintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRComplaintCell.h; sourceTree = "<group>"; };
-		B1F447CD1C11A4D800DCEA3A /* FIRComplaintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRComplaintCell.m; sourceTree = "<group>"; };
-		B1F447CE1C11A4D800DCEA3A /* FIRComplaintCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FIRComplaintCell.xib; sourceTree = "<group>"; };
+		B1F447CE1C11A4D800DCEA3A /* InvestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestCell.xib; sourceTree = "<group>"; };
 		C4D50FF4650F570B8C626D18 /* Pods-mFIR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mFIR.release.xcconfig"; path = "Pods/Target Support Files/Pods-mFIR/Pods-mFIR.release.xcconfig"; sourceTree = "<group>"; };
 		DC3E487640CAD6EE1A9AF242 /* libPods-mFIR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mFIR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -201,9 +200,8 @@
 			children = (
 				B18E3E0C1C15E6970094A7EC /* SAMTextView.h */,
 				B18E3E0D1C15E6970094A7EC /* SAMTextView.m */,
-				B1F447CC1C11A4D800DCEA3A /* FIRComplaintCell.h */,
-				B1F447CD1C11A4D800DCEA3A /* FIRComplaintCell.m */,
-				B1F447CE1C11A4D800DCEA3A /* FIRComplaintCell.xib */,
+				54709ABA1ED001D000B8359E /* InvestCell.swift */,
+				B1F447CE1C11A4D800DCEA3A /* InvestCell.xib */,
 				B1624C2B1C167FD1001E897C /* FIRFileCollectionViewFooter.h */,
 				B1624C2C1C167FD1001E897C /* FIRFileCollectionViewFooter.m */,
 				B1624C2D1C167FD1001E897C /* FIRFileCollectionViewFooter.xib */,
@@ -409,7 +407,7 @@
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
 				547741B11C11EE5D00C5E2BA /* Filing@2x.png in Resources */,
 				B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */,
-				B1F447D01C11A4D800DCEA3A /* FIRComplaintCell.xib in Resources */,
+				B1F447D01C11A4D800DCEA3A /* InvestCell.xib in Resources */,
 				545EAA951C16BA75008FA18A /* Police.png in Resources */,
 				54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */,
 				54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */,
@@ -499,8 +497,8 @@
 				B1624C411C16AEFF001E897C /* UIImage+Resize.m in Sources */,
 				B1624C2A1C167BBF001E897C /* FIRFaceDetector.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
-				B1F447CF1C11A4D800DCEA3A /* FIRComplaintCell.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
+				54709ABB1ED001D000B8359E /* InvestCell.swift in Sources */,
 				B1624C2E1C167FD1001E897C /* FIRFileCollectionViewFooter.m in Sources */,
 				B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */,
 				547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */,

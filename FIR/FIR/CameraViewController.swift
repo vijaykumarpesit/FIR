@@ -35,7 +35,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         videoPreviewLayer.frame = cameraButton.layer.bounds
-        cameraButton.layer .addSublayer(videoPreviewLayer)
+        cameraButton.layer.addSublayer(videoPreviewLayer)
         
         captureSession.startRunning()
     }
