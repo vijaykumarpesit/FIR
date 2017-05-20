@@ -16,6 +16,7 @@
 @property (nonatomic, copy) NSArray *documents;
 @property (nonatomic, copy) NSString *userID;
 @property (nonatomic, copy) NSString *phoneNumber;
+@property (nonatomic, copy) NSDictionary *locationDict;
 
 - (void)saveLoan;
 

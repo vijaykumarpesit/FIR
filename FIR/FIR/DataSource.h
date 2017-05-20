@@ -20,4 +20,10 @@
 @property (nonatomic,strong) FIRDataSnapshot *loans;
 @property (nonatomic, strong) FIRDataSnapshot *currentUserSnapShot;
 
+- (NSArray *)myLoansArray;
+
+- (NSArray *)othersLoansArray;
+
+- (void)refreshLoans;
+
 @end

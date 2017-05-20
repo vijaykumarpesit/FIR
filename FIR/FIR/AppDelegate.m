@@ -17,6 +17,7 @@
 #import "DataSource.h"
 #import <XMLDictionary/XMLDictionary.h>
 #import "FIRInvestment.h"
+#import "FIRLocationManger.h"
 
 @interface AppDelegate () <QRCodeReaderDelegate>
 @end
@@ -31,6 +32,7 @@
     
     [FIRApp configure];
     
+    [FIRLocationManger locationManager];
     
     [[GoContactSync sharedInstance] syncAddressBookIfNeeded];
 
@@ -66,16 +68,16 @@
                                 completion:^(DGTSession *session, NSError *error) {
                                     
                                     if ([[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"] && [[NSUserDefaults standardUserDefaults] valueForKey:@"adharNumber"]) {
-                                        
+                                        //Everything is cool just go
                                     } else {
                                         //First time sign up
                                         FIRUser *user = [[FIRUser alloc] init];
-                                        NSMutableString *phoneNo = [NSMutableString stringWithString:session.phoneNumber];
+                                        NSMutableString *phoneNo = [NSMutableString stringWithString:[session.phoneNumber substringFromIndex:3]];
                                         user.userID = session.userID;
                                         user.phoneNumber = phoneNo;
                                         [user saveUser];
                                         [DataSource sharedDataSource].currentUser = user;
-                                        [[NSUserDefaults standardUserDefaults] setValue:session.phoneNumber forKey:@"phoneNumber"];
+                                        [[NSUserDefaults standardUserDefaults] setValue:phoneNo forKey:@"phoneNumber"];
                                         [[NSUserDefaults standardUserDefaults] synchronize];
                                         
                                         

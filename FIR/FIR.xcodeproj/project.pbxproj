@@ -67,6 +67,8 @@
 		B19B08741ED0243200687ADB /* FIRLoan.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B08731ED0243200687ADB /* FIRLoan.m */; };
 		B19B087A1ED0275900687ADB /* NSObject+DictionaryRep.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B08791ED0275900687ADB /* NSObject+DictionaryRep.m */; };
 		B19B087D1ED0286900687ADB /* FIRInvestment.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B087C1ED0286900687ADB /* FIRInvestment.m */; };
+		B19B088E1ED0697800687ADB /* FIRRiskScoreLoan.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B088D1ED0697800687ADB /* FIRRiskScoreLoan.m */; };
+		B19B08911ED0717000687ADB /* FIRLocationManger.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B08901ED0717000687ADB /* FIRLocationManger.m */; };
 		B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B940241C11E186002306D3 /* accidentPlaceHolder.png */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
@@ -163,6 +165,10 @@
 		B19B08791ED0275900687ADB /* NSObject+DictionaryRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DictionaryRep.m"; path = "FIR/NSObject+DictionaryRep.m"; sourceTree = "<group>"; };
 		B19B087B1ED0286900687ADB /* FIRInvestment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIRInvestment.h; path = FIR/FIRInvestment.h; sourceTree = "<group>"; };
 		B19B087C1ED0286900687ADB /* FIRInvestment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FIRInvestment.m; path = FIR/FIRInvestment.m; sourceTree = "<group>"; };
+		B19B088C1ED0697800687ADB /* FIRRiskScoreLoan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIRRiskScoreLoan.h; path = FIR/FIRRiskScoreLoan.h; sourceTree = "<group>"; };
+		B19B088D1ED0697800687ADB /* FIRRiskScoreLoan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FIRRiskScoreLoan.m; path = FIR/FIRRiskScoreLoan.m; sourceTree = "<group>"; };
+		B19B088F1ED0717000687ADB /* FIRLocationManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIRLocationManger.h; path = FIR/FIRLocationManger.h; sourceTree = "<group>"; };
+		B19B08901ED0717000687ADB /* FIRLocationManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FIRLocationManger.m; path = FIR/FIRLocationManger.m; sourceTree = "<group>"; };
 		B1B940241C11E186002306D3 /* accidentPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidentPlaceHolder.png; sourceTree = "<group>"; };
 		B1D168B91C102F8F0079E760 /* p2pLending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2pLending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -343,6 +349,10 @@
 				B19B08791ED0275900687ADB /* NSObject+DictionaryRep.m */,
 				B19B087B1ED0286900687ADB /* FIRInvestment.h */,
 				B19B087C1ED0286900687ADB /* FIRInvestment.m */,
+				B19B088C1ED0697800687ADB /* FIRRiskScoreLoan.h */,
+				B19B088D1ED0697800687ADB /* FIRRiskScoreLoan.m */,
+				B19B088F1ED0717000687ADB /* FIRLocationManger.h */,
+				B19B08901ED0717000687ADB /* FIRLocationManger.m */,
 			);
 			name = Airtel;
 			sourceTree = "<group>";
@@ -576,6 +586,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19B087D1ED0286900687ADB /* FIRInvestment.m in Sources */,
+				B19B08911ED0717000687ADB /* FIRLocationManger.m in Sources */,
+				B19B088E1ED0697800687ADB /* FIRRiskScoreLoan.m in Sources */,
 				B1624C3A1C1682EB001E897C /* FIRImageCollectionViewCell.m in Sources */,
 				B1556EFD1ED0080700866807 /* FIRDataBase.m in Sources */,
 				B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */,
