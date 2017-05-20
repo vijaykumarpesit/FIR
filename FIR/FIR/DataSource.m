@@ -12,6 +12,7 @@
 #import "FIRRiskScoreLoan.h"
 #import "GoContactSync.h"
 #import "FIRLocationManger.h"
+#import <stdlib.h>
 
 @interface DataSource ()
 
@@ -120,7 +121,9 @@
     FIRRiskScoreLoan *riskScoreLoan = [[FIRRiskScoreLoan alloc] init];
     riskScoreLoan.loanSnapshot = snapShot;
     
-    NSUInteger riskScore = 0;
+    int randomNumber = 10 + rand() % (100-10);
+
+    NSUInteger riskScore = randomNumber;
     
     NSString *phoneNumber = [snapShot.value valueForKey:@"phoneNumber"];
     
@@ -144,6 +147,7 @@
         
     }
     
+    riskScoreLoan.riskScore = @(riskScore);
     return riskScoreLoan;
 }
 
