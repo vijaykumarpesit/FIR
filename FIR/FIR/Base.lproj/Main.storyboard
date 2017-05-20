@@ -12,7 +12,7 @@
         <!--Status-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="FIR Status" id="8rJ-Kc-sve" userLabel="Status" customClass="BorrowTableViewController" customModule="p2pLending" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FIR Status" id="8rJ-Kc-sve" userLabel="Status" customClass="BorrowTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="xIX-OQ-7TU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
