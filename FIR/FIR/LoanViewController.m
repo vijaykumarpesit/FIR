@@ -9,7 +9,7 @@
 #import "LoanViewController.h"
 #import "FIRDataBase.h"
 
-@interface LoanViewController ()
+@interface LoanViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
@@ -17,12 +17,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *location;
 @property (weak, nonatomic) IBOutlet UILabel *riskScore;
 @property (weak, nonatomic) IBOutlet UITableView *documents;
+@property (nonatomic, strong) NSString *aadharID;
 @end
 
 @implementation LoanViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.documents.delegate = self;
+    self.documents.dataSource = self;
     
     NSDictionary *loanDict = self.riskScoreLoan.loanSnapshot.value;
     
@@ -35,6 +39,7 @@
     if (loanDict[@"phoneNumber"]) {
         FIRDatabaseReference *db = [FIRDataBase sharedDataBase].ref;
         
+        __weak typeof(self) weakSelf = self;
         [[[db child:@"acounts"] child:loanDict[@"phoneNumber"] ] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
             if (snapshot.value && ![snapshot.value isKindOfClass:[NSNull class]]) {
                 NSDictionary *adharCardInfo = snapshot.value[@"completeAdharInfo"];
@@ -63,7 +68,8 @@
                     [address appendString:adharCardInfo[@"_state"]];
                 }
                 
-                self.addressLabel.text = address;
+                weakSelf.addressLabel.text = address;
+                weakSelf.aadharID = snapshot.value[@"adharID"];
             }
         }];
         
@@ -82,6 +88,24 @@
     //Need to make a call to submit call. investmentID creation
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Documents"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Documents"];
+    }
+    cell.textLabel.textColor = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:255.0/255.0 alpha:1.0];
+    cell.textLabel.text = [@"Aadhar" stringByAppendingFormat:@"-%@", self.aadharID];
+    return cell;
 }
 
 /*
