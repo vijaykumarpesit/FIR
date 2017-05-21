@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FIRUser.h"
+#import "FIRDataBase.h"
 
 @interface DataSource : NSObject
 
@@ -15,6 +16,14 @@
 
 + (DataSource *)sharedDataSource;
 
-@property(nonatomic, strong) NSMutableArray *accidentMetaDataArry;
+@property (nonatomic,strong) FIRDataSnapshot *investments;
+@property (nonatomic,strong) FIRDataSnapshot *loans;
+@property (nonatomic, strong) FIRDataSnapshot *currentUserSnapShot;
+
+- (NSArray *)myLoansArray;
+
+- (NSArray *)othersLoansArray;
+
+- (void)refreshLoans;
 
 @end

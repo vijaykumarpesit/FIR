@@ -9,6 +9,17 @@
 #import "DataSource.h"
 #import <Parse/Parse.h>
 #import "FIRUser.h"
+#import "FIRRiskScoreLoan.h"
+#import "GoContactSync.h"
+#import "FIRLocationManger.h"
+#import <stdlib.h>
+
+@interface DataSource ()
+
+@property (nonatomic, strong) NSMutableArray *myLoans;
+@property (nonatomic, strong) NSMutableArray *othersLoans;
+@property (nonatomic, strong) NSOperationQueue *dataRefreshQueue;
+@end
 
 @implementation DataSource
 
@@ -24,19 +35,132 @@
     return sharedDataSource;
 }
 
--(instancetype)init {
+- (instancetype)init {
     
-    if(self = [super init]) {
-        PFUser *parseUser = [PFUser currentUser];
-        if (!parseUser) {
-            parseUser = [PFUser user];
+    self = [super init];
+    
+    if (self) {
+        
+        self.myLoans = [[NSMutableArray alloc] init];
+        self.othersLoans = [[NSMutableArray alloc] init];
+        self.dataRefreshQueue = [[NSOperationQueue alloc] init];
+        self.dataRefreshQueue.maxConcurrentOperationCount = 1;
+        
+        FIRDatabaseReference *ref =  [FIRDataBase sharedDataBase].ref;
+        
+        
+        [[ref child:@"investments"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            self.investments = snapshot;
+            [self refreshInvestments];
+        }];
+        
+        [[ref child:@"loans"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+            self.loans = snapshot;
+            [self refreshLoans];
+        }];
+        
+        
+        NSString *phoneNumber =  [[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"];
+        
+        if (phoneNumber) {
+            [[[ref child:@"accounts"] child:phoneNumber] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                self.currentUserSnapShot = snapshot;
+            }];
         }
-        self.currentUser = [[FIRUser alloc] initWithPFUser:parseUser];
-        self.accidentMetaDataArry = [[NSMutableArray alloc] init];
         
     }
     
     return self;
 }
 
+- (void)refreshInvestments {
+    
+}
+
+- (void)refreshLoans {
+    
+    [self.dataRefreshQueue addOperationWithBlock:^{
+        
+        if (self.loans) {
+            
+            NSMutableArray *localMyLoans = [NSMutableArray array];
+            NSMutableArray *localOthersLoans = [NSMutableArray array];
+            
+            NSEnumerator *children = [self.loans children];
+            
+            FIRDataSnapshot *child;
+            
+            NSString *phoneNumber =  [[NSUserDefaults standardUserDefaults] valueForKey:@"phoneNumber"];
+            
+            while (child = [children nextObject]) {
+                
+                if ([[child.value valueForKey:@"phoneNumber"] isEqualToString:phoneNumber]) {
+                    FIRRiskScoreLoan *loan = [[FIRRiskScoreLoan alloc] init];
+                    loan.loanSnapshot = child;
+                    [localMyLoans addObject:loan];
+                } else {
+                    [localOthersLoans addObject:[self riskScoreLoanFor:child]];
+                    
+                    
+                }
+                
+            }
+            NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"riskScore" ascending:NO];
+            [localOthersLoans sortUsingDescriptors:@[sort]];
+            self.othersLoans = localOthersLoans;
+            self.myLoans = localMyLoans;
+            
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshDS" object:nil];
+            
+        });
+    }];
+    
+}
+
+- (FIRRiskScoreLoan *)riskScoreLoanFor:(FIRDataSnapshot *)snapShot {
+    
+    FIRRiskScoreLoan *riskScoreLoan = [[FIRRiskScoreLoan alloc] init];
+    riskScoreLoan.loanSnapshot = snapShot;
+    
+    int randomNumber = 10 + rand() % (100-10);
+
+    NSUInteger riskScore = randomNumber;
+    
+    NSString *phoneNumber = [snapShot.value valueForKey:@"phoneNumber"];
+    
+    //First check
+    if ([[[[GoContactSync sharedInstance] syncedContacts] allKeys] containsObject:phoneNumber]) {
+        riskScore += 1000;
+    }
+   
+    //SecondCheck
+    
+    if ([snapShot.value valueForKey:@"locationDict"]) {
+        NSDictionary *locationDict = [snapShot.value valueForKey:@"locationDict"];
+        NSNumber *lattitude = [locationDict valueForKey:@"latitude"];
+        NSNumber *longitude = [locationDict valueForKey:@"longitude"];
+        
+        CLLocation *loanLocation = [[CLLocation alloc] initWithLatitude:lattitude.doubleValue longitude:longitude.doubleValue];
+        CLLocation *currentLocation = [FIRLocationManger locationManager].locationManger.location;
+        
+        CLLocationDistance distance = [currentLocation distanceFromLocation:loanLocation];
+        riskScore += (riskScore*distance/1000);
+        
+    }
+    
+    riskScoreLoan.riskScore = @(riskScore);
+    return riskScoreLoan;
+}
+
+- (NSArray *)myLoansArray {
+    return self.myLoans;
+}
+
+- (NSArray *)othersLoansArray {
+    return self.othersLoans;
+}
 @end

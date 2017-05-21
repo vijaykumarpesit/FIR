@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		116D23D042297E33B2D63D02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE27327042BDA62222BEAE3E /* libPods.a */; };
-		545EAA911C16B620008FA18A /* EmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545EAA901C16B620008FA18A /* EmergencyViewController.m */; };
+		278A892820DA4BF37AD386C6 /* libPods-mFIR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3E487640CAD6EE1A9AF242 /* libPods-mFIR.a */; };
 		545EAA951C16BA75008FA18A /* Police.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAA941C16BA75008FA18A /* Police.png */; };
 		545EAACA1C16E7AE008FA18A /* Call.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAAC91C16E7AE008FA18A /* Call.png */; };
 		545EAACC1C16E806008FA18A /* ShareLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 545EAACB1C16E806008FA18A /* ShareLocation.png */; };
+		54709AB71ECFE97000B8359E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54709AB61ECFE97000B8359E /* CameraViewController.swift */; };
+		54709ACD1ED03C0A00B8359E /* BorrowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709ACC1ED03C0A00B8359E /* BorrowTableViewController.m */; };
+		54709AD01ED03E9C00B8359E /* InvestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709ACF1ED03E9C00B8359E /* InvestCell.m */; };
+		54709AD31ED03FA000B8359E /* LendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709AD21ED03FA000B8359E /* LendTableViewController.m */; };
+		54709AD61ED041D600B8359E /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709AD51ED041D600B8359E /* LoanViewController.m */; };
+		54709ADC1ED053B500B8359E /* BorrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709ADB1ED053B500B8359E /* BorrowViewController.m */; };
+		54709ADE1ED0580D00B8359E /* P2PLen.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709ADD1ED0580D00B8359E /* P2PLen.png */; };
+		54709AE81ED0662800B8359E /* Borrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709AE51ED0662800B8359E /* Borrow@2x.png */; };
+		54709AE91ED0662800B8359E /* Chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709AE61ED0662800B8359E /* Chat@2x.png */; };
+		54709AEA1ED0662800B8359E /* Lend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709AE71ED0662800B8359E /* Lend@2x.png */; };
+		54709AF01ED07C6200B8359E /* ChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54709AEF1ED07C6200B8359E /* ChatTableViewController.m */; };
+		54709AF21ED07D0F00B8359E /* profile_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 54709AF11ED07D0F00B8359E /* profile_default.png */; };
 		5476F9831C11F999001A18CF /* Ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9821C11F999001A18CF /* Ambulance.png */; };
 		5476F9851C11FAA4001A18CF /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5476F9841C11FAA4001A18CF /* Fire.png */; };
 		547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547741811C11E19400C5E2BA /* TabbarViewController.m */; };
@@ -22,11 +33,9 @@
 		54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */; };
 		54E18CD01C11B61D00939F08 /* document.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 54E18CCF1C11B61D00939F08 /* document.JPG */; };
 		54F9A6C81C17DA9000F7767B /* Accident.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6C71C17DA9000F7767B /* Accident.png */; };
-		54F9A6CB1C17DD2D00F7767B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9A6CA1C17DD2D00F7767B /* MapViewController.m */; };
 		54F9A6CD1C17DD7200F7767B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A6CC1C17DD7200F7767B /* MapKit.framework */; };
 		54F9A6D11C17F3BD00F7767B /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F9A6D01C17F3BD00F7767B /* delete.png */; };
-		54F9A6F51C18120D00F7767B /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9A6F41C18120D00F7767B /* DetailsViewController.m */; };
-		B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C241C11716200F7BBB7 /* SubmitViewController.m */; };
+		AB548BE7524426CF3789D350 /* libPods-p2pLending.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D5091F5C0D3402C46BD469 /* libPods-p2pLending.a */; };
 		B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C271C11788C00F7BBB7 /* DataSource.m */; };
 		B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C301C117FD500F7BBB7 /* FIRUser.m */; };
 		B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1072C331C1183D800F7BBB7 /* FIRAccidentMetaData.m */; };
@@ -46,6 +55,8 @@
 		B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = B114094D1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m */; };
 		B114095B1C1164400033F0F5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B114095A1C1164400033F0F5 /* tessdata */; };
 		B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = B114095D1C1165040033F0F5 /* ImageMetaData.m */; };
+		B1556EF81ED0076700866807 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1556EF71ED0076700866807 /* GoogleService-Info.plist */; };
+		B1556EFD1ED0080700866807 /* FIRDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = B1556EFC1ED0080700866807 /* FIRDataBase.m */; };
 		B1624C2A1C167BBF001E897C /* FIRFaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = B1624C291C167BBF001E897C /* FIRFaceDetector.m */; };
 		B1624C2E1C167FD1001E897C /* FIRFileCollectionViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1624C2C1C167FD1001E897C /* FIRFileCollectionViewFooter.m */; };
 		B1624C2F1C167FD1001E897C /* FIRFileCollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1624C2D1C167FD1001E897C /* FIRFileCollectionViewFooter.xib */; };
@@ -55,26 +66,48 @@
 		B18E3E0E1C15E6970094A7EC /* SAMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B18E3E0D1C15E6970094A7EC /* SAMTextView.m */; };
 		B18E3E121C15F2D30094A7EC /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E111C15F2D30094A7EC /* placeholder.png */; };
 		B18E3E161C15F6F20094A7EC /* placeholder_large.png in Resources */ = {isa = PBXBuildFile; fileRef = B18E3E151C15F6F20094A7EC /* placeholder_large.png */; };
+		B19B086E1ED01DFD00687ADB /* GoContactSyncEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B086D1ED01DFD00687ADB /* GoContactSyncEntry.m */; };
+		B19B08711ED01E2200687ADB /* GoContactSync.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B08701ED01E2200687ADB /* GoContactSync.m */; };
+		B19B08741ED0243200687ADB /* FIRLoan.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B08731ED0243200687ADB /* FIRLoan.m */; };
+		B19B087A1ED0275900687ADB /* NSObject+DictionaryRep.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B08791ED0275900687ADB /* NSObject+DictionaryRep.m */; };
+		B19B087D1ED0286900687ADB /* FIRInvestment.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B087C1ED0286900687ADB /* FIRInvestment.m */; };
+		B19B088E1ED0697800687ADB /* FIRRiskScoreLoan.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B088D1ED0697800687ADB /* FIRRiskScoreLoan.m */; };
+		B19B08911ED0717000687ADB /* FIRLocationManger.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B08901ED0717000687ADB /* FIRLocationManger.m */; };
+		B19B08931ED0BE9C00687ADB /* download (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B19B08921ED0BE9C00687ADB /* download (1).png */; };
 		B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = B1B940241C11E186002306D3 /* accidentPlaceHolder.png */; };
 		B1D168BE1C102F8F0079E760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168BD1C102F8F0079E760 /* main.m */; };
 		B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C01C102F8F0079E760 /* AppDelegate.m */; };
-		B1D168C41C102F8F0079E760 /* FIRFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C31C102F8F0079E760 /* FIRFileViewController.m */; };
-		B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D168C61C102F8F0079E760 /* StatusViewController.m */; };
 		B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168C81C102F8F0079E760 /* Main.storyboard */; };
 		B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CB1C102F900079E760 /* Assets.xcassets */; };
 		B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D168CD1C102F900079E760 /* LaunchScreen.storyboard */; };
 		B1F447CB1C1191DD00DCEA3A /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B114093F1C114F920033F0F5 /* TesseractOCR.framework */; };
-		B1F447CF1C11A4D800DCEA3A /* FIRComplaintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F447CD1C11A4D800DCEA3A /* FIRComplaintCell.m */; };
-		B1F447D01C11A4D800DCEA3A /* FIRComplaintCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F447CE1C11A4D800DCEA3A /* FIRComplaintCell.xib */; };
+		B1F447D01C11A4D800DCEA3A /* InvestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1F447CE1C11A4D800DCEA3A /* InvestCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		545EAA8F1C16B620008FA18A /* EmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyViewController.h; sourceTree = "<group>"; };
-		545EAA901C16B620008FA18A /* EmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyViewController.m; sourceTree = "<group>"; };
+		334C2C395594E1E260134DFA /* Pods-mFIR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mFIR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mFIR/Pods-mFIR.debug.xcconfig"; sourceTree = "<group>"; };
 		545EAA941C16BA75008FA18A /* Police.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Police.png; sourceTree = "<group>"; };
 		545EAAC91C16E7AE008FA18A /* Call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call.png; sourceTree = "<group>"; };
 		545EAACB1C16E806008FA18A /* ShareLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareLocation.png; sourceTree = "<group>"; };
+		54709AB51ECFE97000B8359E /* mFIR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mFIR-Bridging-Header.h"; sourceTree = "<group>"; };
+		54709AB61ECFE97000B8359E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		54709ACB1ED03C0A00B8359E /* BorrowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorrowTableViewController.h; sourceTree = "<group>"; };
+		54709ACC1ED03C0A00B8359E /* BorrowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorrowTableViewController.m; sourceTree = "<group>"; };
+		54709ACE1ED03E9C00B8359E /* InvestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestCell.h; sourceTree = "<group>"; };
+		54709ACF1ED03E9C00B8359E /* InvestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestCell.m; sourceTree = "<group>"; };
+		54709AD11ED03FA000B8359E /* LendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LendTableViewController.h; sourceTree = "<group>"; };
+		54709AD21ED03FA000B8359E /* LendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LendTableViewController.m; sourceTree = "<group>"; };
+		54709AD41ED041D600B8359E /* LoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanViewController.h; sourceTree = "<group>"; };
+		54709AD51ED041D600B8359E /* LoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
+		54709ADA1ED053B500B8359E /* BorrowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorrowViewController.h; sourceTree = "<group>"; };
+		54709ADB1ED053B500B8359E /* BorrowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorrowViewController.m; sourceTree = "<group>"; };
+		54709ADD1ED0580D00B8359E /* P2PLen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = P2PLen.png; sourceTree = "<group>"; };
+		54709AE51ED0662800B8359E /* Borrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Borrow@2x.png"; sourceTree = "<group>"; };
+		54709AE61ED0662800B8359E /* Chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chat@2x.png"; sourceTree = "<group>"; };
+		54709AE71ED0662800B8359E /* Lend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lend@2x.png"; sourceTree = "<group>"; };
+		54709AEE1ED07C6200B8359E /* ChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewController.h; sourceTree = "<group>"; };
+		54709AEF1ED07C6200B8359E /* ChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewController.m; sourceTree = "<group>"; };
+		54709AF11ED07D0F00B8359E /* profile_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_default.png; sourceTree = "<group>"; };
 		5476F9821C11F999001A18CF /* Ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ambulance.png; sourceTree = "<group>"; };
 		5476F9841C11FAA4001A18CF /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
 		547741801C11E19400C5E2BA /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
@@ -86,14 +119,9 @@
 		54E18CC71C11B4D600939F08 /* toonvectors-15209-140.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "toonvectors-15209-140.jpg"; sourceTree = "<group>"; };
 		54E18CCF1C11B61D00939F08 /* document.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = document.JPG; sourceTree = "<group>"; };
 		54F9A6C71C17DA9000F7767B /* Accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Accident.png; sourceTree = "<group>"; };
-		54F9A6C91C17DD2D00F7767B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		54F9A6CA1C17DD2D00F7767B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		54F9A6CC1C17DD7200F7767B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		54F9A6D01C17F3BD00F7767B /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
-		54F9A6F31C18120D00F7767B /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
-		54F9A6F41C18120D00F7767B /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
-		B1072C231C11716200F7BBB7 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
-		B1072C241C11716200F7BBB7 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
+		7F8D196DBDC1FC765E305802 /* Pods-p2pLending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p2pLending.release.xcconfig"; path = "Pods/Target Support Files/Pods-p2pLending/Pods-p2pLending.release.xcconfig"; sourceTree = "<group>"; };
 		B1072C261C11788C00F7BBB7 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		B1072C271C11788C00F7BBB7 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		B1072C2F1C117FD500F7BBB7 /* FIRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRUser.h; sourceTree = "<group>"; };
@@ -120,6 +148,9 @@
 		B114095A1C1164400033F0F5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		B114095C1C1165040033F0F5 /* ImageMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMetaData.h; sourceTree = "<group>"; };
 		B114095D1C1165040033F0F5 /* ImageMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMetaData.m; sourceTree = "<group>"; };
+		B1556EF71ED0076700866807 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1556EFB1ED0080700866807 /* FIRDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRDataBase.h; sourceTree = "<group>"; };
+		B1556EFC1ED0080700866807 /* FIRDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRDataBase.m; sourceTree = "<group>"; };
 		B1624C281C167BBF001E897C /* FIRFaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRFaceDetector.h; sourceTree = "<group>"; };
 		B1624C291C167BBF001E897C /* FIRFaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRFaceDetector.m; sourceTree = "<group>"; };
 		B1624C2B1C167FD1001E897C /* FIRFileCollectionViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRFileCollectionViewFooter.h; sourceTree = "<group>"; };
@@ -134,24 +165,35 @@
 		B18E3E0D1C15E6970094A7EC /* SAMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMTextView.m; sourceTree = "<group>"; };
 		B18E3E111C15F2D30094A7EC /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		B18E3E151C15F6F20094A7EC /* placeholder_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_large.png; sourceTree = "<group>"; };
+		B19B086C1ED01DFD00687ADB /* GoContactSyncEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoContactSyncEntry.h; path = FIR/GoContactSyncEntry.h; sourceTree = "<group>"; };
+		B19B086D1ED01DFD00687ADB /* GoContactSyncEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoContactSyncEntry.m; path = FIR/GoContactSyncEntry.m; sourceTree = "<group>"; };
+		B19B086F1ED01E2200687ADB /* GoContactSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoContactSync.h; path = FIR/GoContactSync.h; sourceTree = "<group>"; };
+		B19B08701ED01E2200687ADB /* GoContactSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoContactSync.m; path = FIR/GoContactSync.m; sourceTree = "<group>"; };
+		B19B08721ED0243200687ADB /* FIRLoan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIRLoan.h; path = FIR/FIRLoan.h; sourceTree = "<group>"; };
+		B19B08731ED0243200687ADB /* FIRLoan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FIRLoan.m; path = FIR/FIRLoan.m; sourceTree = "<group>"; };
+		B19B08781ED0275900687ADB /* NSObject+DictionaryRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+DictionaryRep.h"; path = "FIR/NSObject+DictionaryRep.h"; sourceTree = "<group>"; };
+		B19B08791ED0275900687ADB /* NSObject+DictionaryRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DictionaryRep.m"; path = "FIR/NSObject+DictionaryRep.m"; sourceTree = "<group>"; };
+		B19B087B1ED0286900687ADB /* FIRInvestment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIRInvestment.h; path = FIR/FIRInvestment.h; sourceTree = "<group>"; };
+		B19B087C1ED0286900687ADB /* FIRInvestment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FIRInvestment.m; path = FIR/FIRInvestment.m; sourceTree = "<group>"; };
+		B19B088C1ED0697800687ADB /* FIRRiskScoreLoan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIRRiskScoreLoan.h; path = FIR/FIRRiskScoreLoan.h; sourceTree = "<group>"; };
+		B19B088D1ED0697800687ADB /* FIRRiskScoreLoan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FIRRiskScoreLoan.m; path = FIR/FIRRiskScoreLoan.m; sourceTree = "<group>"; };
+		B19B088F1ED0717000687ADB /* FIRLocationManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIRLocationManger.h; path = FIR/FIRLocationManger.h; sourceTree = "<group>"; };
+		B19B08901ED0717000687ADB /* FIRLocationManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FIRLocationManger.m; path = FIR/FIRLocationManger.m; sourceTree = "<group>"; };
+		B19B08921ED0BE9C00687ADB /* download (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download (1).png"; sourceTree = "<group>"; };
 		B1B940241C11E186002306D3 /* accidentPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidentPlaceHolder.png; sourceTree = "<group>"; };
-		B1D168B91C102F8F0079E760 /* mFIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mFIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D168B91C102F8F0079E760 /* p2pLending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = p2pLending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D168BD1C102F8F0079E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1D168BF1C102F8F0079E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1D168C01C102F8F0079E760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B1D168C21C102F8F0079E760 /* FIRFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRFileViewController.h; sourceTree = "<group>"; };
-		B1D168C31C102F8F0079E760 /* FIRFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRFileViewController.m; sourceTree = "<group>"; };
-		B1D168C51C102F8F0079E760 /* StatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
-		B1D168C61C102F8F0079E760 /* StatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
 		B1D168C91C102F8F0079E760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1D168CB1C102F900079E760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1D168CE1C102F900079E760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1D168D01C102F900079E760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1F447CC1C11A4D800DCEA3A /* FIRComplaintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRComplaintCell.h; sourceTree = "<group>"; };
-		B1F447CD1C11A4D800DCEA3A /* FIRComplaintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIRComplaintCell.m; sourceTree = "<group>"; };
-		B1F447CE1C11A4D800DCEA3A /* FIRComplaintCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FIRComplaintCell.xib; sourceTree = "<group>"; };
-		C61F0AB145FE38C667092794 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		CE27327042BDA62222BEAE3E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1F447CE1C11A4D800DCEA3A /* InvestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestCell.xib; sourceTree = "<group>"; };
+		C4D50FF4650F570B8C626D18 /* Pods-mFIR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mFIR.release.xcconfig"; path = "Pods/Target Support Files/Pods-mFIR/Pods-mFIR.release.xcconfig"; sourceTree = "<group>"; };
+		C5D5091F5C0D3402C46BD469 /* libPods-p2pLending.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-p2pLending.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC3E487640CAD6EE1A9AF242 /* libPods-mFIR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mFIR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DEB59081F913BE69003847 /* Pods-p2pLending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p2pLending.debug.xcconfig"; path = "Pods/Target Support Files/Pods-p2pLending/Pods-p2pLending.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,13 +214,25 @@
 				B11409251C10B3F10033F0F5 /* Fabric.framework in Frameworks */,
 				B11409281C10B3F10033F0F5 /* TwitterCore.framework in Frameworks */,
 				B11409261C10B3F10033F0F5 /* DigitsKit.framework in Frameworks */,
-				116D23D042297E33B2D63D02 /* libPods.a in Frameworks */,
+				278A892820DA4BF37AD386C6 /* libPods-mFIR.a in Frameworks */,
+				AB548BE7524426CF3789D350 /* libPods-p2pLending.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13599F60002E191D17645749 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				334C2C395594E1E260134DFA /* Pods-mFIR.debug.xcconfig */,
+				C4D50FF4650F570B8C626D18 /* Pods-mFIR.release.xcconfig */,
+				E5DEB59081F913BE69003847 /* Pods-p2pLending.debug.xcconfig */,
+				7F8D196DBDC1FC765E305802 /* Pods-p2pLending.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		20AA80C624B1E5210AEA8DAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,18 +246,10 @@
 				B114092F1C10B6670033F0F5 /* CoreData.framework */,
 				B114092D1C10B6570033F0F5 /* AddressBookUI.framework */,
 				B114092B1C10B6500033F0F5 /* AddressBook.framework */,
-				CE27327042BDA62222BEAE3E /* libPods.a */,
+				DC3E487640CAD6EE1A9AF242 /* libPods-mFIR.a */,
+				C5D5091F5C0D3402C46BD469 /* libPods-p2pLending.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		998D46A76D8AC4AB8F42F7D3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */,
-				C61F0AB145FE38C667092794 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		B1072C291C11789600F7BBB7 /* Views */ = {
@@ -211,9 +257,9 @@
 			children = (
 				B18E3E0C1C15E6970094A7EC /* SAMTextView.h */,
 				B18E3E0D1C15E6970094A7EC /* SAMTextView.m */,
-				B1F447CC1C11A4D800DCEA3A /* FIRComplaintCell.h */,
-				B1F447CD1C11A4D800DCEA3A /* FIRComplaintCell.m */,
-				B1F447CE1C11A4D800DCEA3A /* FIRComplaintCell.xib */,
+				B1F447CE1C11A4D800DCEA3A /* InvestCell.xib */,
+				54709ACE1ED03E9C00B8359E /* InvestCell.h */,
+				54709ACF1ED03E9C00B8359E /* InvestCell.m */,
 				B1624C2B1C167FD1001E897C /* FIRFileCollectionViewFooter.h */,
 				B1624C2C1C167FD1001E897C /* FIRFileCollectionViewFooter.m */,
 				B1624C2D1C167FD1001E897C /* FIRFileCollectionViewFooter.xib */,
@@ -226,20 +272,19 @@
 		B1072C2A1C1178A900F7BBB7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1072C231C11716200F7BBB7 /* SubmitViewController.h */,
-				B1072C241C11716200F7BBB7 /* SubmitViewController.m */,
-				B1D168C21C102F8F0079E760 /* FIRFileViewController.h */,
-				B1D168C31C102F8F0079E760 /* FIRFileViewController.m */,
-				B1D168C51C102F8F0079E760 /* StatusViewController.h */,
-				B1D168C61C102F8F0079E760 /* StatusViewController.m */,
 				547741801C11E19400C5E2BA /* TabbarViewController.h */,
 				547741811C11E19400C5E2BA /* TabbarViewController.m */,
-				545EAA8F1C16B620008FA18A /* EmergencyViewController.h */,
-				545EAA901C16B620008FA18A /* EmergencyViewController.m */,
-				54F9A6C91C17DD2D00F7767B /* MapViewController.h */,
-				54F9A6CA1C17DD2D00F7767B /* MapViewController.m */,
-				54F9A6F31C18120D00F7767B /* DetailsViewController.h */,
-				54F9A6F41C18120D00F7767B /* DetailsViewController.m */,
+				54709AB61ECFE97000B8359E /* CameraViewController.swift */,
+				54709ACB1ED03C0A00B8359E /* BorrowTableViewController.h */,
+				54709ACC1ED03C0A00B8359E /* BorrowTableViewController.m */,
+				54709AD11ED03FA000B8359E /* LendTableViewController.h */,
+				54709AD21ED03FA000B8359E /* LendTableViewController.m */,
+				54709AD41ED041D600B8359E /* LoanViewController.h */,
+				54709AD51ED041D600B8359E /* LoanViewController.m */,
+				54709ADA1ED053B500B8359E /* BorrowViewController.h */,
+				54709ADB1ED053B500B8359E /* BorrowViewController.m */,
+				54709AEE1ED07C6200B8359E /* ChatTableViewController.h */,
+				54709AEF1ED07C6200B8359E /* ChatTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -247,6 +292,8 @@
 		B1072C2C1C1178CC00F7BBB7 /* App Life Cycle */ = {
 			isa = PBXGroup;
 			children = (
+				B1556EF91ED007DB00866807 /* Airtel */,
+				B1556EF71ED0076700866807 /* GoogleService-Info.plist */,
 				B1D168BF1C102F8F0079E760 /* AppDelegate.h */,
 				B1D168C01C102F8F0079E760 /* AppDelegate.m */,
 				B1D168C81C102F8F0079E760 /* Main.storyboard */,
@@ -284,20 +331,59 @@
 			name = Utility;
 			sourceTree = "<group>";
 		};
+		B1556EF91ED007DB00866807 /* Airtel */ = {
+			isa = PBXGroup;
+			children = (
+				B1556EFA1ED007EC00866807 /* DB */,
+			);
+			name = Airtel;
+			sourceTree = "<group>";
+		};
+		B1556EFA1ED007EC00866807 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				B1556EFB1ED0080700866807 /* FIRDataBase.h */,
+				B1556EFC1ED0080700866807 /* FIRDataBase.m */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		B19B086B1ED01DDE00687ADB /* Airtel */ = {
+			isa = PBXGroup;
+			children = (
+				B19B086F1ED01E2200687ADB /* GoContactSync.h */,
+				B19B08701ED01E2200687ADB /* GoContactSync.m */,
+				B19B086C1ED01DFD00687ADB /* GoContactSyncEntry.h */,
+				B19B086D1ED01DFD00687ADB /* GoContactSyncEntry.m */,
+				B19B08721ED0243200687ADB /* FIRLoan.h */,
+				B19B08731ED0243200687ADB /* FIRLoan.m */,
+				B19B08781ED0275900687ADB /* NSObject+DictionaryRep.h */,
+				B19B08791ED0275900687ADB /* NSObject+DictionaryRep.m */,
+				B19B087B1ED0286900687ADB /* FIRInvestment.h */,
+				B19B087C1ED0286900687ADB /* FIRInvestment.m */,
+				B19B088C1ED0697800687ADB /* FIRRiskScoreLoan.h */,
+				B19B088D1ED0697800687ADB /* FIRRiskScoreLoan.m */,
+				B19B088F1ED0717000687ADB /* FIRLocationManger.h */,
+				B19B08901ED0717000687ADB /* FIRLocationManger.m */,
+			);
+			name = Airtel;
+			sourceTree = "<group>";
+		};
 		B1D168B01C102F8F0079E760 = {
 			isa = PBXGroup;
 			children = (
+				B19B086B1ED01DDE00687ADB /* Airtel */,
 				B1D168BB1C102F8F0079E760 /* FIR */,
 				B1D168BA1C102F8F0079E760 /* Products */,
-				998D46A76D8AC4AB8F42F7D3 /* Pods */,
 				20AA80C624B1E5210AEA8DAE /* Frameworks */,
+				13599F60002E191D17645749 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		B1D168BA1C102F8F0079E760 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1D168B91C102F8F0079E760 /* mFIR.app */,
+				B1D168B91C102F8F0079E760 /* p2pLending.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -318,6 +404,13 @@
 		B1D168BC1C102F8F0079E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B19B08921ED0BE9C00687ADB /* download (1).png */,
+				54709AF11ED07D0F00B8359E /* profile_default.png */,
+				54709AE51ED0662800B8359E /* Borrow@2x.png */,
+				54709AE61ED0662800B8359E /* Chat@2x.png */,
+				54709AE71ED0662800B8359E /* Lend@2x.png */,
+				54709ADD1ED0580D00B8359E /* P2PLen.png */,
+				54709AB51ECFE97000B8359E /* mFIR-Bridging-Header.h */,
 				54F9A6D01C17F3BD00F7767B /* delete.png */,
 				54F9A6C71C17DA9000F7767B /* Accident.png */,
 				545EAACB1C16E806008FA18A /* ShareLocation.png */,
@@ -351,25 +444,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1D168B81C102F8F0079E760 /* mFIR */ = {
+		B1D168B81C102F8F0079E760 /* p2pLending */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "mFIR" */;
+			buildConfigurationList = B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "p2pLending" */;
 			buildPhases = (
-				AEFB8C95C4554529FBC6F637 /* Check Pods Manifest.lock */,
+				39A2E5BF8ED26334D1EC6BE8 /* [CP] Check Pods Manifest.lock */,
 				B1D168B51C102F8F0079E760 /* Sources */,
 				B1D168B61C102F8F0079E760 /* Frameworks */,
 				B1D168B71C102F8F0079E760 /* Resources */,
-				BBE13A39F728DF15814615A6 /* Embed Pods Frameworks */,
-				4A4C87D2047066737F3E7BA0 /* Copy Pods Resources */,
 				B114092A1C10B6280033F0F5 /* ShellScript */,
+				8607FF0EB927D09864610ADA /* [CP] Embed Pods Frameworks */,
+				F9AC6D6A549484B1A0AE4128 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = mFIR;
+			name = p2pLending;
 			productName = FIR;
-			productReference = B1D168B91C102F8F0079E760 /* mFIR.app */;
+			productReference = B1D168B91C102F8F0079E760 /* p2pLending.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -383,7 +476,9 @@
 				TargetAttributes = {
 					B1D168B81C102F8F0079E760 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = Q3X4VL27V6;
+						DevelopmentTeam = S62Z5886G5;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -400,7 +495,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1D168B81C102F8F0079E760 /* mFIR */,
+				B1D168B81C102F8F0079E760 /* p2pLending */,
 			);
 		};
 /* End PBXProject section */
@@ -411,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F9A6D11C17F3BD00F7767B /* delete.png in Resources */,
+				B19B08931ED0BE9C00687ADB /* download (1).png in Resources */,
 				B11409271C10B3F10033F0F5 /* DigitsKitResources.bundle in Resources */,
 				545EAACA1C16E7AE008FA18A /* Call.png in Resources */,
 				5476F9851C11FAA4001A18CF /* Fire.png in Resources */,
@@ -418,56 +514,62 @@
 				B1D168CF1C102F900079E760 /* LaunchScreen.storyboard in Resources */,
 				B1D168CC1C102F900079E760 /* Assets.xcassets in Resources */,
 				B1624C3D1C168713001E897C /* placeholder_small.png in Resources */,
+				54709AE81ED0662800B8359E /* Borrow@2x.png in Resources */,
 				547741B21C11EE5D00C5E2BA /* Status@2x.png in Resources */,
 				545EAACC1C16E806008FA18A /* ShareLocation.png in Resources */,
 				54F9A6C81C17DA9000F7767B /* Accident.png in Resources */,
 				B1D168CA1C102F8F0079E760 /* Main.storyboard in Resources */,
 				547741B11C11EE5D00C5E2BA /* Filing@2x.png in Resources */,
 				B1B940251C11E186002306D3 /* accidentPlaceHolder.png in Resources */,
-				B1F447D01C11A4D800DCEA3A /* FIRComplaintCell.xib in Resources */,
+				B1F447D01C11A4D800DCEA3A /* InvestCell.xib in Resources */,
+				54709AE91ED0662800B8359E /* Chat@2x.png in Resources */,
 				545EAA951C16BA75008FA18A /* Police.png in Resources */,
 				54E18CC61C11AF9D00939F08 /* motorcycle-accident-hand-drawn-cartoon-characters-31896266.jpg in Resources */,
+				B1556EF81ED0076700866807 /* GoogleService-Info.plist in Resources */,
 				54E18CC81C11B4D600939F08 /* toonvectors-15209-140.jpg in Resources */,
+				54709AEA1ED0662800B8359E /* Lend@2x.png in Resources */,
 				5476F9831C11F999001A18CF /* Ambulance.png in Resources */,
 				547741A01C11E76500C5E2BA /* Emergency@2x.png in Resources */,
 				B1624C2F1C167FD1001E897C /* FIRFileCollectionViewFooter.xib in Resources */,
 				54E18CD01C11B61D00939F08 /* document.JPG in Resources */,
 				B114095B1C1164400033F0F5 /* tessdata in Resources */,
+				54709ADE1ED0580D00B8359E /* P2PLen.png in Resources */,
 				B18E3E161C15F6F20094A7EC /* placeholder_large.png in Resources */,
+				54709AF21ED07D0F00B8359E /* profile_default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A4C87D2047066737F3E7BA0 /* Copy Pods Resources */ = {
+		39A2E5BF8ED26334D1EC6BE8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AEFB8C95C4554529FBC6F637 /* Check Pods Manifest.lock */ = {
+		8607FF0EB927D09864610ADA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-p2pLending/Pods-p2pLending-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B114092A1C10B6280033F0F5 /* ShellScript */ = {
@@ -483,19 +585,19 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run a158ed92adc33849add174bc6f7fb20fc8ba2fa6 60ebe5f7c0afae81320b2d59dccc1285dfe88b14eb75d9e775447f0487921899";
 		};
-		BBE13A39F728DF15814615A6 /* Embed Pods Frameworks */ = {
+		F9AC6D6A549484B1A0AE4128 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-p2pLending/Pods-p2pLending-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -505,27 +607,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D168C71C102F8F0079E760 /* StatusViewController.m in Sources */,
+				B19B087D1ED0286900687ADB /* FIRInvestment.m in Sources */,
+				B19B08911ED0717000687ADB /* FIRLocationManger.m in Sources */,
+				B19B088E1ED0697800687ADB /* FIRRiskScoreLoan.m in Sources */,
 				B1624C3A1C1682EB001E897C /* FIRImageCollectionViewCell.m in Sources */,
+				B1556EFD1ED0080700866807 /* FIRDataBase.m in Sources */,
 				B1072C281C11788C00F7BBB7 /* DataSource.m in Sources */,
+				B19B086E1ED01DFD00687ADB /* GoContactSyncEntry.m in Sources */,
 				B1D168C11C102F8F0079E760 /* AppDelegate.m in Sources */,
+				54709AB71ECFE97000B8359E /* CameraViewController.swift in Sources */,
+				54709AD01ED03E9C00B8359E /* InvestCell.m in Sources */,
 				B18E3E0E1C15E6970094A7EC /* SAMTextView.m in Sources */,
 				B1624C411C16AEFF001E897C /* UIImage+Resize.m in Sources */,
-				B1D168C41C102F8F0079E760 /* FIRFileViewController.m in Sources */,
-				54F9A6CB1C17DD2D00F7767B /* MapViewController.m in Sources */,
 				B1624C2A1C167BBF001E897C /* FIRFaceDetector.m in Sources */,
+				54709AF01ED07C6200B8359E /* ChatTableViewController.m in Sources */,
 				B1D168BE1C102F8F0079E760 /* main.m in Sources */,
-				B1F447CF1C11A4D800DCEA3A /* FIRComplaintCell.m in Sources */,
 				B114094B1C1150DB0033F0F5 /* TextExtractor.m in Sources */,
+				B19B08741ED0243200687ADB /* FIRLoan.m in Sources */,
 				B1624C2E1C167FD1001E897C /* FIRFileCollectionViewFooter.m in Sources */,
+				54709AD31ED03FA000B8359E /* LendTableViewController.m in Sources */,
 				B1072C341C1183D800F7BBB7 /* FIRAccidentMetaData.m in Sources */,
-				B1072C251C11716200F7BBB7 /* SubmitViewController.m in Sources */,
 				547741821C11E19400C5E2BA /* TabbarViewController.m in Sources */,
 				B114095E1C1165040033F0F5 /* ImageMetaData.m in Sources */,
+				B19B087A1ED0275900687ADB /* NSObject+DictionaryRep.m in Sources */,
+				B19B08711ED01E2200687ADB /* GoContactSync.m in Sources */,
+				54709ACD1ED03C0A00B8359E /* BorrowTableViewController.m in Sources */,
 				B114094E1C1152540033F0F5 /* UIImage+BlackAndWhiteFilters.m in Sources */,
-				54F9A6F51C18120D00F7767B /* DetailsViewController.m in Sources */,
 				B1072C311C117FD500F7BBB7 /* FIRUser.m in Sources */,
-				545EAA911C16B620008FA18A /* EmergencyViewController.m in Sources */,
+				54709ADC1ED053B500B8359E /* BorrowViewController.m in Sources */,
+				54709AD61ED041D600B8359E /* LoanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,11 +745,13 @@
 		};
 		B1D168D41C102F900079E760 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2468E4E2E5581C6775293673 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = E5DEB59081F913BE69003847 /* Pods-p2pLending.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = S62Z5886G5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -654,21 +766,27 @@
 					"\"${PODS_ROOT}/Headers/Public/Parse\"",
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.GoIbibo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.GoIbibo.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FIR/mFIR-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		B1D168D51C102F900079E760 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C61F0AB145FE38C667092794 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7F8D196DBDC1FC765E305802 /* Pods-p2pLending.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = S62Z5886G5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,11 +801,14 @@
 					"\"${PODS_ROOT}/Headers/Public/Parse\"",
 				);
 				INFOPLIST_FILE = FIR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.GoIbibo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.GoIbibo.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FIR/mFIR-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -703,7 +824,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "mFIR" */ = {
+		B1D168D31C102F900079E760 /* Build configuration list for PBXNativeTarget "p2pLending" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1D168D41C102F900079E760 /* Debug */,
